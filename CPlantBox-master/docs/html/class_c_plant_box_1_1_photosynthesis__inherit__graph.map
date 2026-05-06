@@ -1,0 +1,5 @@
+<map id="CPlantBox::Photosynthesis" name="CPlantBox::Photosynthesis">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,201,121"/>
+<area shape="rect" id="node3" href="$class_phloem_flux.html" title=" " alt="" coords="54,169,153,196"/>
+<area shape="rect" id="node2" href="$class_c_plant_box_1_1_plant_hydraulic_model.html" title=" " alt="" coords="7,5,199,47"/>
+</map>

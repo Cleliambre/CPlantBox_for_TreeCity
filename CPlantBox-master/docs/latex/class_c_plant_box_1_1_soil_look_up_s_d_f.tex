@@ -1,0 +1,100 @@
+\hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f}{}\doxysection{CPlant\+Box\+::Soil\+Look\+Up\+SDF Class Reference}
+\label{class_c_plant_box_1_1_soil_look_up_s_d_f}\index{CPlantBox::SoilLookUpSDF@{CPlantBox::SoilLookUpSDF}}
+
+
+{\ttfamily \#include $<$soil.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Soil\+Look\+Up\+SDF\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_c_plant_box_1_1_soil_look_up_s_d_f__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Soil\+Look\+Up\+SDF\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_c_plant_box_1_1_soil_look_up_s_d_f__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_a1aee6c9311fb469ad1e08a41a1e0c7f6}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_a1aee6c9311fb469ad1e08a41a1e0c7f6}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_a1aee6c9311fb469ad1e08a41a1e0c7f6}{Soil\+Look\+Up\+SDF}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_a7422a905d9ba712af739df5ea5da2a66}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_a7422a905d9ba712af739df5ea5da2a66}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries copy} () override
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_ae690091bb5720ddfd6655a2818dd65a6}{Soil\+Look\+Up\+SDF}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ sdf\+\_\+, double max\+\_\+=1, double min\+\_\+=0, double slope\+\_\+=1)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_ab16c57db51a5132c216ba725d18e9882}{get\+Value}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o=nullptr) const override
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_a67dad03d902d1465f22e97aaeb454b23}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_a67dad03d902d1465f22e97aaeb454b23}} 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_a67dad03d902d1465f22e97aaeb454b23}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Quick info about the object for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_a96271fe21d26f7e97d3841877fc6238b}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_a96271fe21d26f7e97d3841877fc6238b}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_a96271fe21d26f7e97d3841877fc6238b}{sdf}}
+\begin{DoxyCompactList}\small\item\em signed distance function representing the geometry \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_a02132f8ebc1dc2d31f0a499520523a3f}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_a02132f8ebc1dc2d31f0a499520523a3f}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_a02132f8ebc1dc2d31f0a499520523a3f}{fmax}}
+\begin{DoxyCompactList}\small\item\em maximum is reached within the geometry at the distance slope \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_a51fa9f37642ca632cbd075f220585ab6}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_a51fa9f37642ca632cbd075f220585ab6}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_a51fa9f37642ca632cbd075f220585ab6}{fmin}}
+\begin{DoxyCompactList}\small\item\em minimum is reached outside of the geometry at the distance slope \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_ae5f9b5dfd0fa93d480cf18856b043c68}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_ae5f9b5dfd0fa93d480cf18856b043c68}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_ae5f9b5dfd0fa93d480cf18856b043c68}{slope}}
+\begin{DoxyCompactList}\small\item\em half length of linear interpolation between fmax and fmin \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Looks up a value based on a signed distance function 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_ae690091bb5720ddfd6655a2818dd65a6}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_ae690091bb5720ddfd6655a2818dd65a6}} 
+\index{CPlantBox::SoilLookUpSDF@{CPlantBox::SoilLookUpSDF}!SoilLookUpSDF@{SoilLookUpSDF}}
+\index{SoilLookUpSDF@{SoilLookUpSDF}!CPlantBox::SoilLookUpSDF@{CPlantBox::SoilLookUpSDF}}
+\doxysubsubsection{\texorpdfstring{SoilLookUpSDF()}{SoilLookUpSDF()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Soil\+Look\+Up\+SDF\+::\+Soil\+Look\+Up\+SDF (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$}]{sdf\+\_\+,  }\item[{double}]{max\+\_\+ = {\ttfamily 1},  }\item[{double}]{min\+\_\+ = {\ttfamily 0},  }\item[{double}]{slope\+\_\+ = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Linearly interpolates between inside the domain (max\+\_\+) and outside the domain (min\+\_\+)
+
+
+\begin{DoxyParams}{Parameters}
+{\em sdf\+\_\+} & the signed distance function representing the geometry \\
+\hline
+{\em max\+\_\+} & the maximal value of the soil property (inside the geometry) \\
+\hline
+{\em min\+\_\+} & the minimal value of the soil property (outside the geometry) \\
+\hline
+{\em slope\+\_\+} & scales the linear gradient of the sdf (note that $\vert$grad(sdf)$\vert$= 1) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_s_d_f_ab16c57db51a5132c216ba725d18e9882}\label{class_c_plant_box_1_1_soil_look_up_s_d_f_ab16c57db51a5132c216ba725d18e9882}} 
+\index{CPlantBox::SoilLookUpSDF@{CPlantBox::SoilLookUpSDF}!getValue@{getValue}}
+\index{getValue@{getValue}!CPlantBox::SoilLookUpSDF@{CPlantBox::SoilLookUpSDF}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Soil\+Look\+Up\+SDF\+::get\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+returns fmin outside of the domain and fmax inside, and a linear ascend according slope $<$ $\ast$(-\/1), because inside the geometry the value is largest
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_ad157577afde792c49fc0545da1928037}{CPlant\+Box\+::\+Soil\+Look\+Up}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/soil.\+h\end{DoxyCompactItemize}

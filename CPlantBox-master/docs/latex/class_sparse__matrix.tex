@@ -1,0 +1,290 @@
+\hypertarget{class_sparse__matrix}{}\doxysection{Sparse\+\_\+matrix Class Reference}
+\label{class_sparse__matrix}\index{Sparse\_matrix@{Sparse\_matrix}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a64bc5806f807b7bd6c6b98c8db535ac3}\label{class_sparse__matrix_a64bc5806f807b7bd6c6b98c8db535ac3}} 
+{\bfseries Sparse\+\_\+matrix} (const int \&m, const int \&n, const int \&npnz=0)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a3304ec95132499fef48ce6d0fbb42983}\label{class_sparse__matrix_a3304ec95132499fef48ce6d0fbb42983}} 
+{\bfseries Sparse\+\_\+matrix} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const int \&npnz=-\/1)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a75cddea24b936342012bf527ec5f017d}\label{class_sparse__matrix_a75cddea24b936342012bf527ec5f017d}} 
+{\bfseries Sparse\+\_\+matrix} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ad38d5653bded29f5597c45f7f6b7d2ec}\label{class_sparse__matrix_ad38d5653bded29f5597c45f7f6b7d2ec}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_add0d3510bdcedf1a319fc7bb0808e34c}\label{class_sparse__matrix_add0d3510bdcedf1a319fc7bb0808e34c}} 
+int {\bfseries nblin} () const
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_aa233bc70ec4411bf8d571b629c78f816}\label{class_sparse__matrix_aa233bc70ec4411bf8d571b629c78f816}} 
+int {\bfseries nbcol} () const
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a93374da8dcbb64406a13415311245650}\label{class_sparse__matrix_a93374da8dcbb64406a13415311245650}} 
+int {\bfseries ntnz} () const
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a5fef792f38fff74166e882bc6818cbf8}\label{class_sparse__matrix_a5fef792f38fff74166e882bc6818cbf8}} 
+int {\bfseries npnz} () const
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a65390535dba7f4a21f4f7f76bc238d78}\label{class_sparse__matrix_a65390535dba7f4a21f4f7f76bc238d78}} 
+void {\bfseries reset\+\_\+npnz} (int npnz=0)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a1ab1c6298d28f2d61b30fb299e930eec}\label{class_sparse__matrix_a1ab1c6298d28f2d61b30fb299e930eec}} 
+void {\bfseries display} (int i1=1, int i2=0, int j1=1, int j2=0)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a76bb788abecf1acef560e5cf5132b4bd}\label{class_sparse__matrix_a76bb788abecf1acef560e5cf5132b4bd}} 
+void {\bfseries dump} ()
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a29b1fd923a7e432e9a5efb3b434da4bd}\label{class_sparse__matrix_a29b1fd923a7e432e9a5efb3b434da4bd}} 
+void {\bfseries set} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, bool check=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a3c4048f42ff9d13e76e9398a87d0ed02}\label{class_sparse__matrix_a3c4048f42ff9d13e76e9398a87d0ed02}} 
+const double \& {\bfseries operator()} (int i, int j) const
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_af6c4d1621fcfd7643f9fab946efabfe0}\label{class_sparse__matrix_af6c4d1621fcfd7643f9fab946efabfe0}} 
+void {\bfseries add\+\_\+} (int i, int j, double a, int ad=1)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ae42e40de510b24daaa98bfb600587c8e}\label{class_sparse__matrix_ae42e40de510b24daaa98bfb600587c8e}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator-\/} ()
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a075fe778e71010f815f89de38f5ffc26}\label{class_sparse__matrix_a075fe778e71010f815f89de38f5ffc26}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator+} (\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_aa9a83de8a34cd21d910c8b2701db6550}\label{class_sparse__matrix_aa9a83de8a34cd21d910c8b2701db6550}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator+} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a5aca2f8075155084b8a94c6aa3d60dfb}\label{class_sparse__matrix_a5aca2f8075155084b8a94c6aa3d60dfb}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator-\/} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a29ada564778f5538f27e579fddde81b8}\label{class_sparse__matrix_a29ada564778f5538f27e579fddde81b8}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator-\/} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a86f1c16e521e3a5f310435dd255bf425}\label{class_sparse__matrix_a86f1c16e521e3a5f310435dd255bf425}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a7c063b58f9d1c0be4e59283fbb2a8eef}\label{class_sparse__matrix_a7c063b58f9d1c0be4e59283fbb2a8eef}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a7ec7ec91f70f5ded65f95bf2faa28bdc}\label{class_sparse__matrix_a7ec7ec91f70f5ded65f95bf2faa28bdc}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator/} (const double \&a)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_aeb6e37bda3359b6e0df54df98b1ecad3}\label{class_sparse__matrix_aeb6e37bda3359b6e0df54df98b1ecad3}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator/} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a305902e4922bc9898a413857c9766ac7}\label{class_sparse__matrix_a305902e4922bc9898a413857c9766ac7}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator+=} (\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a9bdf14c52cb8f4b315dcce7909a6b19f}\label{class_sparse__matrix_a9bdf14c52cb8f4b315dcce7909a6b19f}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator+=} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a49f76ddb16d9dce9328b0737220a2ca0}\label{class_sparse__matrix_a49f76ddb16d9dce9328b0737220a2ca0}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator-\/=} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a3a07447475cdfc0528a5a23398209fda}\label{class_sparse__matrix_a3a07447475cdfc0528a5a23398209fda}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator-\/=} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a33c626847d1728e05423ab578af997fa}\label{class_sparse__matrix_a33c626847d1728e05423ab578af997fa}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator$\ast$=} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a6f4c4ba52a393baf9a1a998f7f7c4647}\label{class_sparse__matrix_a6f4c4ba52a393baf9a1a998f7f7c4647}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator$\ast$=} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a78f3bf4ad2be5359ee5c8734c2fd1082}\label{class_sparse__matrix_a78f3bf4ad2be5359ee5c8734c2fd1082}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator$\ast$=} (const double \&a)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a7428a4d9a925a537dd69f80ae17581dd}\label{class_sparse__matrix_a7428a4d9a925a537dd69f80ae17581dd}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator$\ast$=} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a56e524df685aef8b3a5c534eeac03d07}\label{class_sparse__matrix_a56e524df685aef8b3a5c534eeac03d07}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator/=} (const double \&a)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a7a1618d8cc0a4023730cbf62af7964d6}\label{class_sparse__matrix_a7a1618d8cc0a4023730cbf62af7964d6}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \& {\bfseries operator/=} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a8277d238b1cde615cf9fef924c13c1fa}\label{class_sparse__matrix_a8277d238b1cde615cf9fef924c13c1fa}} 
+void {\bfseries row\+\_\+elemult} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ac0e1c024b9ab7cc35a00fadcf48e462f}\label{class_sparse__matrix_ac0e1c024b9ab7cc35a00fadcf48e462f}} 
+void {\bfseries row\+\_\+elediv} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a4baee6eefce5ab41f0e6fac2f06cea64}\label{class_sparse__matrix_a4baee6eefce5ab41f0e6fac2f06cea64}} 
+void {\bfseries add\+\_\+add} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S1, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S2, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a177c184021e157a3b6256f92d2e09468}\label{class_sparse__matrix_a177c184021e157a3b6256f92d2e09468}} 
+void {\bfseries add\+\_\+add} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_aca254e75021c739e08b96baf1c03aa86}\label{class_sparse__matrix_aca254e75021c739e08b96baf1c03aa86}} 
+void {\bfseries add\+\_\+add} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_aafe548002b5b2046535d58acf2cba3f1}\label{class_sparse__matrix_aafe548002b5b2046535d58acf2cba3f1}} 
+void {\bfseries add\+\_\+add} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U1, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U2, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ac463be4dac79c3bc3f93245309fcf0ca}\label{class_sparse__matrix_ac463be4dac79c3bc3f93245309fcf0ca}} 
+void {\bfseries add\+\_\+sub} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S1, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S2, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_aa6e8e1dfe1e75a28db825c08c8cb48a7}\label{class_sparse__matrix_aa6e8e1dfe1e75a28db825c08c8cb48a7}} 
+void {\bfseries add\+\_\+sub} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_aae7a3733034fa60c951a9a3824c7de66}\label{class_sparse__matrix_aae7a3733034fa60c951a9a3824c7de66}} 
+void {\bfseries add\+\_\+sub} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a922631e502599e28d9dc0c3ec921fda5}\label{class_sparse__matrix_a922631e502599e28d9dc0c3ec921fda5}} 
+void {\bfseries add\+\_\+sub} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U1, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U2, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ac21deace94c3d167215ac488d1c33cac}\label{class_sparse__matrix_ac21deace94c3d167215ac488d1c33cac}} 
+void {\bfseries add\+\_\+elemult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S1, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S2, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a3089158ff10f0e1a6bcb7a0816a2e4c4}\label{class_sparse__matrix_a3089158ff10f0e1a6bcb7a0816a2e4c4}} 
+void {\bfseries add\+\_\+elemult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a419f350d2f5120d5e93bf94663fb6e43}\label{class_sparse__matrix_a419f350d2f5120d5e93bf94663fb6e43}} 
+void {\bfseries add\+\_\+elemult} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_afc3976957d556673819d4f49cc3a6cce}\label{class_sparse__matrix_afc3976957d556673819d4f49cc3a6cce}} 
+void {\bfseries add\+\_\+elemult} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, int ad=1, bool save\+\_\+count=true, bool transpose=false)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ac2410b392a93821915a4dd2aefe2ac0e}\label{class_sparse__matrix_ac2410b392a93821915a4dd2aefe2ac0e}} 
+void {\bfseries add\+\_\+elemult} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, int ad=1, bool save\+\_\+count=true, bool transpose=false)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a038e2441b2a9e0432a44cb3c425cc9ce}\label{class_sparse__matrix_a038e2441b2a9e0432a44cb3c425cc9ce}} 
+void {\bfseries add\+\_\+mult} (const double \&a, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_aa5e13890f7678f0743ca61ac9fed6301}\label{class_sparse__matrix_aa5e13890f7678f0743ca61ac9fed6301}} 
+void {\bfseries add\+\_\+mult} (const double \&a, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a56711019db1385b69d22d5e772be4080}\label{class_sparse__matrix_a56711019db1385b69d22d5e772be4080}} 
+void {\bfseries add\+\_\+elediv} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v, int ad=1, bool save\+\_\+count=true, bool transpose=false)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a80a67a66d64456032ce442fdd0a6ce4d}\label{class_sparse__matrix_a80a67a66d64456032ce442fdd0a6ce4d}} 
+void {\bfseries add\+\_\+elediv} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v, int ad=1, bool save\+\_\+count=true, bool transpose=false)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a03766e072ca1da04553f4a31d34e9733}\label{class_sparse__matrix_a03766e072ca1da04553f4a31d34e9733}} 
+void {\bfseries add\+\_\+div} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const double \&a, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a11729802d96c35eaf4399b5d6f486d79}\label{class_sparse__matrix_a11729802d96c35eaf4399b5d6f486d79}} 
+void {\bfseries add\+\_\+div} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const double \&a, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ae23735f9e972195080d52cb48aea103e}\label{class_sparse__matrix_ae23735f9e972195080d52cb48aea103e}} 
+void {\bfseries add\+\_\+row\+\_\+elemult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a89d5d39b6764073ebbfc930042f45743}\label{class_sparse__matrix_a89d5d39b6764073ebbfc930042f45743}} 
+void {\bfseries add\+\_\+row\+\_\+elemult} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a87c2fec8ab21cbbcd86bf2ecdc6f089d}\label{class_sparse__matrix_a87c2fec8ab21cbbcd86bf2ecdc6f089d}} 
+void {\bfseries add\+\_\+row\+\_\+elediv} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a6d30ae240a67e4edf0eb608ab138188f}\label{class_sparse__matrix_a6d30ae240a67e4edf0eb608ab138188f}} 
+void {\bfseries add\+\_\+row\+\_\+elediv} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v, int ad=1, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a3b883c1ca34b422c0995513469c6d8ab}\label{class_sparse__matrix_a3b883c1ca34b422c0995513469c6d8ab}} 
+void {\bfseries set\+\_\+diag} (const double \&a)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ab3fe1080156016f23d0ac2709b4e6689}\label{class_sparse__matrix_ab3fe1080156016f23d0ac2709b4e6689}} 
+void {\bfseries set\+\_\+diag} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&V)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a61de74a38ce103baf06549c49dfda880}\label{class_sparse__matrix_a61de74a38ce103baf06549c49dfda880}} 
+void {\bfseries set\+\_\+subdiag} (const int \&i1, const int \&i2, const double \&a)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a992d7f7be38915b2e0ef5fad1a169cf3}\label{class_sparse__matrix_a992d7f7be38915b2e0ef5fad1a169cf3}} 
+void {\bfseries set\+\_\+subdiag} (const int \&i1, const int \&i2, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&V)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a89bf015a914869a83ff2327778313761}\label{class_sparse__matrix_a89bf015a914869a83ff2327778313761}} 
+void {\bfseries add\+\_\+diag} (const double \&a, int ad=1)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a62d4e07da35aa20ca01f1c28075b83c5}\label{class_sparse__matrix_a62d4e07da35aa20ca01f1c28075b83c5}} 
+void {\bfseries add\+\_\+diag} (const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&V, int ad=1)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ac7316bef0e92a7d081a8f139222e05a9}\label{class_sparse__matrix_ac7316bef0e92a7d081a8f139222e05a9}} 
+void {\bfseries add\+\_\+subdiag} (const int \&i1, const int \&i2, const double \&a, int ad=1)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a373e480c0ef87edeab941762a42ec7c1}\label{class_sparse__matrix_a373e480c0ef87edeab941762a42ec7c1}} 
+void {\bfseries add\+\_\+subdiag} (const int \&i1, const int \&i2, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&V, int ad=1)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ab413aa3fa58a75a7cc741a8b821558b7}\label{class_sparse__matrix_ab413aa3fa58a75a7cc741a8b821558b7}} 
+void {\bfseries check\+\_\+addsubdiag\+\_\+set\+\_\+ij\+\_\+} (const int \&i1, const int \&i2)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_acc825f8627ae8914004017bf27706ce6}\label{class_sparse__matrix_acc825f8627ae8914004017bf27706ce6}} 
+void {\bfseries set\+\_\+matmult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S1, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S2, \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} $\ast$temp\+\_\+v=NULL, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_afdb5aff9feb72bc1d2af47fcb058aedd}\label{class_sparse__matrix_afdb5aff9feb72bc1d2af47fcb058aedd}} 
+void {\bfseries set\+\_\+matmult} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} $\ast$temp\+\_\+v=NULL, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_adab6c2a4724cddef9c2b7ef5ec8a367d}\label{class_sparse__matrix_adab6c2a4724cddef9c2b7ef5ec8a367d}} 
+void {\bfseries set\+\_\+matmult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} $\ast$temp\+\_\+v=NULL, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a118dc8e93bd5564d8bf999af06dbe3d0}\label{class_sparse__matrix_a118dc8e93bd5564d8bf999af06dbe3d0}} 
+void {\bfseries set\+\_\+matmult} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U1, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U2, \mbox{\hyperlink{class_index__vector}{Index\+\_\+vector}} $\ast$temp\+\_\+v=NULL, bool save\+\_\+count=true)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a32123ccd726eddbaaf2eae7eaff727ca}\label{class_sparse__matrix_a32123ccd726eddbaaf2eae7eaff727ca}} 
+void {\bfseries Sparse\+\_\+add\+\_\+set\+\_\+ij\+\_\+set} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S1, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S2)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ad1abc0ee8549f91d50afedb3d73f0e8f}\label{class_sparse__matrix_ad1abc0ee8549f91d50afedb3d73f0e8f}} 
+void {\bfseries Sparse\+\_\+elemult\+\_\+set\+\_\+ij\+\_\+set} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S1, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S2)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a482ffb5387b0669aa201e3e6193cced9}\label{class_sparse__matrix_a482ffb5387b0669aa201e3e6193cced9}} 
+void {\bfseries Sparse\+\_\+matmult\+\_\+set\+\_\+ij\+\_\+set} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S1, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S2, double $\ast$v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a632b62ed7cd60247425737d1f01191f2}\label{class_sparse__matrix_a632b62ed7cd60247425737d1f01191f2}} 
+void {\bfseries Sp\+Unit\+\_\+matmult\+\_\+set\+\_\+ij\+\_\+set} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U1, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U2, int $\ast$v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a19d96294fc22b98a36299b973d6f891b}\label{class_sparse__matrix_a19d96294fc22b98a36299b973d6f891b}} 
+class {\bfseries Fortran\+\_\+matrix}
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a670575f8685a7ce41eaa02b44e448852}\label{class_sparse__matrix_a670575f8685a7ce41eaa02b44e448852}} 
+class {\bfseries Fortran\+\_\+vector}
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ae8300f03f9e88367887a9c23e3ea1f53}\label{class_sparse__matrix_ae8300f03f9e88367887a9c23e3ea1f53}} 
+class {\bfseries Sp\+Unit\+\_\+matrix}
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ac1ec66955976c38237940a19dba63a2f}\label{class_sparse__matrix_ac1ec66955976c38237940a19dba63a2f}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries transpose} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, int npnz)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ab7925931e2591c2cb58dfe9369baee2c}\label{class_sparse__matrix_ab7925931e2591c2cb58dfe9369baee2c}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator$\ast$} (const double \&a, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a5b7a4d35f8b74441cac47f660d5dfe3e}\label{class_sparse__matrix_a5b7a4d35f8b74441cac47f660d5dfe3e}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries operator$\ast$} (const double \&a, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&S)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a53084b1fe667113dad24f9d7be45d212}\label{class_sparse__matrix_a53084b1fe667113dad24f9d7be45d212}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries row\+\_\+elemult} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_ac60414b9b17f1cb814273c205eccd195}\label{class_sparse__matrix_ac60414b9b17f1cb814273c205eccd195}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries row\+\_\+elediv} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a55c25d94afa38e121fb8a36be05132a4}\label{class_sparse__matrix_a55c25d94afa38e121fb8a36be05132a4}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries row\+\_\+elemult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a4c03d76ed5b1a89a7f9b7c81273f566a}\label{class_sparse__matrix_a4c03d76ed5b1a89a7f9b7c81273f566a}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries row\+\_\+elediv} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a79f9d7e85981b24f8ebfc0ebe0827a92}\label{class_sparse__matrix_a79f9d7e85981b24f8ebfc0ebe0827a92}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries matmult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S1, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S2, \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} $\ast$temp\+\_\+v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a541204024a9decd42e2485a3c3ed1bdb}\label{class_sparse__matrix_a541204024a9decd42e2485a3c3ed1bdb}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries matmult} (const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} $\ast$temp\+\_\+v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a187ca4e3fdbc5fa85110884d8c7e75b1}\label{class_sparse__matrix_a187ca4e3fdbc5fa85110884d8c7e75b1}} 
+\mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} {\bfseries matmult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_sp_unit__matrix}{Sp\+Unit\+\_\+matrix}} \&U, \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} $\ast$temp\+\_\+v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a070e06cca58fc22c65a11a7d1d7b5e5b}\label{class_sparse__matrix_a070e06cca58fc22c65a11a7d1d7b5e5b}} 
+\mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} {\bfseries matmult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_abe293e4a8098853bb8ccaefa34ea1fa9}\label{class_sparse__matrix_abe293e4a8098853bb8ccaefa34ea1fa9}} 
+void {\bfseries Fortran\+\_\+vector\+::set\+\_\+matmult} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, const \mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} \&v1)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a33b99fbb57b3f32d747639b30da9bd32}\label{class_sparse__matrix_a33b99fbb57b3f32d747639b30da9bd32}} 
+void {\bfseries KLU\+\_\+allocate} (const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, int $\ast$$\ast$$\ast$ipiv\+\_\+ptr\+\_\+ptr, void $\ast$$\ast$$\ast$TM\+\_\+ptr\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{class_sparse__matrix_a4f328b7e252d7ae301700b0819620ada}\label{class_sparse__matrix_a4f328b7e252d7ae301700b0819620ada}} 
+int {\bfseries set\+\_\+\+KLU\+\_\+solve\+\_\+} (double $\ast$x, int p, const \mbox{\hyperlink{class_sparse__matrix}{Sparse\+\_\+matrix}} \&S, double $\ast$b, int $\ast$$\ast$ipiv\+\_\+ptr, void $\ast$$\ast$TM\+\_\+ptr, bool full\+\_\+check)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/\+Piaf\+Munch/PM\+\_\+arrays.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/\+Piaf\+Munch/sparse\+\_\+matrix.\+cpp\end{DoxyCompactItemize}

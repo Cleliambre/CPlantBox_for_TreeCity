@@ -1,0 +1,1030 @@
+\hypertarget{class_c_plant_box_1_1_organism}{}\doxysection{CPlant\+Box\+::Organism Class Reference}
+\label{class_c_plant_box_1_1_organism}\index{CPlantBox::Organism@{CPlantBox::Organism}}
+
+
+{\ttfamily \#include $<$Organism.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Organism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_c_plant_box_1_1_organism__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Organism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_c_plant_box_1_1_organism__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a8d7a28622d68573798685e8791a32807}\label{class_c_plant_box_1_1_organism_a8d7a28622d68573798685e8791a32807}} 
+enum {\bfseries Delay\+Definition} \{ {\bfseries dd\+\_\+distance} = 0
+, {\bfseries dd\+\_\+time\+\_\+lat} = 1
+, {\bfseries dd\+\_\+time\+\_\+self} = 2
+ \}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a966444694bf2839fac8a7004bc4024a3}\label{class_c_plant_box_1_1_organism_a966444694bf2839fac8a7004bc4024a3}} 
+enum {\bfseries Organ\+Types} \{ \newline
+{\bfseries ot\+\_\+organ} = 0
+, {\bfseries ot\+\_\+seed} = 1
+, {\bfseries ot\+\_\+root} = 2
+, {\bfseries ot\+\_\+stem} = 3
+, \newline
+{\bfseries ot\+\_\+leaf} = 4
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_organism_a9fdef781edc982b80b494b7ffcc58f62}{Organism}} (unsigned int seednum=0)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_af3c27dcd67fe2ac50c589acc65232207}{copy}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_seed}{Seed}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a5378a2cf5520e45eb462da5f18d5e80c}{get\+Seed}} ()
+\begin{DoxyCompactList}\small\item\em the plant seed \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a9fb43549e1a06b8feede14a9159d4107}{get\+Organ\+Random\+Parameter}} (int ot, int sub\+Type) const
+\begin{DoxyCompactList}\small\item\em returns the respective the type parameter \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_aeff72713063d26d942617b5e44f54b2c}{get\+Organ\+Random\+Parameter}} (int ot) const
+\begin{DoxyCompactList}\small\item\em returns all type parameters of an organ type (e.\+g. root) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organism_ab65cd34d756c1fd975eafe142be4d571}{set\+Organ\+Random\+Parameter}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ p)
+\begin{DoxyCompactList}\small\item\em sets an organ type parameter, sub\+Type and organ\+Type defined within p \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a7ecfd2ee315a1b3c17e6ae9bb95ad30c}{get\+Parameter\+Sub\+Type}} (int organtype, std\+::string str) const
+\begin{DoxyCompactList}\small\item\em returns the parameter sub type index of name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_aaab450dd0336a812da97de2ec6d8cf6f}\label{class_c_plant_box_1_1_organism_aaab450dd0336a812da97de2ec6d8cf6f}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organism_aaab450dd0336a812da97de2ec6d8cf6f}{set\+Geometry}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ geom)
+\begin{DoxyCompactList}\small\item\em optionally, sets a confining geometry, call before \mbox{\hyperlink{class_c_plant_box_1_1_organism_a0b94d4a64b67eb1f9755b54eab1fb9e1}{initialize()}} \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organism_a0b94d4a64b67eb1f9755b54eab1fb9e1}{initialize}} (bool verbose=true, std\+::string mode=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em initialize before simulation, overwrite to setup model \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organism_af3c862c732db32f4b4acf1a93b73acf6}{simulate}} (double dt, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em calls the base organs simulate methods \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_acb4e7e34a9509ff4b04cf328974016d1}\label{class_c_plant_box_1_1_organism_acb4e7e34a9509ff4b04cf328974016d1}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organism_acb4e7e34a9509ff4b04cf328974016d1}{get\+Sim\+Time}} () const
+\begin{DoxyCompactList}\small\item\em returns the current simulation time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a874a2003978c2b6e30ec27956d5fb9b6}\label{class_c_plant_box_1_1_organism_a874a2003978c2b6e30ec27956d5fb9b6}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organism_a874a2003978c2b6e30ec27956d5fb9b6}{get\+Dt}} () const
+\begin{DoxyCompactList}\small\item\em returns the simulation time step of the last \mbox{\hyperlink{class_c_plant_box_1_1_organism_af3c862c732db32f4b4acf1a93b73acf6}{simulate()}} call \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a79f0e4d9b6153c3d6171a1271cb609d1}\label{class_c_plant_box_1_1_organism_a79f0e4d9b6153c3d6171a1271cb609d1}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organism_a79f0e4d9b6153c3d6171a1271cb609d1}{add\+Organ}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o)
+\begin{DoxyCompactList}\small\item\em adds an organ, takes ownership \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_ae93dc36c962f81f05efcd07a0702a70f}{get\+Organs}} (int ot=-\/1, bool all=false) const
+\begin{DoxyCompactList}\small\item\em sequential list of organs \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_aa524db373c51ccee0e199baf3dc7dfb7}{get\+Parameter}} (std\+::string name, int ot=-\/1, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$$>$ organs=std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$$>$(0)) const
+\begin{DoxyCompactList}\small\item\em parameter value per organ \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organism_a4f69633ac67398081932e1967334144e}{get\+Summed}} (std\+::string name, int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em summed up parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ae002961b28a91e469cc43efd39a310ce}\label{class_c_plant_box_1_1_organism_ae002961b28a91e469cc43efd39a310ce}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_ae002961b28a91e469cc43efd39a310ce}{get\+Number\+Of\+Organs}} () const
+\begin{DoxyCompactList}\small\item\em number of nodes of the organism \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a7a5c9257cf4084e080bb60c4157a9e22}\label{class_c_plant_box_1_1_organism_a7a5c9257cf4084e080bb60c4157a9e22}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a7a5c9257cf4084e080bb60c4157a9e22}{get\+Number\+Of\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em number of nodes of the organism \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6d6f64fcd1c7cff0ede160be971ae86f}{get\+Number\+Of\+Segments}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em number of segments of the organism \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a2aece1527bb9147e059027a2f07789eb}{get\+Polylines}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em nodes per organ \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a4e5b91a9d37d30993bf74efad187f7d5}{get\+Polyline\+CTs}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em node creation times per organ \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}{get\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em nodes of the organ \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_adfae2dc2accd1c833d72dc7b98041650}{get\+Node\+CTs}} () const
+\begin{DoxyCompactList}\small\item\em node creation times, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}{Organism\+::get\+Nodes}} \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}{get\+Segments}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em line segment containing two node indices, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}{Organism\+::get\+Nodes}} \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_ab48d977d455593480cb7e3e21e469fc3}{get\+Segment\+CTs}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em line creation times, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}{Organism\+::get\+Segments}} \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a0a68f0a373c04bed04e3e88d902678ef}{get\+Segment\+Ids}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em line segment indices, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}{Organism\+::get\+Segments}} \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a206928d94f9155a82d606358d54f78ce}{get\+Segment\+Origins}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em points to the organ which contains the segment, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}{Organism\+::get\+Segments}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ae39688c0e7778f53a3d5200bbbf04a35}\label{class_c_plant_box_1_1_organism_ae39688c0e7778f53a3d5200bbbf04a35}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_ae39688c0e7778f53a3d5200bbbf04a35}{get\+Number\+Of\+New\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em The number of new nodes created in the previous time step (same number as new segments) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a60c1878213620a77c01796a9cb014e7a}\label{class_c_plant_box_1_1_organism_a60c1878213620a77c01796a9cb014e7a}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a60c1878213620a77c01796a9cb014e7a}{get\+Number\+Of\+New\+Organs}} () const
+\begin{DoxyCompactList}\small\item\em The number of new roots created in the previous time step. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a082990cd6df74ef811f3e2b1de11621f}{get\+Updated\+Node\+Indices}} () const
+\begin{DoxyCompactList}\small\item\em Indices of nodes that were updated in the previous time step. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_aab29e5ba6d0d443488360e0fe5a212f7}{get\+Updated\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em new coordinates of the updated nodes \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a1d9bd4ffd04ea7a2853583fb97ffc28c}{get\+Updated\+Node\+CTs}} () const
+\begin{DoxyCompactList}\small\item\em new coordinates of the updated nodes \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6da393d8a45fc6e4930f3db7a938c019}{get\+New\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em nodes created in the previous time step \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_aad265e0b94b664ba329ccd833095bb62}{get\+New\+Node\+CTs}} () const
+\begin{DoxyCompactList}\small\item\em nodes created in the previous time step \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a16639838652893674d52ffcfdeb74f8c}{get\+New\+Segments}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em Segments created in the previous time step. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_ad4d685533adbfa7e0cc9b7b97168c406}{get\+New\+Segment\+Origins}} (int ot=-\/1) const
+\begin{DoxyCompactList}\small\item\em Copies a pointer to the root containing the new segments. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_organism_ae35837c60428a354a289c1817da4bf2c}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em quick info for debugging \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_aff80c2e5b594681b0c5f4a361d005cdc}\label{class_c_plant_box_1_1_organism_aff80c2e5b594681b0c5f4a361d005cdc}} 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organism_aff80c2e5b594681b0c5f4a361d005cdc}{initialize\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em initializes parameter reader \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organism_adb958dfb52157e92159c52f2ec70ec20}{read\+Parameters}} (std\+::string name, std\+::string basetag=\char`\"{}plant\char`\"{}, bool from\+File=true, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em reads all organ type parameters from a xml file \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_organism_a9690362a923b3c3c830b3ec74049e27a}{write\+Parameters}} (std\+::string name, std\+::string basetag=\char`\"{}plant\char`\"{}, bool into\+File=true, bool comments=true) const
+\begin{DoxyCompactList}\small\item\em write all organ type parameters into a xml file \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_organism_adadd804f773658a2792f73d649315139}{write}} (std\+::string name, bool into\+File=true) const
+\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organism_a85b2ed453f21df087b3f4c8bc8c853e3}{write\+VTP}} (int otype, std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em writes simulation results (type is determined from file extension in name) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organism_aa1517201d005adbd1bb591f0d78f1c2a}{write\+Geometry}} (std\+::ostream \&os) const
+\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_organism_af46bd0b04fc579e5d64a40cb9ff565c6}{write\+RSML}} (std\+::string name, bool into\+File=true) const
+\begin{DoxyCompactList}\small\item\em writes a RSML file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a418fb0b8204e091402e7c99e4ca66dcd}\label{class_c_plant_box_1_1_organism_a418fb0b8204e091402e7c99e4ca66dcd}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a418fb0b8204e091402e7c99e4ca66dcd}{get\+RSMLSkip}} () const
+\begin{DoxyCompactList}\small\item\em skips points in the RSML output (default = 0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a3a9afa121670fc4d7d31514689cec43b}\label{class_c_plant_box_1_1_organism_a3a9afa121670fc4d7d31514689cec43b}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organism_a3a9afa121670fc4d7d31514689cec43b}{set\+RSMLSkip}} (int skip)
+\begin{DoxyCompactList}\small\item\em skips points in the RSML output (default = 0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a2c8846f7b6e93d326e98afc5392fa19c}\label{class_c_plant_box_1_1_organism_a2c8846f7b6e93d326e98afc5392fa19c}} 
+std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{class_c_plant_box_1_1_organism_a2c8846f7b6e93d326e98afc5392fa19c}{get\+RSMLProperties}} ()
+\begin{DoxyCompactList}\small\item\em reference to the vector$<$string$>$ of RSML property names, default is \{ \char`\"{}organ\+Type\char`\"{}, \char`\"{}sub\+Type\char`\"{},\char`\"{}length\char`\"{}, \char`\"{}age\char`\"{} \} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a88edf4d05def898a651ffb65055685d9}\label{class_c_plant_box_1_1_organism_a88edf4d05def898a651ffb65055685d9}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a88edf4d05def898a651ffb65055685d9}{get\+Organ\+Index}} ()
+\begin{DoxyCompactList}\small\item\em returns next unique organ id, only organ constructors should call this \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ae1a4015e7304038fdcb365bb22a94070}\label{class_c_plant_box_1_1_organism_ae1a4015e7304038fdcb365bb22a94070}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_ae1a4015e7304038fdcb365bb22a94070}{get\+Node\+Index}} ()
+\begin{DoxyCompactList}\small\item\em returns next unique node id, only organ constructors should call this \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a2f4b08d75b2c2d5eadee994b744ca478}\label{class_c_plant_box_1_1_organism_a2f4b08d75b2c2d5eadee994b744ca478}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organism_a2f4b08d75b2c2d5eadee994b744ca478}{set\+Min\+Dx}} (double dx)
+\begin{DoxyCompactList}\small\item\em minimum segment size, smaller segments will be skipped \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a0cbe3b2696c861f4c32be7dcfa0edc6f}\label{class_c_plant_box_1_1_organism_a0cbe3b2696c861f4c32be7dcfa0edc6f}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organism_a0cbe3b2696c861f4c32be7dcfa0edc6f}{get\+Min\+Dx}} ()
+\begin{DoxyCompactList}\small\item\em minimum segment size, smaller segments will be skipped \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6e76098753c1ccc783650177c9cd140b}{set\+Seed}} (unsigned int seed)
+\begin{DoxyCompactList}\small\item\em sets the seed of the organisms random number generator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a8d5be0722b05e4bbd4b52a1858331fb0}\label{class_c_plant_box_1_1_organism_a8d5be0722b05e4bbd4b52a1858331fb0}} 
+unsigned int {\bfseries get\+Seed\+Val} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a9e7d54a48afaf8098f8eabd339db6273}\label{class_c_plant_box_1_1_organism_a9e7d54a48afaf8098f8eabd339db6273}} 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_organism_a9e7d54a48afaf8098f8eabd339db6273}{rand}} ()
+\begin{DoxyCompactList}\small\item\em uniformly distributed random number \mbox{[}0, 1) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a8c483d75b04b85c59a1fad9731be514c}\label{class_c_plant_box_1_1_organism_a8c483d75b04b85c59a1fad9731be514c}} 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_organism_a8c483d75b04b85c59a1fad9731be514c}{randn}} ()
+\begin{DoxyCompactList}\small\item\em normally distributed random number \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a9090f3045760d1767744dea87d09c909}\label{class_c_plant_box_1_1_organism_a9090f3045760d1767744dea87d09c909}} 
+void {\bfseries set\+Stochastic} (bool stochastic\+\_\+)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a231303527ad5fcbebe4eccc039380ff5}\label{class_c_plant_box_1_1_organism_a231303527ad5fcbebe4eccc039380ff5}} 
+bool {\bfseries get\+Stochastic} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a13510c312c6566eea1bdbbed15344fb6}\label{class_c_plant_box_1_1_organism_a13510c312c6566eea1bdbbed15344fb6}} 
+virtual bool \mbox{\hyperlink{class_c_plant_box_1_1_organism_a13510c312c6566eea1bdbbed15344fb6}{has\+Rel\+Coord}} ()
+\begin{DoxyCompactList}\small\item\em overriden by @\+Plant\+::has\+Rel\+Coord() \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a50426a94ef27814636cc116dd163d319}{get\+Delay\+Definition}} (int ot\+\_\+lat)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a1c8ae3b76dbb107cb1a47cba2b495191}{organ\+Type\+Number}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em organ type number from a string REMOVE? \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf3edf627dfd03e6a6aaa5167d1f8962}{organ\+Type\+Name}} (int ot)
+\begin{DoxyCompactList}\small\item\em organ type name from an organ type number REMOVE? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a5eb440f9fb3f21a7371941b6e5406d86}\label{class_c_plant_box_1_1_organism_a5eb440f9fb3f21a7371941b6e5406d86}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a5eb440f9fb3f21a7371941b6e5406d86}{base\+Organs}}
+\begin{DoxyCompactList}\small\item\em base organs of the organism (e.\+g. seed, or initial plant) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a7f6099793a765d1dda077981cdb0e25f}\label{class_c_plant_box_1_1_organism_a7f6099793a765d1dda077981cdb0e25f}} 
+int {\bfseries plant\+Id}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_aba56ccd341664450effe12a8efbc94ae}\label{class_c_plant_box_1_1_organism_aba56ccd341664450effe12a8efbc94ae}} 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_aba56ccd341664450effe12a8efbc94ae}{organ\+Type\+Names}} = \{\char`\"{}organ\char`\"{}, \char`\"{}seed\char`\"{}, \char`\"{}root\char`\"{}, \char`\"{}stem\char`\"{}, \char`\"{}leaf\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em names of the organ types \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a1ed7003fdd63468d7a7fd2ba50e010d2}\label{class_c_plant_box_1_1_organism_a1ed7003fdd63468d7a7fd2ba50e010d2}} 
+static int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a1ed7003fdd63468d7a7fd2ba50e010d2}{instances}} = 0
+\begin{DoxyCompactList}\small\item\em the number of instances of this or derived classes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_ae08864d6ea60e5101d82a346318859a9}{get\+RSMLMetadata}} (\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_document}{tinyxml2\+::\+XMLDocument}} \&doc) const
+\item 
+virtual \mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a8c5a861fe95ca42c5dc2cfc7b59d0015}{get\+RSMLScene}} (\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_document}{tinyxml2\+::\+XMLDocument}} \&doc) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a3911496a418ccf3d8dedc63863757872}\label{class_c_plant_box_1_1_organism_a3911496a418ccf3d8dedc63863757872}} 
+std\+::array$<$ std\+::map$<$ int, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ $>$, number\+Of\+Organ\+Types $>$ {\bfseries organ\+Param}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a1854fc970329de599edf5c5f4dc21d8d}\label{class_c_plant_box_1_1_organism_a1854fc970329de599edf5c5f4dc21d8d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organism_a1854fc970329de599edf5c5f4dc21d8d}{geometry}} = std\+::make\+\_\+shared$<$\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}}$>$()
+\begin{DoxyCompactList}\small\item\em Confining geometry (unconfined by default) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a4aab4aee3f4f24dcf9dd215977396154}\label{class_c_plant_box_1_1_organism_a4aab4aee3f4f24dcf9dd215977396154}} 
+double {\bfseries simtime} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a981901c025733c88b9bcb009079b33d7}\label{class_c_plant_box_1_1_organism_a981901c025733c88b9bcb009079b33d7}} 
+double {\bfseries dt} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a9fc522aa1f2d075a5583b7fd96bcc787}\label{class_c_plant_box_1_1_organism_a9fc522aa1f2d075a5583b7fd96bcc787}} 
+int {\bfseries organ\+Id} = -\/1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_afdc98982bff59cbd9cf3cd91a325e5ac}\label{class_c_plant_box_1_1_organism_afdc98982bff59cbd9cf3cd91a325e5ac}} 
+int {\bfseries node\+Id} = -\/1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a54f3c075bd5bbf22669aeaed1e9fb14b}\label{class_c_plant_box_1_1_organism_a54f3c075bd5bbf22669aeaed1e9fb14b}} 
+int {\bfseries old\+Number\+Of\+Nodes} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a20d4782e0869305f4dc17238c17b2418}\label{class_c_plant_box_1_1_organism_a20d4782e0869305f4dc17238c17b2418}} 
+int {\bfseries old\+Number\+Of\+Organs} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_af3f6dd4c26019160f64b00869d42a08f}\label{class_c_plant_box_1_1_organism_af3f6dd4c26019160f64b00869d42a08f}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries rsml\+Properties} = \{\char`\"{}organ\+Type\char`\"{}, \char`\"{}sub\+Type\char`\"{}, \char`\"{}length\char`\"{}, \char`\"{}age\char`\"{}, \char`\"{}parent-\/node\char`\"{}, \char`\"{}diameter\char`\"{}\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a2bad2466b1517e23ac5d76b2a5020690}\label{class_c_plant_box_1_1_organism_a2bad2466b1517e23ac5d76b2a5020690}} 
+int {\bfseries rsml\+Skip} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ad916305850dc4973dc188060e59ad356}\label{class_c_plant_box_1_1_organism_ad916305850dc4973dc188060e59ad356}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organism_ad916305850dc4973dc188060e59ad356}{min\+Dx}} = 1.e-\/6
+\begin{DoxyCompactList}\small\item\em threshold value, smaller segments will be skipped, otherwise root tip direction can become NaN \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a23f1f0bc22f50b4b841bce90a0d48d7f}\label{class_c_plant_box_1_1_organism_a23f1f0bc22f50b4b841bce90a0d48d7f}} 
+unsigned int \mbox{\hyperlink{class_c_plant_box_1_1_organism_a23f1f0bc22f50b4b841bce90a0d48d7f}{seed\+\_\+val}}
+\begin{DoxyCompactList}\small\item\em value to use as seed, keep in memory to send to tropism \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a433e01a1c96da660d6304b3e34f8d795}\label{class_c_plant_box_1_1_organism_a433e01a1c96da660d6304b3e34f8d795}} 
+std\+::mt19937 {\bfseries gen}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a265684e245b13a1391100eac87186c37}\label{class_c_plant_box_1_1_organism_a265684e245b13a1391100eac87186c37}} 
+std\+::uniform\+\_\+real\+\_\+distribution$<$ double $>$ {\bfseries UD} = std\+::uniform\+\_\+real\+\_\+distribution$<$double$>$(0.\+0, 1.\+0)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a6c1bf5eebd376ca70ec0e1f8943589e0}\label{class_c_plant_box_1_1_organism_a6c1bf5eebd376ca70ec0e1f8943589e0}} 
+std\+::normal\+\_\+distribution$<$ double $>$ {\bfseries ND} = std\+::normal\+\_\+distribution$<$double$>$(0.\+0, 1.\+0)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a71b0eec51cca0ef8576b766bb0e7465d}\label{class_c_plant_box_1_1_organism_a71b0eec51cca0ef8576b766bb0e7465d}} 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_organism_a71b0eec51cca0ef8576b766bb0e7465d}{stochastic}} = true
+\begin{DoxyCompactList}\small\item\em Whether to implement stochasticity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a029a9dac942a72940b33e3c945cdaef4}\label{class_c_plant_box_1_1_organism_a029a9dac942a72940b33e3c945cdaef4}} 
+static const int {\bfseries number\+Of\+Organ\+Types} = 5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}}
+
+Manages the Organ\+Random\+Parameters Offers an interface for the simulation loop (initialize, simulate, ...) Collects node and line segment geometry from the organ tree Collect parameters from the organs Can collect information about the last time step Supports RSML, VTK, and a custom text output Holds global node index and organ index counter Holds random numbers generator for the organ classes 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a9fdef781edc982b80b494b7ffcc58f62}\label{class_c_plant_box_1_1_organism_a9fdef781edc982b80b494b7ffcc58f62}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!Organism@{Organism}}
+\index{Organism@{Organism}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{Organism()}{Organism()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Organism\+::\+Organism (\begin{DoxyParamCaption}\item[{unsigned int}]{seednum = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+Constructs organism, initializes random number generator 
+\begin{DoxyParams}{Parameters}
+{\em seednum} & option to set seed (for creation of random number) default = 0. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_af3c27dcd67fe2ac50c589acc65232207}\label{class_c_plant_box_1_1_organism_af3c27dcd67fe2ac50c589acc65232207}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ CPlant\+Box\+::\+Organism\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+destructor 
+
+deep copies the organism
+
+Deep copies the organism 
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a2f5abb9e303741b1829a362111c8751b}{CPlant\+Box\+::\+Root\+System}}, and \mbox{\hyperlink{class_c_plant_box_1_1_plant_af5c8e9db4a7430f6e544f4fa38bcff0d}{CPlant\+Box\+::\+Plant}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a50426a94ef27814636cc116dd163d319}\label{class_c_plant_box_1_1_organism_a50426a94ef27814636cc116dd163d319}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getDelayDefinition@{getDelayDefinition}}
+\index{getDelayDefinition@{getDelayDefinition}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getDelayDefinition()}{getDelayDefinition()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+Organism\+::get\+Delay\+Definition (\begin{DoxyParamCaption}\item[{int}]{ot\+\_\+lat }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Definition of growth delay type for a specific lateral organ type (delay\+Definition\+Shoot for stem or leaf, delay\+Definition for root) 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ot\+\_\+lat} & the lateral organ type (e.\+g. ot\+\_\+stem, ot\+\_\+leaf) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_aad265e0b94b664ba329ccd833095bb62}\label{class_c_plant_box_1_1_organism_aad265e0b94b664ba329ccd833095bb62}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getNewNodeCTs@{getNewNodeCTs}}
+\index{getNewNodeCTs@{getNewNodeCTs}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getNewNodeCTs()}{getNewNodeCTs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Organism\+::get\+New\+Node\+CTs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+nodes created in the previous time step 
+
+\begin{DoxyReturn}{Returns}
+a vector of the creation times of the nodes created in the last time step, initially start with a \mbox{\hyperlink{class_c_plant_box_1_1_organism_adfae2dc2accd1c833d72dc7b98041650}{Organism\+::get\+Node\+CTs()}} call
+\end{DoxyReturn}
+At a branching point we copy the creation time of the base root \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organism_adfae2dc2accd1c833d72dc7b98041650}{Organism\+::get\+Node\+CTs()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a6da393d8a45fc6e4930f3db7a938c019}\label{class_c_plant_box_1_1_organism_a6da393d8a45fc6e4930f3db7a938c019}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getNewNodes@{getNewNodes}}
+\index{getNewNodes@{getNewNodes}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getNewNodes()}{getNewNodes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ CPlant\+Box\+::\+Organism\+::get\+New\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+nodes created in the previous time step 
+
+\begin{DoxyReturn}{Returns}
+a vector of all nodes created during the last time step to dynamically add to the old node list, see also \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a274e70d8c987ef05cdb37cefb0b48b73}{Root\+System\+::get\+Nodes()}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ad4d685533adbfa7e0cc9b7b97168c406}\label{class_c_plant_box_1_1_organism_ad4d685533adbfa7e0cc9b7b97168c406}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getNewSegmentOrigins@{getNewSegmentOrigins}}
+\index{getNewSegmentOrigins@{getNewSegmentOrigins}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getNewSegmentOrigins()}{getNewSegmentOrigins()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ CPlant\+Box\+::\+Organism\+::get\+New\+Segment\+Origins (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const}
+
+
+
+Copies a pointer to the root containing the new segments. 
+
+Creates a vector of pointers to the organ class containing the segments, for each newly created segment of organ type
+\begin{DoxyParams}{Parameters}
+{\em ot,corresponding} & to the segments obtained by Organism\+::get\+New\+Segments(ot)\\
+\hline
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of pointers to organs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a16639838652893674d52ffcfdeb74f8c}\label{class_c_plant_box_1_1_organism_a16639838652893674d52ffcfdeb74f8c}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getNewSegments@{getNewSegments}}
+\index{getNewSegments@{getNewSegments}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getNewSegments()}{getNewSegments()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ CPlant\+Box\+::\+Organism\+::get\+New\+Segments (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const}
+
+
+
+Segments created in the previous time step. 
+
+Creates a vector of new created segments that were created during the last time step
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of newly created segments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_adfae2dc2accd1c833d72dc7b98041650}\label{class_c_plant_box_1_1_organism_adfae2dc2accd1c833d72dc7b98041650}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getNodeCTs@{getNodeCTs}}
+\index{getNodeCTs@{getNodeCTs}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getNodeCTs()}{getNodeCTs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Organism\+::get\+Node\+CTs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+node creation times, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}{Organism\+::get\+Nodes}} 
+
+The organim\textquotesingle{}s node creation times of a specific organ type corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}{Organism\+::get\+Nodes}}.
+
+At a branching point, there are two creation times attached to one node, the creation time of the base node, and the emergence time of the lateral root. This method copies the node creation time of time of the base root.
+
+\begin{DoxyReturn}{Returns}
+a vector of node creation times 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}\label{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ CPlant\+Box\+::\+Organism\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+nodes of the organ 
+
+All nodes of emerged organs are ordered by their node index, initial nodes of base organs are copied, even if not emerged.
+
+\begin{DoxyReturn}{Returns}
+a vector of nodes 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a274e70d8c987ef05cdb37cefb0b48b73}{CPlant\+Box\+::\+Root\+System}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a6d6f64fcd1c7cff0ede160be971ae86f}\label{class_c_plant_box_1_1_organism_a6d6f64fcd1c7cff0ede160be971ae86f}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getNumberOfSegments@{getNumberOfSegments}}
+\index{getNumberOfSegments@{getNumberOfSegments}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getNumberOfSegments()}{getNumberOfSegments()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+Organism\+::get\+Number\+Of\+Segments (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+number of segments of the organism 
+
+Returns the organisms number of segments of a specific organ type
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total number of segments in the organism of type ot 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a48f1e3aeb5e51fb971aaa756a3f23a95}{CPlant\+Box\+::\+Root\+System}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_aeff72713063d26d942617b5e44f54b2c}\label{class_c_plant_box_1_1_organism_aeff72713063d26d942617b5e44f54b2c}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getOrganRandomParameter@{getOrganRandomParameter}}
+\index{getOrganRandomParameter@{getOrganRandomParameter}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getOrganRandomParameter()}{getOrganRandomParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ $>$ CPlant\+Box\+::\+Organism\+::get\+Organ\+Random\+Parameter (\begin{DoxyParamCaption}\item[{int}]{ot }\end{DoxyParamCaption}) const}
+
+
+
+returns all type parameters of an organ type (e.\+g. root) 
+
+Copies the organ random parameters of all sub types of one specific organ type into a vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the organ type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+all random parameters as a list (list index != sub\+Type) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a9fb43549e1a06b8feede14a9159d4107}\label{class_c_plant_box_1_1_organism_a9fb43549e1a06b8feede14a9159d4107}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getOrganRandomParameter@{getOrganRandomParameter}}
+\index{getOrganRandomParameter@{getOrganRandomParameter}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getOrganRandomParameter()}{getOrganRandomParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ CPlant\+Box\+::\+Organism\+::get\+Organ\+Random\+Parameter (\begin{DoxyParamCaption}\item[{int}]{ot,  }\item[{int}]{sub\+Type }\end{DoxyParamCaption}) const}
+
+
+
+returns the respective the type parameter 
+
+Returns an organ random parameter of a specific organ type and sub type
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the organ type (e.\+g. ot\+\_\+root) \\
+\hline
+{\em sub\+Type} & the sub type (e.\+g. root type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the respective random parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ae93dc36c962f81f05efcd07a0702a70f}\label{class_c_plant_box_1_1_organism_ae93dc36c962f81f05efcd07a0702a70f}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getOrgans@{getOrgans}}
+\index{getOrgans@{getOrgans}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getOrgans()}{getOrgans()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ CPlant\+Box\+::\+Organism\+::get\+Organs (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1},  }\item[{bool}]{all = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+sequential list of organs 
+
+Creates a sequential list of organs. Considers only organs with more than 1 node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default). \\
+\hline
+{\em all} & get also the organs with only one node? default\+: false. Sometimes true for carbon-\/limited growth \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sequential list of organs. For all == false, if there is less than one node, or another organ type is expected, an empty vector is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_aa524db373c51ccee0e199baf3dc7dfb7}\label{class_c_plant_box_1_1_organism_aa524db373c51ccee0e199baf3dc7dfb7}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getParameter@{getParameter}}
+\index{getParameter@{getParameter}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getParameter()}{getParameter()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Organism\+::get\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{ot = {\ttfamily -\/1},  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$$>$}]{organs = {\ttfamily std\+:\+:vector$<$std\+:\+:shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}}$>$$>$(0)} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+parameter value per organ 
+
+Returns a single scalar parameter for each organ as sequential list, corresponding to the sequential organ list, see \mbox{\hyperlink{class_c_plant_box_1_1_organism_ae93dc36c962f81f05efcd07a0702a70f}{Organism\+::get\+Organs}}.
+
+This method is mostly for post processing, since it is flexible but slow.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the parameter \\
+\hline
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default). \\
+\hline
+{\em organs} & optionally, a predefined sequential organ list can be used (\\
+\hline
+{\em ot} & is ignored in this case) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of one parameter values per each organ, if unknown NaN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a7ecfd2ee315a1b3c17e6ae9bb95ad30c}\label{class_c_plant_box_1_1_organism_a7ecfd2ee315a1b3c17e6ae9bb95ad30c}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getParameterSubType@{getParameterSubType}}
+\index{getParameterSubType@{getParameterSubType}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getParameterSubType()}{getParameterSubType()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+Organism\+::get\+Parameter\+Sub\+Type (\begin{DoxyParamCaption}\item[{int}]{organtype,  }\item[{std\+::string}]{str }\end{DoxyParamCaption}) const}
+
+
+
+returns the parameter sub type index of name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & REMOVE?\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Get the organ sub type by its name
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em organtype} & the organ type \\
+\hline
+{\em str} & the sub type name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a4e5b91a9d37d30993bf74efad187f7d5}\label{class_c_plant_box_1_1_organism_a4e5b91a9d37d30993bf74efad187f7d5}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getPolylineCTs@{getPolylineCTs}}
+\index{getPolylineCTs@{getPolylineCTs}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getPolylineCTs()}{getPolylineCTs()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ CPlant\+Box\+::\+Organism\+::get\+Polyline\+CTs (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const}
+
+
+
+node creation times per organ 
+
+The corresponding node creation times to the organ polyline representation (\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organism_a2aece1527bb9147e059027a2f07789eb}{Organism\+::get\+Polylines}})
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+for each organ a vector of nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a2aece1527bb9147e059027a2f07789eb}\label{class_c_plant_box_1_1_organism_a2aece1527bb9147e059027a2f07789eb}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getPolylines@{getPolylines}}
+\index{getPolylines@{getPolylines}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getPolylines()}{getPolylines()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ $>$ CPlant\+Box\+::\+Organism\+::get\+Polylines (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const}
+
+
+
+nodes per organ 
+
+Represents the organ\textquotesingle{}s nodes as polyline
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+for each organ a vector of nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ae08864d6ea60e5101d82a346318859a9}\label{class_c_plant_box_1_1_organism_ae08864d6ea60e5101d82a346318859a9}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getRSMLMetadata@{getRSMLMetadata}}
+\index{getRSMLMetadata@{getRSMLMetadata}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getRSMLMetadata()}{getRSMLMetadata()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$ CPlant\+Box\+::\+Organism\+::get\+RSMLMetadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_document}{tinyxml2\+::\+XMLDocument}} \&}]{xml\+Doc }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the meta tag of the rsml file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a8c5a861fe95ca42c5dc2cfc7b59d0015}\label{class_c_plant_box_1_1_organism_a8c5a861fe95ca42c5dc2cfc7b59d0015}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getRSMLScene@{getRSMLScene}}
+\index{getRSMLScene@{getRSMLScene}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getRSMLScene()}{getRSMLScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$ CPlant\+Box\+::\+Organism\+::get\+RSMLScene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_document}{tinyxml2\+::\+XMLDocument}} \&}]{xml\+Doc }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the scene tag of the RSML document, calls base organs to write their tags 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a5378a2cf5520e45eb462da5f18d5e80c}\label{class_c_plant_box_1_1_organism_a5378a2cf5520e45eb462da5f18d5e80c}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getSeed@{getSeed}}
+\index{getSeed@{getSeed}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getSeed()}{getSeed()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_seed}{Seed}} $>$ CPlant\+Box\+::\+Organism\+::get\+Seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+the plant seed 
+
+Returns the seed of the plant \mbox{\Hypertarget{class_c_plant_box_1_1_organism_ab48d977d455593480cb7e3e21e469fc3}\label{class_c_plant_box_1_1_organism_ab48d977d455593480cb7e3e21e469fc3}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getSegmentCTs@{getSegmentCTs}}
+\index{getSegmentCTs@{getSegmentCTs}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getSegmentCTs()}{getSegmentCTs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Organism\+::get\+Segment\+CTs (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+line creation times, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}{Organism\+::get\+Segments}} 
+
+The creation time per segment, corresponding to Organism\+::get\+Segments(ot). The segment creation time equals the node creation time of the second node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+creation times of each segment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a0a68f0a373c04bed04e3e88d902678ef}\label{class_c_plant_box_1_1_organism_a0a68f0a373c04bed04e3e88d902678ef}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getSegmentIds@{getSegmentIds}}
+\index{getSegmentIds@{getSegmentIds}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getSegmentIds()}{getSegmentIds()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ CPlant\+Box\+::\+Organism\+::get\+Segment\+Ids (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+line segment indices, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}{Organism\+::get\+Segments}} 
+
+The segment indexes, corresponding to Organism\+::get\+Segments(ot).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id of each segment 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a35f3c47181e94636b743ae5f3a188b3e}{CPlant\+Box\+::\+Mapped\+Plant}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a206928d94f9155a82d606358d54f78ce}\label{class_c_plant_box_1_1_organism_a206928d94f9155a82d606358d54f78ce}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getSegmentOrigins@{getSegmentOrigins}}
+\index{getSegmentOrigins@{getSegmentOrigins}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getSegmentOrigins()}{getSegmentOrigins()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ CPlant\+Box\+::\+Organism\+::get\+Segment\+Origins (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+points to the organ which contains the segment, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}{Organism\+::get\+Segments}} 
+
+A vector of pointers to the organs containing each segment, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}{Organism\+::get\+Segments}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+creation times of each segment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}\label{class_c_plant_box_1_1_organism_acf810cf27c9aa0352b516189631a81cc}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getSegments@{getSegments}}
+\index{getSegments@{getSegments}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getSegments()}{getSegments()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ CPlant\+Box\+::\+Organism\+::get\+Segments (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+line segment containing two node indices, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}{Organism\+::get\+Nodes}} 
+
+The line segments of the organism, each segment consisting of two node indices, corresponding to the node list Organism\+::get\+Node(-\/1), or the node indices from Organism\+::get\+Node\+Id(ot).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+line segments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a4f69633ac67398081932e1967334144e}\label{class_c_plant_box_1_1_organism_a4f69633ac67398081932e1967334144e}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getSummed@{getSummed}}
+\index{getSummed@{getSummed}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getSummed()}{getSummed()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Organism\+::get\+Summed (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const}
+
+
+
+summed up parameters 
+
+Returns the summed parameter, obtained by Organism\+::get\+Parameters (e.\+g. get\+Summed(\char`\"{}length\char`\"{}))
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the parameter \\
+\hline
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the summed up value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a1d9bd4ffd04ea7a2853583fb97ffc28c}\label{class_c_plant_box_1_1_organism_a1d9bd4ffd04ea7a2853583fb97ffc28c}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getUpdatedNodeCTs@{getUpdatedNodeCTs}}
+\index{getUpdatedNodeCTs@{getUpdatedNodeCTs}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getUpdatedNodeCTs()}{getUpdatedNodeCTs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Organism\+::get\+Updated\+Node\+CTs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+new coordinates of the updated nodes 
+
+\begin{DoxyReturn}{Returns}
+the new creation times of nodes that were updated during the last time step, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_a082990cd6df74ef811f3e2b1de11621f}{Organism\+::get\+Updated\+Node\+Indices}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a082990cd6df74ef811f3e2b1de11621f}\label{class_c_plant_box_1_1_organism_a082990cd6df74ef811f3e2b1de11621f}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getUpdatedNodeIndices@{getUpdatedNodeIndices}}
+\index{getUpdatedNodeIndices@{getUpdatedNodeIndices}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getUpdatedNodeIndices()}{getUpdatedNodeIndices()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ CPlant\+Box\+::\+Organism\+::get\+Updated\+Node\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Indices of nodes that were updated in the previous time step. 
+
+\begin{DoxyReturn}{Returns}
+the indices of the nodes that were moved during the last time step, update the node coordinates using \mbox{\hyperlink{class_c_plant_box_1_1_organism_aab29e5ba6d0d443488360e0fe5a212f7}{Organism\+::get\+Updated\+Nodes()}}, and creation times using \mbox{\hyperlink{class_c_plant_box_1_1_organism_a1d9bd4ffd04ea7a2853583fb97ffc28c}{Organism\+::get\+Updated\+Node\+CTs()}} for stem and leaves, assume that all the old nodes need to be updated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_aab29e5ba6d0d443488360e0fe5a212f7}\label{class_c_plant_box_1_1_organism_aab29e5ba6d0d443488360e0fe5a212f7}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!getUpdatedNodes@{getUpdatedNodes}}
+\index{getUpdatedNodes@{getUpdatedNodes}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{getUpdatedNodes()}{getUpdatedNodes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ CPlant\+Box\+::\+Organism\+::get\+Updated\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+new coordinates of the updated nodes 
+
+\begin{DoxyReturn}{Returns}
+the new coordinates of nodes that were updated during the last time step, corresponding to \mbox{\hyperlink{class_c_plant_box_1_1_organism_a082990cd6df74ef811f3e2b1de11621f}{Organism\+::get\+Updated\+Node\+Indices}} for stem and leaves, assume that all the old nodes need to be updated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a0b94d4a64b67eb1f9755b54eab1fb9e1}\label{class_c_plant_box_1_1_organism_a0b94d4a64b67eb1f9755b54eab1fb9e1}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!initialize@{initialize}}
+\index{initialize@{initialize}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organism\+::initialize (\begin{DoxyParamCaption}\item[{bool}]{verbose = {\ttfamily true},  }\item[{std\+::string}]{mode = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+initialize before simulation, overwrite to setup model 
+
+Overwrite if there is the need for additional initializations, before the simulation starts.
+
+e.\+g. for initialization of Growth\+Functions, Tropism\+Functions, set up base Organs 
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}{CPlant\+Box\+::\+Root\+System}}, and \mbox{\hyperlink{class_c_plant_box_1_1_plant_afcda1c37b70b7755840d760f2a60bffe}{CPlant\+Box\+::\+Plant}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_acf3edf627dfd03e6a6aaa5167d1f8962}\label{class_c_plant_box_1_1_organism_acf3edf627dfd03e6a6aaa5167d1f8962}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!organTypeName@{organTypeName}}
+\index{organTypeName@{organTypeName}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{organTypeName()}{organTypeName()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Organism\+::organ\+Type\+Name (\begin{DoxyParamCaption}\item[{int}]{ot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+organ type name from an organ type number REMOVE? 
+
+\begin{DoxyReturn}{Returns}
+the organ type name of an organ type number
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ot} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a1c8ae3b76dbb107cb1a47cba2b495191}\label{class_c_plant_box_1_1_organism_a1c8ae3b76dbb107cb1a47cba2b495191}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!organTypeNumber@{organTypeNumber}}
+\index{organTypeNumber@{organTypeNumber}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{organTypeNumber()}{organTypeNumber()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+Organism\+::organ\+Type\+Number (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+organ type number from a string REMOVE? 
+
+\begin{DoxyReturn}{Returns}
+the organ type number of an organ type name
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_adb958dfb52157e92159c52f2ec70ec20}\label{class_c_plant_box_1_1_organism_adb958dfb52157e92159c52f2ec70ec20}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!readParameters@{readParameters}}
+\index{readParameters@{readParameters}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{readParameters()}{readParameters()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organism\+::read\+Parameters (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{basetag = {\ttfamily \char`\"{}plant\char`\"{}},  }\item[{bool}]{from\+File = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+reads all organ type parameters from a xml file 
+
+Polymorphic XML parameter file reader\+: adds all organ parameter types of a XML file to the organism\textquotesingle{}s parameters
+
+Each Organ\+Type\+Parameter must have already one prototype defined in the organ type parameters Organism\+::organ\+Param, since the organ type parameters are created by Organ\+Type\+Parameter\+::copy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & file name or data as string \\
+\hline
+{\em basetag} & name of the base tag (e.\+g. \char`\"{}organism\char`\"{}, or \char`\"{}plant\char`\"{}) \\
+\hline
+{\em from\+File} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_system_ac2390ca6fdcd50fd7a511a0eacfc900f}{CPlant\+Box\+::\+Root\+System}}, and \mbox{\hyperlink{class_c_plant_box_1_1_plant_ac158acc4a003c9e37fb472acce8e1990}{CPlant\+Box\+::\+Plant}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ab65cd34d756c1fd975eafe142be4d571}\label{class_c_plant_box_1_1_organism_ab65cd34d756c1fd975eafe142be4d571}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!setOrganRandomParameter@{setOrganRandomParameter}}
+\index{setOrganRandomParameter@{setOrganRandomParameter}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{setOrganRandomParameter()}{setOrganRandomParameter()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organism\+::set\+Organ\+Random\+Parameter (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$}]{p }\end{DoxyParamCaption})}
+
+
+
+sets an organ type parameter, sub\+Type and organ\+Type defined within p 
+
+Sets the random parameter. sub\+Type and organ\+Type are defined within
+\begin{DoxyParams}{Parameters}
+{\em p.} & \\
+\hline
+{\em p} & the organ random parameter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a6e76098753c1ccc783650177c9cd140b}\label{class_c_plant_box_1_1_organism_a6e76098753c1ccc783650177c9cd140b}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!setSeed@{setSeed}}
+\index{setSeed@{setSeed}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{setSeed()}{setSeed()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organism\+::set\+Seed (\begin{DoxyParamCaption}\item[{unsigned int}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+sets the seed of the organisms random number generator 
+
+Sets the seed of the organisms random number generator. In order to obtain two exact same organisms call before \mbox{\hyperlink{class_c_plant_box_1_1_organism_a0b94d4a64b67eb1f9755b54eab1fb9e1}{Organism\+::initialize()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & the random number generator seed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_af3c862c732db32f4b4acf1a93b73acf6}\label{class_c_plant_box_1_1_organism_af3c862c732db32f4b4acf1a93b73acf6}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!simulate@{simulate}}
+\index{simulate@{simulate}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organism\+::simulate (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+calls the base organs simulate methods 
+
+Simulates the development of the organism in a time span of
+\begin{DoxyParams}{Parameters}
+{\em dt} & days.\\
+\hline
+{\em dt} & time step \mbox{[}day\mbox{]} \\
+\hline
+{\em verbose} & turns console output on or off \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a189f57c72a4e7e603eefdbe3e54c9d4d}{CPlant\+Box\+::\+Root\+System}}, \mbox{\hyperlink{class_c_plant_box_1_1_plant_ad2f0a126741fa6abfe43c6acc260c548}{CPlant\+Box\+::\+Plant}}, and \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a9b1ccd5112e144fc3f02d6f7d901773d}{CPlant\+Box\+::\+Mapped\+Plant}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_ae35837c60428a354a289c1817da4bf2c}\label{class_c_plant_box_1_1_organism_ae35837c60428a354a289c1817da4bf2c}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Organism\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+quick info for debugging 
+
+\begin{DoxyReturn}{Returns}
+Quick info about the object for debugging 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a4ea4d4773bd4cd2bb144893af757507d}{CPlant\+Box\+::\+Root\+System}}, and \mbox{\hyperlink{class_c_plant_box_1_1_plant_a52f7db3f069edf04c38b8cd3fbce491e}{CPlant\+Box\+::\+Plant}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_adadd804f773658a2792f73d649315139}\label{class_c_plant_box_1_1_organism_adadd804f773658a2792f73d649315139}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!write@{write}}
+\index{write@{write}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Organism\+::write (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{bool}]{into\+File = {\ttfamily true} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Exports the simulation results with the type from the extension in name (that must be lower case)
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & file name e.\+g. output.\+vtp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_aa1517201d005adbd1bb591f0d78f1c2a}\label{class_c_plant_box_1_1_organism_aa1517201d005adbd1bb591f0d78f1c2a}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!writeGeometry@{writeGeometry}}
+\index{writeGeometry@{writeGeometry}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{writeGeometry()}{writeGeometry()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organism\+::write\+Geometry (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes the current confining geometry (e.\+g. a plant container) as paraview python script Just adds the initial lines, before calling the method of the sdf.
+
+todo move to \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} (including geometry)
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & typically a file out stream \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a9690362a923b3c3c830b3ec74049e27a}\label{class_c_plant_box_1_1_organism_a9690362a923b3c3c830b3ec74049e27a}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!writeParameters@{writeParameters}}
+\index{writeParameters@{writeParameters}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{writeParameters()}{writeParameters()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Organism\+::write\+Parameters (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{basetag = {\ttfamily \char`\"{}plant\char`\"{}},  }\item[{bool}]{into\+File = {\ttfamily true},  }\item[{bool}]{comments = {\ttfamily true} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+write all organ type parameters into a xml file 
+
+XML parameter file writer writes all organ parameter types into a XML File
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & file name \\
+\hline
+{\em basetag} & name of the base tag (e.\+g. \char`\"{}organism\char`\"{}, or \char`\"{}plant\char`\"{}) $\ast$ \\
+\hline
+{\em into\+File} & write into file (true) or return as string (false) \\
+\hline
+{\em comments} & write parameter descriptions \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_af46bd0b04fc579e5d64a40cb9ff565c6}\label{class_c_plant_box_1_1_organism_af46bd0b04fc579e5d64a40cb9ff565c6}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!writeRSML@{writeRSML}}
+\index{writeRSML@{writeRSML}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{writeRSML()}{writeRSML()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Organism\+::write\+RSML (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{bool}]{into\+File = {\ttfamily true} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+writes a RSML file 
+
+Creates a rsml file with filename
+\begin{DoxyParams}{Parameters}
+{\em name.} & \\
+\hline
+{\em name} & name of the rsml file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organism_a85b2ed453f21df087b3f4c8bc8c853e3}\label{class_c_plant_box_1_1_organism_a85b2ed453f21df087b3f4c8bc8c853e3}} 
+\index{CPlantBox::Organism@{CPlantBox::Organism}!writeVTP@{writeVTP}}
+\index{writeVTP@{writeVTP}!CPlantBox::Organism@{CPlantBox::Organism}}
+\doxysubsubsection{\texorpdfstring{writeVTP()}{writeVTP()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organism\+::write\+VTP (\begin{DoxyParamCaption}\item[{int}]{otype,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+writes simulation results (type is determined from file extension in name) 
+
+write VTP using tiny\+XML 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Organism.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Organism.\+cpp\end{DoxyCompactItemize}

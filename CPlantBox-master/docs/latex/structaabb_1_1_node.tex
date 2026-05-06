@@ -1,0 +1,82 @@
+\hypertarget{structaabb_1_1_node}{}\doxysection{aabb\+::Node Struct Reference}
+\label{structaabb_1_1_node}\index{aabb::Node@{aabb::Node}}
+
+
+A node of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} tree.  
+
+
+
+
+{\ttfamily \#include $<$AABB.\+h$>$}
+
+
+
+Collaboration diagram for aabb\+::Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{structaabb_1_1_node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaabb_1_1_node_a1236f72c4c32d6777b61e2aa7ec886ba}\label{structaabb_1_1_node_a1236f72c4c32d6777b61e2aa7ec886ba}} 
+\mbox{\hyperlink{structaabb_1_1_node_a1236f72c4c32d6777b61e2aa7ec886ba}{Node}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structaabb_1_1_node_a01b82fd3dda6c1ff4960e784af62e339}{is\+Leaf}} () const
+\begin{DoxyCompactList}\small\item\em Test whether the node is a leaf. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaabb_1_1_node_a066c2013a78dc0640a03b8572faa0d32}\label{structaabb_1_1_node_a066c2013a78dc0640a03b8572faa0d32}} 
+\mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \mbox{\hyperlink{structaabb_1_1_node_a066c2013a78dc0640a03b8572faa0d32}{aabb}}
+\begin{DoxyCompactList}\small\item\em The fattened axis-\/aligned bounding box. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaabb_1_1_node_a1e1ee8158d1664081214a1f823b88758}\label{structaabb_1_1_node_a1e1ee8158d1664081214a1f823b88758}} 
+unsigned int \mbox{\hyperlink{structaabb_1_1_node_a1e1ee8158d1664081214a1f823b88758}{parent}}
+\begin{DoxyCompactList}\small\item\em Index of the parent node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaabb_1_1_node_a8cd0e75894b45d9c3a01e7307f3169ce}\label{structaabb_1_1_node_a8cd0e75894b45d9c3a01e7307f3169ce}} 
+unsigned int \mbox{\hyperlink{structaabb_1_1_node_a8cd0e75894b45d9c3a01e7307f3169ce}{next}}
+\begin{DoxyCompactList}\small\item\em Index of the next node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaabb_1_1_node_aaf524d3b2a91427739e562931ea49f30}\label{structaabb_1_1_node_aaf524d3b2a91427739e562931ea49f30}} 
+unsigned int \mbox{\hyperlink{structaabb_1_1_node_aaf524d3b2a91427739e562931ea49f30}{left}}
+\begin{DoxyCompactList}\small\item\em Index of the left-\/hand child. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaabb_1_1_node_a4e9ae2baf65fbbbddb95985318ff1900}\label{structaabb_1_1_node_a4e9ae2baf65fbbbddb95985318ff1900}} 
+unsigned int \mbox{\hyperlink{structaabb_1_1_node_a4e9ae2baf65fbbbddb95985318ff1900}{right}}
+\begin{DoxyCompactList}\small\item\em Index of the right-\/hand child. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaabb_1_1_node_a00cd12243b1ddbaf52a594d3db58d835}\label{structaabb_1_1_node_a00cd12243b1ddbaf52a594d3db58d835}} 
+int \mbox{\hyperlink{structaabb_1_1_node_a00cd12243b1ddbaf52a594d3db58d835}{height}}
+\begin{DoxyCompactList}\small\item\em Height of the node. This is 0 for a leaf and -\/1 for a free node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaabb_1_1_node_a62e99a6f43cf7a423dfb44323b78f561}\label{structaabb_1_1_node_a62e99a6f43cf7a423dfb44323b78f561}} 
+unsigned int \mbox{\hyperlink{structaabb_1_1_node_a62e99a6f43cf7a423dfb44323b78f561}{particle}}
+\begin{DoxyCompactList}\small\item\em The index of the particle that the node contains (leaf nodes only). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A node of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} tree. 
+
+Each node of the tree contains an \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} object which corresponds to a particle, or a group of particles, in the simulation box. The \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} objects of individual particles are \char`\"{}fattened\char`\"{} before they are stored to avoid having to continually update and rebalance the tree when displacements are small.
+
+Nodes are aware of their position within in the tree. The is\+Leaf member function allows the tree to query whether the node is a leaf, i.\+e. to determine whether it holds a single particle. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structaabb_1_1_node_a01b82fd3dda6c1ff4960e784af62e339}\label{structaabb_1_1_node_a01b82fd3dda6c1ff4960e784af62e339}} 
+\index{aabb::Node@{aabb::Node}!isLeaf@{isLeaf}}
+\index{isLeaf@{isLeaf}!aabb::Node@{aabb::Node}}
+\doxysubsubsection{\texorpdfstring{isLeaf()}{isLeaf()}}
+{\footnotesize\ttfamily bool aabb\+::\+Node\+::is\+Leaf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Test whether the node is a leaf. 
+
+\begin{DoxyReturn}{Returns}
+Whether the node is a leaf node. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/aabbcc/AABB.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/aabbcc/AABB.\+cc\end{DoxyCompactItemize}

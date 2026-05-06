@@ -1,0 +1,374 @@
+\hypertarget{classaabb_1_1_tree}{}\doxysection{aabb\+::Tree Class Reference}
+\label{classaabb_1_1_tree}\index{aabb::Tree@{aabb::Tree}}
+
+
+The dynamic \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} tree.  
+
+
+
+
+{\ttfamily \#include $<$AABB.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaabb_1_1_tree_ab8339ea3bced9bc9feaee2398bb7b278}{Tree}} (unsigned int dimension\+\_\+=3, double skin\+Thickness\+\_\+=0.\+05, unsigned int \mbox{\hyperlink{classaabb_1_1_tree_a2fd088c7e07a701109a6fd9b1248df82}{n\+Particles}}=16, bool touch\+Is\+Overlap=true)
+\begin{DoxyCompactList}\small\item\em Constructor (non-\/periodic). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaabb_1_1_tree_a047d7042ab32617660db2332268c1b13}{Tree}} (unsigned int, double, const std\+::vector$<$ bool $>$ \&, const std\+::vector$<$ double $>$ \&, unsigned int \mbox{\hyperlink{classaabb_1_1_tree_a2fd088c7e07a701109a6fd9b1248df82}{n\+Particles}}=16, bool touch\+Is\+Overlap=true)
+\begin{DoxyCompactList}\small\item\em Constructor (custom periodicity). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaabb_1_1_tree_a6df23b2721517120d126450e0af71543}{set\+Periodicity}} (const std\+::vector$<$ bool $>$ \&)
+\begin{DoxyCompactList}\small\item\em Set the periodicity of the simulation box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaabb_1_1_tree_a1847c033dd5ffb5ed562a8e58fe506d6}{set\+Box\+Size}} (const std\+::vector$<$ double $>$ \&)
+\begin{DoxyCompactList}\small\item\em Set the size of the simulation box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaabb_1_1_tree_a7f6348bb1ba0ea3c77f030ca7e8cff11}{insert\+Particle}} (unsigned int, std\+::vector$<$ double $>$ \&, double)
+\begin{DoxyCompactList}\small\item\em Insert a particle into the tree (point particle). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaabb_1_1_tree_a6d7cde2e788a4faa923cf613aab29cec}{insert\+Particle}} (unsigned int, std\+::vector$<$ double $>$ \&, std\+::vector$<$ double $>$ \&)
+\begin{DoxyCompactList}\small\item\em Insert a particle into the tree (arbitrary shape with bounding box). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_tree_a2fd088c7e07a701109a6fd9b1248df82}\label{classaabb_1_1_tree_a2fd088c7e07a701109a6fd9b1248df82}} 
+unsigned int \mbox{\hyperlink{classaabb_1_1_tree_a2fd088c7e07a701109a6fd9b1248df82}{n\+Particles}} ()
+\begin{DoxyCompactList}\small\item\em Return the number of particles in the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaabb_1_1_tree_a28a1831044ead0c79bc2ce3860b668cd}{remove\+Particle}} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Remove a particle from the tree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_tree_a77c3ec9b26b0af4f5f08b985c31c306e}\label{classaabb_1_1_tree_a77c3ec9b26b0af4f5f08b985c31c306e}} 
+void \mbox{\hyperlink{classaabb_1_1_tree_a77c3ec9b26b0af4f5f08b985c31c306e}{remove\+All}} ()
+\begin{DoxyCompactList}\small\item\em Remove all particles from the tree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaabb_1_1_tree_a683e0ce87a5e0ad8910f1844acee44dd}{update\+Particle}} (unsigned int, std\+::vector$<$ double $>$ \&, double, bool always\+Reinsert=false)
+\begin{DoxyCompactList}\small\item\em Update the tree if a particle moves outside its fattened \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaabb_1_1_tree_a7a307380d3c5b8a04690ca47a33fa0cc}{update\+Particle}} (unsigned int, std\+::vector$<$ double $>$ \&, std\+::vector$<$ double $>$ \&, bool always\+Reinsert=false)
+\begin{DoxyCompactList}\small\item\em Update the tree if a particle moves outside its fattened \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classaabb_1_1_tree_ad0b5cd68a14ddd97231040a4a0308a7c}{query}} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Query the tree to find candidate interactions for a particle. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classaabb_1_1_tree_a926e05f59177390bc321e0db10913ba7}{query}} (unsigned int, const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&)
+\begin{DoxyCompactList}\small\item\em Query the tree to find candidate interactions for an \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classaabb_1_1_tree_a8dd28dc47d245fa8c4bc962bb5e2adad}{query}} (const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&)
+\begin{DoxyCompactList}\small\item\em Query the tree to find candidate interactions for an \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \& \mbox{\hyperlink{classaabb_1_1_tree_a25575e9545711f8363a40cc84af86bac}{get\+AABB}} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Get a particle \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classaabb_1_1_tree_aea72e7f3d5dcb391f6e53bf8cfd98d3b}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the tree. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classaabb_1_1_tree_ab457383a707cbd187562b6a804bb7504}{get\+Node\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of nodes in the tree. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classaabb_1_1_tree_a689c51f052c3dc7fe3b4fd60d4253cca}{compute\+Maximum\+Balance}} () const
+\begin{DoxyCompactList}\small\item\em Compute the maximum balancance of the tree. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classaabb_1_1_tree_aaa94a5d7eedbeb617b578ae517f2ca72}{compute\+Surface\+Area\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Compute the surface area ratio of the tree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_tree_ac50bf8e6a3aabcd417f9193f63653c92}\label{classaabb_1_1_tree_ac50bf8e6a3aabcd417f9193f63653c92}} 
+void \mbox{\hyperlink{classaabb_1_1_tree_ac50bf8e6a3aabcd417f9193f63653c92}{validate}} () const
+\begin{DoxyCompactList}\small\item\em Validate the tree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_tree_a0091f110ace3bf8987895356cba4bf5d}\label{classaabb_1_1_tree_a0091f110ace3bf8987895356cba4bf5d}} 
+void \mbox{\hyperlink{classaabb_1_1_tree_a0091f110ace3bf8987895356cba4bf5d}{rebuild}} ()
+\begin{DoxyCompactList}\small\item\em Rebuild an optimal tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The dynamic \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} tree. 
+
+The dynamic \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} tree is a hierarchical data structure that can be used to efficiently query overlaps between objects of arbitrary shape and size that lie inside of a simulation box. Support is provided for periodic and non-\/periodic boxes, as well as boxes with partial periodicity, e.\+g. periodic along specific axes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaabb_1_1_tree_ab8339ea3bced9bc9feaee2398bb7b278}\label{classaabb_1_1_tree_ab8339ea3bced9bc9feaee2398bb7b278}} 
+\index{aabb::Tree@{aabb::Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily aabb\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{unsigned int}]{dimension\+\_\+ = {\ttfamily 3},  }\item[{double}]{skin\+Thickness\+\_\+ = {\ttfamily 0.05},  }\item[{unsigned int}]{n\+Particles = {\ttfamily 16},  }\item[{bool}]{touch\+Is\+Overlap = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Constructor (non-\/periodic). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimension\+\_\+} & The dimensionality of the system.\\
+\hline
+{\em skin\+Thickness\+\_\+} & The skin thickness for fattened AABBs, as a fraction of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} base length.\\
+\hline
+{\em n\+Particles} & The number of particles (for fixed particle number systems).\\
+\hline
+{\em touch\+Is\+Overlap} & Does touching count as overlapping in query operations? \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_tree_a047d7042ab32617660db2332268c1b13}\label{classaabb_1_1_tree_a047d7042ab32617660db2332268c1b13}} 
+\index{aabb::Tree@{aabb::Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily aabb\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{unsigned int}]{dimension\+\_\+,  }\item[{double}]{skin\+Thickness\+\_\+,  }\item[{const std\+::vector$<$ bool $>$ \&}]{periodicity\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{box\+Size\+\_\+,  }\item[{unsigned int}]{n\+Particles = {\ttfamily 16},  }\item[{bool}]{touch\+Is\+Overlap = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Constructor (custom periodicity). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimension\+\_\+} & The dimensionality of the system.\\
+\hline
+{\em skin\+Thickness\+\_\+} & The skin thickness for fattened AABBs, as a fraction of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} base length.\\
+\hline
+{\em periodicity\+\_\+} & Whether the system is periodic in each dimension.\\
+\hline
+{\em box\+Size\+\_\+} & The size of the simulation box in each dimension.\\
+\hline
+{\em n\+Particles} & The number of particles (for fixed particle number systems).\\
+\hline
+{\em touch\+Is\+Overlap} & Does touching count as overlapping in query operations? \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaabb_1_1_tree_a689c51f052c3dc7fe3b4fd60d4253cca}\label{classaabb_1_1_tree_a689c51f052c3dc7fe3b4fd60d4253cca}} 
+\index{aabb::Tree@{aabb::Tree}!computeMaximumBalance@{computeMaximumBalance}}
+\index{computeMaximumBalance@{computeMaximumBalance}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{computeMaximumBalance()}{computeMaximumBalance()}}
+{\footnotesize\ttfamily unsigned int aabb\+::\+Tree\+::compute\+Maximum\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Compute the maximum balancance of the tree. 
+
+\begin{DoxyReturn}{Returns}
+The maximum difference between the height of two children of a node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_tree_aaa94a5d7eedbeb617b578ae517f2ca72}\label{classaabb_1_1_tree_aaa94a5d7eedbeb617b578ae517f2ca72}} 
+\index{aabb::Tree@{aabb::Tree}!computeSurfaceAreaRatio@{computeSurfaceAreaRatio}}
+\index{computeSurfaceAreaRatio@{computeSurfaceAreaRatio}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{computeSurfaceAreaRatio()}{computeSurfaceAreaRatio()}}
+{\footnotesize\ttfamily double aabb\+::\+Tree\+::compute\+Surface\+Area\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Compute the surface area ratio of the tree. 
+
+\begin{DoxyReturn}{Returns}
+The ratio of the sum of the node surface area to the surface area of the root node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_tree_a25575e9545711f8363a40cc84af86bac}\label{classaabb_1_1_tree_a25575e9545711f8363a40cc84af86bac}} 
+\index{aabb::Tree@{aabb::Tree}!getAABB@{getAABB}}
+\index{getAABB@{getAABB}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{getAABB()}{getAABB()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \& aabb\+::\+Tree\+::get\+AABB (\begin{DoxyParamCaption}\item[{unsigned int}]{particle }\end{DoxyParamCaption})}
+
+
+
+Get a particle \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particle} & The particle index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_tree_aea72e7f3d5dcb391f6e53bf8cfd98d3b}\label{classaabb_1_1_tree_aea72e7f3d5dcb391f6e53bf8cfd98d3b}} 
+\index{aabb::Tree@{aabb::Tree}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily unsigned int aabb\+::\+Tree\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the height of the tree. 
+
+\begin{DoxyReturn}{Returns}
+The height of the binary tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_tree_ab457383a707cbd187562b6a804bb7504}\label{classaabb_1_1_tree_ab457383a707cbd187562b6a804bb7504}} 
+\index{aabb::Tree@{aabb::Tree}!getNodeCount@{getNodeCount}}
+\index{getNodeCount@{getNodeCount}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{getNodeCount()}{getNodeCount()}}
+{\footnotesize\ttfamily unsigned int aabb\+::\+Tree\+::get\+Node\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of nodes in the tree. 
+
+\begin{DoxyReturn}{Returns}
+The number of nodes in the tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_tree_a7f6348bb1ba0ea3c77f030ca7e8cff11}\label{classaabb_1_1_tree_a7f6348bb1ba0ea3c77f030ca7e8cff11}} 
+\index{aabb::Tree@{aabb::Tree}!insertParticle@{insertParticle}}
+\index{insertParticle@{insertParticle}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{insertParticle()}{insertParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void aabb\+::\+Tree\+::insert\+Particle (\begin{DoxyParamCaption}\item[{unsigned int}]{particle,  }\item[{std\+::vector$<$ double $>$ \&}]{position,  }\item[{double}]{radius }\end{DoxyParamCaption})}
+
+
+
+Insert a particle into the tree (point particle). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the particle.\\
+\hline
+{\em position} & The position vector of the particle.\\
+\hline
+{\em radius} & The radius of the particle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_tree_a6d7cde2e788a4faa923cf613aab29cec}\label{classaabb_1_1_tree_a6d7cde2e788a4faa923cf613aab29cec}} 
+\index{aabb::Tree@{aabb::Tree}!insertParticle@{insertParticle}}
+\index{insertParticle@{insertParticle}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{insertParticle()}{insertParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void aabb\+::\+Tree\+::insert\+Particle (\begin{DoxyParamCaption}\item[{unsigned int}]{particle,  }\item[{std\+::vector$<$ double $>$ \&}]{lower\+Bound,  }\item[{std\+::vector$<$ double $>$ \&}]{upper\+Bound }\end{DoxyParamCaption})}
+
+
+
+Insert a particle into the tree (arbitrary shape with bounding box). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the particle.\\
+\hline
+{\em lower\+Bound} & The lower bound in each dimension.\\
+\hline
+{\em upper\+Bound} & The upper bound in each dimension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_tree_a8dd28dc47d245fa8c4bc962bb5e2adad}\label{classaabb_1_1_tree_a8dd28dc47d245fa8c4bc962bb5e2adad}} 
+\index{aabb::Tree@{aabb::Tree}!query@{query}}
+\index{query@{query}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ aabb\+::\+Tree\+::query (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&}]{aabb }\end{DoxyParamCaption})}
+
+
+
+Query the tree to find candidate interactions for an \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aabb} & The \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+particles A vector of particle indices. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_tree_ad0b5cd68a14ddd97231040a4a0308a7c}\label{classaabb_1_1_tree_ad0b5cd68a14ddd97231040a4a0308a7c}} 
+\index{aabb::Tree@{aabb::Tree}!query@{query}}
+\index{query@{query}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ aabb\+::\+Tree\+::query (\begin{DoxyParamCaption}\item[{unsigned int}]{particle }\end{DoxyParamCaption})}
+
+
+
+Query the tree to find candidate interactions for a particle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particle} & The particle index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+particles A vector of particle indices. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_tree_a926e05f59177390bc321e0db10913ba7}\label{classaabb_1_1_tree_a926e05f59177390bc321e0db10913ba7}} 
+\index{aabb::Tree@{aabb::Tree}!query@{query}}
+\index{query@{query}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ aabb\+::\+Tree\+::query (\begin{DoxyParamCaption}\item[{unsigned int}]{particle,  }\item[{const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&}]{aabb }\end{DoxyParamCaption})}
+
+
+
+Query the tree to find candidate interactions for an \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particle} & The particle index.\\
+\hline
+{\em aabb} & The \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+particles A vector of particle indices. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_tree_a28a1831044ead0c79bc2ce3860b668cd}\label{classaabb_1_1_tree_a28a1831044ead0c79bc2ce3860b668cd}} 
+\index{aabb::Tree@{aabb::Tree}!removeParticle@{removeParticle}}
+\index{removeParticle@{removeParticle}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{removeParticle()}{removeParticle()}}
+{\footnotesize\ttfamily void aabb\+::\+Tree\+::remove\+Particle (\begin{DoxyParamCaption}\item[{unsigned int}]{particle }\end{DoxyParamCaption})}
+
+
+
+Remove a particle from the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particle} & The particle index (particle\+Map will be used to map the node). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_tree_a1847c033dd5ffb5ed562a8e58fe506d6}\label{classaabb_1_1_tree_a1847c033dd5ffb5ed562a8e58fe506d6}} 
+\index{aabb::Tree@{aabb::Tree}!setBoxSize@{setBoxSize}}
+\index{setBoxSize@{setBoxSize}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{setBoxSize()}{setBoxSize()}}
+{\footnotesize\ttfamily void aabb\+::\+Tree\+::set\+Box\+Size (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{box\+Size\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Set the size of the simulation box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em box\+Size\+\_\+} & The size of the simulation box in each dimension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_tree_a6df23b2721517120d126450e0af71543}\label{classaabb_1_1_tree_a6df23b2721517120d126450e0af71543}} 
+\index{aabb::Tree@{aabb::Tree}!setPeriodicity@{setPeriodicity}}
+\index{setPeriodicity@{setPeriodicity}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{setPeriodicity()}{setPeriodicity()}}
+{\footnotesize\ttfamily void aabb\+::\+Tree\+::set\+Periodicity (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ bool $>$ \&}]{periodicity\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Set the periodicity of the simulation box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em periodicity\+\_\+} & Whether the system is periodic in each dimension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_tree_a683e0ce87a5e0ad8910f1844acee44dd}\label{classaabb_1_1_tree_a683e0ce87a5e0ad8910f1844acee44dd}} 
+\index{aabb::Tree@{aabb::Tree}!updateParticle@{updateParticle}}
+\index{updateParticle@{updateParticle}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{updateParticle()}{updateParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool aabb\+::\+Tree\+::update\+Particle (\begin{DoxyParamCaption}\item[{unsigned int}]{particle,  }\item[{std\+::vector$<$ double $>$ \&}]{position,  }\item[{double}]{radius,  }\item[{bool}]{always\+Reinsert = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Update the tree if a particle moves outside its fattened \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particle} & The particle index (particle\+Map will be used to map the node).\\
+\hline
+{\em position} & The position vector of the particle.\\
+\hline
+{\em radius} & The radius of the particle.\\
+\hline
+{\em always\+Reinsert} & Always reinsert the particle, even if it\textquotesingle{}s within its old \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} (default\+:false)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the particle was reinserted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_tree_a7a307380d3c5b8a04690ca47a33fa0cc}\label{classaabb_1_1_tree_a7a307380d3c5b8a04690ca47a33fa0cc}} 
+\index{aabb::Tree@{aabb::Tree}!updateParticle@{updateParticle}}
+\index{updateParticle@{updateParticle}!aabb::Tree@{aabb::Tree}}
+\doxysubsubsection{\texorpdfstring{updateParticle()}{updateParticle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool aabb\+::\+Tree\+::update\+Particle (\begin{DoxyParamCaption}\item[{unsigned int}]{particle,  }\item[{std\+::vector$<$ double $>$ \&}]{lower\+Bound,  }\item[{std\+::vector$<$ double $>$ \&}]{upper\+Bound,  }\item[{bool}]{always\+Reinsert = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Update the tree if a particle moves outside its fattened \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particle} & The particle index (particle\+Map will be used to map the node).\\
+\hline
+{\em lower\+Bound} & The lower bound in each dimension.\\
+\hline
+{\em upper\+Bound} & The upper bound in each dimension.\\
+\hline
+{\em always\+Reinsert} & Always reinsert the particle, even if it\textquotesingle{}s within its old \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} (default\+: false) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/aabbcc/AABB.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/aabbcc/AABB.\+cc\end{DoxyCompactItemize}

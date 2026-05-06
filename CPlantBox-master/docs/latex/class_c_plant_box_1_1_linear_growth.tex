@@ -1,0 +1,105 @@
+\hypertarget{class_c_plant_box_1_1_linear_growth}{}\doxysection{CPlant\+Box\+::Linear\+Growth Class Reference}
+\label{class_c_plant_box_1_1_linear_growth}\index{CPlantBox::LinearGrowth@{CPlantBox::LinearGrowth}}
+
+
+{\ttfamily \#include $<$growth.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Linear\+Growth\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_c_plant_box_1_1_linear_growth__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Linear\+Growth\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_c_plant_box_1_1_linear_growth__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_linear_growth_a141693ec33e4057452f719690af7c772}{get\+Length}} (double t, double r, double k, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o) const override
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_linear_growth_a473f271b03ebb78760de422d385749b6}{get\+Age}} (double l, double r, double k, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o) const override
+\begin{DoxyCompactList}\small\item\em Returns the age of a root of length l. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_growth_function}{Growth\+Function}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_linear_growth_a0d716bfdafab8d4cf0e57786c392709e}{copy}} () const override
+\begin{DoxyCompactList}\small\item\em Copy the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_linear_growth}{Linear\+Growth}} elongates at constant rate until the maximal length k is reached 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_linear_growth_a0d716bfdafab8d4cf0e57786c392709e}\label{class_c_plant_box_1_1_linear_growth_a0d716bfdafab8d4cf0e57786c392709e}} 
+\index{CPlantBox::LinearGrowth@{CPlantBox::LinearGrowth}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::LinearGrowth@{CPlantBox::LinearGrowth}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_plant_box_1_1_growth_function}{Growth\+Function}}$>$ CPlant\+Box\+::\+Linear\+Growth\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Copy the object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_growth_function_aeaabe0fe56a02f5b45a3892a7a446ed8}{CPlant\+Box\+::\+Growth\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_linear_growth_a473f271b03ebb78760de422d385749b6}\label{class_c_plant_box_1_1_linear_growth_a473f271b03ebb78760de422d385749b6}} 
+\index{CPlantBox::LinearGrowth@{CPlantBox::LinearGrowth}!getAge@{getAge}}
+\index{getAge@{getAge}!CPlantBox::LinearGrowth@{CPlantBox::LinearGrowth}}
+\doxysubsubsection{\texorpdfstring{getAge()}{getAge()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Linear\+Growth\+::get\+Age (\begin{DoxyParamCaption}\item[{double}]{l,  }\item[{double}]{r,  }\item[{double}]{k,  }\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the age of a root of length l. 
+
+Returns the age of a root of length l
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & organ length \mbox{[}cm\mbox{]} \\
+\hline
+{\em r} & initial growth rate \mbox{[}cm/day\mbox{]} \\
+\hline
+{\em k} & maximal root length \mbox{[}cm\mbox{]} \\
+\hline
+{\em root} & points to the organ in case more information is needed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+organ age \mbox{[}day\mbox{]} at specific length 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_growth_function_a244e78e24fe542efeeed369c5f949add}{CPlant\+Box\+::\+Growth\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_linear_growth_a141693ec33e4057452f719690af7c772}\label{class_c_plant_box_1_1_linear_growth_a141693ec33e4057452f719690af7c772}} 
+\index{CPlantBox::LinearGrowth@{CPlantBox::LinearGrowth}!getLength@{getLength}}
+\index{getLength@{getLength}!CPlantBox::LinearGrowth@{CPlantBox::LinearGrowth}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Linear\+Growth\+::get\+Length (\begin{DoxyParamCaption}\item[{double}]{t,  }\item[{double}]{r,  }\item[{double}]{k,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_growth_function_adc0924128786e08b4c3405d633bc052a}{CPlant\+Box\+::\+Growth\+Function}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/growth.\+h\end{DoxyCompactItemize}

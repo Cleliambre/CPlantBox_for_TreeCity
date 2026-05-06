@@ -1,0 +1,543 @@
+\hypertarget{class_c_plant_box_1_1_root_system}{}\doxysection{CPlant\+Box\+::Root\+System Class Reference}
+\label{class_c_plant_box_1_1_root_system}\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+
+
+{\ttfamily \#include $<$Root\+System.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Root\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_c_plant_box_1_1_root_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Root\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_c_plant_box_1_1_root_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_aedbf574cc3014e917591aaedd5acd297}\label{class_c_plant_box_1_1_root_system_aedbf574cc3014e917591aaedd5acd297}} 
+enum {\bfseries Tropism\+Types} \{ {\bfseries tt\+\_\+plagio} = 0
+, {\bfseries tt\+\_\+gravi} = 1
+, {\bfseries tt\+\_\+exo} = 2
+, {\bfseries tt\+\_\+hydro} = 3
+ \}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_af1fe70dcbd6dcdfa76ff890b654c9718}\label{class_c_plant_box_1_1_root_system_af1fe70dcbd6dcdfa76ff890b654c9718}} 
+enum {\bfseries Growth\+Function\+Types} \{ {\bfseries gft\+\_\+negexp} = 1
+, {\bfseries gft\+\_\+linear} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_root_system_a0473d2c748770c8c5232ea5a3929f864}{Root\+System}} ()
+\begin{DoxyCompactList}\small\item\em empty root system \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a2f5abb9e303741b1829a362111c8751b}{copy}} () override
+\begin{DoxyCompactList}\small\item\em deep copies the organism \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter}{Root\+Random\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_ad9c76d7985553398018266db889ee321}{get\+Root\+Random\+Parameter}} (int type) const
+\begin{DoxyCompactList}\small\item\em returns the i-\/th root parameter set (i=1..n) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter}{Root\+Random\+Parameter}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aeaa1aefc4b0b7f9edc73e1db45fc543b}{get\+Root\+Random\+Parameter}} () const
+\begin{DoxyCompactList}\small\item\em all root type parameters as a vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aa651b4fed8f5b2012bd81b7c4b67651a}{set\+Root\+System\+Parameter}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter}{Seed\+Random\+Parameter}} $>$ rsp)
+\begin{DoxyCompactList}\small\item\em sets the root system parameters \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter}{Seed\+Random\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a11cc8d1cefe9872e2f8532c7e9af71be}{get\+Root\+System\+Parameter}} ()
+\begin{DoxyCompactList}\small\item\em gets the root system parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a2e8853a177cf6945182faad29c298c5f}{initialize\+Reader}} () override
+\begin{DoxyCompactList}\small\item\em initializes XML reader \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_ac2390ca6fdcd50fd7a511a0eacfc900f}{read\+Parameters}} (std\+::string name, std\+::string basetag=\char`\"{}plant\char`\"{}, bool from\+File=true, bool verbose=true) override
+\begin{DoxyCompactList}\small\item\em reads all organ type parameters from a xml file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a2316e3d8fa8594327b94d683849c5f8e}\label{class_c_plant_box_1_1_root_system_a2316e3d8fa8594327b94d683849c5f8e}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a2316e3d8fa8594327b94d683849c5f8e}{set\+Soil}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ soil\+\_\+)
+\begin{DoxyCompactList}\small\item\em optionally sets a soil for hydro tropism (call before \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}{Root\+System\+::initialize()}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a8e3a0b20d46f012d53bf472f547aab9d}{reset}} ()
+\begin{DoxyCompactList}\small\item\em resets the root class, keeps the root type parameters \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}{initialize}} (bool verbose=true, std\+::string mode=\char`\"{}\char`\"{}) override
+\begin{DoxyCompactList}\small\item\em creates the base roots, call before simulation and after setting the plant and root parameters \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a71bceae10318dfedfa78dd03b11012e9}{initialize\+LB}} (int basal=4, int shootborne=5, bool verbose=true)
+\begin{DoxyCompactList}\small\item\em creates the base roots (length based lateral emergence times), call before simulation and after setting plant and root parameters \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a3fae3938b88404d7770af2b30ed100d9}{initialize\+DB}} (int basal=4, int shootborne=5, bool verbose=true)
+\begin{DoxyCompactList}\small\item\em creates the base roots (delay based lateral emergence times), call before simulation and after setting plant and root parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a7f150e4c7ad3e6aebff2ff2eeebd7e71}{set\+Tropism}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ tf, int rt=-\/1)
+\begin{DoxyCompactList}\small\item\em sets a tropism function for a single root type or all root types (defaut) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a189f57c72a4e7e603eefdbe3e54c9d4d}{simulate}} (double dt, bool verbose=false) override
+\begin{DoxyCompactList}\small\item\em simulates root system growth for time span dt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a8d2cd1aa8710f5d4c7e3511807e00771}{simulate}} ()
+\begin{DoxyCompactList}\small\item\em simulates root system growth for the time defined in the root system parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_abc932a0e12a6abb021044e70cf6ed506}{simulate}} (double dt, double maxinc, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_proportional_elongation}{Proportional\+Elongation}} $>$ se, bool verbose=true)
+\begin{DoxyCompactList}\small\item\em simulates the root system with a maximal overall elongation \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a3bb6c988e73e1214489a66db0ebc496d}{get\+Roots}} () const
+\begin{DoxyCompactList}\small\item\em represents the root system as sequential vector of roots and buffers the result \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a82108eed9b5785e0b54368538c5a1845}{init\+Callbacks}} ()
+\begin{DoxyCompactList}\small\item\em sets up callback functions for tropisms and growth functions, called by \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}{initialize()}} \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a4db260e9f3df068862bef9f56b5a735c}{create\+Tropism\+Function}} (int tt, double N, double sigma)
+\begin{DoxyCompactList}\small\item\em creates the tropisms, overwrite or change this method to add more tropisms \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_growth_function}{Growth\+Function}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a87db956c8adb4f08b2bd48b92496a89c}{create\+Growth\+Function}} (int gft)
+\begin{DoxyCompactList}\small\item\em creates the growth function per root type, overwrite or change this method to add more tropisms \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a48f1e3aeb5e51fb971aaa756a3f23a95}\label{class_c_plant_box_1_1_root_system_a48f1e3aeb5e51fb971aaa756a3f23a95}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a48f1e3aeb5e51fb971aaa756a3f23a95}{get\+Number\+Of\+Segments}} (int ot=-\/1) const override
+\begin{DoxyCompactList}\small\item\em number of segments of the root system ((nid+1)-\/1) -\/ number\+Of\+Crowns -\/ 1 (artificial shoot) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_aed61d4187a027423a39aa44312ce3d51}\label{class_c_plant_box_1_1_root_system_aed61d4187a027423a39aa44312ce3d51}} 
+int {\bfseries get\+Number\+Of\+Roots} (bool all=false) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a274e70d8c987ef05cdb37cefb0b48b73}{get\+Nodes}} () const override
+\begin{DoxyCompactList}\small\item\em nodes of the organ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a79db1a928bc13ee90687277aed214e7d}\label{class_c_plant_box_1_1_root_system_a79db1a928bc13ee90687277aed214e7d}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a79db1a928bc13ee90687277aed214e7d}{get\+Base\+Roots}} () const
+\begin{DoxyCompactList}\small\item\em base roots are tap root, basal roots, and shoot borne roots TODO \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a9b8a159a90d233cc62b400872f7b0d46}{get\+Shoot\+Segments}} () const
+\begin{DoxyCompactList}\small\item\em copies the segments connecting tap, basal root, shootborne roots \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a832645dae619469bfa0089d88e642ed5}{get\+Root\+Tips}} () const
+\begin{DoxyCompactList}\small\item\em node indices of the root tips \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a1fecc290cc4593c2dd45212437fc0716}{get\+Root\+Bases}} () const
+\begin{DoxyCompactList}\small\item\em node indices of the root bases \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a4ea4d4773bd4cd2bb144893af757507d}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em infos about current root system state (for debugging) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a85a5d144db1ca510f9c47efbb450aef9}\label{class_c_plant_box_1_1_root_system_a85a5d144db1ca510f9c47efbb450aef9}} 
+int {\bfseries number\+Of\+Crowns} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_root_system}{Root\+System}}
+
+This class manages model parameter, the simulation, stores the base roots of the root system, and offers utility functions for post processing. More post processing functions can be found in the class \mbox{\hyperlink{class_c_plant_box_1_1_segment_analyser}{Segment\+Analyser}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a0473d2c748770c8c5232ea5a3929f864}\label{class_c_plant_box_1_1_root_system_a0473d2c748770c8c5232ea5a3929f864}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!RootSystem@{RootSystem}}
+\index{RootSystem@{RootSystem}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{RootSystem()}{RootSystem()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Root\+System\+::\+Root\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+empty root system 
+
+Creates a root system 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a2f5abb9e303741b1829a362111c8751b}\label{class_c_plant_box_1_1_root_system_a2f5abb9e303741b1829a362111c8751b}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ CPlant\+Box\+::\+Root\+System\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copies the organism 
+
+Deep copies the organism 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_af3c27dcd67fe2ac50c589acc65232207}{CPlant\+Box\+::\+Organism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a87db956c8adb4f08b2bd48b92496a89c}\label{class_c_plant_box_1_1_root_system_a87db956c8adb4f08b2bd48b92496a89c}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!createGrowthFunction@{createGrowthFunction}}
+\index{createGrowthFunction@{createGrowthFunction}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{createGrowthFunction()}{createGrowthFunction()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_growth_function}{Growth\+Function}} $>$ CPlant\+Box\+::\+Root\+System\+::create\+Growth\+Function (\begin{DoxyParamCaption}\item[{int}]{gft }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+creates the growth function per root type, overwrite or change this method to add more tropisms 
+
+Creates a growth functions from the growth function index. This function must bee extended or overwritten to add more growth functions
+
+
+\begin{DoxyParams}{Parameters}
+{\em gft} & the growth function index, given in the root type parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the growth function class containing with the callback functions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a4db260e9f3df068862bef9f56b5a735c}\label{class_c_plant_box_1_1_root_system_a4db260e9f3df068862bef9f56b5a735c}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!createTropismFunction@{createTropismFunction}}
+\index{createTropismFunction@{createTropismFunction}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{createTropismFunction()}{createTropismFunction()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ CPlant\+Box\+::\+Root\+System\+::create\+Tropism\+Function (\begin{DoxyParamCaption}\item[{int}]{tt,  }\item[{double}]{N,  }\item[{double}]{sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+creates the tropisms, overwrite or change this method to add more tropisms 
+
+Creates a specific tropism from the tropism type index. the function must be extended or overwritten to add more tropisms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tt} & the tropism type index, given in the root type parameters \\
+\hline
+{\em N} & tropism parameter (passsed to the tropism class) \\
+\hline
+{\em sigma} & tropism parameter (passsed to the tropism class) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tropism class containing with the callback functions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a274e70d8c987ef05cdb37cefb0b48b73}\label{class_c_plant_box_1_1_root_system_a274e70d8c987ef05cdb37cefb0b48b73}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ CPlant\+Box\+::\+Root\+System\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+nodes of the organ 
+
+All nodes of emerged organs are ordered by their node index, initial nodes of base organs are copied, even if not emerged.
+
+\begin{DoxyReturn}{Returns}
+a vector of nodes
+\end{DoxyReturn}
+also set position of the artificial node 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_a6168a5e1b50bec47bed86d0d2b50d33b}{CPlant\+Box\+::\+Organism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a1fecc290cc4593c2dd45212437fc0716}\label{class_c_plant_box_1_1_root_system_a1fecc290cc4593c2dd45212437fc0716}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!getRootBases@{getRootBases}}
+\index{getRootBases@{getRootBases}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{getRootBases()}{getRootBases()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ CPlant\+Box\+::\+Root\+System\+::get\+Root\+Bases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+node indices of the root bases 
+
+\begin{DoxyReturn}{Returns}
+the node indices of the root bases 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_aeaa1aefc4b0b7f9edc73e1db45fc543b}\label{class_c_plant_box_1_1_root_system_aeaa1aefc4b0b7f9edc73e1db45fc543b}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!getRootRandomParameter@{getRootRandomParameter}}
+\index{getRootRandomParameter@{getRootRandomParameter}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{getRootRandomParameter()}{getRootRandomParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter}{Root\+Random\+Parameter}} $>$ $>$ CPlant\+Box\+::\+Root\+System\+::get\+Root\+Random\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+all root type parameters as a vector 
+
+\begin{DoxyReturn}{Returns}
+all root type parameters in a vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_ad9c76d7985553398018266db889ee321}\label{class_c_plant_box_1_1_root_system_ad9c76d7985553398018266db889ee321}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!getRootRandomParameter@{getRootRandomParameter}}
+\index{getRootRandomParameter@{getRootRandomParameter}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{getRootRandomParameter()}{getRootRandomParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter}{Root\+Random\+Parameter}} $>$ CPlant\+Box\+::\+Root\+System\+::get\+Root\+Random\+Parameter (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption}) const}
+
+
+
+returns the i-\/th root parameter set (i=1..n) 
+
+\begin{DoxyReturn}{Returns}
+the i-\/th root parameter of sub type
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em type.} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a3bb6c988e73e1214489a66db0ebc496d}\label{class_c_plant_box_1_1_root_system_a3bb6c988e73e1214489a66db0ebc496d}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!getRoots@{getRoots}}
+\index{getRoots@{getRoots}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{getRoots()}{getRoots()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}} $>$ $>$ CPlant\+Box\+::\+Root\+System\+::get\+Roots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+represents the root system as sequential vector of roots and buffers the result 
+
+Represents the root system as sequential vector of roots, copies the root only, if it has more than 1 node. buffers the result, until next call of simulate(dt), a bit redundant to \begin{DoxySeeAlso}{See also}
+Organsim\+::get\+Organs().
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+sequential vector of roots with more than 1 node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a11cc8d1cefe9872e2f8532c7e9af71be}\label{class_c_plant_box_1_1_root_system_a11cc8d1cefe9872e2f8532c7e9af71be}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!getRootSystemParameter@{getRootSystemParameter}}
+\index{getRootSystemParameter@{getRootSystemParameter}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{getRootSystemParameter()}{getRootSystemParameter()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter}{Seed\+Random\+Parameter}} $>$ CPlant\+Box\+::\+Root\+System\+::get\+Root\+System\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets the root system parameters 
+
+\begin{DoxyReturn}{Returns}
+the root system parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a832645dae619469bfa0089d88e642ed5}\label{class_c_plant_box_1_1_root_system_a832645dae619469bfa0089d88e642ed5}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!getRootTips@{getRootTips}}
+\index{getRootTips@{getRootTips}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{getRootTips()}{getRootTips()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ CPlant\+Box\+::\+Root\+System\+::get\+Root\+Tips (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+node indices of the root tips 
+
+\begin{DoxyReturn}{Returns}
+the node indices of the root tips 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a9b8a159a90d233cc62b400872f7b0d46}\label{class_c_plant_box_1_1_root_system_a9b8a159a90d233cc62b400872f7b0d46}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!getShootSegments@{getShootSegments}}
+\index{getShootSegments@{getShootSegments}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{getShootSegments()}{getShootSegments()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ CPlant\+Box\+::\+Root\+System\+::get\+Shoot\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+copies the segments connecting tap, basal root, shootborne roots 
+
+Return the segments connecting tap root, basal roots, and shoot borne roots.
+
+The upper node represents the oldest emerged shoot-\/borne root, or if none, the node where all basal roots emerge. \mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a82108eed9b5785e0b54368538c5a1845}\label{class_c_plant_box_1_1_root_system_a82108eed9b5785e0b54368538c5a1845}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!initCallbacks@{initCallbacks}}
+\index{initCallbacks@{initCallbacks}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{initCallbacks()}{initCallbacks()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::init\+Callbacks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sets up callback functions for tropisms and growth functions, called by \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}{initialize()}} 
+
+Called by \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}{Root\+System\+::initialize}}. Sets up tropism and growth functions call backs using \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a4db260e9f3df068862bef9f56b5a735c}{Root\+System\+::create\+Tropism\+Function}} and \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a87db956c8adb4f08b2bd48b92496a89c}{Root\+System\+::create\+Growth\+Function}} \mbox{\Hypertarget{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}\label{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!initialize@{initialize}}
+\index{initialize@{initialize}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::initialize (\begin{DoxyParamCaption}\item[{bool}]{verbose = {\ttfamily true},  }\item[{std\+::string}]{mode = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+creates the base roots, call before simulation and after setting the plant and root parameters 
+
+Calls initialize\+LB (default, \char`\"{}length\+Based\char`\"{}, \char`\"{}length\+\_\+based\char`\"{}) or initialize\+DB (\char`\"{}delay\+Based\char`\"{}, \char`\"{}delay\+\_\+based\char`\"{}) 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_a0b94d4a64b67eb1f9755b54eab1fb9e1}{CPlant\+Box\+::\+Organism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a3fae3938b88404d7770af2b30ed100d9}\label{class_c_plant_box_1_1_root_system_a3fae3938b88404d7770af2b30ed100d9}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!initializeDB@{initializeDB}}
+\index{initializeDB@{initializeDB}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{initializeDB()}{initializeDB()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::initialize\+DB (\begin{DoxyParamCaption}\item[{int}]{basal = {\ttfamily 4},  }\item[{int}]{shootborne = {\ttfamily 5},  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+creates the base roots (delay based lateral emergence times), call before simulation and after setting plant and root parameters 
+
+Sets up the base roots according to the plant parameters, a confining geometry, the tropism functions, and the growth functions.
+
+DB, Delay based\+: Delay for lateral root is predefined, apical length therefore not constant
+
+Call this method before simulation and after setting geometry, plant and root parameters
+
+@parm basal the type of the basal roots (default = 4) @parm shootborne the type of the shootborne roots (default = 5) 
+\begin{DoxyParams}{Parameters}
+{\em verbose} & chatty with the std\+::couts \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a71bceae10318dfedfa78dd03b11012e9}\label{class_c_plant_box_1_1_root_system_a71bceae10318dfedfa78dd03b11012e9}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!initializeLB@{initializeLB}}
+\index{initializeLB@{initializeLB}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{initializeLB()}{initializeLB()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::initialize\+LB (\begin{DoxyParamCaption}\item[{int}]{basal = {\ttfamily 4},  }\item[{int}]{shootborne = {\ttfamily 5},  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+creates the base roots (length based lateral emergence times), call before simulation and after setting plant and root parameters 
+
+Sets up the base roots according to the plant parameters, a confining geometry, the tropism functions, and the growth functions.
+
+LB, Length based\+: Delay for lateral root is calculated from the apical length (classical Root\+Box approach)
+
+Call this method before simulation and after setting geometry, plant and root parameters
+
+@parm basal the type of the basal roots (default = 4) @parm shootborne the type of the shootborne roots (default = 5) 
+\begin{DoxyParams}{Parameters}
+{\em verbose} & chatty with the std\+::couts \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a2e8853a177cf6945182faad29c298c5f}\label{class_c_plant_box_1_1_root_system_a2e8853a177cf6945182faad29c298c5f}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!initializeReader@{initializeReader}}
+\index{initializeReader@{initializeReader}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{initializeReader()}{initializeReader()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::initialize\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initializes XML reader 
+
+Initializes the xml parameter reader, specifying prototypes for roots (\mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter}{Root\+Random\+Parameter}}), and seed (\mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter}{Seed\+Random\+Parameter}})
+
+Overwrite this function if you want to use other parameter classes. 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_aff80c2e5b594681b0c5f4a361d005cdc}{CPlant\+Box\+::\+Organism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_ac2390ca6fdcd50fd7a511a0eacfc900f}\label{class_c_plant_box_1_1_root_system_ac2390ca6fdcd50fd7a511a0eacfc900f}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!readParameters@{readParameters}}
+\index{readParameters@{readParameters}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{readParameters()}{readParameters()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::read\+Parameters (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{basetag = {\ttfamily \char`\"{}plant\char`\"{}},  }\item[{bool}]{from\+File = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+reads all organ type parameters from a xml file 
+
+Polymorphic XML parameter file reader\+: adds all organ parameter types of a XML file to the organism\textquotesingle{}s parameters
+
+Each Organ\+Type\+Parameter must have already one prototype defined in the organ type parameters Organism\+::organ\+Param, since the organ type parameters are created by Organ\+Type\+Parameter\+::copy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & file name or data as string \\
+\hline
+{\em basetag} & name of the base tag (e.\+g. \char`\"{}organism\char`\"{}, or \char`\"{}plant\char`\"{}) \\
+\hline
+{\em from\+File} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_adb958dfb52157e92159c52f2ec70ec20}{CPlant\+Box\+::\+Organism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a8e3a0b20d46f012d53bf472f547aab9d}\label{class_c_plant_box_1_1_root_system_a8e3a0b20d46f012d53bf472f547aab9d}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!reset@{reset}}
+\index{reset@{reset}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+resets the root class, keeps the root type parameters 
+
+Resets the root system\+: deletes all roots, sets simulation time to 0. \mbox{\Hypertarget{class_c_plant_box_1_1_root_system_aa651b4fed8f5b2012bd81b7c4b67651a}\label{class_c_plant_box_1_1_root_system_aa651b4fed8f5b2012bd81b7c4b67651a}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!setRootSystemParameter@{setRootSystemParameter}}
+\index{setRootSystemParameter@{setRootSystemParameter}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{setRootSystemParameter()}{setRootSystemParameter()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::set\+Root\+System\+Parameter (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter}{Seed\+Random\+Parameter}} $>$}]{sp }\end{DoxyParamCaption})}
+
+
+
+sets the root system parameters 
+
+Sets the root system parameters
+\begin{DoxyParams}{Parameters}
+{\em rsp} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a7f150e4c7ad3e6aebff2ff2eeebd7e71}\label{class_c_plant_box_1_1_root_system_a7f150e4c7ad3e6aebff2ff2eeebd7e71}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!setTropism@{setTropism}}
+\index{setTropism@{setTropism}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{setTropism()}{setTropism()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::set\+Tropism (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$}]{tf\+\_\+,  }\item[{int}]{rt = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+sets a tropism function for a single root type or all root types (defaut) 
+
+Manually sets a tropism function for a specific or for all root types. Must be called after \mbox{\hyperlink{class_c_plant_box_1_1_root_system_aaf6a00df82bbd536b4621daa4e269276}{Root\+System\+::initialize()}}, otherwise its overwritten.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tf\+\_\+} & a tropism \\
+\hline
+{\em rt} & root type, if rt = -\/1 all types are set to this tropism (default). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a8d2cd1aa8710f5d4c7e3511807e00771}\label{class_c_plant_box_1_1_root_system_a8d2cd1aa8710f5d4c7e3511807e00771}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!simulate@{simulate}}
+\index{simulate@{simulate}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::simulate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+simulates root system growth for the time defined in the root system parameters 
+
+Simulates root system growth for the time span defined in the root system parameters \mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a189f57c72a4e7e603eefdbe3e54c9d4d}\label{class_c_plant_box_1_1_root_system_a189f57c72a4e7e603eefdbe3e54c9d4d}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!simulate@{simulate}}
+\index{simulate@{simulate}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::simulate (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+simulates root system growth for time span dt 
+
+Simulates root system growth for time span dt
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & time step \mbox{[}day\mbox{]} \\
+\hline
+{\em verbose} & indicates if status is written to the console (cout) (default = false) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_af3c862c732db32f4b4acf1a93b73acf6}{CPlant\+Box\+::\+Organism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_abc932a0e12a6abb021044e70cf6ed506}\label{class_c_plant_box_1_1_root_system_abc932a0e12a6abb021044e70cf6ed506}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!simulate@{simulate}}
+\index{simulate@{simulate}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+System\+::simulate (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{double}]{maxinc\+\_\+,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_proportional_elongation}{Proportional\+Elongation}} $>$}]{se,  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+simulates the root system with a maximal overall elongation 
+
+Simulates root system growth for a time span, elongates a maximum of
+\begin{DoxyParams}{Parameters}
+{\em maxinc} & total length \mbox{[}cm/day\mbox{]} using the proportional elongation\\
+\hline
+{\em se} & to impede overall growth.\\
+\hline
+{\em dt} & time step \mbox{[}day\mbox{]} \\
+\hline
+{\em maxinc\+\_\+} & maximal total length \mbox{[}cm/day\mbox{]} the root system is allowed to grow in this time step \\
+\hline
+{\em se} & The class \mbox{\hyperlink{class_c_plant_box_1_1_proportional_elongation}{Proportional\+Elongation}} is used to scale overall root growth \\
+\hline
+{\em verbose} & indicates if status is written to the console (cout) (default = false) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_system_a4ea4d4773bd4cd2bb144893af757507d}\label{class_c_plant_box_1_1_root_system_a4ea4d4773bd4cd2bb144893af757507d}} 
+\index{CPlantBox::RootSystem@{CPlantBox::RootSystem}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::RootSystem@{CPlantBox::RootSystem}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Root\+System\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+infos about current root system state (for debugging) 
+
+\begin{DoxyReturn}{Returns}
+quick info about the root system for debugging 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_ae35837c60428a354a289c1817da4bf2c}{CPlant\+Box\+::\+Organism}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Root\+System.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Root\+System.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+\hypertarget{class_c_plant_box_1_1_s_d_f___half_plane}{}\doxysection{CPlant\+Box\+::SDF\+\_\+\+Half\+Plane Class Reference}
+\label{class_c_plant_box_1_1_s_d_f___half_plane}\index{CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}}
+
+
+{\ttfamily \#include $<$sdf.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::SDF\+\_\+\+Half\+Plane\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_c_plant_box_1_1_s_d_f___half_plane__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::SDF\+\_\+\+Half\+Plane\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_s_d_f___half_plane__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a3389c75eeecdde472a740580b015f649}{SDF\+\_\+\+Half\+Plane}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a9546987ce3f185224ca97c5b3aebe0d3}{o}}, const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&n\+\_\+)
+\begin{DoxyCompactList}\small\item\em half plane by origin and normal vector \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_abb755181a7348c8f3b780e28a0c46efd}\label{class_c_plant_box_1_1_s_d_f___half_plane_abb755181a7348c8f3b780e28a0c46efd}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_abb755181a7348c8f3b780e28a0c46efd}{SDF\+\_\+\+Half\+Plane}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a9546987ce3f185224ca97c5b3aebe0d3}{o}}, const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a60299a78ce8dad5494ef4a3a85997d04}{p1}}, const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a4022071d0f9f9531db0565ffb9a4f661}{p2}})
+\begin{DoxyCompactList}\small\item\em half plane by origin and two linear independent vectors \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a2f91abbe2d163ea2ad0c3aecca842417}{get\+Dist}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&v) const override
+\item 
+virtual int \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a1cf4b96dfb204bc7a98963f9ffb27f90}{write\+PVPScript}} (std\+::ostream \&cout, int c=1) const override
+\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a02c6e2b23c2aa19ed25803f78316e09a}{to\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_a9546987ce3f185224ca97c5b3aebe0d3}\label{class_c_plant_box_1_1_s_d_f___half_plane_a9546987ce3f185224ca97c5b3aebe0d3}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a9546987ce3f185224ca97c5b3aebe0d3}{o}}
+\begin{DoxyCompactList}\small\item\em origin of the plane \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_ade3114729569e8f5b1003cc923f7dc91}\label{class_c_plant_box_1_1_s_d_f___half_plane_ade3114729569e8f5b1003cc923f7dc91}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_ade3114729569e8f5b1003cc923f7dc91}{n}}
+\begin{DoxyCompactList}\small\item\em normal of the plane p1xp2 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_a60299a78ce8dad5494ef4a3a85997d04}\label{class_c_plant_box_1_1_s_d_f___half_plane_a60299a78ce8dad5494ef4a3a85997d04}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a60299a78ce8dad5494ef4a3a85997d04}{p1}}
+\begin{DoxyCompactList}\small\item\em for visualisation (plane is a simplex\+: o,p1,p2) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_a4022071d0f9f9531db0565ffb9a4f661}\label{class_c_plant_box_1_1_s_d_f___half_plane_a4022071d0f9f9531db0565ffb9a4f661}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane_a4022071d0f9f9531db0565ffb9a4f661}{p2}}
+\begin{DoxyCompactList}\small\item\em for visualisation (plane is a simplex\+: o,p1,p2) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___half_plane}{SDF\+\_\+\+Half\+Plane}} defines the signed distance function of a half plane 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_a3389c75eeecdde472a740580b015f649}\label{class_c_plant_box_1_1_s_d_f___half_plane_a3389c75eeecdde472a740580b015f649}} 
+\index{CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}!SDF\_HalfPlane@{SDF\_HalfPlane}}
+\index{SDF\_HalfPlane@{SDF\_HalfPlane}!CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}}
+\doxysubsubsection{\texorpdfstring{SDF\_HalfPlane()}{SDF\_HalfPlane()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+SDF\+\_\+\+Half\+Plane\+::\+SDF\+\_\+\+Half\+Plane (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{o,  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{n\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+half plane by origin and normal vector 
+
+Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_a2f91abbe2d163ea2ad0c3aecca842417}\label{class_c_plant_box_1_1_s_d_f___half_plane_a2f91abbe2d163ea2ad0c3aecca842417}} 
+\index{CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}!getDist@{getDist}}
+\index{getDist@{getDist}!CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily virtual double CPlant\+Box\+::\+SDF\+\_\+\+Half\+Plane\+::get\+Dist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{Signed\+Distance\+Function\+::get\+Dist}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_a02c6e2b23c2aa19ed25803f78316e09a}\label{class_c_plant_box_1_1_s_d_f___half_plane_a02c6e2b23c2aa19ed25803f78316e09a}} 
+\index{CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string CPlant\+Box\+::\+SDF\+\_\+\+Half\+Plane\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{Signed\+Distance\+Function\+::to\+String}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___half_plane_a1cf4b96dfb204bc7a98963f9ffb27f90}\label{class_c_plant_box_1_1_s_d_f___half_plane_a1cf4b96dfb204bc7a98963f9ffb27f90}} 
+\index{CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}!writePVPScript@{writePVPScript}}
+\index{writePVPScript@{writePVPScript}!CPlantBox::SDF\_HalfPlane@{CPlantBox::SDF\_HalfPlane}}
+\doxysubsubsection{\texorpdfstring{writePVPScript()}{writePVPScript()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+SDF\+\_\+\+Half\+Plane\+::write\+PVPScript (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{cout,  }\item[{int}]{c = {\ttfamily 1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a0098fb469c9be5557d5593cec9e76d2a}{Signed\+Distance\+Function\+::write\+PVPScript}}
+\end{DoxySeeAlso}
+Writes a Para\+View Phython script explicitly representing the half plane, the plane is given only by its normal, two orthogonal vectors are randomly chosen
+
+
+\begin{DoxyParams}{Parameters}
+{\em cout} & e.\+g. a file output stream \\
+\hline
+{\em c} & python object counter for the script (to avoid duplicate names) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object counter 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a0098fb469c9be5557d5593cec9e76d2a}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,576 @@
+\hypertarget{class_c_plant_box_1_1_leaf}{}\doxysection{CPlant\+Box\+::Leaf Class Reference}
+\label{class_c_plant_box_1_1_leaf}\index{CPlantBox::Leaf@{CPlantBox::Leaf}}
+
+
+{\ttfamily \#include $<$Leaf.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Leaf\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_c_plant_box_1_1_leaf__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Leaf\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_c_plant_box_1_1_leaf__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_leaf_a8aac04553469f76a5f66fd1fb3f1d913}{Leaf}} (int \mbox{\hyperlink{class_c_plant_box_1_1_organ_a1c602de4cbb1294d6caf35b81655e1db}{id}}, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a663626eff9b83918a920e345e6f36fe6}{param}}, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a0889e6bf6d670b945de355dbc6e96965}{alive}}, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a37cba2abb3c4052d7e69b57019589b78}{active}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a4f17f0bfe7f03eedf4138fd8fe51376d}{age}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a94f5b16aa7ebc3912501051281fe88dc}{length}}, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} partial\+IHeading\+\_\+, int pni, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a79bcbb57413b3ca4e96ea9ed0d9285af}{moved}}=true, int old\+NON=0)
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_leaf_af8889c95983606b128f9df58eacd7a45}{Leaf}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_ae7e6e82271bc27409ceb37725ae75050}{plant}}, int type, double delay, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_a3650b8edd1964d65ac4059871d6f5c4b}{parent}}, int pni)
+\begin{DoxyCompactList}\small\item\em used within simulation \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_ac43d1e4588f267c8b60b77a1d0e76b4d}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_ae7e6e82271bc27409ceb37725ae75050}{plant}}) override
+\begin{DoxyCompactList}\small\item\em deep copies the root tree \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_af7556eb19d907b277e314e09dce849de}\label{class_c_plant_box_1_1_leaf_af7556eb19d907b277e314e09dce849de}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_leaf_af7556eb19d907b277e314e09dce849de}{organ\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em returns the organs type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_leaf_ac8f35a92020107f44059b995e44af5d6}{simulate}} (double dt, bool silence=false) override
+\begin{DoxyCompactList}\small\item\em leaf growth for a time span of \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a2645b540297387922f5ec843002ad68e}\label{class_c_plant_box_1_1_leaf_a2645b540297387922f5ec843002ad68e}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a2645b540297387922f5ec843002ad68e}{get\+Node}} (int i) const override
+\begin{DoxyCompactList}\small\item\em i-\/th node of the organ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a19ed98953abf8d6f9df1c1ce0761ac92}\label{class_c_plant_box_1_1_leaf_a19ed98953abf8d6f9df1c1ce0761ac92}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a19ed98953abf8d6f9df1c1ce0761ac92}{get\+Parameter}} (std\+::string name) const override
+\begin{DoxyCompactList}\small\item\em returns an organ parameter of Plant\+::\+Scalar\+Type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a07cc3a02a25c4c5c1998860722109df0}\label{class_c_plant_box_1_1_leaf_a07cc3a02a25c4c5c1998860722109df0}} 
+double {\bfseries leaf\+Length} (bool realized=false) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a36733622e7a70db931933093f355f69d}\label{class_c_plant_box_1_1_leaf_a36733622e7a70db931933093f355f69d}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a36733622e7a70db931933093f355f69d}{leaf\+Center}} (bool realized=false) const
+\begin{DoxyCompactList}\small\item\em leaf surface length \mbox{[}cm\mbox{]} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a2bf60002fdccfe56e2b7295c919974e4}{leaf\+Area}} (bool realized=false, bool with\+Petiole=false) const
+\begin{DoxyCompactList}\small\item\em center of the radial parametrisation \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_aeb1ad0cca9ae182707cd9bfeceb133c5}{leaf\+Area\+At\+Seg}} (int local\+Seg\+Id, bool realized=false, bool with\+Petiole=false)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a280f725bf0196b5d4429711da2a2f379}{leaf\+Vol\+At\+Seg}} (int local\+Seg\+Id, bool realized=false, bool with\+Petiole=false)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_ae76760fc0071924184389f18fcc15e0b}{leaf\+Length\+At\+Seg}} (int local\+Seg\+Id, bool with\+Petiole=false)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a0dfa0a18b23466a863207a93271a30e6}{get\+Leaf\+VisX}} (int i)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a8826b402834fea45d287a0437f2e67a6}\label{class_c_plant_box_1_1_leaf_a8826b402834fea45d287a0437f2e67a6}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ {\bfseries get\+Leaf\+Vis} (int i)
+\item 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_leaf_aac289a8a8793c3b27fb7ff1009d1a8ed}{to\+String}} () const override
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a733dca8f8f4ab665318eb3f8dfa2d1ab}{calc\+Length}} (double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a4f17f0bfe7f03eedf4138fd8fe51376d}{age}}) override
+\begin{DoxyCompactList}\small\item\em analytical length of the leaf \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a893c2b987a5c0ef1bf9cee386c2502b3}{calc\+Age}} (double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a94f5b16aa7ebc3912501051281fe88dc}{length}}) const override
+\begin{DoxyCompactList}\small\item\em analytical age of the leaf \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_random_parameter}{Leaf\+Random\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a18c08ed790a299055b8c5986e521b856}{get\+Leaf\+Random\+Parameter}} () const
+\begin{DoxyCompactList}\small\item\em root type parameter of this root \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter}{Leaf\+Specific\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a663626eff9b83918a920e345e6f36fe6}{param}} () const
+\begin{DoxyCompactList}\small\item\em root parameter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a5e8bdac4db71ace73d5e96f20940ef92}\label{class_c_plant_box_1_1_leaf_a5e8bdac4db71ace73d5e96f20940ef92}} 
+bool {\bfseries has\+Moved} () const override
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_ae5c9c5ee554227e7c1737b25c07d7b73}{org\+Volume}} (double length\+\_\+=-\/1., bool realized=false) const override
+\begin{DoxyCompactList}\small\item\em always need to update the coordinates of the nodes for the \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_af083c7748065264a915d71129a2ec0b3}{org\+Volume2\+Length}} (double volume\+\_\+) override
+\item 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a369456c3d48f62b79386ee91a706381b}{node\+Leaf\+Vis}} (double l)
+\begin{DoxyCompactList}\small\item\em leaf base (false), branched leaf (false), or leaf surface area (true) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a28fa4a7f8739b54a72132561b922aa5c}{get\+Increment}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&p, double sdx, int n=-\/1) override
+\begin{DoxyCompactList}\small\item\em called by create\+Segments, to determine growth direction \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a43be6785dc565fbbc63732f5b9c4c4a2}{heading}} (int n) const override
+\begin{DoxyCompactList}\small\item\em current (absolute) heading of the organs at node n \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_acb5adec7a2e5088ca1150c821e765a9e}\label{class_c_plant_box_1_1_leaf_acb5adec7a2e5088ca1150c821e765a9e}} 
+int {\bfseries getleafphytomer\+ID} (int subtype)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_ae05cf8384ee6186d728c2c1fe9a7db67}\label{class_c_plant_box_1_1_leaf_ae05cf8384ee6186d728c2c1fe9a7db67}} 
+void {\bfseries minus\+Phytomer\+Id} (int subtype)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a5912cafb62d77befff4281f062a62b6c}\label{class_c_plant_box_1_1_leaf_a5912cafb62d77befff4281f062a62b6c}} 
+void {\bfseries addleafphytomer\+ID} (int subtype)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a30c78b1944ed2e7223787a5f68d0f965}{get\+Leaf\+Vis\+X\+\_\+2D}} (double l)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a2c178f0809d0c360918da10fbfdf3a1d}{get\+Leaf\+Vis\+X\+\_\+cuboid}} (double l)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_abbd15d1eb3f8683830599e00f93c7f25}{get\+Leaf\+Vis\+\_\+2D}} (int i)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a5725b019d22d235e4a3bbe4e07c6d627}{get\+Leaf\+Vis\+\_\+cuboid}} (int i)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_af7770be15028a5c9f89e12d1dca252ea}\label{class_c_plant_box_1_1_leaf_af7770be15028a5c9f89e12d1dca252ea}} 
+double {\bfseries beta}
+\item 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a55d24589065036c723a38e3bcc39773d}{age\+Dependent\+Tropism}} = false
+\begin{DoxyCompactList}\small\item\em do we need to check the leaf\textquotesingle{}s age to see when to update the tropism effect?, \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_leaf}{Leaf}}
+
+Describes a single leaf, by a vector of nodes representing the leaf The method \mbox{\hyperlink{class_c_plant_box_1_1_leaf_ac8f35a92020107f44059b995e44af5d6}{simulate()}} creates new nodes of this leaf, and lateral leafs in the leaf\textquotesingle{}s branching zone. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a8aac04553469f76a5f66fd1fb3f1d913}\label{class_c_plant_box_1_1_leaf_a8aac04553469f76a5f66fd1fb3f1d913}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!Leaf@{Leaf}}
+\index{Leaf@{Leaf}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{Leaf()}{Leaf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Leaf\+::\+Leaf (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$}]{param,  }\item[{bool}]{alive,  }\item[{bool}]{active,  }\item[{double}]{age,  }\item[{double}]{length,  }\item[{\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}}]{partial\+IHeading\+\_\+,  }\item[{int}]{pni,  }\item[{bool}]{moved = {\ttfamily true},  }\item[{int}]{old\+NON = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructs a leaf from given data. The organ tree must be created, \begin{DoxySeeAlso}{See also}
+Organ\+::set\+Plant, \mbox{\hyperlink{class_c_plant_box_1_1_organ_a5f89e793a1ff1e068f18b953fb25409c}{Organ\+::set\+Parent}}, \mbox{\hyperlink{class_c_plant_box_1_1_organ_a92560d96959389219d26b1f10ea9437e}{Organ\+::add\+Child}} \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} geometry must be created, 
+
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a928426fcc1d5ed8101744a34d4ab2f06}{Organ\+::add\+Node}}, ensure that this-\/$>$get\+Node\+Id(0) == parent-\/$>$get\+Node\+Id(pni)
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the organ\textquotesingle{}s unique id (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_af4916e667175aff351c73cb6f0748324}{Organ\+::get\+Id}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & the organs parameters set, ownership transfers to the organ \\
+\hline
+{\em alive} & indicates if the organ is alive (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_abe7318360213d9effff6f52d0911c0ca}{Organ\+::is\+Alive}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em active} & indicates if the organ is active (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a36d3c456f82fbcae99c1256781c564a8}{Organ\+::is\+Active}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em age} & the current age of the organ (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_aee4adaa0ebe3dec382f725db5ba9d361}{Organ\+::get\+Age}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em length} & the current length of the organ (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a2b332bc562d43c90fb4bb00d181d0c52}{Organ\+::get\+Length}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em iheading} & the initial heading of this leaf \\
+\hline
+{\em pbl} & base length of the parent leaf, where this leaf emerges \\
+\hline
+{\em pni} & local node index, where this leaf emerges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]moved as long as stem is active, nodes are assumed to have moved (\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organism_aab29e5ba6d0d443488360e0fe5a212f7}{Organism\+::get\+Updated\+Nodes}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em old\+NON} & the number of nodes of the previous time step (default = 0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_af8889c95983606b128f9df58eacd7a45}\label{class_c_plant_box_1_1_leaf_af8889c95983606b128f9df58eacd7a45}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!Leaf@{Leaf}}
+\index{Leaf@{Leaf}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{Leaf()}{Leaf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Leaf\+::\+Leaf (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant,  }\item[{int}]{type,  }\item[{double}]{delay,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{parent,  }\item[{int}]{pni }\end{DoxyParamCaption})}
+
+
+
+used within simulation 
+
+Constructor Typically called by the Plant\+::\+Plant(), or Leaf\+::create\+New\+Leaf(). For leaf the initial node (in nodes) and node emergence time (in node\+CTs) must be set from outside
+
+
+\begin{DoxyParams}{Parameters}
+{\em plant} & points to the plant \\
+\hline
+{\em parent} & points to the parent organ \\
+\hline
+{\em subtype} & sub type of the leaf \\
+\hline
+{\em delay} & delay after which the organ starts to develop (days) \\
+\hline
+{\em rheading} & relative heading (within parent organ) \\
+\hline
+{\em pni} & parent node index \\
+\hline
+{\em pbl} & parent base length \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a893c2b987a5c0ef1bf9cee386c2502b3}\label{class_c_plant_box_1_1_leaf_a893c2b987a5c0ef1bf9cee386c2502b3}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!calcAge@{calcAge}}
+\index{calcAge@{calcAge}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{calcAge()}{calcAge()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+::calc\+Age (\begin{DoxyParamCaption}\item[{double}]{length }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+analytical age of the leaf 
+
+Analytical age of the leaf at a given length
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & length of the leaf \mbox{[}cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a84d141f13b899b8024746a72cad43789}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a733dca8f8f4ab665318eb3f8dfa2d1ab}\label{class_c_plant_box_1_1_leaf_a733dca8f8f4ab665318eb3f8dfa2d1ab}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!calcLength@{calcLength}}
+\index{calcLength@{calcLength}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{calcLength()}{calcLength()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+::calc\+Length (\begin{DoxyParamCaption}\item[{double}]{age }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+analytical length of the leaf 
+
+Analytical length of the leaf at a given age
+
+
+\begin{DoxyParams}{Parameters}
+{\em age} & age of the leaf \mbox{[}day\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_ac43d1e4588f267c8b60b77a1d0e76b4d}\label{class_c_plant_box_1_1_leaf_ac43d1e4588f267c8b60b77a1d0e76b4d}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ CPlant\+Box\+::\+Leaf\+::copy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copies the root tree 
+
+Deep copies the organ into the new plant
+\begin{DoxyParams}{Parameters}
+{\em rs.} & All laterals are deep copied, plant and parent pointers are updated.\\
+\hline
+{\em plant} & the plant the copied organ will be part of \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a9314bc56eaa1104bbcfa19e62c7cfdb2}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a28fa4a7f8739b54a72132561b922aa5c}\label{class_c_plant_box_1_1_leaf_a28fa4a7f8739b54a72132561b922aa5c}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!getIncrement@{getIncrement}}
+\index{getIncrement@{getIncrement}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{getIncrement()}{getIncrement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} CPlant\+Box\+::\+Leaf\+::get\+Increment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{p,  }\item[{double}]{sdx,  }\item[{int}]{n = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+called by create\+Segments, to determine growth direction 
+
+Returns the increment of the next segments
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & coordinates of previous node \\
+\hline
+{\em sdx} & length of next segment \mbox{[}cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the vector representing the increment 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a074acc573d0768a9f827bf16c64c07b5}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a18c08ed790a299055b8c5986e521b856}\label{class_c_plant_box_1_1_leaf_a18c08ed790a299055b8c5986e521b856}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!getLeafRandomParameter@{getLeafRandomParameter}}
+\index{getLeafRandomParameter@{getLeafRandomParameter}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{getLeafRandomParameter()}{getLeafRandomParameter()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_random_parameter}{Leaf\+Random\+Parameter}} $>$ CPlant\+Box\+::\+Leaf\+::get\+Leaf\+Random\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+root type parameter of this root 
+
+\begin{DoxyReturn}{Returns}
+The Leaf\+Type\+Parameter from the plant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_abbd15d1eb3f8683830599e00f93c7f25}\label{class_c_plant_box_1_1_leaf_abbd15d1eb3f8683830599e00f93c7f25}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!getLeafVis\_2D@{getLeafVis\_2D}}
+\index{getLeafVis\_2D@{getLeafVis\_2D}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{getLeafVis\_2D()}{getLeafVis\_2D()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ CPlant\+Box\+::\+Leaf\+::get\+Leaf\+Vis\+\_\+2D (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Scales unit leaf shape to the specific leaf, and returns leaf shape coordinates per node (normally 2 points, for convex domain it could be more points) see used by vtk\+\_\+plot.\+py to create a polygon representation of the leaf area \mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a5725b019d22d235e4a3bbe4e07c6d627}\label{class_c_plant_box_1_1_leaf_a5725b019d22d235e4a3bbe4e07c6d627}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!getLeafVis\_cuboid@{getLeafVis\_cuboid}}
+\index{getLeafVis\_cuboid@{getLeafVis\_cuboid}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{getLeafVis\_cuboid()}{getLeafVis\_cuboid()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ CPlant\+Box\+::\+Leaf\+::get\+Leaf\+Vis\+\_\+cuboid (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Scales unit leaf shape to the specific leaf, and returns leaf shape coordinates per node (normally 2 points, for convex domain it could be more points) see used by vtk\+\_\+plot.\+py to create a polygon representation of the leaf area \mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a0dfa0a18b23466a863207a93271a30e6}\label{class_c_plant_box_1_1_leaf_a0dfa0a18b23466a863207a93271a30e6}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!getLeafVisX@{getLeafVisX}}
+\index{getLeafVisX@{getLeafVisX}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{getLeafVisX()}{getLeafVisX()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Leaf\+::get\+Leaf\+VisX (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+for Python binding \mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a30c78b1944ed2e7223787a5f68d0f965}\label{class_c_plant_box_1_1_leaf_a30c78b1944ed2e7223787a5f68d0f965}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!getLeafVisX\_2D@{getLeafVisX\_2D}}
+\index{getLeafVisX\_2D@{getLeafVisX\_2D}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{getLeafVisX\_2D()}{getLeafVisX\_2D()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Leaf\+::get\+Leaf\+Vis\+X\+\_\+2D (\begin{DoxyParamCaption}\item[{double}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parameterization x value, at position l along the leaf axis \mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a2c178f0809d0c360918da10fbfdf3a1d}\label{class_c_plant_box_1_1_leaf_a2c178f0809d0c360918da10fbfdf3a1d}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!getLeafVisX\_cuboid@{getLeafVisX\_cuboid}}
+\index{getLeafVisX\_cuboid@{getLeafVisX\_cuboid}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{getLeafVisX\_cuboid()}{getLeafVisX\_cuboid()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Leaf\+::get\+Leaf\+Vis\+X\+\_\+cuboid (\begin{DoxyParamCaption}\item[{double}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parameterization x value, at position l along the leaf axis \mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a43be6785dc565fbbc63732f5b9c4c4a2}\label{class_c_plant_box_1_1_leaf_a43be6785dc565fbbc63732f5b9c4c4a2}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!heading@{heading}}
+\index{heading@{heading}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{heading()}{heading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} CPlant\+Box\+::\+Leaf\+::heading (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+current (absolute) heading of the organs at node n 
+
+\begin{DoxyReturn}{Returns}
+Current absolute heading of the organ at node n, based on initial heading, or direction of the segment going from node n-\/1 to node n 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_ae956e283784226444c01016128dbf405}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a2bf60002fdccfe56e2b7295c919974e4}\label{class_c_plant_box_1_1_leaf_a2bf60002fdccfe56e2b7295c919974e4}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!leafArea@{leafArea}}
+\index{leafArea@{leafArea}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{leafArea()}{leafArea()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+::leaf\+Area (\begin{DoxyParamCaption}\item[{bool}]{realized = {\ttfamily false},  }\item[{bool}]{with\+Petiole = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+center of the radial parametrisation 
+
+returns the leaf surface area, zero if there are lateral-\/leafs \mbox{[}cm2\mbox{]}
+
+in case there are no lateral leafs return leaf surface area \mbox{[}cm2\mbox{]} upper side only. If used for photosynthesis, with C3 plants (stomata on upper + lower side) need to do $\ast$ 2 
+\begin{DoxyParams}{Parameters}
+{\em realized} & use realized (true) or theoretical (false) length and area (default = false) \\
+\hline
+{\em with\+Petiole} & take into account leaf petiole or sheath (true) or not (false). Default = false (for computation of transpiration) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total leaf blade Area (with\+Petiole == false) or total leaf Area (with\+Petiole == true) \mbox{[}cm2\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_aeb1ad0cca9ae182707cd9bfeceb133c5}\label{class_c_plant_box_1_1_leaf_aeb1ad0cca9ae182707cd9bfeceb133c5}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!leafAreaAtSeg@{leafAreaAtSeg}}
+\index{leafAreaAtSeg@{leafAreaAtSeg}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{leafAreaAtSeg()}{leafAreaAtSeg()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+::leaf\+Area\+At\+Seg (\begin{DoxyParamCaption}\item[{int}]{local\+Seg\+Id,  }\item[{bool}]{realized = {\ttfamily false},  }\item[{bool}]{with\+Petiole = {\ttfamily false} }\end{DoxyParamCaption})}
+
+leaf BLADE Area at segment n°local\+Seg\+Id upper side only. If used for photosynthesis, with C3 plants (stomata on upper + lower side) need to do $\ast$ 2 see @\+Xylem\+Flux\+::seg\+Fluxes and @\+Xylem\+Flux\+::linear\+System 
+\begin{DoxyParams}{Parameters}
+{\em local\+Seg\+Id} & index for which evaluate area == nodey\+\_\+localid + 1 \\
+\hline
+{\em realized} & use realized (true) or theoretical (false) length and area (default = false) \\
+\hline
+{\em with\+Petiole} & take into account leaf petiole or sheath (true) or not (false). Default = false (for computation of transpiration) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+leaf area at segment n°local\+Seg\+Id \mbox{[}cm2\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_ae76760fc0071924184389f18fcc15e0b}\label{class_c_plant_box_1_1_leaf_ae76760fc0071924184389f18fcc15e0b}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!leafLengthAtSeg@{leafLengthAtSeg}}
+\index{leafLengthAtSeg@{leafLengthAtSeg}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{leafLengthAtSeg()}{leafLengthAtSeg()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+::leaf\+Length\+At\+Seg (\begin{DoxyParamCaption}\item[{int}]{local\+Seg\+Id,  }\item[{bool}]{with\+Petiole = {\ttfamily false} }\end{DoxyParamCaption})}
+
+leaf BLADE Area at segment n°local\+Seg\+Id upper side only. If used for photosynthesis, with C3 plants (stomata on upper + lower side) need to do $\ast$ 2 see @\+Xylem\+Flux\+::seg\+Fluxes and @\+Xylem\+Flux\+::linear\+System 
+\begin{DoxyParams}{Parameters}
+{\em local\+Seg\+Id} & index for which evaluate area == nodey\+\_\+localid + 1 \\
+\hline
+{\em realized} & use realized (true) or theoretical (false) length and area (default = false) \\
+\hline
+{\em with\+Petiole} & take into account leaf petiole or sheath (true) or not (false). Default = false (for computation of transpiration) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+leaf area at segment n°local\+Seg\+Id \mbox{[}cm2\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a280f725bf0196b5d4429711da2a2f379}\label{class_c_plant_box_1_1_leaf_a280f725bf0196b5d4429711da2a2f379}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!leafVolAtSeg@{leafVolAtSeg}}
+\index{leafVolAtSeg@{leafVolAtSeg}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{leafVolAtSeg()}{leafVolAtSeg()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+::leaf\+Vol\+At\+Seg (\begin{DoxyParamCaption}\item[{int}]{local\+Seg\+Id,  }\item[{bool}]{realized = {\ttfamily false},  }\item[{bool}]{with\+Petiole = {\ttfamily false} }\end{DoxyParamCaption})}
+
+leaf BLADE Area at segment n°local\+Seg\+Id upper side only. If used for photosynthesis, with C3 plants (stomata on upper + lower side) need to do $\ast$ 2 see @\+Xylem\+Flux\+::seg\+Fluxes and @\+Xylem\+Flux\+::linear\+System 
+\begin{DoxyParams}{Parameters}
+{\em local\+Seg\+Id} & index for which evaluate area == nodey\+\_\+localid + 1 \\
+\hline
+{\em realized} & use realized (true) or theoretical (false) length and area (default = false) \\
+\hline
+{\em with\+Petiole} & take into account leaf petiole or sheath (true) or not (false). Default = false (for computation of transpiration) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+leaf area at segment n°local\+Seg\+Id \mbox{[}cm2\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a369456c3d48f62b79386ee91a706381b}\label{class_c_plant_box_1_1_leaf_a369456c3d48f62b79386ee91a706381b}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!nodeLeafVis@{nodeLeafVis}}
+\index{nodeLeafVis@{nodeLeafVis}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{nodeLeafVis()}{nodeLeafVis()}}
+{\footnotesize\ttfamily bool CPlant\+Box\+::\+Leaf\+::node\+Leaf\+Vis (\begin{DoxyParamCaption}\item[{double}]{l }\end{DoxyParamCaption})}
+
+
+
+leaf base (false), branched leaf (false), or leaf surface area (true) 
+
+indicates if the node is in the leaf surface are and should be viusalized as polygon
+
+leaf base (false), branched leaf (false), or leaf surface area (true) \mbox{\Hypertarget{class_c_plant_box_1_1_leaf_ae5c9c5ee554227e7c1737b25c07d7b73}\label{class_c_plant_box_1_1_leaf_ae5c9c5ee554227e7c1737b25c07d7b73}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!orgVolume@{orgVolume}}
+\index{orgVolume@{orgVolume}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{orgVolume()}{orgVolume()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+::org\+Volume (\begin{DoxyParamCaption}\item[{double}]{length\+\_\+ = {\ttfamily -\/1.},  }\item[{bool}]{realized = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+always need to update the coordinates of the nodes for the \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length\+\_\+} & total leaf length for which to evaluate volume. default = -\/1 (i.\+e., use current volume) for phloem module, need to compute volume for other lengths \\
+\hline
+{\em realized} & use realized (true) or theoretical (false) length and area (default = false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+leaf volume \mbox{[}cm3\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a60b8028c229b4071b6046ad383ed5020}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_af083c7748065264a915d71129a2ec0b3}\label{class_c_plant_box_1_1_leaf_af083c7748065264a915d71129a2ec0b3}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!orgVolume2Length@{orgVolume2Length}}
+\index{orgVolume2Length@{orgVolume2Length}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{orgVolume2Length()}{orgVolume2Length()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+::org\+Volume2\+Length (\begin{DoxyParamCaption}\item[{double}]{volume\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume\+\_\+} & total leaf length for which to evaluate volume. for phloem module, need to compute lengths for different volumes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+leaf length \mbox{[}cm\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a663626eff9b83918a920e345e6f36fe6}\label{class_c_plant_box_1_1_leaf_a663626eff9b83918a920e345e6f36fe6}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!param@{param}}
+\index{param@{param}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{param()}{param()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter}{Leaf\+Specific\+Parameter}} $>$ CPlant\+Box\+::\+Leaf\+::param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+root parameter 
+
+\begin{DoxyReturn}{Returns}
+Parameters of the specific leaf 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_ac8f35a92020107f44059b995e44af5d6}\label{class_c_plant_box_1_1_leaf_ac8f35a92020107f44059b995e44af5d6}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!simulate@{simulate}}
+\index{simulate@{simulate}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Leaf\+::simulate (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+leaf growth for a time span of 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Simulates f\+\_\+gf of this leaf for a time span dt\\
+\hline
+{\em dt} & time step \mbox{[}day\mbox{]} \\
+\hline
+{\em verbose} & indicates if status messages are written to the console (cout) (default = false) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_acced3af5057dae40c647bcc1ea0e511d}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_aac289a8a8793c3b27fb7ff1009d1a8ed}\label{class_c_plant_box_1_1_leaf_aac289a8a8793c3b27fb7ff1009d1a8ed}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Leaf\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Quick info about the object for debugging additionally, use \mbox{\hyperlink{class_c_plant_box_1_1_leaf_a663626eff9b83918a920e345e6f36fe6}{param()}}-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_leaf_aac289a8a8793c3b27fb7ff1009d1a8ed}{to\+String()}} and \mbox{\hyperlink{class_c_plant_box_1_1_organ_afabf8911c0d2771a58564792e353f186}{get\+Organ\+Random\+Parameter()}}-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_leaf_aac289a8a8793c3b27fb7ff1009d1a8ed}{to\+String()}} to obtain all information. 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a9f823aebd19519096e899e65604f239f}{CPlant\+Box\+::\+Organ}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_a55d24589065036c723a38e3bcc39773d}\label{class_c_plant_box_1_1_leaf_a55d24589065036c723a38e3bcc39773d}} 
+\index{CPlantBox::Leaf@{CPlantBox::Leaf}!ageDependentTropism@{ageDependentTropism}}
+\index{ageDependentTropism@{ageDependentTropism}!CPlantBox::Leaf@{CPlantBox::Leaf}}
+\doxysubsubsection{\texorpdfstring{ageDependentTropism}{ageDependentTropism}}
+{\footnotesize\ttfamily bool CPlant\+Box\+::\+Leaf\+::age\+Dependent\+Tropism = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+do we need to check the leaf\textquotesingle{}s age to see when to update the tropism effect?, 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_af0ee7fd74362edaa56e7835c4e259294}{Leaf\+::rel2abs}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Leaf.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Leaf.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\hypertarget{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod}{}\doxysection{src.\+functional.\+Mesh1\+Dmod.\+Mesh1\+Dmod Class Reference}
+\label{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod}\index{src.functional.Mesh1Dmod.Mesh1Dmod@{src.functional.Mesh1Dmod.Mesh1Dmod}}
+
+
+Inheritance diagram for src.\+functional.\+Mesh1\+Dmod.\+Mesh1\+Dmod\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for src.\+functional.\+Mesh1\+Dmod.\+Mesh1\+Dmod\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_a0ba798ec9083dddb9032d8d3091e7f2a}\label{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_a0ba798ec9083dddb9032d8d3091e7f2a}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, radii\+Vertices, radii\+Cells, length, vertex\+Coords, face\+Vertex\+IDs, cell\+Face\+IDs, faces\+Norm=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_adf6fe7376d63f284eca5517da1a55f29}\label{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_adf6fe7376d63f284eca5517da1a55f29}} 
+{\bfseries faces\+Norm}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_aba82d2650681cb7459a87136aa4dc123}\label{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_aba82d2650681cb7459a87136aa4dc123}} 
+{\bfseries radii\+Vertices}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_a9c1e2a9a5f2ca0dcab3f55e3da43ec25}\label{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_a9c1e2a9a5f2ca0dcab3f55e3da43ec25}} 
+{\bfseries radii\+Cells}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_a64d7c713cdca2b83307e397ef7906c73}\label{classsrc_1_1functional_1_1_mesh1_dmod_1_1_mesh1_dmod_a64d7c713cdca2b83307e397ef7906c73}} 
+{\bfseries length}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} adapted mesh1D to axcept 3D network
+    already ok/apparently no need to adapt:
+    cellFaceIDs
+    cellToCellIDs
+    _adjacentCellIDs
+    faceCenters
+    _cellToFaceOrientations
+    _interiorCellIDs
+    _exteriorCellIDs
+    _interiorFaces
+    _exteriorFaces
+    _cellToFaceDistanceVectors : shape =( 3[x,y,z coord] , 2 [each side of face] , Num of faces )
+    _internalCellDistances : ok
+    _internalFaceToCellDistances
+    cellDistanceVectors : ok
+    cellToFaceDistanceVectors: ok
+    _cellToFaceOrientations: faces not facing same way as would for fipy mesh but still gives ok results for faceGrad.divergence
+    cellvar.grad: bcause tangents = 0, not used to compute faceVAr.grad. so ok if equation is wrong
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Mesh1\+Dmod.\+py\end{DoxyCompactItemize}

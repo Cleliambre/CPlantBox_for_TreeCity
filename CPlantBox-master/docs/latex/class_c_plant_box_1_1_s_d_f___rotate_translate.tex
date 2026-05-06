@@ -1,0 +1,148 @@
+\hypertarget{class_c_plant_box_1_1_s_d_f___rotate_translate}{}\doxysection{CPlant\+Box\+::SDF\+\_\+\+Rotate\+Translate Class Reference}
+\label{class_c_plant_box_1_1_s_d_f___rotate_translate}\index{CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}}
+
+
+{\ttfamily \#include $<$sdf.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::SDF\+\_\+\+Rotate\+Translate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{class_c_plant_box_1_1_s_d_f___rotate_translate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::SDF\+\_\+\+Rotate\+Translate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{class_c_plant_box_1_1_s_d_f___rotate_translate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___rotate_translate_a25d0aa05aef8f8fb9b93553b4672801b}\label{class_c_plant_box_1_1_s_d_f___rotate_translate_a25d0aa05aef8f8fb9b93553b4672801b}} 
+enum {\bfseries SDF\+\_\+\+Axes} \{ {\bfseries xaxis} =0
+, {\bfseries yaxis} =1
+, {\bfseries zaxis} =2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___rotate_translate_a1d864b2a7e5a50c8a0535ab2f6ae73f7}{SDF\+\_\+\+Rotate\+Translate}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ sdf, double angle=0, int axis=xaxis, const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos=\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}(0, 0, 0))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___rotate_translate_aa84ff0105949f60026107ef9fd6ca8cc}\label{class_c_plant_box_1_1_s_d_f___rotate_translate_aa84ff0105949f60026107ef9fd6ca8cc}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___rotate_translate_aa84ff0105949f60026107ef9fd6ca8cc}{SDF\+\_\+\+Rotate\+Translate}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ sdf, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} pos)
+\begin{DoxyCompactList}\small\item\em Translate only. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___rotate_translate_a7988706f4589f71b70c15398c55a516f}{get\+Dist}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&v) const override
+\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___rotate_translate_a545b54bc6ab42229226cd7f8247757d5}{to\+String}} () const override
+\item 
+virtual int \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___rotate_translate_a15b10224d854daab94990c23355b352d}{write\+PVPScript}} (std\+::ostream \&cout, int c=1) const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___rotate_translate}{SDF\+\_\+\+Rotate\+Translate}} first rotates, and then translates a base geometry 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___rotate_translate_a1d864b2a7e5a50c8a0535ab2f6ae73f7}\label{class_c_plant_box_1_1_s_d_f___rotate_translate_a1d864b2a7e5a50c8a0535ab2f6ae73f7}} 
+\index{CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}!SDF\_RotateTranslate@{SDF\_RotateTranslate}}
+\index{SDF\_RotateTranslate@{SDF\_RotateTranslate}!CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}}
+\doxysubsubsection{\texorpdfstring{SDF\_RotateTranslate()}{SDF\_RotateTranslate()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+SDF\+\_\+\+Rotate\+Translate\+::\+SDF\+\_\+\+Rotate\+Translate (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$}]{sdf\+\_\+,  }\item[{double}]{a = {\ttfamily 0},  }\item[{int}]{axis\+\_\+ = {\ttfamily xaxis},  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos\+\_\+ = {\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}(0,0,0)} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Rotates the base geometry pot around a main axis and then translates it
+
+
+\begin{DoxyParams}{Parameters}
+{\em sdf\+\_\+} & points to the original geometry \\
+\hline
+{\em a} & rotation angle \mbox{[}degree\mbox{]} \\
+\hline
+{\em axis\+\_\+} & rotation axis (SDF\+\_\+\+Axes\+: sdf\+\_\+xaxis, sdf\+\_\+yaxis, or sdf\+\_\+zaxis) \\
+\hline
+{\em pos\+\_\+} & position of origin \mbox{[}cm\mbox{]}, default=(0,0,0) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___rotate_translate_a7988706f4589f71b70c15398c55a516f}\label{class_c_plant_box_1_1_s_d_f___rotate_translate_a7988706f4589f71b70c15398c55a516f}} 
+\index{CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}!getDist@{getDist}}
+\index{getDist@{getDist}!CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+SDF\+\_\+\+Rotate\+Translate\+::get\+Dist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{Signed\+Distance\+Function\+::get\+Dist}}
+\end{DoxySeeAlso}
+Distance to the next boundary, after rotation and translation of the base geometry
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & spatial position \mbox{[}cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+signed distance \mbox{[}cm\mbox{]}, a minus sign6 means inside, plus outside 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___rotate_translate_a545b54bc6ab42229226cd7f8247757d5}\label{class_c_plant_box_1_1_s_d_f___rotate_translate_a545b54bc6ab42229226cd7f8247757d5}} 
+\index{CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string CPlant\+Box\+::\+SDF\+\_\+\+Rotate\+Translate\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{Signed\+Distance\+Function\+::to\+String}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___rotate_translate_a15b10224d854daab94990c23355b352d}\label{class_c_plant_box_1_1_s_d_f___rotate_translate_a15b10224d854daab94990c23355b352d}} 
+\index{CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}!writePVPScript@{writePVPScript}}
+\index{writePVPScript@{writePVPScript}!CPlantBox::SDF\_RotateTranslate@{CPlantBox::SDF\_RotateTranslate}}
+\doxysubsubsection{\texorpdfstring{writePVPScript()}{writePVPScript()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+SDF\+\_\+\+Rotate\+Translate\+::write\+PVPScript (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{cout,  }\item[{int}]{c = {\ttfamily 1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a0098fb469c9be5557d5593cec9e76d2a}{Signed\+Distance\+Function\+::write\+PVPScript}}
+\end{DoxySeeAlso}
+Writes a Para\+View Phython script explicitly representing the implicit geometry
+
+
+\begin{DoxyParams}{Parameters}
+{\em cout} & e.\+g. a file output stream \\
+\hline
+{\em c} & python object counter for the script (to avoid duplicate names) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object counter 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a0098fb469c9be5557d5593cec9e76d2a}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['initcallbacks_1356',['initCallbacks',['../class_c_plant_box_1_1_root_system.html#a82108eed9b5785e0b54368538c5a1845',1,'CPlantBox::RootSystem::initCallbacks()'],['../class_c_plant_box_1_1_plant.html#adaec2f8674699ae5c2f9ed2f8df87ae2',1,'CPlantBox::Plant::initCallbacks()']]],
+  ['initialize_1357',['initialize',['../class_c_plant_box_1_1_organism.html#a0b94d4a64b67eb1f9755b54eab1fb9e1',1,'CPlantBox::Organism::initialize()'],['../class_c_plant_box_1_1_plant.html#afcda1c37b70b7755840d760f2a60bffe',1,'CPlantBox::Plant::initialize()'],['../class_c_plant_box_1_1_root_system.html#aaf6a00df82bbd536b4621daa4e269276',1,'CPlantBox::RootSystem::initialize()'],['../class_c_plant_box_1_1_seed.html#a33d05612e1aa9e9b2846aeb8e377a949',1,'CPlantBox::Seed::initialize()']]],
+  ['initialize_5f_1358',['initialize_',['../class_c_plant_box_1_1_mapped_plant.html#aad949435c11d959b722d80f0809ab9be',1,'CPlantBox::MappedPlant::initialize_()'],['../class_c_plant_box_1_1_plant.html#a6e4c7010f67fff3e68989b7c6e422ebf',1,'CPlantBox::Plant::initialize_()']]],
+  ['initialize_5fstatic_1359',['initialize_static',['../classsrc_1_1structural_1_1_static_plant_1_1_static_plant.html#a6d19d3b0323c8177d16fd9914f2e7501',1,'src::structural::StaticPlant::StaticPlant']]],
+  ['initialize_5fstatic_5flaterals_1360',['initialize_static_laterals',['../classsrc_1_1structural_1_1_static_plant_1_1_static_plant.html#a5f189246f210248fbdc41ee8bed2f2c6',1,'src::structural::StaticPlant::StaticPlant']]],
+  ['initializedb_1361',['initializeDB',['../class_c_plant_box_1_1_mapped_plant.html#a5715e20fe9486b15f1082721bb45eec2',1,'CPlantBox::MappedPlant::initializeDB()'],['../class_c_plant_box_1_1_plant.html#aed6efcec7951ed692e098c600dc1929d',1,'CPlantBox::Plant::initializeDB()'],['../class_c_plant_box_1_1_root_system.html#a3fae3938b88404d7770af2b30ed100d9',1,'CPlantBox::RootSystem::initializeDB()']]],
+  ['initializelb_1362',['initializeLB',['../class_c_plant_box_1_1_mapped_plant.html#a83dd04cc58a1fa3be20a1b2577f95434',1,'CPlantBox::MappedPlant::initializeLB()'],['../class_c_plant_box_1_1_plant.html#a4d736cfe1d38ac753aefd0f04238d4d2',1,'CPlantBox::Plant::initializeLB()'],['../class_c_plant_box_1_1_root_system.html#a71bceae10318dfedfa78dd03b11012e9',1,'CPlantBox::RootSystem::initializeLB(int basal=4, int shootborne=5, bool verbose=true)']]],
+  ['initializereader_1363',['initializeReader',['../class_c_plant_box_1_1_root_system.html#a2e8853a177cf6945182faad29c298c5f',1,'CPlantBox::RootSystem::initializeReader()'],['../class_c_plant_box_1_1_plant.html#ab45ede3a1d6ea27520fbeca178bb23fb',1,'CPlantBox::Plant::initializeReader()'],['../class_c_plant_box_1_1_organism.html#aff80c2e5b594681b0c5f4a361d005cdc',1,'CPlantBox::Organism::initializeReader()']]],
+  ['insertafterchild_1364',['InsertAfterChild',['../classtinyxml2_1_1_x_m_l_node.html#a9275138a1b8dd5d8e2c26789bdc23ac8',1,'tinyxml2::XMLNode']]],
+  ['insertendchild_1365',['InsertEndChild',['../classtinyxml2_1_1_x_m_l_node.html#ae3b422e98914d6002ca99bb1d2837103',1,'tinyxml2::XMLNode']]],
+  ['insertfirstchild_1366',['InsertFirstChild',['../classtinyxml2_1_1_x_m_l_node.html#ac609a8f3ea949027f439280c640bbaf2',1,'tinyxml2::XMLNode']]],
+  ['insertparticle_1367',['insertParticle',['../classaabb_1_1_tree.html#a7f6348bb1ba0ea3c77f030ca7e8cff11',1,'aabb::Tree::insertParticle(unsigned int, std::vector&lt; double &gt; &amp;, double)'],['../classaabb_1_1_tree.html#a6d7cde2e788a4faa923cf613aab29cec',1,'aabb::Tree::insertParticle(unsigned int, std::vector&lt; double &gt; &amp;, std::vector&lt; double &gt; &amp;)']]],
+  ['int64attribute_1368',['Int64Attribute',['../classtinyxml2_1_1_x_m_l_element.html#a66d96972adecd816194191f13cc4a0a0',1,'tinyxml2::XMLElement']]],
+  ['int64text_1369',['Int64Text',['../classtinyxml2_1_1_x_m_l_element.html#aab6151f7e3b4c2c0a8234e262d7b6b8a',1,'tinyxml2::XMLElement']]],
+  ['intattribute_1370',['IntAttribute',['../classtinyxml2_1_1_x_m_l_element.html#a95a89b13bb14a2d4655e2b5b406c00d4',1,'tinyxml2::XMLElement']]],
+  ['internodalgrowth_1371',['internodalGrowth',['../class_c_plant_box_1_1_stem.html#a2b3776a249b86d8e57d8b3b1067b14ac',1,'CPlantBox::Stem']]],
+  ['interp1_1372',['interp1',['../class_c_plant_box_1_1_function.html#a55ce80347b6c95917b00a64fa9e43d23',1,'CPlantBox::Function']]],
+  ['intersections_1373',['intersections',['../class_c_plant_box_1_1_leaf_random_parameter.html#aa7366bcb61057022c1ac83fb7b397311',1,'CPlantBox::LeafRandomParameter']]],
+  ['intvalue_1374',['IntValue',['../classtinyxml2_1_1_x_m_l_attribute.html#adfa2433f0fdafd5c3880936de9affa80',1,'tinyxml2::XMLAttribute']]],
+  ['inverse_1375',['inverse',['../class_c_plant_box_1_1_matrix3d.html#a6b51e2a2d5ca24cd5199ac0c4990fb44',1,'CPlantBox::Matrix3d']]],
+  ['isactive_1376',['isActive',['../class_c_plant_box_1_1_organ.html#a36d3c456f82fbcae99c1256781c564a8',1,'CPlantBox::Organ']]],
+  ['isalive_1377',['isAlive',['../class_c_plant_box_1_1_organ.html#abe7318360213d9effff6f52d0911c0ca',1,'CPlantBox::Organ']]],
+  ['isleaf_1378',['isLeaf',['../structaabb_1_1_node.html#a01b82fd3dda6c1ff4960e784af62e339',1,'aabb::Node']]]
+];

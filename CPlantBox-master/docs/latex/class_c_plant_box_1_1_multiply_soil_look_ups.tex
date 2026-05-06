@@ -1,0 +1,87 @@
+\hypertarget{class_c_plant_box_1_1_multiply_soil_look_ups}{}\doxysection{CPlant\+Box\+::Multiply\+Soil\+Look\+Ups Class Reference}
+\label{class_c_plant_box_1_1_multiply_soil_look_ups}\index{CPlantBox::MultiplySoilLookUps@{CPlantBox::MultiplySoilLookUps}}
+
+
+{\ttfamily \#include $<$soil.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Multiply\+Soil\+Look\+Ups\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{class_c_plant_box_1_1_multiply_soil_look_ups__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Multiply\+Soil\+Look\+Ups\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{class_c_plant_box_1_1_multiply_soil_look_ups__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_multiply_soil_look_ups_a1c359eb0195798b5fcc539e5470635ef}\label{class_c_plant_box_1_1_multiply_soil_look_ups_a1c359eb0195798b5fcc539e5470635ef}} 
+{\bfseries Multiply\+Soil\+Look\+Ups} (\mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $\ast$s1, \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $\ast$s2)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_multiply_soil_look_ups_aa075a11ed1486712adf8eecf19f546aa}\label{class_c_plant_box_1_1_multiply_soil_look_ups_aa075a11ed1486712adf8eecf19f546aa}} 
+{\bfseries Multiply\+Soil\+Look\+Ups} (std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $\ast$ $>$ soils)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_multiply_soil_look_ups_a2af5cfc7ad5700f259853abe0e43321f}\label{class_c_plant_box_1_1_multiply_soil_look_ups_a2af5cfc7ad5700f259853abe0e43321f}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries copy} () override
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_multiply_soil_look_ups_a249db03264505301312ae1063abedd46}{get\+Value}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o=nullptr) const override
+\begin{DoxyCompactList}\small\item\em Returns a scalar property of the soil, 1. per default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_multiply_soil_look_ups_ae22e7bdd04b87f14db19f02d5e0b88d1}\label{class_c_plant_box_1_1_multiply_soil_look_ups_ae22e7bdd04b87f14db19f02d5e0b88d1}} 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_multiply_soil_look_ups_ae22e7bdd04b87f14db19f02d5e0b88d1}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Quick info about the object for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_multiply_soil_look_ups_a03041b5939152dbec41739238a40c185}\label{class_c_plant_box_1_1_multiply_soil_look_ups_a03041b5939152dbec41739238a40c185}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $\ast$ $>$ {\bfseries soils}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Product of multiple \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_ad157577afde792c49fc0545da1928037}{Soil\+Look\+Up\+::get\+Value}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_multiply_soil_look_ups_a249db03264505301312ae1063abedd46}\label{class_c_plant_box_1_1_multiply_soil_look_ups_a249db03264505301312ae1063abedd46}} 
+\index{CPlantBox::MultiplySoilLookUps@{CPlantBox::MultiplySoilLookUps}!getValue@{getValue}}
+\index{getValue@{getValue}!CPlantBox::MultiplySoilLookUps@{CPlantBox::MultiplySoilLookUps}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Multiply\+Soil\+Look\+Ups\+::get\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{organ = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a scalar property of the soil, 1. per default. 
+
+Returns a scalar property of the soil scaled from 0..1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position \mbox{[}cm\mbox{]}, (normally, root-\/$>$get\+Node(root-\/$>$get\+Number\+Of\+Nodes()-\/1)) \\
+\hline
+{\em root} & the root that wants to know the scalar property in some situation this might be usefull (e.\+g. could increase look up speed from a unstructured mesh) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+scalar soil property 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_ad157577afde792c49fc0545da1928037}{CPlant\+Box\+::\+Soil\+Look\+Up}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/soil.\+h\end{DoxyCompactItemize}

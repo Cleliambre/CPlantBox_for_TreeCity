@@ -1,0 +1,22 @@
+ipython
+matplotlib
+mpi4py
+numpy
+pandas
+pybind11
+scipy
+vtk
+pylint
+pyevtk
+dash
+dash_vtk
+dash_bootstrap_components
+pympler
+openpyxl
+
+# other requirements:
+# default-jre
+# libboost-all-dev
+# python3-pip
+# libeigen3-dev
+

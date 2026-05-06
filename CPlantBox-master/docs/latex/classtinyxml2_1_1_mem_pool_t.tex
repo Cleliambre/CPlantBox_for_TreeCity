@@ -1,0 +1,61 @@
+\hypertarget{classtinyxml2_1_1_mem_pool_t}{}\doxysection{tinyxml2\+::Mem\+PoolT$<$ ITEM\+\_\+\+SIZE $>$ Class Template Reference}
+\label{classtinyxml2_1_1_mem_pool_t}\index{tinyxml2::MemPoolT$<$ ITEM\_SIZE $>$@{tinyxml2::MemPoolT$<$ ITEM\_SIZE $>$}}
+
+
+Inheritance diagram for tinyxml2\+::Mem\+PoolT$<$ ITEM\+\_\+\+SIZE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classtinyxml2_1_1_mem_pool_t__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tinyxml2\+::Mem\+PoolT$<$ ITEM\+\_\+\+SIZE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classtinyxml2_1_1_mem_pool_t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_af9de1b2544c6553c3f8a75dd75c2f8f5}\label{classtinyxml2_1_1_mem_pool_t_af9de1b2544c6553c3f8a75dd75c2f8f5}} 
+enum \{ {\bfseries ITEMS\+\_\+\+PER\+\_\+\+BLOCK} = (4 $\ast$ 1024) / ITEM\+\_\+\+SIZE
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_a22d595caa0e9d23aa080f49ca6475fdd}\label{classtinyxml2_1_1_mem_pool_t_a22d595caa0e9d23aa080f49ca6475fdd}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_a54e4d9b343459ef1731314a99877ff35}\label{classtinyxml2_1_1_mem_pool_t_a54e4d9b343459ef1731314a99877ff35}} 
+virtual int {\bfseries Item\+Size} () const
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_a445a6c80151ba6268b24ec62a7c84d74}\label{classtinyxml2_1_1_mem_pool_t_a445a6c80151ba6268b24ec62a7c84d74}} 
+int {\bfseries Current\+Allocs} () const
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_a810fd2b0caf56b8b688e55f2768f96c7}\label{classtinyxml2_1_1_mem_pool_t_a810fd2b0caf56b8b688e55f2768f96c7}} 
+virtual void $\ast$ {\bfseries Alloc} ()
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_a408ce0918e9d3d5e5e1cc4896944875f}\label{classtinyxml2_1_1_mem_pool_t_a408ce0918e9d3d5e5e1cc4896944875f}} 
+virtual void {\bfseries Free} (void $\ast$mem)
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_a47eefbd934ef70d973ea41d41ab5f239}\label{classtinyxml2_1_1_mem_pool_t_a47eefbd934ef70d973ea41d41ab5f239}} 
+void {\bfseries Trace} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_aee3c611215ae08cce41a940bf2763027}\label{classtinyxml2_1_1_mem_pool_t_aee3c611215ae08cce41a940bf2763027}} 
+void {\bfseries Set\+Tracked} ()
+\item 
+\mbox{\Hypertarget{classtinyxml2_1_1_mem_pool_t_a3bcdc302ae15d2810e11192321a8f5f1}\label{classtinyxml2_1_1_mem_pool_t_a3bcdc302ae15d2810e11192321a8f5f1}} 
+int {\bfseries Untracked} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/tinyxml2/tinyxml2.\+h\end{DoxyCompactItemize}

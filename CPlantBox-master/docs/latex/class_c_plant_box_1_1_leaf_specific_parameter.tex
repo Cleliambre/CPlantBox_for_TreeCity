@@ -1,0 +1,126 @@
+\hypertarget{class_c_plant_box_1_1_leaf_specific_parameter}{}\doxysection{CPlant\+Box\+::Leaf\+Specific\+Parameter Class Reference}
+\label{class_c_plant_box_1_1_leaf_specific_parameter}\index{CPlantBox::LeafSpecificParameter@{CPlantBox::LeafSpecificParameter}}
+
+
+{\ttfamily \#include $<$leafparameter.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Leaf\+Specific\+Parameter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_c_plant_box_1_1_leaf_specific_parameter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Leaf\+Specific\+Parameter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_c_plant_box_1_1_leaf_specific_parameter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_aa6fb650bf6f26e7f3802f4726896fa62}\label{class_c_plant_box_1_1_leaf_specific_parameter_aa6fb650bf6f26e7f3802f4726896fa62}} 
+{\bfseries Leaf\+Specific\+Parameter} (int \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter_a1cc8e4fde8ac7581d3b9172fff9d7bc2}{sub\+Type}}, double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a26049fddfba53916e6aebc2865ba1b7f}{lb}}, double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a63bf869184b0809bfcb0b52297056734}{la}}, const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a9621977f6e9f92453c1741314ccb766c}{ln}}, double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a00f7ea2011c3c2bf0801bb45753451bf}{r}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter_a5e0fdcc59722be12e20c967f8248532d}{a}}, double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_aee8fdc84071dac92405e83a642e05826}{theta}}, double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a57be60086252c028632706f4f6d6f58a}{rlt}}, double leaf\+Area, bool \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a58b5423bb4ede00da8c6b849223289eb}{laterals}}, double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a376b1cd217f9ad3af97d233144454082}{width\+\_\+blade}}, double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_aa3f4ce22131cfa64071fe98456e17e04}{width\+\_\+petiole}})
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a3c0b32fd5626515cffc7d07ac1382067}\label{class_c_plant_box_1_1_leaf_specific_parameter_a3c0b32fd5626515cffc7d07ac1382067}} 
+int {\bfseries nob} () const
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a289b91ab24a2dcef2ae26d045144f3fb}{getK}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact maximal leaf length (including leaf stem) of this realization \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a8164e90b11be9b8f0301306ce8aab416}\label{class_c_plant_box_1_1_leaf_specific_parameter_a8164e90b11be9b8f0301306ce8aab416}} 
+double {\bfseries leaf\+Length} () const
+\item 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a24523aa7c1dde6bbe980ec0e221896fc}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the exact maximal leaf length (excluding leaf stem) of this realization \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a26049fddfba53916e6aebc2865ba1b7f}{lb}} = 0.
+\begin{DoxyCompactList}\small\item\em Constructor setting all parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a63bf869184b0809bfcb0b52297056734}\label{class_c_plant_box_1_1_leaf_specific_parameter_a63bf869184b0809bfcb0b52297056734}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a63bf869184b0809bfcb0b52297056734}{la}} = 0.
+\begin{DoxyCompactList}\small\item\em Apical zone of leaf vein \mbox{[}cm\mbox{]};. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a00f7ea2011c3c2bf0801bb45753451bf}\label{class_c_plant_box_1_1_leaf_specific_parameter_a00f7ea2011c3c2bf0801bb45753451bf}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a00f7ea2011c3c2bf0801bb45753451bf}{r}} = 0.
+\begin{DoxyCompactList}\small\item\em Initial growth rate \mbox{[}cm day-\/1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_aee8fdc84071dac92405e83a642e05826}\label{class_c_plant_box_1_1_leaf_specific_parameter_aee8fdc84071dac92405e83a642e05826}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_aee8fdc84071dac92405e83a642e05826}{theta}} = 0.
+\begin{DoxyCompactList}\small\item\em Branching angle between veins \mbox{[}rad\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a57be60086252c028632706f4f6d6f58a}\label{class_c_plant_box_1_1_leaf_specific_parameter_a57be60086252c028632706f4f6d6f58a}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a57be60086252c028632706f4f6d6f58a}{rlt}} = 0.
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_c_plant_box_1_1_leaf}{Leaf}} life time \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a2a151af5bf85b85dbb8ff357a58f58a9}\label{class_c_plant_box_1_1_leaf_specific_parameter_a2a151af5bf85b85dbb8ff357a58f58a9}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a2a151af5bf85b85dbb8ff357a58f58a9}{area\+Max}} = 0.
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_c_plant_box_1_1_leaf}{Leaf}} area \mbox{[}cm2\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a58b5423bb4ede00da8c6b849223289eb}\label{class_c_plant_box_1_1_leaf_specific_parameter_a58b5423bb4ede00da8c6b849223289eb}} 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a58b5423bb4ede00da8c6b849223289eb}{laterals}} = false
+\begin{DoxyCompactList}\small\item\em Indicates if lateral leaves exist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a9621977f6e9f92453c1741314ccb766c}\label{class_c_plant_box_1_1_leaf_specific_parameter_a9621977f6e9f92453c1741314ccb766c}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a9621977f6e9f92453c1741314ccb766c}{ln}} = std\+::vector$<$double$>$()
+\begin{DoxyCompactList}\small\item\em Inter-\/lateral distances (if laterals) or mid for radial parametrisation (if there are no laterals) \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a376b1cd217f9ad3af97d233144454082}\label{class_c_plant_box_1_1_leaf_specific_parameter_a376b1cd217f9ad3af97d233144454082}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_a376b1cd217f9ad3af97d233144454082}{width\+\_\+blade}} = 0.
+\begin{DoxyCompactList}\small\item\em width of leafe blade (cm) = length -\/ lb zone. define later a width growth rate? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_aa3f4ce22131cfa64071fe98456e17e04}\label{class_c_plant_box_1_1_leaf_specific_parameter_aa3f4ce22131cfa64071fe98456e17e04}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter_aa3f4ce22131cfa64071fe98456e17e04}{width\+\_\+petiole}} = 0.
+\begin{DoxyCompactList}\small\item\em width of leafe petiole (cm) = lb zone. define later a width growth rate? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parameters of a single leaf (created by \mbox{\hyperlink{class_c_plant_box_1_1_leaf_specific_parameter}{Leaf\+Specific\+Parameter}}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a289b91ab24a2dcef2ae26d045144f3fb}\label{class_c_plant_box_1_1_leaf_specific_parameter_a289b91ab24a2dcef2ae26d045144f3fb}} 
+\index{CPlantBox::LeafSpecificParameter@{CPlantBox::LeafSpecificParameter}!getK@{getK}}
+\index{getK@{getK}!CPlantBox::LeafSpecificParameter@{CPlantBox::LeafSpecificParameter}}
+\doxysubsubsection{\texorpdfstring{getK()}{getK()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+Specific\+Parameter\+::getK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the exact maximal leaf length (including leaf stem) of this realization \mbox{[}cm\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+Mean maximal leaf length of this leaf type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a24523aa7c1dde6bbe980ec0e221896fc}\label{class_c_plant_box_1_1_leaf_specific_parameter_a24523aa7c1dde6bbe980ec0e221896fc}} 
+\index{CPlantBox::LeafSpecificParameter@{CPlantBox::LeafSpecificParameter}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::LeafSpecificParameter@{CPlantBox::LeafSpecificParameter}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Leaf\+Specific\+Parameter\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact maximal leaf length (excluding leaf stem) of this realization \mbox{[}cm\mbox{]}. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter_a16a919dccc42ed931ea5b1675abe2251}{CPlant\+Box\+::\+Organ\+Specific\+Parameter}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_leaf_specific_parameter_a26049fddfba53916e6aebc2865ba1b7f}\label{class_c_plant_box_1_1_leaf_specific_parameter_a26049fddfba53916e6aebc2865ba1b7f}} 
+\index{CPlantBox::LeafSpecificParameter@{CPlantBox::LeafSpecificParameter}!lb@{lb}}
+\index{lb@{lb}!CPlantBox::LeafSpecificParameter@{CPlantBox::LeafSpecificParameter}}
+\doxysubsubsection{\texorpdfstring{lb}{lb}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Leaf\+Specific\+Parameter\+::lb = 0.}
+
+
+
+Constructor setting all parameters. 
+
+Basal zone of leaf (leaf-\/stem) \mbox{[}cm\mbox{]} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/leafparameter.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/leafparameter.\+cpp\end{DoxyCompactItemize}

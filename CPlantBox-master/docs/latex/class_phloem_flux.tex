@@ -1,0 +1,583 @@
+\hypertarget{class_phloem_flux}{}\doxysection{Phloem\+Flux Class Reference}
+\label{class_phloem_flux}\index{PhloemFlux@{PhloemFlux}}
+
+
+{\ttfamily \#include $<$run\+PM.\+h$>$}
+
+
+
+Inheritance diagram for Phloem\+Flux\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_phloem_flux__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Phloem\+Flux\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_phloem_flux__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a47fb088cda72ede92f64e6930e8f42bd}\label{class_phloem_flux_a47fb088cda72ede92f64e6930e8f42bd}} 
+{\bfseries Phloem\+Flux} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{CPlant\+Box\+::\+Mapped\+Plant}} $>$ plant\+\_\+, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters}{CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters}} $>$ params, double psi\+Xyl\+Init=-\/500., double ci\+Init=350e-\/6)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_aa4f18c91e82a2cab6e036045776ccb43}\label{class_phloem_flux_aa4f18c91e82a2cab6e036045776ccb43}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_phloem_flux}{Phloem\+Flux}} $>$ {\bfseries Phloem} ()
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a18d7fd78f380f2fd8a3b0871b9063cb0}\label{class_phloem_flux_a18d7fd78f380f2fd8a3b0871b9063cb0}} 
+int \mbox{\hyperlink{class_phloem_flux_a18d7fd78f380f2fd8a3b0871b9063cb0}{start\+PM}} (double Start\+Time, double End\+Time, int Output\+Step, double TairK, bool verbose=true, std\+::string filename=\char`\"{}outpm.\+txt\char`\"{})
+\begin{DoxyCompactList}\small\item\em main function called from python \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_a5dee2bdc44dc1d6506b0dadf43dfb099}\label{class_phloem_flux_a5dee2bdc44dc1d6506b0dadf43dfb099}} 
+void \mbox{\hyperlink{class_phloem_flux_a5dee2bdc44dc1d6506b0dadf43dfb099}{compute\+Org\+Growth}} (double t)
+\begin{DoxyCompactList}\small\item\em returns max sucrose need for growth per segment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_phloem_flux_afb117cbccaef71009ed46c7209bd0497}{set\+Kr\+\_\+st}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ values, double kr\+\_\+length\+\_\+, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em sets a callback for kr\+\_\+suc\+:=kr\+\_\+suc(ot,type), \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_aae6c9009afb1783125c8805373362467}\label{class_phloem_flux_aae6c9009afb1783125c8805373362467}} 
+void \mbox{\hyperlink{class_phloem_flux_aae6c9009afb1783125c8805373362467}{set\+Kx\+\_\+st}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ values, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em sets a callback for kx\+\_\+suc\+:=kx\+\_\+suc(ot,type), \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_a1069307107c7c399748b9bb5eb1b7bf6}\label{class_phloem_flux_a1069307107c7c399748b9bb5eb1b7bf6}} 
+void \mbox{\hyperlink{class_phloem_flux_a1069307107c7c399748b9bb5eb1b7bf6}{set\+Rmax\+\_\+st}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ values, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em sets a callback for kx\+\_\+suc\+:=kx\+\_\+suc(ot,type), \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_ac1302c05d894a906364d72e96f27b040}\label{class_phloem_flux_ac1302c05d894a906364d72e96f27b040}} 
+void \mbox{\hyperlink{class_phloem_flux_ac1302c05d894a906364d72e96f27b040}{set\+Across\+\_\+st}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ values, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em sets a callback for kx\+\_\+suc\+:=kx\+\_\+suc(ot,type), \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_a90179665838962452fee7b37a0bd00ba}\label{class_phloem_flux_a90179665838962452fee7b37a0bd00ba}} 
+void \mbox{\hyperlink{class_phloem_flux_a90179665838962452fee7b37a0bd00ba}{set\+Perimeter\+\_\+st}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ values, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em sets a callback for kx\+\_\+suc\+:=kx\+\_\+suc(ot,type), ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_abfa5a7a29eb79c039eeb8e3b6c5afe76}\label{class_phloem_flux_abfa5a7a29eb79c039eeb8e3b6c5afe76}} 
+void \mbox{\hyperlink{class_phloem_flux_abfa5a7a29eb79c039eeb8e3b6c5afe76}{set\+Rho\+Sucrose}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ values, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em sets a callback for kx\+\_\+suc\+:=kx\+\_\+suc(ot,type), ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_a7516f0a49a652a8c649e376c9822cfa7}\label{class_phloem_flux_a7516f0a49a652a8c649e376c9822cfa7}} 
+void \mbox{\hyperlink{class_phloem_flux_a7516f0a49a652a8c649e376c9822cfa7}{set\+Krm1}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ values, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em sets a callback for kx\+\_\+suc\+:=kx\+\_\+suc(ot,type), \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_a8c13eaff9558cd3e408226aa22b70e8d}\label{class_phloem_flux_a8c13eaff9558cd3e408226aa22b70e8d}} 
+void \mbox{\hyperlink{class_phloem_flux_a8c13eaff9558cd3e408226aa22b70e8d}{set\+Krm2}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ values, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em sets a callback for kx\+\_\+suc\+:=kx\+\_\+suc(ot,type), \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phloem_flux_aeae76a1c17899eefd40edfd86d6c63df}\label{class_phloem_flux_aeae76a1c17899eefd40edfd86d6c63df}} 
+void {\bfseries initialize\+\_\+carbon} (vector$<$ double $>$ vec\+In)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a1232d3fdc81a7de9614f37138e707068}\label{class_phloem_flux_a1232d3fdc81a7de9614f37138e707068}} 
+void {\bfseries initialize\+\_\+hydric} ()
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a77ae7d1a87de4aa4429be00ef9333e5f}\label{class_phloem_flux_a77ae7d1a87de4aa4429be00ef9333e5f}} 
+void {\bfseries initialize\+PM\+\_\+} (double dt, double TairK)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a645d086a81cfb8efa674689d63d7485a}\label{class_phloem_flux_a645d086a81cfb8efa674689d63d7485a}} 
+void {\bfseries f} (double t, double $\ast$y, double $\ast$y\+\_\+dot)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a9861d502f342614f53a63958551ca796}\label{class_phloem_flux_a9861d502f342614f53a63958551ca796}} 
+void {\bfseries aux} (double t, double $\ast$y)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_adff26fb52071fe9dbb0e73d1f65d1961}\label{class_phloem_flux_adff26fb52071fe9dbb0e73d1f65d1961}} 
+void {\bfseries update\+\_\+viscosity} ()
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ae0ef9648af42990cda88236bc2665a97}\label{class_phloem_flux_ae0ef9648af42990cda88236bc2665a97}} 
+void {\bfseries C\+\_\+fluxes} (double t, int Nt)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ab8e360a5a6a8c3a1c0ab1e867cafda54}\label{class_phloem_flux_ab8e360a5a6a8c3a1c0ab1e867cafda54}} 
+std\+::vector$<$ std\+::map$<$ int, double $>$ $>$ {\bfseries water\+Limited\+Growth} (double t)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_aca077c8e72df5d91b17647622a00dba0}\label{class_phloem_flux_aca077c8e72df5d91b17647622a00dba0}} 
+double {\bfseries adapt\+Dt} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{CPlant\+Box\+::\+Organ}} $>$ org, double dt)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_af137f833214699ed4ef2625df48259d7}\label{class_phloem_flux_af137f833214699ed4ef2625df48259d7}} 
+void {\bfseries assert\+Used\+CReserves} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{CPlant\+Box\+::\+Organ}} $>$ org)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a5aa9deb0726a8c4a1f0537959ed17cf3}\label{class_phloem_flux_a5aa9deb0726a8c4a1f0537959ed17cf3}} 
+double {\bfseries get\+Max\+Volumic\+Growth} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{CPlant\+Box\+::\+Organ}} $>$ org, double t)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a9cdb84340b6f155300d1ebd365a50d19}\label{class_phloem_flux_a9cdb84340b6f155300d1ebd365a50d19}} 
+std\+::vector$<$ int $>$ {\bfseries get\+Growing\+Nodes} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{CPlant\+Box\+::\+Organ}} $>$ org)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a2a01472f45b1e65d0c8020d3814cb3c1}\label{class_phloem_flux_a2a01472f45b1e65d0c8020d3814cb3c1}} 
+void {\bfseries compute\+Fpsi} ()
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a6b38cfb513b627d19cc1fce0b9d46faa}\label{class_phloem_flux_a6b38cfb513b627d19cc1fce0b9d46faa}} 
+void {\bfseries compute\+Flen} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{CPlant\+Box\+::\+Organ}} $>$ org, std\+::vector$<$ int $>$ growing\+Nodes\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ double(int, int, int)$>$ {\bfseries kr\+\_\+st\+\_\+f}
+\item 
+std\+::function$<$ double(int, int)$>$ {\bfseries kx\+\_\+st\+\_\+f}
+\item 
+std\+::function$<$ double(int, int)$>$ {\bfseries Across\+\_\+st\+\_\+f}
+\item 
+std\+::function$<$ double(int, int)$>$ {\bfseries Perimeter\+\_\+st\+\_\+f}
+\item 
+std\+::function$<$ double(int, int)$>$ {\bfseries Rmax\+\_\+st\+\_\+f}
+\item 
+std\+::function$<$ double(int, int)$>$ {\bfseries rho\+Sucrose\+\_\+f}
+\item 
+std\+::function$<$ double(int, int)$>$ {\bfseries krm1\+\_\+f}
+\item 
+std\+::function$<$ double(int, int)$>$ {\bfseries krm2\+\_\+f}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a9b31461a926b205f8777bae05da1225a}\label{class_phloem_flux_a9b31461a926b205f8777bae05da1225a}} 
+std\+::vector$<$ double $>$ {\bfseries a\+\_\+\+STv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a3f4d611deeb97731b7d580f4f67f5afe}\label{class_phloem_flux_a3f4d611deeb97731b7d580f4f67f5afe}} 
+vector$<$ double $>$ {\bfseries Q\+\_\+outv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a4c252a1c66b3afc21b4d65db0e758977}\label{class_phloem_flux_a4c252a1c66b3afc21b4d65db0e758977}} 
+vector$<$ double $>$ {\bfseries Q\+\_\+init}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a459491e25e9a4a7fd51ab6c849f1cbd1}\label{class_phloem_flux_a459491e25e9a4a7fd51ab6c849f1cbd1}} 
+vector$<$ double $>$ {\bfseries Q\+\_\+out\+\_\+dotv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a5bd923a1b12cd4d292444811c2c11c1f}\label{class_phloem_flux_a5bd923a1b12cd4d292444811c2c11c1f}} 
+vector$<$ double $>$ {\bfseries C\+\_\+\+STv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a9e444c9b7326b582d1e0a6a82d08c819}\label{class_phloem_flux_a9e444c9b7326b582d1e0a6a82d08c819}} 
+vector$<$ double $>$ {\bfseries vol\+\_\+\+STv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_acb8babd55154e809786d14b2910a871b}\label{class_phloem_flux_acb8babd55154e809786d14b2910a871b}} 
+vector$<$ double $>$ {\bfseries r\+\_\+\+ST\+\_\+refv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a3bb79023ece795c176abfd66eb6c7225}\label{class_phloem_flux_a3bb79023ece795c176abfd66eb6c7225}} 
+vector$<$ double $>$ {\bfseries r\+\_\+\+STv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a6dfca5696cd9acbdc99143284a70bee3}\label{class_phloem_flux_a6dfca5696cd9acbdc99143284a70bee3}} 
+std\+::vector$<$ double $>$ {\bfseries Agv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a7b44aee27d615ccca6426a3efcc8a82f}\label{class_phloem_flux_a7b44aee27d615ccca6426a3efcc8a82f}} 
+std\+::vector$<$ double $>$ {\bfseries Q\+\_\+\+Grmaxv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a2000cd37f064a224ebce11da0bf93ea2}\label{class_phloem_flux_a2000cd37f064a224ebce11da0bf93ea2}} 
+std\+::vector$<$ double $>$ {\bfseries Q\+\_\+\+Exudmaxv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ac959641b2351f087545c9f11c0703fa5}\label{class_phloem_flux_ac959641b2351f087545c9f11c0703fa5}} 
+std\+::vector$<$ double $>$ {\bfseries Q\+\_\+\+Rmmaxv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ae01377d248dc817a796656a693517681}\label{class_phloem_flux_ae01377d248dc817a796656a693517681}} 
+std\+::vector$<$ double $>$ {\bfseries Flv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a7a224e97b6176b8fdae27e07ee2aaafe}\label{class_phloem_flux_a7a224e97b6176b8fdae27e07ee2aaafe}} 
+std\+::vector$<$ double $>$ {\bfseries vol\+\_\+\+Mesov}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a7fe1e0b599bd4bff56aa39e91306ef30}\label{class_phloem_flux_a7fe1e0b599bd4bff56aa39e91306ef30}} 
+std\+::vector$<$ double $>$ {\bfseries JW\+\_\+\+STv}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_aeda1e266852c939a48380217d1b419e6}\label{class_phloem_flux_aeda1e266852c939a48380217d1b419e6}} 
+std\+::vector$<$ double $>$ {\bfseries Fpsi}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a4ce5c68e0a421366e69d689d07eaf030}\label{class_phloem_flux_a4ce5c68e0a421366e69d689d07eaf030}} 
+std\+::vector$<$ double $>$ {\bfseries Flen}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_af58648265e75608baeeaa8d1c69a295c}\label{class_phloem_flux_af58648265e75608baeeaa8d1c69a295c}} 
+std\+::vector$<$ int $>$ {\bfseries Growth\+Zone}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a6c29435d1520dc1f2c0205ef9fe5a395}\label{class_phloem_flux_a6c29435d1520dc1f2c0205ef9fe5a395}} 
+std\+::vector$<$ int $>$ {\bfseries Growth\+Zone\+Lat}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ab645b7a6427dc9ce8c9093bbe29ff155}\label{class_phloem_flux_ab645b7a6427dc9ce8c9093bbe29ff155}} 
+std\+::vector$<$ std\+::map$<$ int, double $>$ $>$ {\bfseries delta\+Suc\+Org\+Node\+\_\+}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_add8ee697fed99b5039a98d93d6b67fa1}\label{class_phloem_flux_add8ee697fed99b5039a98d93d6b67fa1}} 
+std\+::vector$<$ double $>$ {\bfseries psi\+\_\+p\+\_\+symplasm}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a63d61d784ce3e043601cf0efb7274aac}\label{class_phloem_flux_a63d61d784ce3e043601cf0efb7274aac}} 
+bool {\bfseries do\+\_\+gf\+\_\+warning} = true
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a90a928c1b874c927497bf5f29fa9451d}\label{class_phloem_flux_a90a928c1b874c927497bf5f29fa9451d}} 
+std\+::vector$<$ double $>$ {\bfseries Csoil\+\_\+seg}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a6d8d2494d1ea6bc7656ece7794810842}\label{class_phloem_flux_a6d8d2494d1ea6bc7656ece7794810842}} 
+std\+::vector$<$ double $>$ {\bfseries Csoil\+\_\+node}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a3725cd2ea1d4f469e31e8b213b294b3f}\label{class_phloem_flux_a3725cd2ea1d4f469e31e8b213b294b3f}} 
+double {\bfseries Csoil\+Default} = 1e-\/4
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a2eda1033c7833ded7853137a33c8a7e1}\label{class_phloem_flux_a2eda1033c7833ded7853137a33c8a7e1}} 
+double {\bfseries init\+Val\+ST} = 0.\+8
+\item 
+\mbox{\Hypertarget{class_phloem_flux_af973349ae1f070c278bb0030d7508252}\label{class_phloem_flux_af973349ae1f070c278bb0030d7508252}} 
+double {\bfseries init\+Val\+Meso} = 0.\+9
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a4560a539a7778328c9a59754fb71e31d}\label{class_phloem_flux_a4560a539a7778328c9a59754fb71e31d}} 
+bool {\bfseries with\+Init\+Val} = false
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ac907959aba1ead4881d2b3bfb07da883}\label{class_phloem_flux_ac907959aba1ead4881d2b3bfb07da883}} 
+double {\bfseries psi\+\_\+osmo\+\_\+proto} = -\/4000$\ast$1.\+0197
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a053defb83dd3a5edde1795b6a4196c1a}\label{class_phloem_flux_a053defb83dd3a5edde1795b6a4196c1a}} 
+double {\bfseries psi\+Min} = 2000$\ast$1.\+0197
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ac582c55516cdda440b4e95d1d6686a5c}\label{class_phloem_flux_ac582c55516cdda440b4e95d1d6686a5c}} 
+double {\bfseries leaf\+Growth\+Zone} = 2
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ae925bf24dd348282a53a55decda8af7a}\label{class_phloem_flux_ae925bf24dd348282a53a55decda8af7a}} 
+double {\bfseries Gr\+\_\+Y} = 0.\+75
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a05ceb0c93a997654dfca13410f201fe6}\label{class_phloem_flux_a05ceb0c93a997654dfca13410f201fe6}} 
+bool {\bfseries Stem\+Growth\+Per\+Phytomer} = true
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a1b01f06e2cbeb66128755c5e22ffc3c2}\label{class_phloem_flux_a1b01f06e2cbeb66128755c5e22ffc3c2}} 
+bool {\bfseries use\+CWGr}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a7b4ec768586022182a64c6a71b63ec57}\label{class_phloem_flux_a7b4ec768586022182a64c6a71b63ec57}} 
+double {\bfseries Vmaxloading} = 0.\+019872
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ac4eb6321033c3df039cadca428ce3764}\label{class_phloem_flux_ac4eb6321033c3df039cadca428ce3764}} 
+double {\bfseries CSTimin} = 0.\+4
+\item 
+\mbox{\Hypertarget{class_phloem_flux_af06daf42f3a15904841d03807cad21b8}\label{class_phloem_flux_af06daf42f3a15904841d03807cad21b8}} 
+double {\bfseries beta\+\_\+loading} = 1
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a13afcf82ac95dd81f80cfa30ed4a06d3}\label{class_phloem_flux_a13afcf82ac95dd81f80cfa30ed4a06d3}} 
+double {\bfseries Mloading} = 0.\+2
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a8e0cc30e01755f50fdc84f3f1d237de9}\label{class_phloem_flux_a8e0cc30e01755f50fdc84f3f1d237de9}} 
+double {\bfseries C\+\_\+targ} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a31b2305bab0a996fded7007f9bd0f3a9}\label{class_phloem_flux_a31b2305bab0a996fded7007f9bd0f3a9}} 
+double {\bfseries Q10} = 2.
+\item 
+\mbox{\Hypertarget{class_phloem_flux_acb3c234804763eb16c66ccf6eb96c50c}\label{class_phloem_flux_acb3c234804763eb16c66ccf6eb96c50c}} 
+double {\bfseries Tref\+Q10} = 20
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a44ca9e6c60ef58c2ae80bb428d19b355}\label{class_phloem_flux_a44ca9e6c60ef58c2ae80bb428d19b355}} 
+double {\bfseries KMfu} = 0.\+2
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a40cbb755f64fb09b5bb6095bdf05919c}\label{class_phloem_flux_a40cbb755f64fb09b5bb6095bdf05919c}} 
+double {\bfseries k\+\_\+mucil} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ac5a12b0a9c8c51326923be7c5066a2e5}\label{class_phloem_flux_ac5a12b0a9c8c51326923be7c5066a2e5}} 
+std\+::vector$<$ double $>$ {\bfseries k\+\_\+mucil\+\_\+}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a4b6dbdff9c123ad4d7386e4a23d3150e}\label{class_phloem_flux_a4b6dbdff9c123ad4d7386e4a23d3150e}} 
+double {\bfseries Vmax\+\_\+\+S\+\_\+\+ST} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ade4ff6bad4a1ac92fa8c2edfce01ab9f}\label{class_phloem_flux_ade4ff6bad4a1ac92fa8c2edfce01ab9f}} 
+double {\bfseries k\+M\+\_\+\+S\+\_\+\+ST} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a67b990e475082323cf0a67da4be20353}\label{class_phloem_flux_a67b990e475082323cf0a67da4be20353}} 
+double {\bfseries k\+Hyd\+\_\+\+S\+\_\+\+ST} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_afe9980fa8987a61661d73630edfb107b}\label{class_phloem_flux_afe9980fa8987a61661d73630edfb107b}} 
+double {\bfseries k\+\_\+\+S\+\_\+\+ST} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_af45db3b06fb979bfedb9535c6eb4551c}\label{class_phloem_flux_af45db3b06fb979bfedb9535c6eb4551c}} 
+bool {\bfseries update\+\_\+viscosity\+\_\+} = true
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ad1638a3bd0f334abc67ae162a0d22ffa}\label{class_phloem_flux_ad1638a3bd0f334abc67ae162a0d22ffa}} 
+bool {\bfseries use\+Psi\+Xyl} = true
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a1b99ea434df245c32eb2262eca9dab26}\label{class_phloem_flux_a1b99ea434df245c32eb2262eca9dab26}} 
+double {\bfseries C\+\_\+targ\+Mesophyll} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a8ccf69e33e425b61dc8d5d141fe9188e}\label{class_phloem_flux_a8ccf69e33e425b61dc8d5d141fe9188e}} 
+double {\bfseries Vmax\+\_\+\+S\+\_\+\+Mesophyll} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ac9bf8d9e4cbe907e5de1285f0f1c1f68}\label{class_phloem_flux_ac9bf8d9e4cbe907e5de1285f0f1c1f68}} 
+double {\bfseries k\+M\+\_\+\+S\+\_\+\+Mesophyll} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_af8e3d0b3351b49aaf2322b0decf0c265}\label{class_phloem_flux_af8e3d0b3351b49aaf2322b0decf0c265}} 
+double {\bfseries k\+Hyd\+\_\+\+S\+\_\+\+Mesophyll} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_af75aae4390009e8c9cbfebe5da971253}\label{class_phloem_flux_af75aae4390009e8c9cbfebe5da971253}} 
+double {\bfseries k\+\_\+\+S\+\_\+\+Mesophyll} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a693e7cbc22fee806bcc82a4cb9d2a803}\label{class_phloem_flux_a693e7cbc22fee806bcc82a4cb9d2a803}} 
+double {\bfseries surf\+Meso} =0.\+01
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a7262272380fb3ddbe18684525c6c0498}\label{class_phloem_flux_a7262272380fb3ddbe18684525c6c0498}} 
+bool {\bfseries same\+Volume\+\_\+meso\+\_\+seg} = true
+\item 
+\mbox{\Hypertarget{class_phloem_flux_aa280f036c0b11f2c10f3a1b7e9bc8f85}\label{class_phloem_flux_aa280f036c0b11f2c10f3a1b7e9bc8f85}} 
+bool {\bfseries same\+Volume\+\_\+meso\+\_\+st} = true
+\item 
+\mbox{\Hypertarget{class_phloem_flux_af298b4669a83665cd8c631e1127487c3}\label{class_phloem_flux_af298b4669a83665cd8c631e1127487c3}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries kr\+\_\+st}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_aa2f65058c3fc676b789c307e74b16014}\label{class_phloem_flux_aa2f65058c3fc676b789c307e74b16014}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries kx\+\_\+st}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_acff8352736c5845e54a6154eb98621d1}\label{class_phloem_flux_acff8352736c5845e54a6154eb98621d1}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries Across\+\_\+st}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_afdfed563a196530e33eadb2c6783cf8e}\label{class_phloem_flux_afdfed563a196530e33eadb2c6783cf8e}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries Perimeter\+\_\+st}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a1e5ca6b64ccc9047b032541d85a4af91}\label{class_phloem_flux_a1e5ca6b64ccc9047b032541d85a4af91}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries Rmax\+\_\+st}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a187d5c08ca667472ac3306b209e6d9b8}\label{class_phloem_flux_a187d5c08ca667472ac3306b209e6d9b8}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries rho\+Sucrose}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a952da33e98cc2b18e0803411761ecc52}\label{class_phloem_flux_a952da33e98cc2b18e0803411761ecc52}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries krm1v}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a29007b03419a9eb2f848db714df1aacd}\label{class_phloem_flux_a29007b03419a9eb2f848db714df1aacd}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries krm2v}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_aeb1e512dfcdbd8c47229b299dac730f8}\label{class_phloem_flux_aeb1e512dfcdbd8c47229b299dac730f8}} 
+double {\bfseries atol\+\_\+double} = 1e-\/017
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a410095e38b99607c580513bd6cc317e1}\label{class_phloem_flux_a410095e38b99607c580513bd6cc317e1}} 
+double {\bfseries rtol\+\_\+double} = 1e-\/023
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a54f3c0d5dbc45591f67f5c589809bb1e}\label{class_phloem_flux_a54f3c0d5dbc45591f67f5c589809bb1e}} 
+int {\bfseries solver} = 1
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a66a240803c99a169a3f0439b7e1d970b}\label{class_phloem_flux_a66a240803c99a169a3f0439b7e1d970b}} 
+bool {\bfseries do\+Troubleshooting} =false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a3fe060ee7db481076f28ab134bde5019}\label{class_phloem_flux_a3fe060ee7db481076f28ab134bde5019}} 
+double {\bfseries kr\+\_\+st\+\_\+const} (int type, int organ\+Type, int si)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a9f426445c4e3a52d7c796d053c093a38}\label{class_phloem_flux_a9f426445c4e3a52d7c796d053c093a38}} 
+double {\bfseries kr\+\_\+st\+\_\+per\+Org\+Type} (int type, int organ\+Type, int si)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ae4e68350824ef5a7d6bcfcd5e0c680d5}\label{class_phloem_flux_ae4e68350824ef5a7d6bcfcd5e0c680d5}} 
+double {\bfseries kr\+\_\+st\+\_\+per\+Type} (int type, int organ\+Type, int si)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a41039c7467d159bae28eaac48b4255de}\label{class_phloem_flux_a41039c7467d159bae28eaac48b4255de}} 
+double {\bfseries kr\+\_\+st\+\_\+\+Root\+Exchange\+Zone\+Per\+Type} (int type, int organ\+Type, int si)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a601837cc7a0e37ff8ce9698a8572938c}\label{class_phloem_flux_a601837cc7a0e37ff8ce9698a8572938c}} 
+double {\bfseries kx\+\_\+st\+\_\+const} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a1beb794dc9b41f8388b5914ff9b3c0c0}\label{class_phloem_flux_a1beb794dc9b41f8388b5914ff9b3c0c0}} 
+double {\bfseries kx\+\_\+st\+\_\+per\+Org\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a935ac7fc175d84e7f991eeb61d8effa2}\label{class_phloem_flux_a935ac7fc175d84e7f991eeb61d8effa2}} 
+double {\bfseries kx\+\_\+st\+\_\+per\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a85fd88fe5aefce40ef03e813de546799}\label{class_phloem_flux_a85fd88fe5aefce40ef03e813de546799}} 
+double {\bfseries Across\+\_\+st\+\_\+const} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a6ba6ff98200eda6c65b11af1c718babc}\label{class_phloem_flux_a6ba6ff98200eda6c65b11af1c718babc}} 
+double {\bfseries Across\+\_\+st\+\_\+per\+Org\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a3429542af05206af0e46595f58ce4fd4}\label{class_phloem_flux_a3429542af05206af0e46595f58ce4fd4}} 
+double {\bfseries Across\+\_\+st\+\_\+per\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a27e3765bdb5d06c739789e410206ef2d}\label{class_phloem_flux_a27e3765bdb5d06c739789e410206ef2d}} 
+double {\bfseries Perimeter\+\_\+st\+\_\+const} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a229bd16f0a39044bf04c836b813f4d31}\label{class_phloem_flux_a229bd16f0a39044bf04c836b813f4d31}} 
+double {\bfseries Perimeter\+\_\+st\+\_\+per\+Org\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a3b3401c9907fa8a99e8a6bc241933291}\label{class_phloem_flux_a3b3401c9907fa8a99e8a6bc241933291}} 
+double {\bfseries Perimeter\+\_\+st\+\_\+per\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_abf058ed0d45e12ef63edd1b193dc75c4}\label{class_phloem_flux_abf058ed0d45e12ef63edd1b193dc75c4}} 
+double {\bfseries Rmax\+\_\+st\+\_\+const} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a4d29753d4e093ab09f3b19a9925ef31f}\label{class_phloem_flux_a4d29753d4e093ab09f3b19a9925ef31f}} 
+double {\bfseries Rmax\+\_\+st\+\_\+per\+Org\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ab5de97bee0beda6493ffbd9796789453}\label{class_phloem_flux_ab5de97bee0beda6493ffbd9796789453}} 
+double {\bfseries Rmax\+\_\+st\+\_\+per\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_aefc44d74ce6b42c1100537c678947f00}\label{class_phloem_flux_aefc44d74ce6b42c1100537c678947f00}} 
+double {\bfseries rho\+Sucrose\+\_\+const} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a8b23ee25eaf72fee2d8e50e64413650e}\label{class_phloem_flux_a8b23ee25eaf72fee2d8e50e64413650e}} 
+double {\bfseries rho\+Sucrose\+\_\+per\+Org\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a0ccc4fdce302f091e021cb5185d64277}\label{class_phloem_flux_a0ccc4fdce302f091e021cb5185d64277}} 
+double {\bfseries rho\+Sucrose\+\_\+per\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a872e3115928b717604d8e5c2ed0c648b}\label{class_phloem_flux_a872e3115928b717604d8e5c2ed0c648b}} 
+double {\bfseries krm1\+\_\+const} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a6d29bad93e7ba5e2ff6f6b7a6eca5af7}\label{class_phloem_flux_a6d29bad93e7ba5e2ff6f6b7a6eca5af7}} 
+double {\bfseries krm1\+\_\+per\+Org\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a128f37114ab1a7c42487468568ae7f48}\label{class_phloem_flux_a128f37114ab1a7c42487468568ae7f48}} 
+double {\bfseries krm1\+\_\+per\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ad0ec8ba199d7c9a14ee1667f54d39203}\label{class_phloem_flux_ad0ec8ba199d7c9a14ee1667f54d39203}} 
+double {\bfseries krm2\+\_\+const} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a362d726332a34cd76ff3737d2e87b3e6}\label{class_phloem_flux_a362d726332a34cd76ff3737d2e87b3e6}} 
+double {\bfseries krm2\+\_\+per\+Org\+Type} (int type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ab3b274c87ed51bb0be1849061c1b7ac9}\label{class_phloem_flux_ab3b274c87ed51bb0be1849061c1b7ac9}} 
+double {\bfseries krm2\+\_\+per\+Type} (int type, int organ\+Type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ace2028f84baddc1cb0012c5aa49aa846}\label{class_phloem_flux_ace2028f84baddc1cb0012c5aa49aa846}} 
+double {\bfseries Tair\+K\+\_\+phloem}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a1ddab3c890e2cb7af4172fbf15965ab4}\label{class_phloem_flux_a1ddab3c890e2cb7af4172fbf15965ab4}} 
+std\+::size\+\_\+t {\bfseries Nt\+\_\+old} = 0
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a8cea7498ab74b315a6b5c3f8fbfa312a}\label{class_phloem_flux_a8cea7498ab74b315a6b5c3f8fbfa312a}} 
+\mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} {\bfseries Q\+\_\+\+Growthtot\+BU}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a8c6f3c7735dd7ea45b2ee97f00379e0d}\label{class_phloem_flux_a8c6f3c7735dd7ea45b2ee97f00379e0d}} 
+\mbox{\hyperlink{class_fortran__vector}{Fortran\+\_\+vector}} {\bfseries Q\+\_\+\+Grmax\+BU}
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a2ab9973eb220953c190d5431a2806b11}\label{class_phloem_flux_a2ab9973eb220953c190d5431a2806b11}} 
+int {\bfseries error\+ID} = -\/1
+\item 
+\mbox{\Hypertarget{class_phloem_flux_a7795280dce9375f82448cbaf4b54c061}\label{class_phloem_flux_a7795280dce9375f82448cbaf4b54c061}} 
+std\+::size\+\_\+t {\bfseries neq\+\_\+coef} = 10
+\item 
+\mbox{\Hypertarget{class_phloem_flux_ad8033352c442a33d7701bfb0504ff3e4}\label{class_phloem_flux_ad8033352c442a33d7701bfb0504ff3e4}} 
+std\+::map$<$ int, double $>$ {\bfseries Back\+Up\+Max\+Growth}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Phloem flow based on Piaf\+Munch code of LAcointe et al. 2019 see also phloem\+\_\+flow.\+py in CPlant\+Box/src/python\+\_\+modules
+
+Units are \mbox{[}h\+Pa\mbox{]} and \mbox{[}day\mbox{]} Cplant\+Box object making link with Piaf\+Munh Wraps a Photosynthesis class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_phloem_flux_afb117cbccaef71009ed46c7209bd0497}\label{class_phloem_flux_afb117cbccaef71009ed46c7209bd0497}} 
+\index{PhloemFlux@{PhloemFlux}!setKr\_st@{setKr\_st}}
+\index{setKr\_st@{setKr\_st}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{setKr\_st()}{setKr\_st()}}
+{\footnotesize\ttfamily void Phloem\+Flux\+::set\+Kr\+\_\+st (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$}]{values,  }\item[{double}]{kr\+\_\+length\+\_\+,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+sets a callback for kr\+\_\+suc\+:=kr\+\_\+suc(ot,type), 
+
+Sets the radial conductivity in \mbox{[}1 day-\/1\mbox{]} in case of organ\+\_\+type specific kr 
+\begin{DoxyParams}{Parameters}
+{\em values} & kr per organ pr/and organ type) or/and per age \mbox{[}cm-\/1\mbox{]} \\
+\hline
+{\em age} & ages if kr per age \\
+\hline
+{\em kr\+\_\+length\+\_\+} & exchange zone in root, where kr $>$ 0 \mbox{[}cm from root tip\mbox{]}, default = -\/1.\+0, i.\+e., no kr\+\_\+length \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_phloem_flux_a2fc052ea0ae7c06a9047ff65539d1e22}\label{class_phloem_flux_a2fc052ea0ae7c06a9047ff65539d1e22}} 
+\index{PhloemFlux@{PhloemFlux}!Across\_st\_f@{Across\_st\_f}}
+\index{Across\_st\_f@{Across\_st\_f}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{Across\_st\_f}{Across\_st\_f}}
+{\footnotesize\ttfamily std\+::function$<$double(int, int)$>$ Phloem\+Flux\+::\+Across\+\_\+st\+\_\+f}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [](\textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} orgtype) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}get\_Across\_st not implemented"{}}); }
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0.; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phloem_flux_a7ed0e05f4c746ef111cbc1e0ccc751f6}\label{class_phloem_flux_a7ed0e05f4c746ef111cbc1e0ccc751f6}} 
+\index{PhloemFlux@{PhloemFlux}!kr\_st\_f@{kr\_st\_f}}
+\index{kr\_st\_f@{kr\_st\_f}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{kr\_st\_f}{kr\_st\_f}}
+{\footnotesize\ttfamily std\+::function$<$double(int, int, int)$>$ Phloem\+Flux\+::kr\+\_\+st\+\_\+f}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= []( \textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} orgtype, \textcolor{keywordtype}{int} si) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}kr\_st\_f not implemented"{}}); }
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0.; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phloem_flux_aeaf29c7147975ec2416143b013a60a37}\label{class_phloem_flux_aeaf29c7147975ec2416143b013a60a37}} 
+\index{PhloemFlux@{PhloemFlux}!krm1\_f@{krm1\_f}}
+\index{krm1\_f@{krm1\_f}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{krm1\_f}{krm1\_f}}
+{\footnotesize\ttfamily std\+::function$<$double(int,int)$>$ Phloem\+Flux\+::krm1\+\_\+f}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= []( \textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} orgtype)\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}get\_rhoSucrose not implemented"{}}); }
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0.; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phloem_flux_a0ef28c136061d0930aab1d438a38c9a8}\label{class_phloem_flux_a0ef28c136061d0930aab1d438a38c9a8}} 
+\index{PhloemFlux@{PhloemFlux}!krm2\_f@{krm2\_f}}
+\index{krm2\_f@{krm2\_f}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{krm2\_f}{krm2\_f}}
+{\footnotesize\ttfamily std\+::function$<$double(int,int)$>$ Phloem\+Flux\+::krm2\+\_\+f}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= []( \textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} orgtype)\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}get\_rhoSucrose not implemented"{}}); }
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0.; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phloem_flux_a419c37df5c59af0dce3ffc664f09836a}\label{class_phloem_flux_a419c37df5c59af0dce3ffc664f09836a}} 
+\index{PhloemFlux@{PhloemFlux}!kx\_st\_f@{kx\_st\_f}}
+\index{kx\_st\_f@{kx\_st\_f}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{kx\_st\_f}{kx\_st\_f}}
+{\footnotesize\ttfamily std\+::function$<$double(int,int)$>$ Phloem\+Flux\+::kx\+\_\+st\+\_\+f}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [](\textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} orgtype) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}kx\_st\_f not implemented"{}}); }
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0.; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phloem_flux_aa1dde7bfe75b3fb5bf199ab80b0876f4}\label{class_phloem_flux_aa1dde7bfe75b3fb5bf199ab80b0876f4}} 
+\index{PhloemFlux@{PhloemFlux}!Perimeter\_st\_f@{Perimeter\_st\_f}}
+\index{Perimeter\_st\_f@{Perimeter\_st\_f}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{Perimeter\_st\_f}{Perimeter\_st\_f}}
+{\footnotesize\ttfamily std\+::function$<$double(int, int)$>$ Phloem\+Flux\+::\+Perimeter\+\_\+st\+\_\+f}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [](\textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} orgtype) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}get\_Across\_st not implemented"{}}); }
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0.; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phloem_flux_a11e88c6ed4503c300faf289281a7775e}\label{class_phloem_flux_a11e88c6ed4503c300faf289281a7775e}} 
+\index{PhloemFlux@{PhloemFlux}!rhoSucrose\_f@{rhoSucrose\_f}}
+\index{rhoSucrose\_f@{rhoSucrose\_f}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{rhoSucrose\_f}{rhoSucrose\_f}}
+{\footnotesize\ttfamily std\+::function$<$double(int,int)$>$ Phloem\+Flux\+::rho\+Sucrose\+\_\+f}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= []( \textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} orgtype)\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}get\_rhoSucrose not implemented"{}}); }
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0.; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phloem_flux_a13e7f4101be1033604729f00391126bf}\label{class_phloem_flux_a13e7f4101be1033604729f00391126bf}} 
+\index{PhloemFlux@{PhloemFlux}!Rmax\_st\_f@{Rmax\_st\_f}}
+\index{Rmax\_st\_f@{Rmax\_st\_f}!PhloemFlux@{PhloemFlux}}
+\doxysubsubsection{\texorpdfstring{Rmax\_st\_f}{Rmax\_st\_f}}
+{\footnotesize\ttfamily std\+::function$<$double(int,int)$>$ Phloem\+Flux\+::\+Rmax\+\_\+st\+\_\+f}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= []( \textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} orgtype)\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}get\_Rmax not implemented"{}}); }
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0.; \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/\+Piaf\+Munch/run\+PM.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/\+Piaf\+Munch/initialize.\+cpp\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/\+Piaf\+Munch/Piaf\+Munch2.\+cpp\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/\+Piaf\+Munch/run\+PM.\+cpp\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/\+Piaf\+Munch/solve.\+cpp\end{DoxyCompactItemize}

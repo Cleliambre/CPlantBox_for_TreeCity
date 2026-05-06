@@ -1,0 +1,361 @@
+\hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters}{}\doxysection{CPlant\+Box\+::Plant\+Hydraulic\+Parameters Class Reference}
+\label{class_c_plant_box_1_1_plant_hydraulic_parameters}\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+
+
+{\ttfamily \#include $<$Plant\+Hydraulic\+Parameters.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a6e804d20d5192b1fb6fb670d75babd1e}{Plant\+Hydraulic\+Parameters}} ()
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a187def362ba2f3b212bc16bcd15c0651}{Plant\+Hydraulic\+Parameters}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{CPlant\+Box\+::\+Mapped\+Segments}} $>$ ms\+\_\+)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_ac13160b1e0b3e65c80636b671e83a9ad}{set\+Mode}} (std\+::string kr\+Mode, std\+::string kx\+Mode)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_ae052f24497c1709a3f510e40f95b7378}{kr\+\_\+f\+\_\+wrapped}} (int si, double age, int type, int orgtype, bool cells) const
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a1371b21271aceb53e977154fd1a12a1c}{set\+Kr\+Const}} (double v, int sub\+Type, int organ\+Type=Organism\+::ot\+\_\+root, double kr\+\_\+length=-\/1)
+\begin{DoxyCompactList}\small\item\em stops transpiration if organs are not in the correct domain \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a8b8a55bc5b339833fd28b9d26934503e}{set\+Kx\+Const}} (double v, int sub\+Type, int organ\+Type=Organism\+::ot\+\_\+root)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_ae2ccace1914a19f8f31546a2802584fb}{set\+Kr\+Age\+Dependent}} (std\+::vector$<$ double $>$ age, std\+::vector$<$ double $>$ values, int sub\+Type, int organ\+Type=Organism\+::ot\+\_\+root)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_acfb5fafa936d8e0868e7a9d6e38c26c4}{set\+Kx\+Age\+Dependent}} (std\+::vector$<$ double $>$ age, std\+::vector$<$ double $>$ values, int sub\+Type, int organ\+Type=Organism\+::ot\+\_\+root)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_aec337150cbc7c55de157965f6d72e511}{set\+Kr\+Distance\+Dependent}} (std\+::vector$<$ double $>$ distance, std\+::vector$<$ double $>$ values, int sub\+Type, int organ\+Type=Organism\+::ot\+\_\+root)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a219fe51de92e1e6b9e8a0bb9b2011c7f}{set\+Kx\+Distance\+Dependent}} (std\+::vector$<$ double $>$ distance, std\+::vector$<$ double $>$ values, int sub\+Type, int organ\+Type=Organism\+::ot\+\_\+root)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_aeedb45e1ea53562f8ac4868818c73ba1}{set\+Kr\+Values}} (std\+::vector$<$ double $>$ values)
+\begin{DoxyCompactList}\small\item\em one value per segment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_aef689b2fe774113a75b0c97c6228cdcb}{set\+Kx\+Values}} (std\+::vector$<$ double $>$ values)
+\begin{DoxyCompactList}\small\item\em one value per segment \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a847785e182b617c3dbff76298acc1960}{get\+Kr}} (double simtime)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a1a879c61e002a4953a2364eebe477369}{get\+Eff\+Kr}} (double simtime)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a4eae0a87d60edbd19e27f4c2926e0c66}{get\+Kx}} (double simtime)
+\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a960ba0dd8857adf67da7f566bb089510}{get\+Psi\+Out}} (bool cells, int si, const std\+::vector$<$ double $>$ \&sx\+\_\+, bool verbose) const
+\begin{DoxyCompactList}\small\item\em get the outer water potential \mbox{[}cm\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a1e18930ccb172d4e9c45e9be1ef9e47f}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a1e18930ccb172d4e9c45e9be1ef9e47f}} 
+std\+::function$<$ double(int, double, int, int)$>$ {\bfseries kr\+\_\+f} = \mbox{[}$\,$\mbox{]}(int si, double age, int type, int orgtype) \{ throw std\+::runtime\+\_\+error(\char`\"{}kr\+\_\+f not implemented\char`\"{}); return 0.; \}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_aedbf78e689a1a48cf31d5d592c6787d5}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_aedbf78e689a1a48cf31d5d592c6787d5}} 
+std\+::function$<$ double(int, double, int, int)$>$ {\bfseries kx\+\_\+f} = \mbox{[}$\,$\mbox{]}(int si, double age, int type, int orgtype) \{ throw std\+::runtime\+\_\+error(\char`\"{}kx\+\_\+f not implemented\char`\"{}); return 1.; \}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a72ffd475d777d5f1820ef0d6fe3196f2}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a72ffd475d777d5f1820ef0d6fe3196f2}} 
+std\+::string {\bfseries kr\+Mode} = \char`\"{}const\char`\"{}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_aa34884f8d6ecdd74808417cceb8c6ccf}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_aa34884f8d6ecdd74808417cceb8c6ccf}} 
+std\+::string {\bfseries kx\+Mode} = \char`\"{}const\char`\"{}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a8e0eeb2e50429bd2caf750c2681af113}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a8e0eeb2e50429bd2caf750c2681af113}} 
+std\+::vector$<$ double $>$ {\bfseries kr\+Values} = \{0.\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a37b5637e7879edc391432e6c9a0b6288}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a37b5637e7879edc391432e6c9a0b6288}} 
+std\+::vector$<$ double $>$ {\bfseries kx\+Values} = \{0.\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a16e777da0943857a611070e9c8871a24}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a16e777da0943857a611070e9c8871a24}} 
+std\+::map$<$ int, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ {\bfseries kr\+\_\+ages}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a2e90b908146a8dc6e78960a1cd32f008}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a2e90b908146a8dc6e78960a1cd32f008}} 
+std\+::map$<$ int, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ {\bfseries kr\+\_\+values}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a393bff546b7a22ae63a38693b97fa78e}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a393bff546b7a22ae63a38693b97fa78e}} 
+std\+::map$<$ int, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ {\bfseries kx\+\_\+ages}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a816bc83501f2bf5cdce19b95f431171f}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a816bc83501f2bf5cdce19b95f431171f}} 
+std\+::map$<$ int, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ {\bfseries kx\+\_\+values}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_ac78eb55a0c3408aa71857be695877a70}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_ac78eb55a0c3408aa71857be695877a70}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{CPlant\+Box\+::\+Mapped\+Segments}} $>$ {\bfseries ms}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_abcebf20c6d4c9c4e9e608221ac45d7d2}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_abcebf20c6d4c9c4e9e608221ac45d7d2}} 
+double {\bfseries psi\+\_\+air} = -\/954378
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a60c462147612274bd59aad4c981ffabc}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a60c462147612274bd59aad4c981ffabc}} 
+const int {\bfseries max\+Sub\+Types} = 11
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a2a67656abe9b31d051115b8fc48419ef}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a2a67656abe9b31d051115b8fc48419ef}} 
+double {\bfseries kr\+\_\+per\+Type} (int si, double age, int sub\+Type, int organ\+Type)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a3ed7af5e2df2dde4c90a4a7e015dd9a1}{kr\+\_\+\+Root\+Exchange\+Zone\+Per\+Type}} (int si, double age, int sub\+Type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a83e77646017833900319ccde24cfa381}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a83e77646017833900319ccde24cfa381}} 
+double {\bfseries kx\+\_\+per\+Type} (int si, double age, int sub\+Type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a5ca4c7bed50f06de499944506c58b5ea}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a5ca4c7bed50f06de499944506c58b5ea}} 
+double {\bfseries kr\+\_\+age} (int si, double age, int sub\+Type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a193b664cba7baf3ef0adcd0dcfd3ace6}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a193b664cba7baf3ef0adcd0dcfd3ace6}} 
+double {\bfseries kx\+\_\+age} (int si, double age, int sub\+Type, int organ\+Type)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a8126263f6609ac5e5eed0c4614a81bb5}{kr\+\_\+distance}} (int si, double age, int sub\+Type, int organ\+Type)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters_a86db6d9d444589469de78709f155c580}{kx\+\_\+distance}} (int si, double age, int sub\+Type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_ae9ff8afba6ab8ee9ff806c25ee241553}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_ae9ff8afba6ab8ee9ff806c25ee241553}} 
+double {\bfseries kr\+\_\+value\+Per\+Segment} (int si, double age, int sub\+Type, int organ\+Type)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a5ae2e508246c223ebc2dc7e975276cb9}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a5ae2e508246c223ebc2dc7e975276cb9}} 
+double {\bfseries kx\+\_\+value\+Per\+Segment} (int si, double age, int sub\+Type, int organ\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_plant}{Plant}} hydraulic conductivities, i.\+e. axial \mbox{[}cm3/day\mbox{]} and radial \mbox{[}cm/day\mbox{]} conductivities
+
+defined by the functions\+: kr\+\_\+f(int segment\+\_\+index, double age, int sub\+Type, int organ\+Type) kx\+\_\+f(int segment\+\_\+index, double age, int sub\+Type, int organ\+Type)
+
+The parameters can be given per organ\+Type and sub\+Type\+:
+\begin{DoxyItemize}
+\item constant
+\item per segment
+\item age dependent
+\item distance dependent
+\end{DoxyItemize}
+
+TODO needs testing and documentation 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a6e804d20d5192b1fb6fb670d75babd1e}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a6e804d20d5192b1fb6fb670d75babd1e}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!PlantHydraulicParameters@{PlantHydraulicParameters}}
+\index{PlantHydraulicParameters@{PlantHydraulicParameters}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{PlantHydraulicParameters()}{PlantHydraulicParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::\+Plant\+Hydraulic\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a187def362ba2f3b212bc16bcd15c0651}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a187def362ba2f3b212bc16bcd15c0651}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!PlantHydraulicParameters@{PlantHydraulicParameters}}
+\index{PlantHydraulicParameters@{PlantHydraulicParameters}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{PlantHydraulicParameters()}{PlantHydraulicParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::\+Plant\+Hydraulic\+Parameters (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{CPlant\+Box\+::\+Mapped\+Segments}} $>$}]{ms\+\_\+ }\end{DoxyParamCaption})}
+
+Constructor passing \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{Mapped\+Segments}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a1a879c61e002a4953a2364eebe477369}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a1a879c61e002a4953a2364eebe477369}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!getEffKr@{getEffKr}}
+\index{getEffKr@{getEffKr}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{getEffKr()}{getEffKr()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::get\+Eff\+Kr (\begin{DoxyParamCaption}\item[{double}]{simtime }\end{DoxyParamCaption})}
+
+Returns radial conductivities per segment multiplied by segment surface for a specific simulation time (TODO numleaf is ingored) \mbox{[}cm2 day-\/1\mbox{]} \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a847785e182b617c3dbff76298acc1960}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a847785e182b617c3dbff76298acc1960}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!getKr@{getKr}}
+\index{getKr@{getKr}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{getKr()}{getKr()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::get\+Kr (\begin{DoxyParamCaption}\item[{double}]{simtime }\end{DoxyParamCaption})}
+
+Returns radial conductivities per segment (TODO numleaf is ingored) \mbox{[}1 day-\/1\mbox{]} \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a4eae0a87d60edbd19e27f4c2926e0c66}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a4eae0a87d60edbd19e27f4c2926e0c66}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!getKx@{getKx}}
+\index{getKx@{getKx}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{getKx()}{getKx()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::get\+Kx (\begin{DoxyParamCaption}\item[{double}]{simtime }\end{DoxyParamCaption})}
+
+Returns axial conductivities per segment for a specific simulation time \mbox{[}cm3 day-\/1\mbox{]} \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a960ba0dd8857adf67da7f566bb089510}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a960ba0dd8857adf67da7f566bb089510}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!getPsiOut@{getPsiOut}}
+\index{getPsiOut@{getPsiOut}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{getPsiOut()}{getPsiOut()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::get\+Psi\+Out (\begin{DoxyParamCaption}\item[{bool}]{cells,  }\item[{int}]{si,  }\item[{const std\+::vector$<$ double $>$ \&}]{sx\+\_\+,  }\item[{bool}]{verbose }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get the outer water potential \mbox{[}cm\mbox{]} 
+
+Returns outer water potential \mbox{[}cm\mbox{]} overloaded by \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_af49bac08d5f8ee2734b929fd75381571}{Photosynthesis\+::get\+Psi\+Out}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em cells} & sx per cell (true), or segments (false) \\
+\hline
+{\em si} & segment index \\
+\hline
+{\em sx\+\_\+} & \mbox{[}cm\mbox{]} soil matric potential for each cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a8126263f6609ac5e5eed0c4614a81bb5}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a8126263f6609ac5e5eed0c4614a81bb5}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!kr\_distance@{kr\_distance}}
+\index{kr\_distance@{kr\_distance}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{kr\_distance()}{kr\_distance()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::kr\+\_\+distance (\begin{DoxyParamCaption}\item[{int}]{si,  }\item[{double}]{age,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Radial conductivity per distance (distance is obtained from \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} via the segment index) for roots, constant values for other organs \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_ae052f24497c1709a3f510e40f95b7378}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_ae052f24497c1709a3f510e40f95b7378}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!kr\_f\_wrapped@{kr\_f\_wrapped}}
+\index{kr\_f\_wrapped@{kr\_f\_wrapped}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{kr\_f\_wrapped()}{kr\_f\_wrapped()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::kr\+\_\+f\+\_\+wrapped (\begin{DoxyParamCaption}\item[{int}]{si,  }\item[{double}]{age,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type,  }\item[{bool}]{cells }\end{DoxyParamCaption}) const}
+
+Returns the radial conductivity kr of roots below ground or leaves aboveground, otherwise returns 0 (ms must be set) \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a3ed7af5e2df2dde4c90a4a7e015dd9a1}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a3ed7af5e2df2dde4c90a4a7e015dd9a1}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!kr\_RootExchangeZonePerType@{kr\_RootExchangeZonePerType}}
+\index{kr\_RootExchangeZonePerType@{kr\_RootExchangeZonePerType}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{kr\_RootExchangeZonePerType()}{kr\_RootExchangeZonePerType()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::kr\+\_\+\+Root\+Exchange\+Zone\+Per\+Type (\begin{DoxyParamCaption}\item[{int}]{si,  }\item[{double}]{age,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+For roots the radial conductivity is multiplied by an exchange zone coefficient (that is calculated within \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} per Segment) \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a86db6d9d444589469de78709f155c580}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a86db6d9d444589469de78709f155c580}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!kx\_distance@{kx\_distance}}
+\index{kx\_distance@{kx\_distance}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{kx\_distance()}{kx\_distance()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::kx\+\_\+distance (\begin{DoxyParamCaption}\item[{int}]{si,  }\item[{double}]{age,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Axial conductivity per distance (distance is obtained from \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} via the segment index) for roots, constant values for other organs \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_ae2ccace1914a19f8f31546a2802584fb}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_ae2ccace1914a19f8f31546a2802584fb}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setKrAgeDependent@{setKrAgeDependent}}
+\index{setKrAgeDependent@{setKrAgeDependent}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setKrAgeDependent()}{setKrAgeDependent()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Kr\+Age\+Dependent (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{age,  }\item[{std\+::vector$<$ double $>$}]{values,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type = {\ttfamily Organism\+:\+:ot\+\_\+root} }\end{DoxyParamCaption})}
+
+Sets the radial conductivity \mbox{[}day-\/1\mbox{]} in an age dependent way, organ type and sub-\/type dependent
+
+The value is linearly interpolated between the sampling points given by age, and values dependent on age, Extrapolation of the last value is used if age lies outside the domain defined by the sampling points.
+
+
+\begin{DoxyParams}{Parameters}
+{\em age} & age values \\
+\hline
+{\em v} & kx values \\
+\hline
+{\em sub\+Type} & organ sub type \\
+\hline
+{\em organ\+Type} & organ type (default is root) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a1371b21271aceb53e977154fd1a12a1c}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a1371b21271aceb53e977154fd1a12a1c}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setKrConst@{setKrConst}}
+\index{setKrConst@{setKrConst}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setKrConst()}{setKrConst()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Kr\+Const (\begin{DoxyParamCaption}\item[{double}]{v,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type = {\ttfamily Organism\+:\+:ot\+\_\+root},  }\item[{double}]{kr\+\_\+length = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+stops transpiration if organs are not in the correct domain 
+
+Sets the radial conductivity in \mbox{[}1 day-\/1\mbox{]} for a sub\+Type and organ\+Type
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & kr per sub\+Type and organ\+Type \mbox{[}cm-\/1\mbox{]} \\
+\hline
+{\em sub\+Type} & organ sub type \\
+\hline
+{\em organ\+Type} & organ type (default is root) \\
+\hline
+{\em kr\+\_\+length} & exchange zone in root, where kr $>$ 0 \mbox{[}cm from root tip\mbox{]}, default = -\/1.\+0, i.\+e., no kr\+\_\+length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_aec337150cbc7c55de157965f6d72e511}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_aec337150cbc7c55de157965f6d72e511}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setKrDistanceDependent@{setKrDistanceDependent}}
+\index{setKrDistanceDependent@{setKrDistanceDependent}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setKrDistanceDependent()}{setKrDistanceDependent()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Kr\+Distance\+Dependent (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{distance,  }\item[{std\+::vector$<$ double $>$}]{values,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type = {\ttfamily Organism\+:\+:ot\+\_\+root} }\end{DoxyParamCaption})}
+
+Sets the radial conductivity \mbox{[}day-\/1\mbox{]} in an age dependent way, organ type and sub-\/type dependent
+
+The value is linearly interpolated between the sampling points given by age, and values dependent on age, Extrapolation of the last value is used if age lies outside the domain defined by the sampling points.
+
+
+\begin{DoxyParams}{Parameters}
+{\em age} & age values \\
+\hline
+{\em v} & kx values \\
+\hline
+{\em sub\+Type} & organ sub type \\
+\hline
+{\em organ\+Type} & organ type (default is root) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_aeedb45e1ea53562f8ac4868818c73ba1}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_aeedb45e1ea53562f8ac4868818c73ba1}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setKrValues@{setKrValues}}
+\index{setKrValues@{setKrValues}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setKrValues()}{setKrValues()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Kr\+Values (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{values }\end{DoxyParamCaption})}
+
+
+
+one value per segment 
+
+Sets the radial conductivity conductivity \mbox{[}1 day-\/1\mbox{]} per segment (e.\+g. constant value per segment) \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_acfb5fafa936d8e0868e7a9d6e38c26c4}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_acfb5fafa936d8e0868e7a9d6e38c26c4}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setKxAgeDependent@{setKxAgeDependent}}
+\index{setKxAgeDependent@{setKxAgeDependent}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setKxAgeDependent()}{setKxAgeDependent()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Kx\+Age\+Dependent (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{age,  }\item[{std\+::vector$<$ double $>$}]{values,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type = {\ttfamily Organism\+:\+:ot\+\_\+root} }\end{DoxyParamCaption})}
+
+Sets the axial conductivity \mbox{[}cm3 day-\/1\mbox{]} in an age dependent way, organ type and sub-\/type dependent
+
+The value is linearly interpolated between the sampling points given by age, and values dependent on age, Extrapolation of the last value is used if age lies outside the domain defined by the sampling points. $\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em age} & age values \\
+\hline
+{\em v} & kx values \\
+\hline
+{\em sub\+Type} & organ sub type \\
+\hline
+{\em organ\+Type} & organ type (default is root) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a8b8a55bc5b339833fd28b9d26934503e}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a8b8a55bc5b339833fd28b9d26934503e}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setKxConst@{setKxConst}}
+\index{setKxConst@{setKxConst}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setKxConst()}{setKxConst()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Kx\+Const (\begin{DoxyParamCaption}\item[{double}]{v,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type = {\ttfamily Organism\+:\+:ot\+\_\+root} }\end{DoxyParamCaption})}
+
+Sets the axial conductivity in \mbox{[}cm3 day-\/1\mbox{]} for a sub\+Type and organ\+Type
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & kx per sub\+Type and organ\+Type \mbox{[}cm3/day\mbox{]} \\
+\hline
+{\em sub\+Type} & organ sub type \\
+\hline
+{\em organ\+Type} & organ type (default is root) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_a219fe51de92e1e6b9e8a0bb9b2011c7f}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_a219fe51de92e1e6b9e8a0bb9b2011c7f}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setKxDistanceDependent@{setKxDistanceDependent}}
+\index{setKxDistanceDependent@{setKxDistanceDependent}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setKxDistanceDependent()}{setKxDistanceDependent()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Kx\+Distance\+Dependent (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{distance,  }\item[{std\+::vector$<$ double $>$}]{values,  }\item[{int}]{sub\+Type,  }\item[{int}]{organ\+Type = {\ttfamily Organism\+:\+:ot\+\_\+root} }\end{DoxyParamCaption})}
+
+Sets the axial conductivity \mbox{[}cm3 day-\/1\mbox{]} in an age dependent way, organ type and sub-\/type dependent
+
+The value is linearly interpolated between the sampling points given by age, and values dependent on age, Extrapolation of the last value is used if age lies outside the domain defined by the sampling points. $\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em age} & age values \\
+\hline
+{\em v} & kx values \\
+\hline
+{\em sub\+Type} & organ sub type \\
+\hline
+{\em organ\+Type} & organ type (default is root) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_aef689b2fe774113a75b0c97c6228cdcb}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_aef689b2fe774113a75b0c97c6228cdcb}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setKxValues@{setKxValues}}
+\index{setKxValues@{setKxValues}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setKxValues()}{setKxValues()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Kx\+Values (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{values }\end{DoxyParamCaption})}
+
+
+
+one value per segment 
+
+Sets the axial conductivity \mbox{[}cm3 day-\/1\mbox{]} per segment (e.\+g. constant value per segment) \mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_parameters_ac13160b1e0b3e65c80636b671e83a9ad}\label{class_c_plant_box_1_1_plant_hydraulic_parameters_ac13160b1e0b3e65c80636b671e83a9ad}} 
+\index{CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}!setMode@{setMode}}
+\index{setMode@{setMode}!CPlantBox::PlantHydraulicParameters@{CPlantBox::PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters\+::set\+Mode (\begin{DoxyParamCaption}\item[{std\+::string}]{kr\+Mode,  }\item[{std\+::string}]{kx\+Mode }\end{DoxyParamCaption})}
+
+Sets the call back function according to kr\+Mode and kx\+Mode. This is called by the Python JSON Reader, otherwise kr\+Mode and kx\+Mode is set automatically by the setter methods.
+
+kr\+Mode is const, per\+Segment, age, or distance kx\+Mode is const, per\+Segment, age, or distance 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Plant\+Hydraulic\+Parameters.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Plant\+Hydraulic\+Parameters.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{class_c_plant_box_1_1_twist_tropism}{}\doxysection{CPlant\+Box\+::Twist\+Tropism Class Reference}
+\label{class_c_plant_box_1_1_twist_tropism}\index{CPlantBox::TwistTropism@{CPlantBox::TwistTropism}}
+
+
+{\ttfamily \#include $<$tropism.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Twist\+Tropism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_c_plant_box_1_1_twist_tropism__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Twist\+Tropism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_c_plant_box_1_1_twist_tropism__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_twist_tropism_a43966ac2f8aba3c001ac24253f994082}{Twist\+Tropism}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant, double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_ad66a1abd4a5e98d30fa305058f330bc9}{n}}, double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_af056914c05b89a19107ac89d9c6b96ba}{sigma}})
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_twist_tropism_abb06bfe8700f4b5fbeded40520066594}\label{class_c_plant_box_1_1_twist_tropism_abb06bfe8700f4b5fbeded40520066594}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_twist_tropism_abb06bfe8700f4b5fbeded40520066594}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant) override
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_twist_tropism_ac17a410b7379e3901aa91beb3cd221dc}{tropism\+Objective}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&old, double a, double b, double dx, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ stem) override
+\begin{DoxyCompactList}\small\item\em Tropism\+Function\+::get\+Heading minimizes this function,. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+todo doc 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_twist_tropism_a43966ac2f8aba3c001ac24253f994082}\label{class_c_plant_box_1_1_twist_tropism_a43966ac2f8aba3c001ac24253f994082}} 
+\index{CPlantBox::TwistTropism@{CPlantBox::TwistTropism}!TwistTropism@{TwistTropism}}
+\index{TwistTropism@{TwistTropism}!CPlantBox::TwistTropism@{CPlantBox::TwistTropism}}
+\doxysubsubsection{\texorpdfstring{TwistTropism()}{TwistTropism()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Twist\+Tropism\+::\+Twist\+Tropism (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant,  }\item[{double}]{n,  }\item[{double}]{sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+Tropism\+Function 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_twist_tropism_ac17a410b7379e3901aa91beb3cd221dc}\label{class_c_plant_box_1_1_twist_tropism_ac17a410b7379e3901aa91beb3cd221dc}} 
+\index{CPlantBox::TwistTropism@{CPlantBox::TwistTropism}!tropismObjective@{tropismObjective}}
+\index{tropismObjective@{tropismObjective}!CPlantBox::TwistTropism@{CPlantBox::TwistTropism}}
+\doxysubsubsection{\texorpdfstring{tropismObjective()}{tropismObjective()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Twist\+Tropism\+::tropism\+Objective (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&}]{old,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{dx,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{stem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tropism\+Function\+::get\+Heading minimizes this function,. 
+
+\begin{DoxySeeAlso}{See also}
+Tropism\+Function\+::get\+Heading and 
+
+Tropism\+Function\+::tropism\+Objective 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_tropism_aee46e346f1fa6b94bb936d309cb70287}{CPlant\+Box\+::\+Tropism}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/tropism.\+h\end{DoxyCompactItemize}

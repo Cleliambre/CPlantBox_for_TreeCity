@@ -1,0 +1,248 @@
+\hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier}{}\doxysection{src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier Class Reference}
+\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier}\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+
+
+Inheritance diagram for src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_ac724104f5553ec9c2457229bedcbe02e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, ms, params, cached=False)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a7291af3584ff6a3fcf44a375e419bb9f}{solve\+\_\+dirichlet}} (self, float sim\+\_\+time, list collar\+\_\+pot, rsx, bool cells, soil\+\_\+k=\mbox{[}$\,$\mbox{]})
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_ac6fbe4f5eaec9ae726f6a225e13aee57}{solve\+\_\+neumann}} (self, float sim\+\_\+time, list t\+\_\+act, rsx, bool cells, soil\+\_\+k=\mbox{[}$\,$\mbox{]})
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a374f68f5244c2de0bc7d0d856f796003}{solve}} (self, float sim\+\_\+time, list t\+\_\+act, rsx, bool cells, soil\+\_\+k=\mbox{[}$\,$\mbox{]})
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a1ef1e4c6ff064917ce9550cc9e94f342}{solve\+\_\+again}} (self, float sim\+\_\+time, list t\+\_\+act, rsx, bool cells, soil\+\_\+k=\mbox{[}$\,$\mbox{]})
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a6b3d459bee7e8169d487348889516f4a}{get\+\_\+transpiration}} (self, sim\+\_\+time, rx, rsx, cells=False, soil\+\_\+k=\mbox{[}$\,$\mbox{]})
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a5c948fc79543b7b48854eba610429331}{radial\+\_\+fluxes}} (self, sim\+\_\+time, rx, rsx, cells=False, soil\+\_\+k=\mbox{[}$\,$\mbox{]})
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_aedd600091935137973baab48c4cd255e}{axial\+\_\+fluxes}} (self, sim\+\_\+time, rx, rsx, cells=False)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_abf6de6707c7d75884f39589dd94ab0f8}{axial\+\_\+flux}} (self, seg\+\_\+ind, sim\+\_\+time, rx, rsx, cells=True, ij=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a8ac8f24ba9407ac2e4f848980c4d1625}{zero\+\_\+rows}} (M, rows)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a263d5e05cb7b09064fdd97d503866b0d}{bc\+\_\+dirichlet}} (Q, b, n0, d)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a9fd1e560d0662ec9353a38efa020e43a}{bc\+\_\+neumann}} (b, n0, f)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a5ee99459c1f2cce156b9df9d620b4ee0}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a5ee99459c1f2cce156b9df9d620b4ee0}} 
+{\bfseries usecached\+\_\+}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a0873250a54cb47acbaf0fe199a56ebe6}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a0873250a54cb47acbaf0fe199a56ebe6}} 
+{\bfseries last}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a01e004b56c43d28eca4922dc0b30ea17}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a01e004b56c43d28eca4922dc0b30ea17}} 
+{\bfseries neumannB}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a3f7fbe0e3d8e1f99b254a4c6968f646b}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a3f7fbe0e3d8e1f99b254a4c6968f646b}} 
+{\bfseries dirichletB}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Meunier hybrid solver (Meunier et al. 2017)
+
+For perfomance reasons building the matrix is implented in C++ (PlantHydraulicModelCPP)
+
+If cached is true, for each solve() call a sparse LU factorization is stored, which is used in every solve_again() call
+(no convenient sparse cholesky implementation in scipy)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_ac724104f5553ec9c2457229bedcbe02e}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_ac724104f5553ec9c2457229bedcbe02e}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ms,  }\item[{}]{params,  }\item[{}]{cached = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param ms is of type MappedSegments (or specializations), or a string containing a rsml filename
+@param params hydraulic conductivities described by PlantHydraulicParameters
+@param if cached == "True" sparse factorization is cached for faster solving using solve_again()
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_plant_hydraulic_model_a951323072ffcd0a8a3f0e53ac89ee5ed}{src.\+functional.\+Plant\+Hydraulic\+Model.\+Plant\+Hydraulic\+Model}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_abf6de6707c7d75884f39589dd94ab0f8}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_abf6de6707c7d75884f39589dd94ab0f8}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!axial\_flux@{axial\_flux}}
+\index{axial\_flux@{axial\_flux}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{axial\_flux()}{axial\_flux()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+axial\+\_\+flux (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{seg\+\_\+ind,  }\item[{}]{sim\+\_\+time,  }\item[{}]{rx,  }\item[{}]{rsx,  }\item[{}]{cells = {\ttfamily True},  }\item[{}]{ij = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}returns the exact axial flux of segment ij of xylem model solution @param rx
+@param seg_ind              segment index
+@param sim_time [day]       needed for age dependent conductivities (age = sim_time - segment creation time)
+@param rx [cm]              root xylem matric potentials per root system node
+@param rsx [cm]             soil matric potentials given per segment or per soil cell
+@param cells                indicates if the matric potentials are given per cell (True) or by segments (False)
+@param ij                   True: calculate axial flux in node i, False: in node j; note that they are not equal due to radial fluxes
+@return [cm3 day-1] axial volumetric flow rate
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_aedd600091935137973baab48c4cd255e}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_aedd600091935137973baab48c4cd255e}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!axial\_fluxes@{axial\_fluxes}}
+\index{axial\_fluxes@{axial\_fluxes}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{axial\_fluxes()}{axial\_fluxes()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+axial\+\_\+fluxes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time,  }\item[{}]{rx,  }\item[{}]{rsx,  }\item[{}]{cells = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}returns the axial fluxes
+@see axial_flux
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a263d5e05cb7b09064fdd97d503866b0d}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a263d5e05cb7b09064fdd97d503866b0d}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!bc\_dirichlet@{bc\_dirichlet}}
+\index{bc\_dirichlet@{bc\_dirichlet}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{bc\_dirichlet()}{bc\_dirichlet()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+bc\+\_\+dirichlet (\begin{DoxyParamCaption}\item[{}]{Q,  }\item[{}]{b,  }\item[{}]{n0,  }\item[{}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}prescribes a Dirichlet boundary conditions for the system Qx=b
+@param Q          system matrix
+@param b          rhs vector
+@param n0         list of node indices, where the Dirichlet bc is applied
+@param d [cm]     list of Dirichlet values
+@return Q, b, the updated matrix, and rhs vector
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a9fd1e560d0662ec9353a38efa020e43a}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a9fd1e560d0662ec9353a38efa020e43a}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!bc\_neumann@{bc\_neumann}}
+\index{bc\_neumann@{bc\_neumann}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{bc\_neumann()}{bc\_neumann()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+bc\+\_\+neumann (\begin{DoxyParamCaption}\item[{}]{b,  }\item[{}]{n0,  }\item[{}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}prescribes a Neumann boundary condition for the root system Qx=b
+@param b                      rhs vector
+@param n0                     list of node indices, where the Neumann boundary condition is applied
+@param f [cm3 day-1]          list of Neumann values
+@return b                     rhs vector
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a6b3d459bee7e8169d487348889516f4a}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a6b3d459bee7e8169d487348889516f4a}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!get\_transpiration@{get\_transpiration}}
+\index{get\_transpiration@{get\_transpiration}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{get\_transpiration()}{get\_transpiration()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+get\+\_\+transpiration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time,  }\item[{}]{rx,  }\item[{}]{rsx,  }\item[{}]{cells = {\ttfamily False},  }\item[{}]{soil\+\_\+k = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}actual transpiration [cm3 day-1], calculated as the sum of all radial fluxes\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a5c948fc79543b7b48854eba610429331}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a5c948fc79543b7b48854eba610429331}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!radial\_fluxes@{radial\_fluxes}}
+\index{radial\_fluxes@{radial\_fluxes}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{radial\_fluxes()}{radial\_fluxes()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+radial\+\_\+fluxes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time,  }\item[{}]{rx,  }\item[{}]{rsx,  }\item[{}]{cells = {\ttfamily False},  }\item[{}]{soil\+\_\+k = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}returns the exact radial fluxes per segment (calls base class)
+@param sim_time [day]       needed for age dependent conductivities (age = sim_time - segment creation time)
+@param rx [cm]              root xylem matric potentials per root system node
+@param rsx [cm]             soil matric potentials given per segment or per soil cell
+@param cells                indicates if the matric potentials are given per cell (True) or by segments (False)
+@param soil_k [day-1]     optionally, soil conductivities can be prescribed per segment,
+                          conductivity at the root surface will be limited by the value, i.e. kr = min(kr_root, k_soil)
+@return [cm3 day-1] radial volumetric flow rate
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a374f68f5244c2de0bc7d0d856f796003}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a374f68f5244c2de0bc7d0d856f796003}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!solve@{solve}}
+\index{solve@{solve}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+solve (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{float}]{sim\+\_\+time,  }\item[{list}]{t\+\_\+act,  }\item[{}]{rsx,  }\item[{bool}]{cells,  }\item[{}]{soil\+\_\+k = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Solves the hydraulic model using Neumann boundary conditions and switching to Dirichlet in case wilting point is reached
+@param sim_time [day]        needed for age dependent conductivities (age = sim_time - segment creation time)
+@param t_act [cm3 day-1]     transpiration rate
+@param rsx [cm]              soil matric potentials given per segment or per soil cell
+@param cells                 indicates if the matric potentials are given per cell (True) or by segments (False)
+@param soil_k [day-1]     optionally, soil conductivities can be prescribed per segment,
+                          conductivity at the root surface will be limited by the value, i.e. kr = min(kr_root, k_soil)
+@return [cm] root matric potential per root system node
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a1ef1e4c6ff064917ce9550cc9e94f342}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a1ef1e4c6ff064917ce9550cc9e94f342}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!solve\_again@{solve\_again}}
+\index{solve\_again@{solve\_again}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{solve\_again()}{solve\_again()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+solve\+\_\+again (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{float}]{sim\+\_\+time,  }\item[{list}]{t\+\_\+act,  }\item[{}]{rsx,  }\item[{bool}]{cells,  }\item[{}]{soil\+\_\+k = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Solves the hydraulic model using Neumann boundary conditions and switching to Dirichlet in case wilting point is reached
+Depending of the method solve_again() is much faster using chached factorization of the last solve() command
+@param sim_time [day]        needed for age dependent conductivities (age = sim_time - segment creation time)
+@param t_act [cm3 day-1]     transpiration rate
+@param rsx [cm]              soil matric potentials given per segment or per soil cell
+@param cells                 indicates if the matric potentials are given per cell (True) or by segments (False)
+@param soil_k [day-1]     optionally, soil conductivities can be prescribed per segment,
+                          conductivity at the root surface will be limited by the value, i.e. kr = min(kr_root, k_soil)
+@return [cm] root matric potential per root system node
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_plant_hydraulic_model_a900917763b2d76b7a53ab8c96651fe41}{src.\+functional.\+Plant\+Hydraulic\+Model.\+Plant\+Hydraulic\+Model}}.
+
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a7291af3584ff6a3fcf44a375e419bb9f}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a7291af3584ff6a3fcf44a375e419bb9f}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!solve\_dirichlet@{solve\_dirichlet}}
+\index{solve\_dirichlet@{solve\_dirichlet}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{solve\_dirichlet()}{solve\_dirichlet()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+solve\+\_\+dirichlet (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{float}]{sim\+\_\+time,  }\item[{list}]{collar\+\_\+pot,  }\item[{}]{rsx,  }\item[{bool}]{cells,  }\item[{}]{soil\+\_\+k = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}solves the flux equations, with a neumann boundary condtion, see solve()
+@param sim_time [day]           needed for age dependent conductivities (age = sim_time - segment creation time)
+@param collar_pot [cm]          collar potential
+@param rsx [cm]                 soil matric potentials given per segment or per soil cell
+@param cells                    indicates if the matric potentials are given per cell (True) or by segments (False)
+@param soil_k [day-1]     optionally, soil conductivities can be prescribed per segment,
+                          conductivity at the root surface will be limited by the value, i.e. kr = min(kr_root, k_soil)
+@return [cm] root matric potential per root system node
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_ac6fbe4f5eaec9ae726f6a225e13aee57}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_ac6fbe4f5eaec9ae726f6a225e13aee57}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!solve\_neumann@{solve\_neumann}}
+\index{solve\_neumann@{solve\_neumann}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{solve\_neumann()}{solve\_neumann()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+solve\+\_\+neumann (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{float}]{sim\+\_\+time,  }\item[{list}]{t\+\_\+act,  }\item[{}]{rsx,  }\item[{bool}]{cells,  }\item[{}]{soil\+\_\+k = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}solves the flux equations, with a neumann boundary condtion, see solve()
+@param sim_time [day]       needed for age dependent conductivities (age = sim_time - segment creation time)
+@param t_act [cm3 day-1]    tranpirational flux is negative
+@param rsx [cm]             soil matric potentials given per segment or per soil cell
+@param cells                indicates if the matric potentials are given per cell (True) or by segments (False)
+@param soil_k [day-1]     optionally, soil conductivities can be prescribed per segment,
+                          conductivity at the root surface will be limited by the value, i.e. kr = min(kr_root, k_soil)
+@return [cm] root matric potential per root system node
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a8ac8f24ba9407ac2e4f848980c4d1625}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___meunier_a8ac8f24ba9407ac2e4f848980c4d1625}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}!zero\_rows@{zero\_rows}}
+\index{zero\_rows@{zero\_rows}!src.functional.PlantHydraulicModel.HydraulicModel\_Meunier@{src.functional.PlantHydraulicModel.HydraulicModel\_Meunier}}
+\doxysubsubsection{\texorpdfstring{zero\_rows()}{zero\_rows()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Meunier.\+zero\+\_\+rows (\begin{DoxyParamCaption}\item[{}]{M,  }\item[{}]{rows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Sets the given rows of the sparse matrix M to zero (I do not know the best way to do it)
+@param M         sparse matrix
+@param rows      list of row indices
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Plant\+Hydraulic\+Model.\+py\end{DoxyCompactItemize}

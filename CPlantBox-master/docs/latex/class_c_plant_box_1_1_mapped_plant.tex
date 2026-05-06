@@ -1,0 +1,268 @@
+\hypertarget{class_c_plant_box_1_1_mapped_plant}{}\doxysection{CPlant\+Box\+::Mapped\+Plant Class Reference}
+\label{class_c_plant_box_1_1_mapped_plant}\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+
+
+{\ttfamily \#include $<$Mapped\+Organism.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Mapped\+Plant\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_mapped_plant__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Mapped\+Plant\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_mapped_plant__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_ab24f3d10d40f1a7a8a5ebd22f2d75003}\label{class_c_plant_box_1_1_mapped_plant_ab24f3d10d40f1a7a8a5ebd22f2d75003}} 
+{\bfseries Mapped\+Plant} (unsigned int random\+Seed=0)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_ac7c892c1455cf95d291352c6bb3f9cda}\label{class_c_plant_box_1_1_mapped_plant_ac7c892c1455cf95d291352c6bb3f9cda}} 
+virtual \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_ac7c892c1455cf95d291352c6bb3f9cda}{$\sim$\+Mapped\+Plant}} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a68bcdf503d7fb60a7e5f2cbfdf1b6346}\label{class_c_plant_box_1_1_mapped_plant_a68bcdf503d7fb60a7e5f2cbfdf1b6346}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{Mapped\+Segments}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a68bcdf503d7fb60a7e5f2cbfdf1b6346}{mapped\+Segments}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_ae61c488a4b46ba2dc5f01f04c6e19fdc}\label{class_c_plant_box_1_1_mapped_plant_ae61c488a4b46ba2dc5f01f04c6e19fdc}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_plant}{Plant}} $>$ {\bfseries plant} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a954d497057145fafc3ab1ff68323fb60}\label{class_c_plant_box_1_1_mapped_plant_a954d497057145fafc3ab1ff68323fb60}} 
+void {\bfseries disable\+Extra\+Node} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_ac874faaaac0805c3c61a17873644594b}\label{class_c_plant_box_1_1_mapped_plant_ac874faaaac0805c3c61a17873644594b}} 
+void {\bfseries enable\+Extra\+Node} ()
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a83dd04cc58a1fa3be20a1b2577f95434}{initialize\+LB}} (bool verbose=true) override
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a5715e20fe9486b15f1082721bb45eec2}\label{class_c_plant_box_1_1_mapped_plant_a5715e20fe9486b15f1082721bb45eec2}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a5715e20fe9486b15f1082721bb45eec2}{initialize\+DB}} (bool verbose=true) override
+\begin{DoxyCompactList}\small\item\em overridden, length based initialization \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a9b1ccd5112e144fc3f02d6f7d901773d}{simulate}} (double dt, bool verbose) override
+\begin{DoxyCompactList}\small\item\em overridden, delay based based initialization \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_ab8323ea37b9fa3b109d721e9134dd278}{print\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em print information \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a7ee72296b3b78c609b511c0be63008f9}{map\+Sub\+Types}} ()
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a5230612fae01bb03f69e508f014104d1}{calc\+Exchange\+Zone\+Coefs}} () override
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a35f3c47181e94636b743ae5f3a188b3e}{get\+Segment\+Ids}} (int ot=-\/1) const
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a389f700d07e4c18f8d2ac896f16836ac}{get\+Node\+Ids}} (int ot=-\/1) const
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a6c77b26257805a5e8a2ab6d77c96125e}{get\+Effective\+Radius}} (int si) override
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_ae69ca81db897fed72475609de3ffaaef}{get\+Perimeter}} (int si\+\_\+, double l\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Perimeter of the segment \mbox{[}cm\mbox{]} overloaded by. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a36a4fca3a71db9f5cd3224863500659d}\label{class_c_plant_box_1_1_mapped_plant_a36a4fca3a71db9f5cd3224863500659d}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a36a4fca3a71db9f5cd3224863500659d}{get\+Segment2leaf\+Id}} (int si\+\_\+) override
+\begin{DoxyCompactList}\small\item\em fill segment2\+Leaf vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a347effd67e48b1eb3f156dbddd03bee1}\label{class_c_plant_box_1_1_mapped_plant_a347effd67e48b1eb3f156dbddd03bee1}} 
+std\+::map$<$ std\+::tuple$<$ int, int $>$, int $>$ {\bfseries st2newst}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a1b1a617c4c9a2c55782288001640227e}\label{class_c_plant_box_1_1_mapped_plant_a1b1a617c4c9a2c55782288001640227e}} 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a1b1a617c4c9a2c55782288001640227e}{segment2leaf\+Ids}}
+\begin{DoxyCompactList}\small\item\em to go from vector of size segment to vector of size leaf\+\_\+segment \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_aad949435c11d959b722d80f0809ab9be}{initialize\+\_\+}} (bool verbose=true, bool length\+Based=true)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_a6d5f91ca9b5ad2b1646955a96838fc04}{get\+Segment2leaf\+Ids}} ()
+\begin{DoxyCompactList}\small\item\em fill segment2\+Leaf vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a00468c75800320bc0bc7b59386005e6c}\label{class_c_plant_box_1_1_mapped_plant_a00468c75800320bc0bc7b59386005e6c}} 
+int {\bfseries extra\+Node} = -\/1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_ab060e3c928ec53beb5b363a3511c11bd}\label{class_c_plant_box_1_1_mapped_plant_ab060e3c928ec53beb5b363a3511c11bd}} 
+bool {\bfseries root\+Hairs} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Build \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{Mapped\+Segments}} sequentially from a \mbox{\hyperlink{class_c_plant_box_1_1_plant}{Plant}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a5230612fae01bb03f69e508f014104d1}\label{class_c_plant_box_1_1_mapped_plant_a5230612fae01bb03f69e508f014104d1}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!calcExchangeZoneCoefs@{calcExchangeZoneCoefs}}
+\index{calcExchangeZoneCoefs@{calcExchangeZoneCoefs}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{calcExchangeZoneCoefs()}{calcExchangeZoneCoefs()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Plant\+::calc\+Exchange\+Zone\+Coefs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+computes coeficients for kr when root kr $>$ 0 up to kr\+\_\+length cm from the root tip see @\+Xylem\+Flux\+::kr\+\_\+\+Root\+Exchange\+Zone\+Per\+Type() 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{CPlant\+Box\+::\+Mapped\+Segments}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a6c77b26257805a5e8a2ab6d77c96125e}\label{class_c_plant_box_1_1_mapped_plant_a6c77b26257805a5e8a2ab6d77c96125e}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!getEffectiveRadius@{getEffectiveRadius}}
+\index{getEffectiveRadius@{getEffectiveRadius}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{getEffectiveRadius()}{getEffectiveRadius()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Mapped\+Plant\+::get\+Effective\+Radius (\begin{DoxyParamCaption}\item[{int}]{si }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+returns the plant radius plus root hair length 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{CPlant\+Box\+::\+Mapped\+Segments}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a389f700d07e4c18f8d2ac896f16836ac}\label{class_c_plant_box_1_1_mapped_plant_a389f700d07e4c18f8d2ac896f16836ac}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!getNodeIds@{getNodeIds}}
+\index{getNodeIds@{getNodeIds}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{getNodeIds()}{getNodeIds()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ CPlant\+Box\+::\+Mapped\+Plant\+::get\+Node\+Ids (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const}
+
+index of segment of organ type ot 
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id of each segment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_ae69ca81db897fed72475609de3ffaaef}\label{class_c_plant_box_1_1_mapped_plant_ae69ca81db897fed72475609de3ffaaef}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Mapped\+Plant\+::get\+Perimeter (\begin{DoxyParamCaption}\item[{int}]{si\+\_\+,  }\item[{double}]{l\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perimeter of the segment \mbox{[}cm\mbox{]} overloaded by. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_ae69ca81db897fed72475609de3ffaaef}{Mapped\+Plant\+::get\+Perimeter}}
+\end{DoxySeeAlso}
+index of segment of organ type ot 
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id of each segment 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a74b833552d5079a92d31a0be1fd60b66}{CPlant\+Box\+::\+Mapped\+Segments}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a6d5f91ca9b5ad2b1646955a96838fc04}\label{class_c_plant_box_1_1_mapped_plant_a6d5f91ca9b5ad2b1646955a96838fc04}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!getSegment2leafIds@{getSegment2leafIds}}
+\index{getSegment2leafIds@{getSegment2leafIds}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{getSegment2leafIds()}{getSegment2leafIds()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Plant\+::get\+Segment2leaf\+Ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+fill segment2\+Leaf vector 
+
+index of node of organtype ot 
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id of each segment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a35f3c47181e94636b743ae5f3a188b3e}\label{class_c_plant_box_1_1_mapped_plant_a35f3c47181e94636b743ae5f3a188b3e}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!getSegmentIds@{getSegmentIds}}
+\index{getSegmentIds@{getSegmentIds}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{getSegmentIds()}{getSegmentIds()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ CPlant\+Box\+::\+Mapped\+Plant\+::get\+Segment\+Ids (\begin{DoxyParamCaption}\item[{int}]{ot = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+index of node of organtype ot 
+\begin{DoxyParams}{Parameters}
+{\em ot} & the expected organ type, where -\/1 denotes all organ types (default) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id of each segment 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_a0a68f0a373c04bed04e3e88d902678ef}{CPlant\+Box\+::\+Organism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_aad949435c11d959b722d80f0809ab9be}\label{class_c_plant_box_1_1_mapped_plant_aad949435c11d959b722d80f0809ab9be}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!initialize\_@{initialize\_}}
+\index{initialize\_@{initialize\_}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{initialize\_()}{initialize\_()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Plant\+::initialize\+\_\+ (\begin{DoxyParamCaption}\item[{bool}]{verbose = {\ttfamily true},  }\item[{bool}]{length\+Based = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+initialization of mappedplant 
+\begin{DoxyParams}{Parameters}
+{\em verbose} & indicates if status is written to the console (cout) (default = false) \\
+\hline
+{\em LB} & implement length-\/based waiting time before growth (true) of laterals or delay-\/based (false)? (default = true)\\
+\hline
+\end{DoxyParams}
+use set\+Stochastic(stochastic); to turn on or off stochasticity \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a83dd04cc58a1fa3be20a1b2577f95434}\label{class_c_plant_box_1_1_mapped_plant_a83dd04cc58a1fa3be20a1b2577f95434}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!initializeLB@{initializeLB}}
+\index{initializeLB@{initializeLB}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{initializeLB()}{initializeLB()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Plant\+::initialize\+LB (\begin{DoxyParamCaption}\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+creates the base roots (length based lateral emergence times), call before simulation and after setting plant and root parameters 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_plant_a4d736cfe1d38ac753aefd0f04238d4d2}{CPlant\+Box\+::\+Plant}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a7ee72296b3b78c609b511c0be63008f9}\label{class_c_plant_box_1_1_mapped_plant_a7ee72296b3b78c609b511c0be63008f9}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!mapSubTypes@{mapSubTypes}}
+\index{mapSubTypes@{mapSubTypes}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{mapSubTypes()}{mapSubTypes()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Plant\+::map\+Sub\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+creates a map to reorder sub types, so that the N subtypes of one organ type go from 0 to N-\/1 \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_ab8323ea37b9fa3b109d721e9134dd278}\label{class_c_plant_box_1_1_mapped_plant_ab8323ea37b9fa3b109d721e9134dd278}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!printNodes@{printNodes}}
+\index{printNodes@{printNodes}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{printNodes()}{printNodes()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Plant\+::print\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+print information 
+
+Gives an overview of the mappedplant object (for debugging) \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_plant_a9b1ccd5112e144fc3f02d6f7d901773d}\label{class_c_plant_box_1_1_mapped_plant_a9b1ccd5112e144fc3f02d6f7d901773d}} 
+\index{CPlantBox::MappedPlant@{CPlantBox::MappedPlant}!simulate@{simulate}}
+\index{simulate@{simulate}!CPlantBox::MappedPlant@{CPlantBox::MappedPlant}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Plant\+::simulate (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{bool}]{verbose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+overridden, delay based based initialization 
+
+build nodes and segments sequentially
+
+Simulates the development of the organism in a time span of
+\begin{DoxyParams}{Parameters}
+{\em dt} & days.\\
+\hline
+{\em dt} & time step \mbox{[}day\mbox{]} \\
+\hline
+{\em verbose} & turns console output on or off \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organism_af3c862c732db32f4b4acf1a93b73acf6}{CPlant\+Box\+::\+Organism}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Mapped\+Organism.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Mapped\+Organism.\+cpp\end{DoxyCompactItemize}

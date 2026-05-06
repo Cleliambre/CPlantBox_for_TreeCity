@@ -1,0 +1,49 @@
+\hypertarget{class_c_plant_box_1_1_function}{}\doxysection{CPlant\+Box\+::Function Class Reference}
+\label{class_c_plant_box_1_1_function}\index{CPlantBox::Function@{CPlantBox::Function}}
+
+
+{\ttfamily \#include $<$mymath.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_c_plant_box_1_1_function_ac97aceceb82f19d81cf1378c99fc6672}{quad}} (std\+::function$<$ double(double)$>$ f, double a, double b, int n)
+\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_function_ad496f68324782add0131444fadab39fc}{linspace}} (double start, double end, int num)
+\item 
+static double \mbox{\hyperlink{class_c_plant_box_1_1_function_a55ce80347b6c95917b00a64fa9e43d23}{interp1}} (double x, std\+::vector$<$ double $>$ x\+\_\+, std\+::vector$<$ double $>$ y\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+usefull 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_function_a55ce80347b6c95917b00a64fa9e43d23}\label{class_c_plant_box_1_1_function_a55ce80347b6c95917b00a64fa9e43d23}} 
+\index{CPlantBox::Function@{CPlantBox::Function}!interp1@{interp1}}
+\index{interp1@{interp1}!CPlantBox::Function@{CPlantBox::Function}}
+\doxysubsubsection{\texorpdfstring{interp1()}{interp1()}}
+{\footnotesize\ttfamily static double CPlant\+Box\+::\+Function\+::interp1 (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{std\+::vector$<$ double $>$}]{x\+\_\+,  }\item[{std\+::vector$<$ double $>$}]{y\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+linearly interpolates a single value
+\begin{DoxyParams}{Parameters}
+{\em x,extrapolates} & with a constant value not in the Python binding, use scipy instead \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_function_ad496f68324782add0131444fadab39fc}\label{class_c_plant_box_1_1_function_ad496f68324782add0131444fadab39fc}} 
+\index{CPlantBox::Function@{CPlantBox::Function}!linspace@{linspace}}
+\index{linspace@{linspace}!CPlantBox::Function@{CPlantBox::Function}}
+\doxysubsubsection{\texorpdfstring{linspace()}{linspace()}}
+{\footnotesize\ttfamily static std\+::vector$<$double$>$ CPlant\+Box\+::\+Function\+::linspace (\begin{DoxyParamCaption}\item[{double}]{start,  }\item[{double}]{end,  }\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+mimics numpy.\+linspace, from stack overflow not in the binding, use numpy.\+linspace \mbox{\Hypertarget{class_c_plant_box_1_1_function_ac97aceceb82f19d81cf1378c99fc6672}\label{class_c_plant_box_1_1_function_ac97aceceb82f19d81cf1378c99fc6672}} 
+\index{CPlantBox::Function@{CPlantBox::Function}!quad@{quad}}
+\index{quad@{quad}!CPlantBox::Function@{CPlantBox::Function}}
+\doxysubsubsection{\texorpdfstring{quad()}{quad()}}
+{\footnotesize\ttfamily static double CPlant\+Box\+::\+Function\+::quad (\begin{DoxyParamCaption}\item[{std\+::function$<$ double(double)$>$}]{f,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+trapezoidal rule (needed in dumux-\/rosi schröder) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/mymath.\+h\end{DoxyCompactItemize}

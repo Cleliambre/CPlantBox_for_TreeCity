@@ -1,0 +1,280 @@
+\hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan}{}\doxysection{src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan Class Reference}
+\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan}\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+
+
+Inheritance diagram for src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a2c0def3d3bae1dadb57f5497d024d1f2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, ms, params, cached=True)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ab1e877ea18985f0173ed622d3f0825a6}{solve\+\_\+dirichlet}} (self, float sim\+\_\+time, list collar\+\_\+pot, rsx, bool cells)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a8271cc0a7713926ba4a8f8e9062e668a}{solve\+\_\+neumann}} (self, float sim\+\_\+time, list t\+\_\+act, rsx, bool cells)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a5d0f9194553d9a54dacbfe1677b6d340}{solve}} (self, float sim\+\_\+time, list t\+\_\+act, rsx, bool cells)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a2364bb259564dd2e5f44f5278b95ed56}{solve\+\_\+again}} (self, float sim\+\_\+time, list t\+\_\+act, rsx, bool cells)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_af6f819a3341b54694d392e5f91741de0}{radial\+\_\+fluxes}} (self, sim\+\_\+time, rx, rsx, cells=False)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_af5fc6d7a95e75cac39bc6387e02976c0}{axial\+\_\+fluxes}} (self, sim\+\_\+time, rx, rsx=None, cells=None)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a4f79c45c7e7871ca61e9089b229e8918}{axial\+\_\+flux}} (self, seg\+\_\+ind, sim\+\_\+time, rx)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a83e1f92c2a830864f5ca2c3951e4af74}{doussan\+\_\+system\+\_\+matrix}} (self, sim\+\_\+time)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ade9791593fd973c61f7b3b3317be0783}{update}} (self, sim\+\_\+time)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a660736a75a648c7351f618d99b67e5d1}{get\+\_\+collar\+\_\+potential}} (self, t\+\_\+act, rsx)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ae28227fc2aa35ceb68073d27788cbd02}{get\+\_\+soil\+\_\+rootsystem\+\_\+conductance}} (self, sim\+\_\+time, h\+\_\+bs, h\+\_\+sr, sp)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a55ed55aff602d1f6997e658f481b26c8}{get\+\_\+krs\+\_\+}} (self, sim\+\_\+time)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a1cb3dd520d1f5028b8a9a03f31580760}{get\+\_\+suf\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a220064471c2ab46a51b92caa3241cb1a}{get\+\_\+heff\+\_\+}} (self, rsx)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ad1c4101bff542944b948699f5451d2b3}{get\+\_\+krs}} (self, sim\+\_\+time)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a55fa6a01e28d900bbb907cc894cf3991}{get\+\_\+suf}} (self, sim\+\_\+time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a4a1a1c3eff57c80ad7b31d393bc5340f}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a4a1a1c3eff57c80ad7b31d393bc5340f}} 
+{\bfseries usecached\+\_\+}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a2b0741998d8cd5ead0b80ad92e1f5a66}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a2b0741998d8cd5ead0b80ad92e1f5a66}} 
+{\bfseries last}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_aed4f47f200d1ae03d90e0fb6fdc69d1c}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_aed4f47f200d1ae03d90e0fb6fdc69d1c}} 
+{\bfseries kx0}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ad8a5e0b440e1c1c4a86507cbad07aa0d}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ad8a5e0b440e1c1c4a86507cbad07aa0d}} 
+{\bfseries A\+\_\+d\+\_\+splu}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a3e2226129227ac18ac0427c8f1d3d6b3}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a3e2226129227ac18ac0427c8f1d3d6b3}} 
+{\bfseries suf}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Doussan solver (Doussan et al. 2006)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a2c0def3d3bae1dadb57f5497d024d1f2}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a2c0def3d3bae1dadb57f5497d024d1f2}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ms,  }\item[{}]{params,  }\item[{}]{cached = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param ms is of type MappedSegments (or specializations), or a string containing a rsml filename
+@param params hydraulic conductivities described by PlantHydraulicParameters
+@param if cached == "True" sparse factorization is cached for faster solving using solve_again()
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_plant_hydraulic_model_a951323072ffcd0a8a3f0e53ac89ee5ed}{src.\+functional.\+Plant\+Hydraulic\+Model.\+Plant\+Hydraulic\+Model}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a4f79c45c7e7871ca61e9089b229e8918}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a4f79c45c7e7871ca61e9089b229e8918}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!axial\_flux@{axial\_flux}}
+\index{axial\_flux@{axial\_flux}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{axial\_flux()}{axial\_flux()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+axial\+\_\+flux (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{seg\+\_\+ind,  }\item[{}]{sim\+\_\+time,  }\item[{}]{rx }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}returns the exact axial flux of segment ij of xylem model solution @param rx
+@param seg_ind              segment index
+@param sim_time [day]       needed for age dependent conductivities (age = sim_time - segment creation time)
+@param rx [cm]              root xylem matric potentials per root system node
+@return [cm3 day-1] axial volumetric flow rate
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_af5fc6d7a95e75cac39bc6387e02976c0}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_af5fc6d7a95e75cac39bc6387e02976c0}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!axial\_fluxes@{axial\_fluxes}}
+\index{axial\_fluxes@{axial\_fluxes}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{axial\_fluxes()}{axial\_fluxes()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+axial\+\_\+fluxes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time,  }\item[{}]{rx,  }\item[{}]{rsx = {\ttfamily None},  }\item[{}]{cells = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}returns the axial fluxes (independent of rsx in case of Doussan)
+@see axial_flux
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a83e1f92c2a830864f5ca2c3951e4af74}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a83e1f92c2a830864f5ca2c3951e4af74}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!doussan\_system\_matrix@{doussan\_system\_matrix}}
+\index{doussan\_system\_matrix@{doussan\_system\_matrix}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{doussan\_system\_matrix()}{doussan\_system\_matrix()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+doussan\+\_\+system\+\_\+matrix (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} \end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a660736a75a648c7351f618d99b67e5d1}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a660736a75a648c7351f618d99b67e5d1}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!get\_collar\_potential@{get\_collar\_potential}}
+\index{get\_collar\_potential@{get\_collar\_potential}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{get\_collar\_potential()}{get\_collar\_potential()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+get\+\_\+collar\+\_\+potential (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{t\+\_\+act,  }\item[{}]{rsx }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}collar potential for an actual transpiration (call update() before)\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a220064471c2ab46a51b92caa3241cb1a}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a220064471c2ab46a51b92caa3241cb1a}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!get\_heff\_@{get\_heff\_}}
+\index{get\_heff\_@{get\_heff\_}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{get\_heff\_()}{get\_heff\_()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+get\+\_\+heff\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{rsx }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}effective total potential [cm] using cached suf\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ad1c4101bff542944b948699f5451d2b3}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ad1c4101bff542944b948699f5451d2b3}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!get\_krs@{get\_krs}}
+\index{get\_krs@{get\_krs}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{get\_krs()}{get\_krs()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+get\+\_\+krs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Overload get_krs so that get_krs and get_krs_ return the same data
+    return None so that we always get two objects from get_krs
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_plant_hydraulic_model_acec31bd730b60eadeb871859357af7ff}{src.\+functional.\+Plant\+Hydraulic\+Model.\+Plant\+Hydraulic\+Model}}.
+
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a55ed55aff602d1f6997e658f481b26c8}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a55ed55aff602d1f6997e658f481b26c8}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!get\_krs\_@{get\_krs\_}}
+\index{get\_krs\_@{get\_krs\_}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{get\_krs\_()}{get\_krs\_()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+get\+\_\+krs\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculatets root system conductivity [cm2/day] at simulation time @param sim_time [day]\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ae28227fc2aa35ceb68073d27788cbd02}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ae28227fc2aa35ceb68073d27788cbd02}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!get\_soil\_rootsystem\_conductance@{get\_soil\_rootsystem\_conductance}}
+\index{get\_soil\_rootsystem\_conductance@{get\_soil\_rootsystem\_conductance}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{get\_soil\_rootsystem\_conductance()}{get\_soil\_rootsystem\_conductance()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+get\+\_\+soil\+\_\+rootsystem\+\_\+conductance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time,  }\item[{}]{h\+\_\+bs,  }\item[{}]{h\+\_\+sr,  }\item[{}]{sp }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The soil root system conductance per soil layer [day-1]
+
+sim_time       simulation time in days
+h_bs           bulk soil matric potential
+h_sr           matric potential at the soil root interface
+sp             soil parameter: van Genuchten parameter set (type vg.Parameters)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a55fa6a01e28d900bbb907cc894cf3991}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a55fa6a01e28d900bbb907cc894cf3991}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!get\_suf@{get\_suf}}
+\index{get\_suf@{get\_suf}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{get\_suf()}{get\_suf()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+get\+\_\+suf (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Standard uptake fraction (SUF) [1] per root segment, should add up to 1\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_plant_hydraulic_model_aac048bd0661b66f6eaa4f2fd6582509c}{src.\+functional.\+Plant\+Hydraulic\+Model.\+Plant\+Hydraulic\+Model}}.
+
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a1cb3dd520d1f5028b8a9a03f31580760}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a1cb3dd520d1f5028b8a9a03f31580760}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!get\_suf\_@{get\_suf\_}}
+\index{get\_suf\_@{get\_suf\_}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{get\_suf\_()}{get\_suf\_()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+get\+\_\+suf\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Standard uptake fraction (SUF) [1] per root segment, should add up to 1\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_af6f819a3341b54694d392e5f91741de0}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_af6f819a3341b54694d392e5f91741de0}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!radial\_fluxes@{radial\_fluxes}}
+\index{radial\_fluxes@{radial\_fluxes}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{radial\_fluxes()}{radial\_fluxes()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+radial\+\_\+fluxes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time,  }\item[{}]{rx,  }\item[{}]{rsx,  }\item[{}]{cells = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}returns the radial fluxes [cm3 day-1]\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a5d0f9194553d9a54dacbfe1677b6d340}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a5d0f9194553d9a54dacbfe1677b6d340}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!solve@{solve}}
+\index{solve@{solve}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+solve (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{float}]{sim\+\_\+time,  }\item[{list}]{t\+\_\+act,  }\item[{}]{rsx,  }\item[{bool}]{cells }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Solves the hydraulic model using Neumann boundary conditions and switching to Dirichlet in case wilting point is reached
+@param sim_time [day]        needed for age dependent conductivities (age = sim_time - segment creation time)
+@param t_act [cm3 day-1]     transpiration rate
+@param rsx [cm]              soil matric potentials given per segment or per soil cell
+@param cells                 indicates if the matric potentials are given per cell (True) or by segments (False)
+@return [cm] root matric potential per root system node
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_plant_hydraulic_model_aaa105b1f9af059a3651103193f31218c}{src.\+functional.\+Plant\+Hydraulic\+Model.\+Plant\+Hydraulic\+Model}}.
+
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a2364bb259564dd2e5f44f5278b95ed56}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a2364bb259564dd2e5f44f5278b95ed56}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!solve\_again@{solve\_again}}
+\index{solve\_again@{solve\_again}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{solve\_again()}{solve\_again()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+solve\+\_\+again (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{float}]{sim\+\_\+time,  }\item[{list}]{t\+\_\+act,  }\item[{}]{rsx,  }\item[{bool}]{cells }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Solves the hydraulic model using Neumann boundary conditions and switching to Dirichlet in case wilting point is reached
+Depending of the method solve_again() is much faster using chached factorization of the last solve() command
+@param sim_time [day]        needed for age dependent conductivities (age = sim_time - segment creation time)
+@param t_act [cm3 day-1]     transpiration rate
+@param rsx [cm]              soil matric potentials given per segment or per soil cell
+@param cells                 indicates if the matric potentials are given per cell (True) or by segments (False)
+@return [cm] root matric potential per root system node
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ab1e877ea18985f0173ed622d3f0825a6}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ab1e877ea18985f0173ed622d3f0825a6}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!solve\_dirichlet@{solve\_dirichlet}}
+\index{solve\_dirichlet@{solve\_dirichlet}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{solve\_dirichlet()}{solve\_dirichlet()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+solve\+\_\+dirichlet (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{float}]{sim\+\_\+time,  }\item[{list}]{collar\+\_\+pot,  }\item[{}]{rsx,  }\item[{bool}]{cells }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}solves the flux equations, with a neumann boundary condtion, see solve()
+@param sim_time [day]           needed for age dependent conductivities (age = sim_time - segment creation time)
+@param collar_pot [cm3 day-1]   collar potential
+@param rsx [cm]                 soil matric potentials given per segment or per soil cell
+@param cells                    indicates if the matric potentials are given per cell (True) or by segments (False)
+@return [cm] root matric potential per root system node
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_plant_hydraulic_model_ad4c6a675a106beafaeea6938ba47aab6}{src.\+functional.\+Plant\+Hydraulic\+Model.\+Plant\+Hydraulic\+Model}}.
+
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a8271cc0a7713926ba4a8f8e9062e668a}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_a8271cc0a7713926ba4a8f8e9062e668a}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!solve\_neumann@{solve\_neumann}}
+\index{solve\_neumann@{solve\_neumann}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{solve\_neumann()}{solve\_neumann()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+solve\+\_\+neumann (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{float}]{sim\+\_\+time,  }\item[{list}]{t\+\_\+act,  }\item[{}]{rsx,  }\item[{bool}]{cells }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}solves the flux equations, with a neumann boundary condtion, see solve()
+@param sim_time [day]       needed for age dependent conductivities (age = sim_time - segment creation time)
+@param t_act [cm3 day-1]    tranpirational flux is negative
+@param rsx [cm]             soil matric potentials given per segment or per soil cell
+@param cells                indicates if the matric potentials are given per cell (True) or by segments (False)
+@return [cm] root matric potential per root system node
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_plant_hydraulic_model_a95752d557d8afd8df0fa9184c8e80fcb}{src.\+functional.\+Plant\+Hydraulic\+Model.\+Plant\+Hydraulic\+Model}}.
+
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ade9791593fd973c61f7b3b3317be0783}\label{classsrc_1_1functional_1_1_plant_hydraulic_model_1_1_hydraulic_model___doussan_ade9791593fd973c61f7b3b3317be0783}} 
+\index{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}!update@{update}}
+\index{update@{update}!src.functional.PlantHydraulicModel.HydraulicModel\_Doussan@{src.functional.PlantHydraulicModel.HydraulicModel\_Doussan}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Model.\+Hydraulic\+Model\+\_\+\+Doussan.\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sim\+\_\+time }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}call before solve(), get_collar_potential(), and get_Heff()\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Plant\+Hydraulic\+Model.\+py\end{DoxyCompactItemize}

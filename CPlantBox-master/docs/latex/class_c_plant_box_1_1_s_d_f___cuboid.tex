@@ -1,0 +1,93 @@
+\hypertarget{class_c_plant_box_1_1_s_d_f___cuboid}{}\doxysection{CPlant\+Box\+::SDF\+\_\+\+Cuboid Class Reference}
+\label{class_c_plant_box_1_1_s_d_f___cuboid}\index{CPlantBox::SDF\_Cuboid@{CPlantBox::SDF\_Cuboid}}
+
+
+{\ttfamily \#include $<$sdf.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::SDF\+\_\+\+Cuboid\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_c_plant_box_1_1_s_d_f___cuboid__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::SDF\+\_\+\+Cuboid\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_s_d_f___cuboid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___cuboid_a0925ecec8b93a9f25ebeb59fd48a1c96}\label{class_c_plant_box_1_1_s_d_f___cuboid_a0925ecec8b93a9f25ebeb59fd48a1c96}} 
+{\bfseries SDF\+\_\+\+Cuboid} (\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} min, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} max)
+\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___cuboid_ab329c135042e3b5ce48048df3fa73f77}{get\+Dist}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&v) const override
+\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___cuboid_ab2b19dfcedb4ce731ed5909daee0e156}{to\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___cuboid_aeff6432b568d16f7635b0b5d3a3c33cf}\label{class_c_plant_box_1_1_s_d_f___cuboid_aeff6432b568d16f7635b0b5d3a3c33cf}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries min}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___cuboid_a4bb2881765f78c5a20ebef47f3854ba3}\label{class_c_plant_box_1_1_s_d_f___cuboid_a4bb2881765f78c5a20ebef47f3854ba3}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries max}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Cuboid is a Quader 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___cuboid_ab329c135042e3b5ce48048df3fa73f77}\label{class_c_plant_box_1_1_s_d_f___cuboid_ab329c135042e3b5ce48048df3fa73f77}} 
+\index{CPlantBox::SDF\_Cuboid@{CPlantBox::SDF\_Cuboid}!getDist@{getDist}}
+\index{getDist@{getDist}!CPlantBox::SDF\_Cuboid@{CPlantBox::SDF\_Cuboid}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+SDF\+\_\+\+Cuboid\+::get\+Dist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{Signed\+Distance\+Function\+::get\+Dist}}
+\end{DoxySeeAlso}
+Returns the signed distance to the next boundary of the cuboid
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & spatial position \mbox{[}cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+signed distance \mbox{[}cm\mbox{]}, a minus sign means inside, plus outside 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___cuboid_ab2b19dfcedb4ce731ed5909daee0e156}\label{class_c_plant_box_1_1_s_d_f___cuboid_ab2b19dfcedb4ce731ed5909daee0e156}} 
+\index{CPlantBox::SDF\_Cuboid@{CPlantBox::SDF\_Cuboid}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::SDF\_Cuboid@{CPlantBox::SDF\_Cuboid}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string CPlant\+Box\+::\+SDF\+\_\+\+Cuboid\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{Signed\+Distance\+Function\+::to\+String}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+cpp\end{DoxyCompactItemize}

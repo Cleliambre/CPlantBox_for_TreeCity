@@ -1,0 +1,205 @@
+\hypertarget{class_c_plant_box_1_1_plant_hydraulic_model}{}\doxysection{CPlant\+Box\+::Plant\+Hydraulic\+Model Class Reference}
+\label{class_c_plant_box_1_1_plant_hydraulic_model}\index{CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}}
+
+
+{\ttfamily \#include $<$Plant\+Hydraulic\+Model.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Plant\+Hydraulic\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_c_plant_box_1_1_plant_hydraulic_model__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_a81b6a3a69dc88553c1cec6411f34918c}\label{class_c_plant_box_1_1_plant_hydraulic_model_a81b6a3a69dc88553c1cec6411f34918c}} 
+{\bfseries Plant\+Hydraulic\+Model} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{CPlant\+Box\+::\+Mapped\+Segments}} $>$ ms, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters}{CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters}} $>$ params)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_model_afe0f8580a58c1c7a91a30dffaac2531a}{linear\+System\+Meunier}} (double sim\+Time, const std\+::vector$<$ double $>$ sx, bool cells=true, const std\+::vector$<$ double $>$ soil\+\_\+k=std\+::vector$<$ double $>$())
+\begin{DoxyCompactList}\small\item\em builds linear system (sim\+Time is needed for age dependent conductivities) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_model_a74bc6ed2e84519c47482215b981343e3}{get\+Radial\+Fluxes}} (double sim\+Time, const std\+::vector$<$ double $>$ rx, const std\+::vector$<$ double $>$ sx, bool approx=false, bool cells=false, const std\+::vector$<$ double $>$ soil\+\_\+k=std\+::vector$<$ double $>$()) const
+\item 
+std\+::map$<$ int, double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_model_a69597abbd7d9bceaa2a36a755344becc}{sum\+Seg\+Fluxes}} (const std\+::vector$<$ double $>$ seg\+Fluxes)
+\begin{DoxyCompactList}\small\item\em sums segment fluxes over soil cells, soil\+Fluxes = sum\+Seg\+Fluxes(seg\+Fluxes), \mbox{[}cm3/day\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_a7aae710d3950b7665ee0e08e7367ec59}\label{class_c_plant_box_1_1_plant_hydraulic_model_a7aae710d3950b7665ee0e08e7367ec59}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{CPlant\+Box\+::\+Mapped\+Segments}} $>$ {\bfseries ms}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_adbe22d3739f1b3aae3f0d06cac06ea60}\label{class_c_plant_box_1_1_plant_hydraulic_model_adbe22d3739f1b3aae3f0d06cac06ea60}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters}{CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters}} $>$ {\bfseries params}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_a9e0b732c3154201d3216eaec23b9c318}\label{class_c_plant_box_1_1_plant_hydraulic_model_a9e0b732c3154201d3216eaec23b9c318}} 
+std\+::vector$<$ int $>$ {\bfseries aI}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_a871358c3bf860a157f3e20669807a3bd}\label{class_c_plant_box_1_1_plant_hydraulic_model_a871358c3bf860a157f3e20669807a3bd}} 
+std\+::vector$<$ int $>$ {\bfseries aJ}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_a679b60f1e5af2e03f1e265ff8afa8b65}\label{class_c_plant_box_1_1_plant_hydraulic_model_a679b60f1e5af2e03f1e265ff8afa8b65}} 
+std\+::vector$<$ double $>$ {\bfseries aV}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_a907310673f7595199a61df1c2f76c84e}\label{class_c_plant_box_1_1_plant_hydraulic_model_a907310673f7595199a61df1c2f76c84e}} 
+std\+::vector$<$ double $>$ {\bfseries aB}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_model_ab17e9c04e2636c3fee41fd7010f1d23a}{fill\+Vectors}} (size\+\_\+t k, int i, int j, double bi, double cii, double cij, double psi\+\_\+s)
+\begin{DoxyCompactList}\small\item\em fills row k of Meunier matrix \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_model_ad10135f2ae6682f1d6a83b94ef663720}{get\+Psi\+Out}} (bool cells, int si, const std\+::vector$<$ double $>$ \&sx\+\_\+) const
+\begin{DoxyCompactList}\small\item\em get the outer water potential \mbox{[}cm\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hydraulic model using parameters stored in \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters}{Plant\+Hydraulic\+Parameters}}
+
+Hybrid solver (Meunier et al. 2017) Doussan solver (Doussan et al. 2006)
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_ab17e9c04e2636c3fee41fd7010f1d23a}\label{class_c_plant_box_1_1_plant_hydraulic_model_ab17e9c04e2636c3fee41fd7010f1d23a}} 
+\index{CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}!fillVectors@{fillVectors}}
+\index{fillVectors@{fillVectors}!CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}}
+\doxysubsubsection{\texorpdfstring{fillVectors()}{fillVectors()}}
+{\footnotesize\ttfamily size\+\_\+t CPlant\+Box\+::\+Plant\+Hydraulic\+Model\+::fill\+Vectors (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{k,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{double}]{bi,  }\item[{double}]{cii,  }\item[{double}]{cij,  }\item[{double}]{psi\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+fills row k of Meunier matrix 
+
+fill the matrices to be solved. Overloaded by \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_ac43abf348e11c6cd05e1e205533f0f2d}{Photosynthesis\+::fill\+Vectors}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em k} & index for the row-\/ and column-\/index vectors \\
+\hline
+{\em i,j} & indexes of the non-\/zero elements of the sparse matrix \\
+\hline
+{\em psi\+\_\+s} & outer water potential \mbox{[}cm\mbox{]} \\
+\hline
+{\em bi} & value of variable b at row i \mbox{[}cm3/d\mbox{]} \\
+\hline
+{\em cii} & value of variable c at row i col i \mbox{[}cm2/d\mbox{]} \\
+\hline
+{\em cij} & value of variable c at row i col j \mbox{[}cm2/d\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+k next index for the row-\/ and column-\/index vectors 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_ac43abf348e11c6cd05e1e205533f0f2d}{CPlant\+Box\+::\+Photosynthesis}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_ad10135f2ae6682f1d6a83b94ef663720}\label{class_c_plant_box_1_1_plant_hydraulic_model_ad10135f2ae6682f1d6a83b94ef663720}} 
+\index{CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}!getPsiOut@{getPsiOut}}
+\index{getPsiOut@{getPsiOut}!CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}}
+\doxysubsubsection{\texorpdfstring{getPsiOut()}{getPsiOut()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Plant\+Hydraulic\+Model\+::get\+Psi\+Out (\begin{DoxyParamCaption}\item[{bool}]{cells,  }\item[{int}]{si,  }\item[{const std\+::vector$<$ double $>$ \&}]{sx\+\_\+ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+get the outer water potential \mbox{[}cm\mbox{]} 
+
+give outer water potential \mbox{[}cm\mbox{]} overloaded by \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_af49bac08d5f8ee2734b929fd75381571}{Photosynthesis\+::get\+Psi\+Out}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em cells} & sx per cell (true), or segments (false) \\
+\hline
+{\em si} & segment index \\
+\hline
+{\em sx} & \mbox{[}cm\mbox{]} soil matric potential for each cell \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_af49bac08d5f8ee2734b929fd75381571}{CPlant\+Box\+::\+Photosynthesis}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_a74bc6ed2e84519c47482215b981343e3}\label{class_c_plant_box_1_1_plant_hydraulic_model_a74bc6ed2e84519c47482215b981343e3}} 
+\index{CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}!getRadialFluxes@{getRadialFluxes}}
+\index{getRadialFluxes@{getRadialFluxes}!CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}}
+\doxysubsubsection{\texorpdfstring{getRadialFluxes()}{getRadialFluxes()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Plant\+Hydraulic\+Model\+::get\+Radial\+Fluxes (\begin{DoxyParamCaption}\item[{double}]{sim\+Time,  }\item[{const std\+::vector$<$ double $>$}]{rx,  }\item[{const std\+::vector$<$ double $>$}]{sx,  }\item[{bool}]{approx = {\ttfamily false},  }\item[{bool}]{cells = {\ttfamily false},  }\item[{const std\+::vector$<$ double $>$}]{soil\+\_\+k = {\ttfamily std\+:\+:vector$<$double$>$()} }\end{DoxyParamCaption}) const}
+
+Volumetric radial fluxes for each segment according to a given solution
+\begin{DoxyParams}{Parameters}
+{\em rx} & and\\
+\hline
+{\em sx} & \\
+\hline
+{\em sim\+Time} & \mbox{[}days\mbox{]} current simulation time is needed for age dependent conductivities, to calculate the age from the creation times (age = sim\+\_\+time -\/ segment creation time). \\
+\hline
+{\em rx} & \mbox{[}cm\mbox{]} root xylem matric potential \\
+\hline
+{\em sx} & \mbox{[}cm\mbox{]} soil matric potential for each segment \\
+\hline
+{\em approx} & approximate or exact (default = false, i.\+e. exact) \\
+\hline
+{\em cells} & sx per cell (true), or segments (false) \\
+\hline
+{\em soil\+\_\+k} & \mbox{[}day-\/1\mbox{]} optionally, soil conductivities can be prescribed per segment, conductivity at the root surface will be limited by the value, i.\+e. kr = min(kr\+\_\+root, k\+\_\+soil)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Volumetric fluxes for each segment \mbox{[}cm3/day\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_afe0f8580a58c1c7a91a30dffaac2531a}\label{class_c_plant_box_1_1_plant_hydraulic_model_afe0f8580a58c1c7a91a30dffaac2531a}} 
+\index{CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}!linearSystemMeunier@{linearSystemMeunier}}
+\index{linearSystemMeunier@{linearSystemMeunier}!CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}}
+\doxysubsubsection{\texorpdfstring{linearSystemMeunier()}{linearSystemMeunier()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Hydraulic\+Model\+::linear\+System\+Meunier (\begin{DoxyParamCaption}\item[{double}]{sim\+Time,  }\item[{const std\+::vector$<$ double $>$}]{sx,  }\item[{bool}]{cells = {\ttfamily true},  }\item[{const std\+::vector$<$ double $>$}]{soil\+\_\+k = {\ttfamily std\+:\+:vector$<$double$>$()} }\end{DoxyParamCaption})}
+
+
+
+builds linear system (sim\+Time is needed for age dependent conductivities) 
+
+Assembles the linear system as sparse matrix, given by public member variables, indices aI, aJ, and corresponding values aV; and load aB
+
+
+\begin{DoxyParams}{Parameters}
+{\em sim\+Time\mbox{[}day\mbox{]}} & current simulation time, needed for age dependent conductivities, to calculate the age from the creation times (age = sim\+\_\+time -\/ segment creation time). \\
+\hline
+{\em sx} & \mbox{[}cm\mbox{]} soil matric potential in the cells or around the segments, given per cell or per segment \\
+\hline
+{\em cells} & sx per cell (true), or segments (false) \\
+\hline
+{\em soil\+\_\+k} & \mbox{[}day-\/1\mbox{]} optionally, soil conductivities can be prescribed per segment, conductivity at the root surface will be limited by the value, i.\+e. kr = min(kr\+\_\+root, k\+\_\+soil) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_hydraulic_model_a69597abbd7d9bceaa2a36a755344becc}\label{class_c_plant_box_1_1_plant_hydraulic_model_a69597abbd7d9bceaa2a36a755344becc}} 
+\index{CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}!sumSegFluxes@{sumSegFluxes}}
+\index{sumSegFluxes@{sumSegFluxes}!CPlantBox::PlantHydraulicModel@{CPlantBox::PlantHydraulicModel}}
+\doxysubsubsection{\texorpdfstring{sumSegFluxes()}{sumSegFluxes()}}
+{\footnotesize\ttfamily std\+::map$<$ int, double $>$ CPlant\+Box\+::\+Plant\+Hydraulic\+Model\+::sum\+Seg\+Fluxes (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$}]{seg\+Fluxes }\end{DoxyParamCaption})}
+
+
+
+sums segment fluxes over soil cells, soil\+Fluxes = sum\+Seg\+Fluxes(seg\+Fluxes), \mbox{[}cm3/day\mbox{]} 
+
+Sums segment fluxes over each cell
+
+
+\begin{DoxyParams}{Parameters}
+{\em seg\+Fluxes} & segment fluxes given per segment index \mbox{[}cm3/day\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash map with cell indices as keys and fluxes as values \mbox{[}cm3/day\mbox{]} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Plant\+Hydraulic\+Model.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Plant\+Hydraulic\+Model.\+cpp\end{DoxyCompactItemize}

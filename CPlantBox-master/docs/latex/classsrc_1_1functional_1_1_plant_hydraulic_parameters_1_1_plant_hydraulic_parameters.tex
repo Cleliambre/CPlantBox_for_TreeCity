@@ -1,0 +1,170 @@
+\hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters}{}\doxysection{src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters Class Reference}
+\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters}\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+
+
+Inheritance diagram for src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a906600e1e66ddb257feb159bb58a138c}{set\+\_\+flexible\+\_\+}} (self, f, params, sub\+Type, organ\+Type)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a6a4acd5e83c2375d75e3fcf77c893dea}{set\+\_\+kr\+\_\+const}} (self, kr, sub\+Type=-\/1, organ\+Type=int(pb.\+Organ\+Types.\+root))
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a3b2aa30d91e3cc9226de7981b168cc87}{set\+\_\+kx\+\_\+const}} (self, kx, sub\+Type=-\/1, organ\+Type=int(pb.\+Organ\+Types.\+root))
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_aba4501c91dd6c3a33e53456d360d17b8}{set\+\_\+kr\+\_\+age\+\_\+dependent}} (self, age, values, sub\+Type=-\/1, organ\+Type=int(pb.\+Organ\+Types.\+root))
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a83de94955f7853620358ba851b30a744}{set\+\_\+kx\+\_\+age\+\_\+dependent}} (self, age, values, sub\+Type=-\/1, organ\+Type=int(pb.\+Organ\+Types.\+root))
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a1d146cfe7bdf337e268c392aa4100f64}{set\+\_\+kr\+\_\+distance\+\_\+dependent}} (self, age, values, sub\+Type=-\/1, organ\+Type=int(pb.\+Organ\+Types.\+root))
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a8e98cb58f97f18977692f8a686a8368c}{set\+\_\+kx\+\_\+distance\+\_\+dependent}} (self, age, values, sub\+Type=-\/1, organ\+Type=int(pb.\+Organ\+Types.\+root))
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a8758fe49668f9e9451eaa276f464f374}{write\+\_\+parameters}} (self, filename)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a24bceaeab07c3a46b4a30458773b1fbd}{read\+\_\+parameters}} (self, filename)
+\item 
+def \mbox{\hyperlink{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a23a40d92b77a536a6ed88bd019a8dede}{plot\+\_\+conductivities}} (self, monocot=True, plot\+\_\+now=True, axes\+\_\+ind=\mbox{[}$\,$\mbox{]}, lateral\+\_\+ind=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a6cf3fa0639928812829289b0aca4224b}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a6cf3fa0639928812829289b0aca4224b}} 
+{\bfseries kr\+Mode}
+\item 
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_aa5bac89329868ec0889d0d0dad6dbfa7}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_aa5bac89329868ec0889d0d0dad6dbfa7}} 
+{\bfseries kx\+Mode}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This class handles axial (kx [cm3 day-1]) and radial (kr [1 day-1]) root hydraulic conductivities, using the callback functions
+- kr_f(int segment_index, double age, int subType, int organType)
+- kx_f(int segment_index, double age, int subType, int organType)
+see also PlantHydraulicParameters.h
+
+Values are set in dependence on subType and organType, are given
+constant:                 setKrConst, setKxConst,
+age dependent:            setKrAgeDependent, setKxAgeDependent,
+distance dependent:       setKrDistanceDependent, setKxDistanceDependent, or
+per segment:              setKrValues
+
+Python setter are more flexible:
+    default: subType = -1 means all subTypes,
+    or single type (int), e.g. subType = 1
+    or multiple types (list), e.g. subType = [2,3]
+
+set_kr_const, set_kx_const -> setKrConst, setKxConst
+set_kr_age_dependent, set_kx_age_dependent -> setKrAgeDependent, setKxAgeDependent
+set_kr_distance_dependent, set_kx_distance_dependent -> setKrDistanceDependent, setKxDistanceDependent
+
+it is NOT possible to use different methods (const, age, or distance) for different subTypes or organTypes
+it is possible to use different methods for kr and kx
+
+can write and read parameter json files
+
+@author Daniel Leitner, 2025
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a23a40d92b77a536a6ed88bd019a8dede}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a23a40d92b77a536a6ed88bd019a8dede}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!plot\_conductivities@{plot\_conductivities}}
+\index{plot\_conductivities@{plot\_conductivities}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{plot\_conductivities()}{plot\_conductivities()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+plot\+\_\+conductivities (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{monocot = {\ttfamily True},  }\item[{}]{plot\+\_\+now = {\ttfamily True},  }\item[{}]{axes\+\_\+ind = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{lateral\+\_\+ind = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}plots conductivity
+@param monocot      indicates if monocot (True) or dicot (False)
+@param plot_now     indicates if the figure is shown, or just retruned
+@param axes_ind     for monocots a list of three root types for "tap root", "basal", "shoot borne" [1, 4, 5];
+                    for dicots a list of one root type representing the "tap root" [1]
+@param lateral_ind  for monocots a list of two root types for "1st order laterals", "2nd order laterals" [2, 3]
+                    for dicots a list of three root types for "1st order laterals", "2nd order laterals", "3rd order laterals" [2, 3, 4]
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a24bceaeab07c3a46b4a30458773b1fbd}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a24bceaeab07c3a46b4a30458773b1fbd}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!read\_parameters@{read\_parameters}}
+\index{read\_parameters@{read\_parameters}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{read\_parameters()}{read\_parameters()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+read\+\_\+parameters (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}writes the parameters into a json file\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a906600e1e66ddb257feb159bb58a138c}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a906600e1e66ddb257feb159bb58a138c}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!set\_flexible\_@{set\_flexible\_}}
+\index{set\_flexible\_@{set\_flexible\_}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{set\_flexible\_()}{set\_flexible\_()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+set\+\_\+flexible\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{f,  }\item[{}]{params,  }\item[{}]{sub\+Type,  }\item[{}]{organ\+Type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calls cpp functions @param f with parameters @param params,
+enabling multiple subTypes and multiple organTypes\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_aba4501c91dd6c3a33e53456d360d17b8}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_aba4501c91dd6c3a33e53456d360d17b8}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!set\_kr\_age\_dependent@{set\_kr\_age\_dependent}}
+\index{set\_kr\_age\_dependent@{set\_kr\_age\_dependent}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{set\_kr\_age\_dependent()}{set\_kr\_age\_dependent()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+set\+\_\+kr\+\_\+age\+\_\+dependent (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{age,  }\item[{}]{values,  }\item[{}]{sub\+Type = {\ttfamily -\/1},  }\item[{}]{organ\+Type = {\ttfamily int(pb.OrganTypes.root)} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}sets an age dependent radial conductivity [1 day-1] for roots for a subTypes (default: all 0-9) and organTypes (default: roots)\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a6a4acd5e83c2375d75e3fcf77c893dea}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a6a4acd5e83c2375d75e3fcf77c893dea}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!set\_kr\_const@{set\_kr\_const}}
+\index{set\_kr\_const@{set\_kr\_const}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{set\_kr\_const()}{set\_kr\_const()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+set\+\_\+kr\+\_\+const (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{kr,  }\item[{}]{sub\+Type = {\ttfamily -\/1},  }\item[{}]{organ\+Type = {\ttfamily int(pb.OrganTypes.root)} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}sets a constant radial conductivity [1 day-1] for roots for a subTypes (default: all 0-9) and organTypes (default: roots)\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a1d146cfe7bdf337e268c392aa4100f64}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a1d146cfe7bdf337e268c392aa4100f64}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!set\_kr\_distance\_dependent@{set\_kr\_distance\_dependent}}
+\index{set\_kr\_distance\_dependent@{set\_kr\_distance\_dependent}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{set\_kr\_distance\_dependent()}{set\_kr\_distance\_dependent()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+set\+\_\+kr\+\_\+distance\+\_\+dependent (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{age,  }\item[{}]{values,  }\item[{}]{sub\+Type = {\ttfamily -\/1},  }\item[{}]{organ\+Type = {\ttfamily int(pb.OrganTypes.root)} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}sets a distance dependent radial conductivity [1 day-1] for roots for a subTypes (default: all 0-9) and organTypes (default: roots)\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a83de94955f7853620358ba851b30a744}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a83de94955f7853620358ba851b30a744}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!set\_kx\_age\_dependent@{set\_kx\_age\_dependent}}
+\index{set\_kx\_age\_dependent@{set\_kx\_age\_dependent}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{set\_kx\_age\_dependent()}{set\_kx\_age\_dependent()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+set\+\_\+kx\+\_\+age\+\_\+dependent (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{age,  }\item[{}]{values,  }\item[{}]{sub\+Type = {\ttfamily -\/1},  }\item[{}]{organ\+Type = {\ttfamily int(pb.OrganTypes.root)} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}sets an age dependent axial conductivity [cm3/day] for roots for a subType (-1 for all subTypes)\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a3b2aa30d91e3cc9226de7981b168cc87}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a3b2aa30d91e3cc9226de7981b168cc87}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!set\_kx\_const@{set\_kx\_const}}
+\index{set\_kx\_const@{set\_kx\_const}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{set\_kx\_const()}{set\_kx\_const()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+set\+\_\+kx\+\_\+const (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{kx,  }\item[{}]{sub\+Type = {\ttfamily -\/1},  }\item[{}]{organ\+Type = {\ttfamily int(pb.OrganTypes.root)} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}sets a constant axial conductivity [cm3/day] for roots for a subType (-1 for all subTypes)\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a8e98cb58f97f18977692f8a686a8368c}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a8e98cb58f97f18977692f8a686a8368c}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!set\_kx\_distance\_dependent@{set\_kx\_distance\_dependent}}
+\index{set\_kx\_distance\_dependent@{set\_kx\_distance\_dependent}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{set\_kx\_distance\_dependent()}{set\_kx\_distance\_dependent()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+set\+\_\+kx\+\_\+distance\+\_\+dependent (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{age,  }\item[{}]{values,  }\item[{}]{sub\+Type = {\ttfamily -\/1},  }\item[{}]{organ\+Type = {\ttfamily int(pb.OrganTypes.root)} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}sets a distant dependent axial conductivity [cm3/day] for roots for a subType (-1 for all subTypes)\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a8758fe49668f9e9451eaa276f464f374}\label{classsrc_1_1functional_1_1_plant_hydraulic_parameters_1_1_plant_hydraulic_parameters_a8758fe49668f9e9451eaa276f464f374}} 
+\index{src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}!write\_parameters@{write\_parameters}}
+\index{write\_parameters@{write\_parameters}!src.functional.PlantHydraulicParameters.PlantHydraulicParameters@{src.functional.PlantHydraulicParameters.PlantHydraulicParameters}}
+\doxysubsubsection{\texorpdfstring{write\_parameters()}{write\_parameters()}}
+{\footnotesize\ttfamily def src.\+functional.\+Plant\+Hydraulic\+Parameters.\+Plant\+Hydraulic\+Parameters.\+write\+\_\+parameters (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}writes the parameters into a json file\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Plant\+Hydraulic\+Parameters.\+py\end{DoxyCompactItemize}

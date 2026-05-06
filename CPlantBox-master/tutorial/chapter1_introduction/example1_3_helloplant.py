@@ -1,0 +1,27 @@
+"""Small example"""
+
+import plantbox as pb  # |\label{l13:cplantbox}|
+import plantbox.visualisation.vtk_plot as vp  # |\label{l13:vtk_plot}|
+
+plant = pb.Plant()  # Create a new plant |\label{l13:plant}|
+
+# Open plant and root parameter from a file
+path = "../../modelparameter/structural/plant/"
+name = "fspm2023"
+plant.readParameters(path + name + ".xml")  # |\label{l13:readparameters}|
+
+plant.initialize()  # Initialize |\label{l13:initialize}|
+
+sim_time = 40  # days
+plant.simulate(sim_time)  # Simulate|\label{l13:simulate}|
+
+# Export final result (as vtp)
+plant.write("results/example_plant.vtp")  # using polylines |\label{l13:write_poly}|
+plant.write("results/example_plant.rsml")  # using polylines, in rsml format |\label{l13:write_rsml}|
+
+ana = pb.SegmentAnalyser(plant)
+ana.write("results/example_plant_segs.vtp")  # using segments |\label{l13:write_segs}|
+ana.writeRSML("results/example_plant_segs.rsml")  # using segments, in rsml format |\label{l13:write_segs_rsml}|
+
+# Interactive plot, using vtk
+#vp.plot_plant(plant, "age")  # e.g. organType, subType, age |\label{l13:plot_plant}|

@@ -1,0 +1,83 @@
+\hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines}{}\doxysection{src.\+rsml.\+rsml\+\_\+writer.\+Linked\+Polylines Class Reference}
+\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines}\index{src.rsml.rsml\_writer.LinkedPolylines@{src.rsml.rsml\_writer.LinkedPolylines}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_aaa29f687ade012e40598cb585d5301d5}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_aaa29f687ade012e40598cb585d5301d5}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a54fdc57fc6636c590a6f8c3ad4459211}{write\+\_\+root}} (self, basetag, nodes, nodedata, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a0e9bda02279416c265f4f10a1625f269}{set\+\_\+metadata}} (meta)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_ab36e58dcb5db17e25b25fb6886cdb27a}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_ab36e58dcb5db17e25b25fb6886cdb27a}} 
+{\bfseries branchnumber}
+\item 
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_abe90ef74e3e96dd3c807290dadd226cf}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_abe90ef74e3e96dd3c807290dadd226cf}} 
+{\bfseries parent\+\_\+node}
+\item 
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a402c55382319bc2e2bb040881718d07f}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a402c55382319bc2e2bb040881718d07f}} 
+{\bfseries polyline}
+\item 
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a504c1d3b77094b18ba12e2b85381527f}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a504c1d3b77094b18ba12e2b85381527f}} 
+{\bfseries laterals}
+\item 
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_ae16543a307cf6a91c4e31a50360bd24e}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_ae16543a307cf6a91c4e31a50360bd24e}} 
+{\bfseries base\+\_\+root}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a53dc677944ad7969c68a79f6111d35e8}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a53dc677944ad7969c68a79f6111d35e8}} 
+int {\bfseries bc} = 0
+\item 
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_af609834a56b3e058a73f607aa636b5a1}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_af609834a56b3e058a73f607aa636b5a1}} 
+list {\bfseries metadata} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} LinkedPolylines, helper class for writing rsml files, used by follow_, which is used by segs2polylines
+
+Attributes:
+    branchnumer(int): the branch number of this polyline
+    polylines(list of int): holds the node indices of this polyline
+    lateral(list of LinkedPolyLines) references to the laterals roots, last element is an empty list
+    data(list of list of float): optionally, holds additional data per root for rsml properties       
+    base_root (bool): if it is a base root, or not
+    bc(static int): branch counter
+    metadata(static Metadata): meta data of the root system, to look up rsml property and function names
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a0e9bda02279416c265f4f10a1625f269}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a0e9bda02279416c265f4f10a1625f269}} 
+\index{src.rsml.rsml\_writer.LinkedPolylines@{src.rsml.rsml\_writer.LinkedPolylines}!set\_metadata@{set\_metadata}}
+\index{set\_metadata@{set\_metadata}!src.rsml.rsml\_writer.LinkedPolylines@{src.rsml.rsml\_writer.LinkedPolylines}}
+\doxysubsubsection{\texorpdfstring{set\_metadata()}{set\_metadata()}}
+{\footnotesize\ttfamily def src.\+rsml.\+rsml\+\_\+writer.\+Linked\+Polylines.\+set\+\_\+metadata (\begin{DoxyParamCaption}\item[{}]{meta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb} Sets the meta data of the root system, to look up property and function names 
+
+Args:
+meta(Metadata): the rsml metadata 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a54fdc57fc6636c590a6f8c3ad4459211}\label{classsrc_1_1rsml_1_1rsml__writer_1_1_linked_polylines_a54fdc57fc6636c590a6f8c3ad4459211}} 
+\index{src.rsml.rsml\_writer.LinkedPolylines@{src.rsml.rsml\_writer.LinkedPolylines}!write\_root@{write\_root}}
+\index{write\_root@{write\_root}!src.rsml.rsml\_writer.LinkedPolylines@{src.rsml.rsml\_writer.LinkedPolylines}}
+\doxysubsubsection{\texorpdfstring{write\_root()}{write\_root()}}
+{\footnotesize\ttfamily def src.\+rsml.\+rsml\+\_\+writer.\+Linked\+Polylines.\+write\+\_\+root (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{basetag,  }\item[{}]{nodes,  }\item[{}]{nodedata,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Adds the rsml root tag to the basetag
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/rsml/rsml\+\_\+writer.\+py\end{DoxyCompactItemize}

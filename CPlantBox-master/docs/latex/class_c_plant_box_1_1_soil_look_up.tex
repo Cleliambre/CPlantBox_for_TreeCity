@@ -1,0 +1,104 @@
+\hypertarget{class_c_plant_box_1_1_soil_look_up}{}\doxysection{CPlant\+Box\+::Soil\+Look\+Up Class Reference}
+\label{class_c_plant_box_1_1_soil_look_up}\index{CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}}
+
+
+{\ttfamily \#include $<$soil.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Soil\+Look\+Up\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_soil_look_up__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_afc7855b797df92be8660720e2ec1712f}\label{class_c_plant_box_1_1_soil_look_up_afc7855b797df92be8660720e2ec1712f}} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries copy} ()
+\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_ad157577afde792c49fc0545da1928037}{get\+Value}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ organ=nullptr) const
+\begin{DoxyCompactList}\small\item\em Returns a scalar property of the soil, 1. per default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_ab6a76c2eb305b2a059202c8a4e59515b}\label{class_c_plant_box_1_1_soil_look_up_ab6a76c2eb305b2a059202c8a4e59515b}} 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_ab6a76c2eb305b2a059202c8a4e59515b}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Quick info about the object for debugging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_a305c7db7b7351438c983d638ed5433d8}{set\+Periodic\+Domain}} (double minx\+\_\+, double maxx\+\_\+, double miny\+\_\+, double maxy\+\_\+, double minz\+\_\+, double maxz\+\_\+)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_a986d4e8cccbbb5649faffe2719badd5a}{set\+Periodic\+Domain}} (double minx, double maxx, double miny, double maxy)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_a0e2784089de6480cb50fcc093aedec88}{set\+Periodic\+Domain}} (double minx, double maxx)
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_a226d541515992a26bcb209b3f6c07afa}{periodic}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_a725cd434d406b996d5325b56c3e937b3}\label{class_c_plant_box_1_1_soil_look_up_a725cd434d406b996d5325b56c3e937b3}} 
+const double {\bfseries inf} = std\+::numeric\+\_\+limits$<$double$>$\+::infinity()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class to look up for a scalar soil property 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_ad157577afde792c49fc0545da1928037}\label{class_c_plant_box_1_1_soil_look_up_ad157577afde792c49fc0545da1928037}} 
+\index{CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}!getValue@{getValue}}
+\index{getValue@{getValue}!CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily virtual double CPlant\+Box\+::\+Soil\+Look\+Up\+::get\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{organ = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns a scalar property of the soil, 1. per default. 
+
+Returns a scalar property of the soil scaled from 0..1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position \mbox{[}cm\mbox{]}, (normally, root-\/$>$get\+Node(root-\/$>$get\+Number\+Of\+Nodes()-\/1)) \\
+\hline
+{\em root} & the root that wants to know the scalar property in some situation this might be usefull (e.\+g. could increase look up speed from a unstructured mesh) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+scalar soil property 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_py_soil_look_up_abd96c70bdc708b9a4c4d37d920ce421c}{CPlant\+Box\+::\+Py\+Soil\+Look\+Up}}, \mbox{\hyperlink{class_c_plant_box_1_1_rectilinear_grid3_d_a058eeea62461da84589e4c4ebe680b6d}{CPlant\+Box\+::\+Rectilinear\+Grid3D}}, \mbox{\hyperlink{class_c_plant_box_1_1_grid1_d_a35a2d95b81ae79947be952ec4b4b7293}{CPlant\+Box\+::\+Grid1D}}, \mbox{\hyperlink{class_c_plant_box_1_1_proportional_elongation_a4373eee0ebcbeb53564a63b593825e71}{CPlant\+Box\+::\+Proportional\+Elongation}}, \mbox{\hyperlink{class_c_plant_box_1_1_multiply_soil_look_ups_a249db03264505301312ae1063abedd46}{CPlant\+Box\+::\+Multiply\+Soil\+Look\+Ups}}, and \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_s_d_f_ab16c57db51a5132c216ba725d18e9882}{CPlant\+Box\+::\+Soil\+Look\+Up\+SDF}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_a226d541515992a26bcb209b3f6c07afa}\label{class_c_plant_box_1_1_soil_look_up_a226d541515992a26bcb209b3f6c07afa}} 
+\index{CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}!periodic@{periodic}}
+\index{periodic@{periodic}!CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}}
+\doxysubsubsection{\texorpdfstring{periodic()}{periodic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} CPlant\+Box\+::\+Soil\+Look\+Up\+::periodic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+maps the point into the periodic domain \mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_a0e2784089de6480cb50fcc093aedec88}\label{class_c_plant_box_1_1_soil_look_up_a0e2784089de6480cb50fcc093aedec88}} 
+\index{CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}!setPeriodicDomain@{setPeriodicDomain}}
+\index{setPeriodicDomain@{setPeriodicDomain}!CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}}
+\doxysubsubsection{\texorpdfstring{setPeriodicDomain()}{setPeriodicDomain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Soil\+Look\+Up\+::set\+Periodic\+Domain (\begin{DoxyParamCaption}\item[{double}]{minx,  }\item[{double}]{maxx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+periodic in x \mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_a986d4e8cccbbb5649faffe2719badd5a}\label{class_c_plant_box_1_1_soil_look_up_a986d4e8cccbbb5649faffe2719badd5a}} 
+\index{CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}!setPeriodicDomain@{setPeriodicDomain}}
+\index{setPeriodicDomain@{setPeriodicDomain}!CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}}
+\doxysubsubsection{\texorpdfstring{setPeriodicDomain()}{setPeriodicDomain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Soil\+Look\+Up\+::set\+Periodic\+Domain (\begin{DoxyParamCaption}\item[{double}]{minx,  }\item[{double}]{maxx,  }\item[{double}]{miny,  }\item[{double}]{maxy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+periodic in x and y \mbox{\Hypertarget{class_c_plant_box_1_1_soil_look_up_a305c7db7b7351438c983d638ed5433d8}\label{class_c_plant_box_1_1_soil_look_up_a305c7db7b7351438c983d638ed5433d8}} 
+\index{CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}!setPeriodicDomain@{setPeriodicDomain}}
+\index{setPeriodicDomain@{setPeriodicDomain}!CPlantBox::SoilLookUp@{CPlantBox::SoilLookUp}}
+\doxysubsubsection{\texorpdfstring{setPeriodicDomain()}{setPeriodicDomain()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Soil\+Look\+Up\+::set\+Periodic\+Domain (\begin{DoxyParamCaption}\item[{double}]{minx\+\_\+,  }\item[{double}]{maxx\+\_\+,  }\item[{double}]{miny\+\_\+,  }\item[{double}]{maxy\+\_\+,  }\item[{double}]{minz\+\_\+,  }\item[{double}]{maxz\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+sets the periodic boundaries, periodicity is used if bounds are set, and if it is supportet by the get\+Value method of the derived classes
+
+periodic in x, y, and z 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/soil.\+h\end{DoxyCompactItemize}

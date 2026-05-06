@@ -1,0 +1,99 @@
+\hypertarget{class_c_plant_box_1_1_proportional_elongation}{}\doxysection{CPlant\+Box\+::Proportional\+Elongation Class Reference}
+\label{class_c_plant_box_1_1_proportional_elongation}\index{CPlantBox::ProportionalElongation@{CPlantBox::ProportionalElongation}}
+
+
+{\ttfamily \#include $<$soil.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Proportional\+Elongation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{class_c_plant_box_1_1_proportional_elongation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Proportional\+Elongation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{class_c_plant_box_1_1_proportional_elongation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a0347e637cd7e73aff7b939eaf88ca3b2}\label{class_c_plant_box_1_1_proportional_elongation_a0347e637cd7e73aff7b939eaf88ca3b2}} 
+{\bfseries Proportional\+Elongation} (double scale)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a0a6ef77a536d8e33025a7ef6cb2fe821}\label{class_c_plant_box_1_1_proportional_elongation_a0a6ef77a536d8e33025a7ef6cb2fe821}} 
+{\bfseries Proportional\+Elongation} (double scale, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ base\+Look\+Up)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a119e81d2f14321e3c2df83b221d39e8e}\label{class_c_plant_box_1_1_proportional_elongation_a119e81d2f14321e3c2df83b221d39e8e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries copy} () override
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_abc158476ae005fe9f10f67adb1b20bcd}\label{class_c_plant_box_1_1_proportional_elongation_abc158476ae005fe9f10f67adb1b20bcd}} 
+void {\bfseries set\+Scale} (double s)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a030cb727b6f89c951642a21c7f706643}\label{class_c_plant_box_1_1_proportional_elongation_a030cb727b6f89c951642a21c7f706643}} 
+double {\bfseries get\+Scale} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a1aa199e6c04a19e991334e840a710b91}\label{class_c_plant_box_1_1_proportional_elongation_a1aa199e6c04a19e991334e840a710b91}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_proportional_elongation_a1aa199e6c04a19e991334e840a710b91}{set\+Base\+Look\+Up}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ base\+Look\+Up)
+\begin{DoxyCompactList}\small\item\em proportionally scales a base soil look up \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_proportional_elongation_a4373eee0ebcbeb53564a63b593825e71}{get\+Value}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o=nullptr) const override
+\begin{DoxyCompactList}\small\item\em Returns a scalar property of the soil, 1. per default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a595e574049eb09d64ec895b5f5d034af}\label{class_c_plant_box_1_1_proportional_elongation_a595e574049eb09d64ec895b5f5d034af}} 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_proportional_elongation_a595e574049eb09d64ec895b5f5d034af}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Quick info about the object for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a1cc1d6a87b2fe349434dcaef02cbbaab}\label{class_c_plant_box_1_1_proportional_elongation_a1cc1d6a87b2fe349434dcaef02cbbaab}} 
+double {\bfseries scale} = 1.
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a335da15423db03ca8c01c1d7f04e3800}\label{class_c_plant_box_1_1_proportional_elongation_a335da15423db03ca8c01c1d7f04e3800}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries base\+Look\+Up}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Scales the root elongation with fixed value same for each root 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_proportional_elongation_a4373eee0ebcbeb53564a63b593825e71}\label{class_c_plant_box_1_1_proportional_elongation_a4373eee0ebcbeb53564a63b593825e71}} 
+\index{CPlantBox::ProportionalElongation@{CPlantBox::ProportionalElongation}!getValue@{getValue}}
+\index{getValue@{getValue}!CPlantBox::ProportionalElongation@{CPlantBox::ProportionalElongation}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Proportional\+Elongation\+::get\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{organ = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a scalar property of the soil, 1. per default. 
+
+Returns a scalar property of the soil scaled from 0..1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position \mbox{[}cm\mbox{]}, (normally, root-\/$>$get\+Node(root-\/$>$get\+Number\+Of\+Nodes()-\/1)) \\
+\hline
+{\em root} & the root that wants to know the scalar property in some situation this might be usefull (e.\+g. could increase look up speed from a unstructured mesh) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+scalar soil property 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_ad157577afde792c49fc0545da1928037}{CPlant\+Box\+::\+Soil\+Look\+Up}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/soil.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{class_c_plant_box_1_1_grid1_d}{}\doxysection{CPlant\+Box\+::Grid1D Class Reference}
+\label{class_c_plant_box_1_1_grid1_d}\index{CPlantBox::Grid1D@{CPlantBox::Grid1D}}
+
+
+{\ttfamily \#include $<$soil.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Grid1D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_c_plant_box_1_1_grid1_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Grid1D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_c_plant_box_1_1_grid1_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_grid1_d_a4b470ae76e7abe707f0d80554f53db58}\label{class_c_plant_box_1_1_grid1_d_a4b470ae76e7abe707f0d80554f53db58}} 
+{\bfseries Grid1D} (size\+\_\+t n, std\+::vector$<$ double $>$ grid, std\+::vector$<$ double $>$ data)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_grid1_d_a32c3a412bdfb15d6704dabb06d9fb049}\label{class_c_plant_box_1_1_grid1_d_a32c3a412bdfb15d6704dabb06d9fb049}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries copy} () override
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_grid1_d_a8708d6e8942855241723fae693a65966}\label{class_c_plant_box_1_1_grid1_d_a8708d6e8942855241723fae693a65966}} 
+virtual size\+\_\+t \mbox{\hyperlink{class_c_plant_box_1_1_grid1_d_a8708d6e8942855241723fae693a65966}{map}} (double x) const
+\begin{DoxyCompactList}\small\item\em Generic way to perform look up in an ordered table, overwrite by faster method if appropriate, todo currently floor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_grid1_d_a35a2d95b81ae79947be952ec4b4b7293}\label{class_c_plant_box_1_1_grid1_d_a35a2d95b81ae79947be952ec4b4b7293}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_grid1_d_a35a2d95b81ae79947be952ec4b4b7293}{get\+Value}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o=nullptr) const override
+\begin{DoxyCompactList}\small\item\em Returns the data of the 1d table, repeats first or last entry if out of bound. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_grid1_d_a6380ccca3eec9b5689a9f815769d07aa}\label{class_c_plant_box_1_1_grid1_d_a6380ccca3eec9b5689a9f815769d07aa}} 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_grid1_d_a6380ccca3eec9b5689a9f815769d07aa}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Quick info about the object for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_grid1_d_ae53cd75b400c01b7876de2b96596bea7}\label{class_c_plant_box_1_1_grid1_d_ae53cd75b400c01b7876de2b96596bea7}} 
+size\+\_\+t {\bfseries n}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_grid1_d_a9800fe8e7f7869f9d5176b0d36120b2d}\label{class_c_plant_box_1_1_grid1_d_a9800fe8e7f7869f9d5176b0d36120b2d}} 
+std\+::vector$<$ double $>$ {\bfseries grid}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_grid1_d_af5ca1e6ebe5c7d6435f262c6be140b95}\label{class_c_plant_box_1_1_grid1_d_af5ca1e6ebe5c7d6435f262c6be140b95}} 
+std\+::vector$<$ double $>$ {\bfseries data}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+1D look up table, where data is located between the grid points 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/soil.\+h\end{DoxyCompactItemize}

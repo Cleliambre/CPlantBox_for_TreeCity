@@ -1,0 +1,269 @@
+\hypertarget{class_c_plant_box_1_1_tropism}{}\doxysection{CPlant\+Box\+::Tropism Class Reference}
+\label{class_c_plant_box_1_1_tropism}\index{CPlantBox::Tropism@{CPlantBox::Tropism}}
+
+
+{\ttfamily \#include $<$tropism.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Tropism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_tropism__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a2f822956ef5b3d9f592294abf2ec066e}\label{class_c_plant_box_1_1_tropism_a2f822956ef5b3d9f592294abf2ec066e}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_tropism_a2f822956ef5b3d9f592294abf2ec066e}{Tropism}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant)
+\begin{DoxyCompactList}\small\item\em Default constructor is Tropism\+Function(0,0) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_tropism_ae594adbfd6fe2a1cdd10990092af4a5f}{Tropism}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant, double n\+\_\+, double sigma\+\_\+, double age\+Switch\+\_\+=0)
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism_af46c4f2a2d0a6b2e9fdbb84877090520}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant)
+\begin{DoxyCompactList}\small\item\em copy object, factory method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_af8491ad33b6adaf39d9e08668e618c4f}\label{class_c_plant_box_1_1_tropism_af8491ad33b6adaf39d9e08668e618c4f}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_tropism_af8491ad33b6adaf39d9e08668e618c4f}{set\+Geometry}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ geom)
+\begin{DoxyCompactList}\small\item\em sets a confining geometry \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_aea875eecb75f65c0e38b7a4b3ba15013}\label{class_c_plant_box_1_1_tropism_aea875eecb75f65c0e38b7a4b3ba15013}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_tropism_aea875eecb75f65c0e38b7a4b3ba15013}{set\+Tropism\+Parameter}} (double n\+\_\+, double sigma\+\_\+)
+\begin{DoxyCompactList}\small\item\em sets the tropism parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_ac4321bf5e0d1086e9e4b4caf5e14adcf}\label{class_c_plant_box_1_1_tropism_ac4321bf5e0d1086e9e4b4caf5e14adcf}} 
+void {\bfseries set\+Sigma} (double new\+Sigma)
+\item 
+virtual \mbox{\hyperlink{class_c_plant_box_1_1_vector2d}{Vector2d}} \mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&old, double dx, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o=nullptr, int node\+Idx=-\/1)
+\begin{DoxyCompactList}\small\item\em constrained heading, dices n times and takes the best shot (according to the objective function) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_c_plant_box_1_1_vector2d}{Vector2d}} \mbox{\hyperlink{class_c_plant_box_1_1_tropism_a8b14aacb1ca3bac3195c492bf1b2d6ee}{get\+UCHeading}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&old, double dx, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o, int node\+Idx)
+\begin{DoxyCompactList}\small\item\em Get unconfined heading (called by get\+Heading) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_aee46e346f1fa6b94bb936d309cb70287}{tropism\+Objective}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&old, double a, double b, double dx, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o=nullptr)
+\begin{DoxyCompactList}\small\item\em The objective function of the random optimization of \mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading()}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a21b5d1bfc2dbcd67d1bd57b6e09e153a}\label{class_c_plant_box_1_1_tropism_a21b5d1bfc2dbcd67d1bd57b6e09e153a}} 
+bool {\bfseries is\+Expired} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a21913cd4fb94ebd469c0fccbde07c024}\label{class_c_plant_box_1_1_tropism_a21913cd4fb94ebd469c0fccbde07c024}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ {\bfseries get\+Plant} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_tropism_afc250228e21ff4b06aba8b6f5f36e72a}{get\+Position}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&old, double a, double b, double dx)
+\begin{DoxyCompactList}\small\item\em Auxiliary function\+: Applies angles a and b and goes dx \mbox{[}cm\mbox{]} into the new direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a435c009269404ab5e6797ad20def2d99}\label{class_c_plant_box_1_1_tropism_a435c009269404ab5e6797ad20def2d99}} 
+int {\bfseries alphaN} = 20
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_acfe816b24eb0117782d4b002e5e29d65}\label{class_c_plant_box_1_1_tropism_acfe816b24eb0117782d4b002e5e29d65}} 
+int {\bfseries betaN} = 5
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_ab76faec683b578c51a6d22edfd834b4b}\label{class_c_plant_box_1_1_tropism_ab76faec683b578c51a6d22edfd834b4b}} 
+double {\bfseries age\+Switch}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a97bcc9d4e9e2a9f97f3fb649635855e8}\label{class_c_plant_box_1_1_tropism_a97bcc9d4e9e2a9f97f3fb649635855e8}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_a97bcc9d4e9e2a9f97f3fb649635855e8}{randn}} (int n\+Node)
+\begin{DoxyCompactList}\small\item\em normally distributed random number (0,1) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_acba55d9317d64fdfede67d220bd7d513}\label{class_c_plant_box_1_1_tropism_acba55d9317d64fdfede67d220bd7d513}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_acba55d9317d64fdfede67d220bd7d513}{rand}} (int n\+Node)
+\begin{DoxyCompactList}\small\item\em uniformly distributed random number (0,1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a561c40ce812eae26c3e198c7eeb7e10a}\label{class_c_plant_box_1_1_tropism_a561c40ce812eae26c3e198c7eeb7e10a}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ {\bfseries plant}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_ad66a1abd4a5e98d30fa305058f330bc9}\label{class_c_plant_box_1_1_tropism_ad66a1abd4a5e98d30fa305058f330bc9}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_ad66a1abd4a5e98d30fa305058f330bc9}{n}}
+\begin{DoxyCompactList}\small\item\em Number of trials. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_af056914c05b89a19107ac89d9c6b96ba}\label{class_c_plant_box_1_1_tropism_af056914c05b89a19107ac89d9c6b96ba}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_af056914c05b89a19107ac89d9c6b96ba}{sigma}}
+\begin{DoxyCompactList}\small\item\em Standard deviation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a07edeb3953fc72c51ff1af99638e62d0}\label{class_c_plant_box_1_1_tropism_a07edeb3953fc72c51ff1af99638e62d0}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism_a07edeb3953fc72c51ff1af99638e62d0}{geometry}}
+\begin{DoxyCompactList}\small\item\em confining geometry \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a5da3733cd054607a3f8363168e440693}\label{class_c_plant_box_1_1_tropism_a5da3733cd054607a3f8363168e440693}} 
+std\+::normal\+\_\+distribution$<$ double $>$ {\bfseries ND}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_abf0cfa1c255aa625892479058575c2b2}\label{class_c_plant_box_1_1_tropism_abf0cfa1c255aa625892479058575c2b2}} 
+std\+::uniform\+\_\+real\+\_\+distribution$<$ double $>$ {\bfseries UD}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_ad046a1b9aa9cbb6c0612b8aa1df5c46e}\label{class_c_plant_box_1_1_tropism_ad046a1b9aa9cbb6c0612b8aa1df5c46e}} 
+std\+::mt19937 \mbox{\hyperlink{class_c_plant_box_1_1_tropism_ad046a1b9aa9cbb6c0612b8aa1df5c46e}{gen}}
+\begin{DoxyCompactList}\small\item\em random number generator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all tropism functions, e.\+g. \mbox{\hyperlink{class_c_plant_box_1_1_gravitropism}{Gravitropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_plagiotropism}{Plagiotropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_exotropism}{Exotropism}}... 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_ae594adbfd6fe2a1cdd10990092af4a5f}\label{class_c_plant_box_1_1_tropism_ae594adbfd6fe2a1cdd10990092af4a5f}} 
+\index{CPlantBox::Tropism@{CPlantBox::Tropism}!Tropism@{Tropism}}
+\index{Tropism@{Tropism}!CPlantBox::Tropism@{CPlantBox::Tropism}}
+\doxysubsubsection{\texorpdfstring{Tropism()}{Tropism()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Tropism\+::\+Tropism (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant,  }\item[{double}]{n\+\_\+,  }\item[{double}]{sigma\+\_\+,  }\item[{double}]{age\+Switch\+\_\+ = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} with n\+\_\+ number of trials and standard deviation of sigma\+\_\+
+
+Always call the constructor, when overwriting the class! Otherwise it will not work, and the mistake is hard to find.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+} & number of tries \\
+\hline
+{\em sigma\+\_\+} & standard deviation of angular change \mbox{[}1/cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_af46c4f2a2d0a6b2e9fdbb84877090520}\label{class_c_plant_box_1_1_tropism_af46c4f2a2d0a6b2e9fdbb84877090520}} 
+\index{CPlantBox::Tropism@{CPlantBox::Tropism}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::Tropism@{CPlantBox::Tropism}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ CPlant\+Box\+::\+Tropism\+::copy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+copy object, factory method 
+
+Copies this tropism 
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_anti_gravi2_gravitropism_ad5924227c9e4dc498e9b5f68340099e7}{CPlant\+Box\+::\+Anti\+Gravi2\+Gravitropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_anti_gravitropism_aaad2367cda6a7dbad12d5e421cb5a2b2}{CPlant\+Box\+::\+Anti\+Gravitropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_twist_tropism_abb06bfe8700f4b5fbeded40520066594}{CPlant\+Box\+::\+Twist\+Tropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_combined_tropism_a86dbb1fb0c6bc68b14dba9c0eca5a7f2}{CPlant\+Box\+::\+Combined\+Tropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_hydrotropism_af5c1523b3e8edd002257c14e2de0c9c3}{CPlant\+Box\+::\+Hydrotropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_exotropism_af09047dd204bc8a7f91dcd89ed3037e6}{CPlant\+Box\+::\+Exotropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_plagiotropism_af6885925874c1b48be76fea299c26a5f}{CPlant\+Box\+::\+Plagiotropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_gravitropism_ab9d297491eb86c1c8a586e1ef3ae8ab8}{CPlant\+Box\+::\+Gravitropism}}, and \mbox{\hyperlink{class_c_plant_box_1_1_py_tropism_ac172da00949fdc37f5881fc418174472}{CPlant\+Box\+::\+Py\+Tropism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}\label{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}} 
+\index{CPlantBox::Tropism@{CPlantBox::Tropism}!getHeading@{getHeading}}
+\index{getHeading@{getHeading}!CPlantBox::Tropism@{CPlantBox::Tropism}}
+\doxysubsubsection{\texorpdfstring{getHeading()}{getHeading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector2d}{Vector2d}} CPlant\+Box\+::\+Tropism\+::get\+Heading (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&}]{old,  }\item[{double}]{dx,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o = {\ttfamily nullptr},  }\item[{int}]{node\+Idx = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+constrained heading, dices n times and takes the best shot (according to the objective function) 
+
+Inside the geometric domain base\+Tropism\+::get\+Heading() is returned. In case geometric boundaries are hit, the rotations are modified, so that growth stays inside the domain.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & root tip position \\
+\hline
+{\em old} & rotation matrix, heading is old(\+:,1) \\
+\hline
+{\em dx} & distance to look ahead (e.\+g in case of hydrotropism) \\
+\hline
+{\em root} & points to the root that called \mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading()}}, just in case something else is needed (i.\+e. iheading for exotropism) \\
+\hline
+{\em node\+Idx} & index of the node on which to apply the tropism\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the rotations alpha and beta 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_py_tropism_a9cc16cc493eaf026280713148672bd5c}{CPlant\+Box\+::\+Py\+Tropism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_afc250228e21ff4b06aba8b6f5f36e72a}\label{class_c_plant_box_1_1_tropism_afc250228e21ff4b06aba8b6f5f36e72a}} 
+\index{CPlantBox::Tropism@{CPlantBox::Tropism}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!CPlantBox::Tropism@{CPlantBox::Tropism}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} CPlant\+Box\+::\+Tropism\+::get\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&}]{old,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Auxiliary function\+: Applies angles a and b and goes dx \mbox{[}cm\mbox{]} into the new direction. 
+
+Applies angles a and b and goes dx \mbox{[}cm\mbox{]} into the new direction and returns the new position
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & root tip position \\
+\hline
+{\em old} & rotation matrix, heading is old(\+:,1) \\
+\hline
+{\em a} & angle alpha, describes the angular rotation of the axis old \\
+\hline
+{\em b} & angle beta, describes the radial rotation of the axis old \\
+\hline
+{\em dx} & distance to look ahead\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_a8b14aacb1ca3bac3195c492bf1b2d6ee}\label{class_c_plant_box_1_1_tropism_a8b14aacb1ca3bac3195c492bf1b2d6ee}} 
+\index{CPlantBox::Tropism@{CPlantBox::Tropism}!getUCHeading@{getUCHeading}}
+\index{getUCHeading@{getUCHeading}!CPlantBox::Tropism@{CPlantBox::Tropism}}
+\doxysubsubsection{\texorpdfstring{getUCHeading()}{getUCHeading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector2d}{Vector2d}} CPlant\+Box\+::\+Tropism\+::get\+UCHeading (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&}]{old,  }\item[{double}]{dx,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o,  }\item[{int}]{node\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get unconfined heading (called by get\+Heading) 
+
+Dices N times picking angles alpha and beta, takes the optimal direction according to the objective function
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & root tip position \\
+\hline
+{\em old} & rotation matrix, heading is old(\+:,1) \\
+\hline
+{\em dx} & distance to look ahead (e.\+g in case of hydrotropism) \\
+\hline
+{\em root} & points to the root that called get\+Heading(...), just in case something else is needed (i.\+e. iheading for exotropism) \\
+\hline
+{\em node\+Idx} & index of the node on which to apply the tropism\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+angle alpha and beta 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_py_tropism_a543690138c02753386430fb702668b30}{CPlant\+Box\+::\+Py\+Tropism}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_tropism_aee46e346f1fa6b94bb936d309cb70287}\label{class_c_plant_box_1_1_tropism_aee46e346f1fa6b94bb936d309cb70287}} 
+\index{CPlantBox::Tropism@{CPlantBox::Tropism}!tropismObjective@{tropismObjective}}
+\index{tropismObjective@{tropismObjective}!CPlantBox::Tropism@{CPlantBox::Tropism}}
+\doxysubsubsection{\texorpdfstring{tropismObjective()}{tropismObjective()}}
+{\footnotesize\ttfamily virtual double CPlant\+Box\+::\+Tropism\+::tropism\+Objective (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&}]{old,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{dx,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+The objective function of the random optimization of \mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading()}}. 
+
+The objective function of the random optimization of \mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading()}}. Overwrite this function to implement a tropism.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & current root tip position \\
+\hline
+{\em old} & rotation matrix, old(\+:,1) is the root tip heading \\
+\hline
+{\em a} & rotation angle alpha (angular change) \\
+\hline
+{\em b} & rotation angle beta (radial change) \\
+\hline
+{\em dx} & small distance to look ahead \\
+\hline
+{\em root} & points to the root that called get\+Heading, just in case something else is needed (i.\+e. iheading for exotropism)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value minimized by \mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading()}}, it should be in \mbox{[}0,1\mbox{]}, in this way combination of various tropisms will be easier 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_anti_gravitropism_af8c4b000f75461ff7651044bd2573ef1}{CPlant\+Box\+::\+Anti\+Gravitropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_twist_tropism_ac17a410b7379e3901aa91beb3cd221dc}{CPlant\+Box\+::\+Twist\+Tropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_py_tropism_a6b2c0a29679fcbb023ea22d7caaaa310}{CPlant\+Box\+::\+Py\+Tropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_combined_tropism_a90203fd1a936905a07646ce9a3dfe9b7}{CPlant\+Box\+::\+Combined\+Tropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_hydrotropism_aadd1b9f47a595e15e65d8adb3b8aa472}{CPlant\+Box\+::\+Hydrotropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_exotropism_a5b8e450b87e04ef5e7bdfc94f374b429}{CPlant\+Box\+::\+Exotropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_plagiotropism_a59ae1f250c14727fe4eb2be43e642fe9}{CPlant\+Box\+::\+Plagiotropism}}, \mbox{\hyperlink{class_c_plant_box_1_1_gravitropism_a495de485763a862a2d746a79f2806f38}{CPlant\+Box\+::\+Gravitropism}}, and \mbox{\hyperlink{class_c_plant_box_1_1_anti_gravi2_gravitropism_a67f9c32a64fecf2b6083b983048eb08c}{CPlant\+Box\+::\+Anti\+Gravi2\+Gravitropism}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/tropism.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/tropism.\+cpp\end{DoxyCompactItemize}

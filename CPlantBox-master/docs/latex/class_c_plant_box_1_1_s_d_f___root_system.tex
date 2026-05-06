@@ -1,0 +1,126 @@
+\hypertarget{class_c_plant_box_1_1_s_d_f___root_system}{}\doxysection{CPlant\+Box\+::SDF\+\_\+\+Root\+System Class Reference}
+\label{class_c_plant_box_1_1_s_d_f___root_system}\index{CPlantBox::SDF\_RootSystem@{CPlantBox::SDF\_RootSystem}}
+
+
+{\ttfamily \#include $<$sdf\+\_\+rs.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::SDF\+\_\+\+Root\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{class_c_plant_box_1_1_s_d_f___root_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::SDF\+\_\+\+Root\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_c_plant_box_1_1_s_d_f___root_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___root_system_a53533d29c395b2edb8f6095764332d10}{SDF\+\_\+\+Root\+System}} (const \mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}} \&r, double dx=0.\+5)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_aae2e072f568488617a6ec11e1de2ea1e}\label{class_c_plant_box_1_1_s_d_f___root_system_aae2e072f568488617a6ec11e1de2ea1e}} 
+{\bfseries SDF\+\_\+\+Root\+System} (const \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} \&plant, double dx=0.\+5)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_a0a4625f932d8afcc4e0833b83a2af2ea}\label{class_c_plant_box_1_1_s_d_f___root_system_a0a4625f932d8afcc4e0833b83a2af2ea}} 
+{\bfseries SDF\+\_\+\+Root\+System} (std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ nodes, const std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ segments, std\+::vector$<$ double $>$ radii, double dx=0.\+5)
+\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___root_system_a7cd7ad402e2ae5a0533dc44edd8b33e3}{get\+Dist}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&p) const override
+\begin{DoxyCompactList}\small\item\em Returns the signed distance to the next boundary. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___root_system_aceb594c75b56487f790fdd43945467b6}{to\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_a87762ab6e7ca1c18c10dcc4a209b386c}\label{class_c_plant_box_1_1_s_d_f___root_system_a87762ab6e7ca1c18c10dcc4a209b386c}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ {\bfseries nodes\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_a36ee52ba0290ea6ad857613f2c490342}\label{class_c_plant_box_1_1_s_d_f___root_system_a36ee52ba0290ea6ad857613f2c490342}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ {\bfseries segments\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_aa606843c8f29e1975ea98fe99e4e851d}\label{class_c_plant_box_1_1_s_d_f___root_system_aa606843c8f29e1975ea98fe99e4e851d}} 
+std\+::vector$<$ double $>$ {\bfseries radii\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_af24ecf2d585552a749bacf562564e2ad}\label{class_c_plant_box_1_1_s_d_f___root_system_af24ecf2d585552a749bacf562564e2ad}} 
+double {\bfseries dx\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_a868de7b251a8f3ae81159f5b7b7c1c85}\label{class_c_plant_box_1_1_s_d_f___root_system_a868de7b251a8f3ae81159f5b7b7c1c85}} 
+void {\bfseries build\+Tree} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_aa27ab3f8372499259e6b173462c51e6c}\label{class_c_plant_box_1_1_s_d_f___root_system_aa27ab3f8372499259e6b173462c51e6c}} 
+\mbox{\hyperlink{classaabb_1_1_tree}{aabb\+::\+Tree}} {\bfseries tree} = \mbox{\hyperlink{classaabb_1_1_tree}{aabb\+::\+Tree}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Distance to a static root system
+
+segment, nodes, and radii are copied, segment centers are put into a aabb tree, for fast distance lookup
+
+dx is the rectangular observation radius 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_a53533d29c395b2edb8f6095764332d10}\label{class_c_plant_box_1_1_s_d_f___root_system_a53533d29c395b2edb8f6095764332d10}} 
+\index{CPlantBox::SDF\_RootSystem@{CPlantBox::SDF\_RootSystem}!SDF\_RootSystem@{SDF\_RootSystem}}
+\index{SDF\_RootSystem@{SDF\_RootSystem}!CPlantBox::SDF\_RootSystem@{CPlantBox::SDF\_RootSystem}}
+\doxysubsubsection{\texorpdfstring{SDF\_RootSystem()}{SDF\_RootSystem()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+SDF\+\_\+\+Root\+System\+::\+SDF\+\_\+\+Root\+System (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}} \&}]{r,  }\item[{double}]{dx = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+Constructors 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_a7cd7ad402e2ae5a0533dc44edd8b33e3}\label{class_c_plant_box_1_1_s_d_f___root_system_a7cd7ad402e2ae5a0533dc44edd8b33e3}} 
+\index{CPlantBox::SDF\_RootSystem@{CPlantBox::SDF\_RootSystem}!getDist@{getDist}}
+\index{getDist@{getDist}!CPlantBox::SDF\_RootSystem@{CPlantBox::SDF\_RootSystem}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+SDF\+\_\+\+Root\+System\+::get\+Dist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the signed distance to the next boundary. 
+
+Returns the signed distance to the next boundary
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & spatial position \mbox{[}cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+signed distance \mbox{[}cm\mbox{]}, a minus sign means inside, plus outside 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___root_system_aceb594c75b56487f790fdd43945467b6}\label{class_c_plant_box_1_1_s_d_f___root_system_aceb594c75b56487f790fdd43945467b6}} 
+\index{CPlantBox::SDF\_RootSystem@{CPlantBox::SDF\_RootSystem}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::SDF\_RootSystem@{CPlantBox::SDF\_RootSystem}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string CPlant\+Box\+::\+SDF\+\_\+\+Root\+System\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns a string representation of the object (for debugging) 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf\+\_\+rs.\+h\end{DoxyCompactItemize}

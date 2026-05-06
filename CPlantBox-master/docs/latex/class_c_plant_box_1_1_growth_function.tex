@@ -1,0 +1,103 @@
+\hypertarget{class_c_plant_box_1_1_growth_function}{}\doxysection{CPlant\+Box\+::Growth\+Function Class Reference}
+\label{class_c_plant_box_1_1_growth_function}\index{CPlantBox::GrowthFunction@{CPlantBox::GrowthFunction}}
+
+
+{\ttfamily \#include $<$growth.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Growth\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_growth_function__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_growth_function_adc0924128786e08b4c3405d633bc052a}{get\+Length}} (double t, double r, double k, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o) const
+\begin{DoxyCompactList}\small\item\em Returns root length at root age t. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_growth_function_a244e78e24fe542efeeed369c5f949add}{get\+Age}} (double l, double r, double k, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o) const
+\begin{DoxyCompactList}\small\item\em Returns the age of a root of length l. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_growth_function_aeaabe0fe56a02f5b45a3892a7a446ed8}\label{class_c_plant_box_1_1_growth_function_aeaabe0fe56a02f5b45a3892a7a446ed8}} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_growth_function}{Growth\+Function}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_growth_function_aeaabe0fe56a02f5b45a3892a7a446ed8}{copy}} () const
+\begin{DoxyCompactList}\small\item\em Copy the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_growth_function_ade0a90eb8e1ff05b21c5917effdfaf29}\label{class_c_plant_box_1_1_growth_function_ade0a90eb8e1ff05b21c5917effdfaf29}} 
+std\+::map$<$ int, double $>$ {\bfseries CW\+\_\+\+Gr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class to all growth functions\+: currently \mbox{\hyperlink{class_c_plant_box_1_1_linear_growth}{Linear\+Growth}} and \mbox{\hyperlink{class_c_plant_box_1_1_exponential_growth}{Exponential\+Growth}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_growth_function_a244e78e24fe542efeeed369c5f949add}\label{class_c_plant_box_1_1_growth_function_a244e78e24fe542efeeed369c5f949add}} 
+\index{CPlantBox::GrowthFunction@{CPlantBox::GrowthFunction}!getAge@{getAge}}
+\index{getAge@{getAge}!CPlantBox::GrowthFunction@{CPlantBox::GrowthFunction}}
+\doxysubsubsection{\texorpdfstring{getAge()}{getAge()}}
+{\footnotesize\ttfamily virtual double CPlant\+Box\+::\+Growth\+Function\+::get\+Age (\begin{DoxyParamCaption}\item[{double}]{l,  }\item[{double}]{r,  }\item[{double}]{k,  }\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the age of a root of length l. 
+
+Returns the age of a root of length l
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & organ length \mbox{[}cm\mbox{]} \\
+\hline
+{\em r} & initial growth rate \mbox{[}cm/day\mbox{]} \\
+\hline
+{\em k} & maximal root length \mbox{[}cm\mbox{]} \\
+\hline
+{\em root} & points to the organ in case more information is needed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+organ age \mbox{[}day\mbox{]} at specific length 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_c_w_limited_growth_a6fb5a75166b052029905ed24b603f24d}{CPlant\+Box\+::\+CWLimited\+Growth}}, \mbox{\hyperlink{class_c_plant_box_1_1_exponential_growth_abfa3ff0a024cf1b449895e6b8675003b}{CPlant\+Box\+::\+Exponential\+Growth}}, and \mbox{\hyperlink{class_c_plant_box_1_1_linear_growth_a473f271b03ebb78760de422d385749b6}{CPlant\+Box\+::\+Linear\+Growth}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_growth_function_adc0924128786e08b4c3405d633bc052a}\label{class_c_plant_box_1_1_growth_function_adc0924128786e08b4c3405d633bc052a}} 
+\index{CPlantBox::GrowthFunction@{CPlantBox::GrowthFunction}!getLength@{getLength}}
+\index{getLength@{getLength}!CPlantBox::GrowthFunction@{CPlantBox::GrowthFunction}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily virtual double CPlant\+Box\+::\+Growth\+Function\+::get\+Length (\begin{DoxyParamCaption}\item[{double}]{t,  }\item[{double}]{r,  }\item[{double}]{k,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns root length at root age t. 
+
+Returns root length at root age t
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & organ age \mbox{[}day\mbox{]} \\
+\hline
+{\em r} & initial growth rate \mbox{[}cm/day\mbox{]} \\
+\hline
+{\em k} & maximal organ length \mbox{[}cm\mbox{]} \\
+\hline
+{\em root} & points to the organ in case more information is needed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+organ length \mbox{[}cm\mbox{]} at specific age 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_c_w_limited_growth_aaa729471da5ac996df9137a520cb21c3}{CPlant\+Box\+::\+CWLimited\+Growth}}, \mbox{\hyperlink{class_c_plant_box_1_1_exponential_growth_ad29e0c6e2c972ae9d982b5ae73ef38e2}{CPlant\+Box\+::\+Exponential\+Growth}}, and \mbox{\hyperlink{class_c_plant_box_1_1_linear_growth_a141693ec33e4057452f719690af7c772}{CPlant\+Box\+::\+Linear\+Growth}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/growth.\+h\end{DoxyCompactItemize}

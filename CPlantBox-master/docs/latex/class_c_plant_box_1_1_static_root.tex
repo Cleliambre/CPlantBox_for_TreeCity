@@ -1,0 +1,73 @@
+\hypertarget{class_c_plant_box_1_1_static_root}{}\doxysection{CPlant\+Box\+::Static\+Root Class Reference}
+\label{class_c_plant_box_1_1_static_root}\index{CPlantBox::StaticRoot@{CPlantBox::StaticRoot}}
+
+
+{\ttfamily \#include $<$Root.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Static\+Root\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_c_plant_box_1_1_static_root__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Static\+Root\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_c_plant_box_1_1_static_root__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_static_root_ac825f3ed8cac7b1ebba747dbed28441d}{Static\+Root}} (int \mbox{\hyperlink{class_c_plant_box_1_1_organ_a1c602de4cbb1294d6caf35b81655e1db}{id}}, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_a30a2056196ff4b77738a76a854665c14}{param}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a94f5b16aa7ebc3912501051281fe88dc}{length}}, int pni)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_static_root_ac920b80426ee778edcd95e6e867d8208}\label{class_c_plant_box_1_1_static_root_ac920b80426ee778edcd95e6e867d8208}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_static_root_ac920b80426ee778edcd95e6e867d8208}{simulate}} (double dt, bool silence=false) override
+\begin{DoxyCompactList}\small\item\em no need to do anything, children are deleted in $\sim$\+Organ() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_static_root_a6339b8aedaafa5f983d75ad8d73a0636}\label{class_c_plant_box_1_1_static_root_a6339b8aedaafa5f983d75ad8d73a0636}} 
+void {\bfseries initialize\+Laterals} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_static_root_aec04c37719ad12d4766b48f6de2cde54}\label{class_c_plant_box_1_1_static_root_aec04c37719ad12d4766b48f6de2cde54}} 
+void {\bfseries add\+Lateral} (int pni, int lateral\+Type, double lateral\+Delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_static_root_ab10186f1e461b9b56b4b69cc404fd390}\label{class_c_plant_box_1_1_static_root_ab10186f1e461b9b56b4b69cc404fd390}} 
+std\+::vector$<$ int $>$ {\bfseries lateral\+Node\+Indices}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_static_root_a3bb49f387c07da51db1796a2e61808f3}\label{class_c_plant_box_1_1_static_root_a3bb49f387c07da51db1796a2e61808f3}} 
+std\+::vector$<$ int $>$ {\bfseries lateral\+Types}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_static_root_ae0f6ad8799a13ec3a246f76260a43882}\label{class_c_plant_box_1_1_static_root_ae0f6ad8799a13ec3a246f76260a43882}} 
+std\+::vector$<$ double $>$ {\bfseries lateral\+Delays}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_static_root}{Static\+Root}}
+
+Describes a single root, by a vector of nodes representing the root. The root is static (i.\+e. does not change over time), all laterals and corresponding emergence times are predefined 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_static_root_ac825f3ed8cac7b1ebba747dbed28441d}\label{class_c_plant_box_1_1_static_root_ac825f3ed8cac7b1ebba747dbed28441d}} 
+\index{CPlantBox::StaticRoot@{CPlantBox::StaticRoot}!StaticRoot@{StaticRoot}}
+\index{StaticRoot@{StaticRoot}!CPlantBox::StaticRoot@{CPlantBox::StaticRoot}}
+\doxysubsubsection{\texorpdfstring{StaticRoot()}{StaticRoot()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Static\+Root\+::\+Static\+Root (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$}]{param,  }\item[{double}]{length,  }\item[{int}]{pni }\end{DoxyParamCaption})}
+
+Static root 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Root.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Root.\+cpp\end{DoxyCompactItemize}

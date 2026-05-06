@@ -1,0 +1,88 @@
+\hypertarget{class_c_plant_box_1_1_s_d_f___union}{}\doxysection{CPlant\+Box\+::SDF\+\_\+\+Union Class Reference}
+\label{class_c_plant_box_1_1_s_d_f___union}\index{CPlantBox::SDF\_Union@{CPlantBox::SDF\_Union}}
+
+
+{\ttfamily \#include $<$sdf.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::SDF\+\_\+\+Union\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_c_plant_box_1_1_s_d_f___union__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::SDF\+\_\+\+Union\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_c_plant_box_1_1_s_d_f___union__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___union_acebae262478b7157ca6c7d7242de65e0}\label{class_c_plant_box_1_1_s_d_f___union_acebae262478b7157ca6c7d7242de65e0}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___union_acebae262478b7157ca6c7d7242de65e0}{SDF\+\_\+\+Union}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$$>$ \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___intersection_a206530ba04eea15a5e20ea03875ecd92}{sdfs}})
+\begin{DoxyCompactList}\small\item\em Constructs (sdfs\+\_\+\mbox{[}0\mbox{]} U sdfs\+\_\+\mbox{[}1\mbox{]} U sdfs\+\_\+\mbox{[}2\mbox{]} U ... ) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___union_a07502f383786da87096a9818a60bcca2}\label{class_c_plant_box_1_1_s_d_f___union_a07502f383786da87096a9818a60bcca2}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___union_a07502f383786da87096a9818a60bcca2}{SDF\+\_\+\+Union}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ sdf1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function}{Signed\+Distance\+Function}} $>$ sdf2)
+\begin{DoxyCompactList}\small\item\em Constructs sdf1 U sdf2. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___union_a9ae2ffe9e2b4f76fb59cb3b91343bbc7}{get\+Dist}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&v) const override
+\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___union_adf430add46e06eb6353d70949e629a7a}{to\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___union}{SDF\+\_\+\+Union}} computes the geometric union between several signed distance functions 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___union_a9ae2ffe9e2b4f76fb59cb3b91343bbc7}\label{class_c_plant_box_1_1_s_d_f___union_a9ae2ffe9e2b4f76fb59cb3b91343bbc7}} 
+\index{CPlantBox::SDF\_Union@{CPlantBox::SDF\_Union}!getDist@{getDist}}
+\index{getDist@{getDist}!CPlantBox::SDF\_Union@{CPlantBox::SDF\_Union}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+SDF\+\_\+\+Union\+::get\+Dist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{Signed\+Distance\+Function\+::get\+Dist}}
+\end{DoxySeeAlso}
+Computes the union of the original geometries
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & spatial position \mbox{[}cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+signed distance \mbox{[}cm\mbox{]}, a minus sign means inside, plus outside 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___intersection_a4db0b0cb531690ba4a2cbc399edcc046}{CPlant\+Box\+::\+SDF\+\_\+\+Intersection}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___union_adf430add46e06eb6353d70949e629a7a}\label{class_c_plant_box_1_1_s_d_f___union_adf430add46e06eb6353d70949e629a7a}} 
+\index{CPlantBox::SDF\_Union@{CPlantBox::SDF\_Union}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::SDF\_Union@{CPlantBox::SDF\_Union}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string CPlant\+Box\+::\+SDF\+\_\+\+Union\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{Signed\+Distance\+Function\+::to\+String}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___intersection_a0f7a13ea3509383733f3a779d7628651}{CPlant\+Box\+::\+SDF\+\_\+\+Intersection}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+cpp\end{DoxyCompactItemize}

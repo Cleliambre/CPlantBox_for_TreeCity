@@ -1,0 +1,140 @@
+\hypertarget{class_c_plant_box_1_1_s_d_f___plant_box}{}\doxysection{CPlant\+Box\+::SDF\+\_\+\+Plant\+Box Class Reference}
+\label{class_c_plant_box_1_1_s_d_f___plant_box}\index{CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}}
+
+
+{\ttfamily \#include $<$sdf.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::SDF\+\_\+\+Plant\+Box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_c_plant_box_1_1_s_d_f___plant_box__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::SDF\+\_\+\+Plant\+Box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_c_plant_box_1_1_s_d_f___plant_box__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___plant_box_a50134597ed4be0df51a41a70128378b7}{SDF\+\_\+\+Plant\+Box}} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em creates a rectangular box \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___plant_box_a3aca8afa75bfd9a5fd16404201f8196c}{get\+Dist}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&v) const override
+\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___plant_box_a4ddb61698c5e859478929fa782ad2421}{to\+String}} () const override
+\item 
+virtual int \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___plant_box_aa46e626be06a2aefc075c6df3b1fb999}{write\+PVPScript}} (std\+::ostream \&cout, int c=1) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___plant_box_a044bb272367e068510954edee0fbad38}\label{class_c_plant_box_1_1_s_d_f___plant_box_a044bb272367e068510954edee0fbad38}} 
+double {\bfseries eps} = 0.\+25
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Plant\+Box describes a rectangular box 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___plant_box_a50134597ed4be0df51a41a70128378b7}\label{class_c_plant_box_1_1_s_d_f___plant_box_a50134597ed4be0df51a41a70128378b7}} 
+\index{CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}!SDF\_PlantBox@{SDF\_PlantBox}}
+\index{SDF\_PlantBox@{SDF\_PlantBox}!CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}}
+\doxysubsubsection{\texorpdfstring{SDF\_PlantBox()}{SDF\_PlantBox()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+SDF\+\_\+\+Plant\+Box\+::\+SDF\+\_\+\+Plant\+Box (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+creates a rectangular box 
+
+Creates a rectangular box\+: \mbox{[}-\/x/2,-\/y/2,-\/z-\/eps\mbox{]} -\/ \mbox{[}x/2,y/2,-\/eps\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & length \\
+\hline
+{\em y} & width \\
+\hline
+{\em z} & height \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___plant_box_a3aca8afa75bfd9a5fd16404201f8196c}\label{class_c_plant_box_1_1_s_d_f___plant_box_a3aca8afa75bfd9a5fd16404201f8196c}} 
+\index{CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}!getDist@{getDist}}
+\index{getDist@{getDist}!CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+SDF\+\_\+\+Plant\+Box\+::get\+Dist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{Signed\+Distance\+Function\+::get\+Dist}}
+\end{DoxySeeAlso}
+Returns the signed distance to the next boundary of the box
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & spatial position \mbox{[}cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+signed distance \mbox{[}cm\mbox{]}, a minus sign means inside, plus outside 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a8e58237574af3673906bba84d5d14ee8}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___plant_box_a4ddb61698c5e859478929fa782ad2421}\label{class_c_plant_box_1_1_s_d_f___plant_box_a4ddb61698c5e859478929fa782ad2421}} 
+\index{CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string CPlant\+Box\+::\+SDF\+\_\+\+Plant\+Box\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{Signed\+Distance\+Function\+::to\+String}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a4d0ae7a8bba5f7066929f4adcea38c42}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_s_d_f___plant_box_aa46e626be06a2aefc075c6df3b1fb999}\label{class_c_plant_box_1_1_s_d_f___plant_box_aa46e626be06a2aefc075c6df3b1fb999}} 
+\index{CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}!writePVPScript@{writePVPScript}}
+\index{writePVPScript@{writePVPScript}!CPlantBox::SDF\_PlantBox@{CPlantBox::SDF\_PlantBox}}
+\doxysubsubsection{\texorpdfstring{writePVPScript()}{writePVPScript()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+SDF\+\_\+\+Plant\+Box\+::write\+PVPScript (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{cout,  }\item[{int}]{c = {\ttfamily 1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a0098fb469c9be5557d5593cec9e76d2a}{Signed\+Distance\+Function\+::write\+PVPScript}}
+\end{DoxySeeAlso}
+Writes a Para\+View Python script explicitly representing the implicit geometry
+
+
+\begin{DoxyParams}{Parameters}
+{\em cout} & e.\+g. a file output stream \\
+\hline
+{\em c} & Python object counter for the script (to avoid duplicate names) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object counter 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_signed_distance_function_a0098fb469c9be5557d5593cec9e76d2a}{CPlant\+Box\+::\+Signed\+Distance\+Function}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/sdf.\+cpp\end{DoxyCompactItemize}

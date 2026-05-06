@@ -1,0 +1,71 @@
+\hypertarget{class_c_plant_box_1_1_py_soil_look_up}{}\doxysection{CPlant\+Box\+::Py\+Soil\+Look\+Up Class Reference}
+\label{class_c_plant_box_1_1_py_soil_look_up}\index{CPlantBox::PySoilLookUp@{CPlantBox::PySoilLookUp}}
+
+
+Inheritance diagram for CPlant\+Box\+::Py\+Soil\+Look\+Up\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_c_plant_box_1_1_py_soil_look_up__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Py\+Soil\+Look\+Up\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_c_plant_box_1_1_py_soil_look_up__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_py_soil_look_up_a2b9ad9e481ac2a450315c4413c6e7f58}\label{class_c_plant_box_1_1_py_soil_look_up_a2b9ad9e481ac2a450315c4413c6e7f58}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries copy} () override
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_py_soil_look_up_abd96c70bdc708b9a4c4d37d920ce421c}{get\+Value}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ organ=nullptr) const override
+\begin{DoxyCompactList}\small\item\em Returns a scalar property of the soil, 1. per default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_py_soil_look_up_a3062062221ddfcd91bc8bde2e260de2e}\label{class_c_plant_box_1_1_py_soil_look_up_a3062062221ddfcd91bc8bde2e260de2e}} 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_py_soil_look_up_a3062062221ddfcd91bc8bde2e260de2e}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Quick info about the object for debugging. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_py_soil_look_up_a2a55370a0f2392a27d971fc595b6f3e7}\label{class_c_plant_box_1_1_py_soil_look_up_a2a55370a0f2392a27d971fc595b6f3e7}} 
+{\bfseries Soil\+Look\+Up} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_py_soil_look_up_abd96c70bdc708b9a4c4d37d920ce421c}\label{class_c_plant_box_1_1_py_soil_look_up_abd96c70bdc708b9a4c4d37d920ce421c}} 
+\index{CPlantBox::PySoilLookUp@{CPlantBox::PySoilLookUp}!getValue@{getValue}}
+\index{getValue@{getValue}!CPlantBox::PySoilLookUp@{CPlantBox::PySoilLookUp}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Py\+Soil\+Look\+Up\+::get\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{organ = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a scalar property of the soil, 1. per default. 
+
+Returns a scalar property of the soil scaled from 0..1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position \mbox{[}cm\mbox{]}, (normally, root-\/$>$get\+Node(root-\/$>$get\+Number\+Of\+Nodes()-\/1)) \\
+\hline
+{\em root} & the root that wants to know the scalar property in some situation this might be usefull (e.\+g. could increase look up speed from a unstructured mesh) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+scalar soil property 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up_ad157577afde792c49fc0545da1928037}{CPlant\+Box\+::\+Soil\+Look\+Up}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/Py\+Plant\+Box.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,562 @@
+\hypertarget{class_c_plant_box_1_1_photosynthesis}{}\doxysection{CPlant\+Box\+::Photosynthesis Class Reference}
+\label{class_c_plant_box_1_1_photosynthesis}\index{CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}}
+
+
+{\ttfamily \#include $<$Photosynthesis.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Photosynthesis\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_c_plant_box_1_1_photosynthesis__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Photosynthesis\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_c_plant_box_1_1_photosynthesis__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a1e01209dfbb904db839231f999c95a2e}\label{class_c_plant_box_1_1_photosynthesis_a1e01209dfbb904db839231f999c95a2e}} 
+enum {\bfseries Photo\+Types} \{ {\bfseries C3} = 0
+, {\bfseries C4} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_ad5b0d2e614b5a02f1354223d2eb197bc}{Photosynthesis}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{CPlant\+Box\+::\+Mapped\+Plant}} $>$ plant\+\_\+, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters}{CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters}} $>$ params, double psi\+Xyl\+Init=-\/500., double ci\+Init=350e-\/6)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae7096eff227edf3b5528f343b11dc7b2}\label{class_c_plant_box_1_1_photosynthesis_ae7096eff227edf3b5528f343b11dc7b2}} 
+std\+::vector$<$ std\+::map$<$ int, double $>$ $>$ {\bfseries water\+Limited\+Growth} (double t)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a3a7dde5dd716b765dca68d3359c66bea}\label{class_c_plant_box_1_1_photosynthesis_a3a7dde5dd716b765dca68d3359c66bea}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_a3a7dde5dd716b765dca68d3359c66bea}{solve\+\_\+photosynthesis}} (double sim\+\_\+time\+\_\+, std\+::vector$<$ double $>$ sxx\+\_\+, double ea\+\_\+, double es\+\_\+, std\+::vector$<$ double $>$ Tleaf\+K\+\_\+, bool cells\+\_\+=true, std\+::vector$<$ double $>$ soil\+\_\+k\+\_\+=std\+::vector$<$ double $>$(), bool do\+Log\+\_\+=false, int verbose\+\_\+=0, std\+::string output\+Dir\+\_\+=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em main function, makes looping until convergence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_a536709fe8d8ba0a02f99efb83268f382}{linear\+System\+Solve}} (double sim\+Time\+\_\+, const std\+::vector$<$ double $>$ \&sxx\+\_\+, bool cells\+\_\+, const std\+::vector$<$ double $>$ soil\+\_\+k\+\_\+)
+\begin{DoxyCompactList}\small\item\em main function, solves the flux equations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae6f78429540e901a49cd9dc98b57cd9a}\label{class_c_plant_box_1_1_photosynthesis_ae6f78429540e901a49cd9dc98b57cd9a}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_ae6f78429540e901a49cd9dc98b57cd9a}{loop\+Calcs}} (double sim\+Time, std\+::vector$<$ double $>$ sxx\+\_\+, bool cells\+\_\+)
+\begin{DoxyCompactList}\small\item\em solves photosynthesis/stomatal opening equations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a605e912d829823f888b9e17b790e3cd3}\label{class_c_plant_box_1_1_photosynthesis_a605e912d829823f888b9e17b790e3cd3}} 
+void {\bfseries photo\+C4\+\_\+loop} (int i)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a79ef36d63306bddb5b59d8ad161b71a8}\label{class_c_plant_box_1_1_photosynthesis_a79ef36d63306bddb5b59d8ad161b71a8}} 
+void {\bfseries photo\+C3\+\_\+loop} (int i)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a586a7bb12e25ec967c134432063635bd}\label{class_c_plant_box_1_1_photosynthesis_a586a7bb12e25ec967c134432063635bd}} 
+void {\bfseries init\+Calcs} (double sim\+\_\+time\+\_\+)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a26f16dbafb6752688489d545d56a1def}\label{class_c_plant_box_1_1_photosynthesis_a26f16dbafb6752688489d545d56a1def}} 
+void {\bfseries init\+Struct} (double sim\+\_\+time\+\_\+)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a7a1030dc0948c2faed502a06a846f1d1}\label{class_c_plant_box_1_1_photosynthesis_a7a1030dc0948c2faed502a06a846f1d1}} 
+void {\bfseries init\+Vc\+Vj\+Rd} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0d936b6cd5d58a8b1768abc69d10e4b3}\label{class_c_plant_box_1_1_photosynthesis_a0d936b6cd5d58a8b1768abc69d10e4b3}} 
+void {\bfseries photo\+C4\+\_\+init} (int i)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ad1f4963913d61777ab8ae24bf01244c0}\label{class_c_plant_box_1_1_photosynthesis_ad1f4963913d61777ab8ae24bf01244c0}} 
+void {\bfseries photo\+C3\+\_\+init} (int i)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a06aef326c9e6b17eff526270beedcf85}\label{class_c_plant_box_1_1_photosynthesis_a06aef326c9e6b17eff526270beedcf85}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_a06aef326c9e6b17eff526270beedcf85}{get\+Ag4\+Phloem}} ()
+\begin{DoxyCompactList}\small\item\em Converts An \mbox{[}mol CO2 m-\/2 s-\/1\mbox{]} to Ag4\+Phloem \mbox{[}mmol Suc d-\/1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a3afbd60c6bc5175d2210f71803c6d90f}\label{class_c_plant_box_1_1_photosynthesis_a3afbd60c6bc5175d2210f71803c6d90f}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_a3afbd60c6bc5175d2210f71803c6d90f}{get\+Error}} (double sim\+Time)
+\begin{DoxyCompactList}\small\item\em Computes error \% for each segment for each of the variables of interestes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a35aab7ed5ded5e01622c861ac774ae94}\label{class_c_plant_box_1_1_photosynthesis_a35aab7ed5ded5e01622c861ac774ae94}} 
+void \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_a35aab7ed5ded5e01622c861ac774ae94}{do\+Add\+Gravity}} ()
+\begin{DoxyCompactList}\small\item\em add gravitational wat. pot to total wat. pot. (used in phloem module) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_afb868b46e935e150e4f7eb03c9c38818}\label{class_c_plant_box_1_1_photosynthesis_afb868b46e935e150e4f7eb03c9c38818}} 
+double {\bfseries Q10f} (int index)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a75351fad324f5fdbbdec230f091950ed}\label{class_c_plant_box_1_1_photosynthesis_a75351fad324f5fdbbdec230f091950ed}} 
+double {\bfseries thermal\+Breakdown} (int index, double Ed)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a87abeae59af11fb4005cc8a61a5d7804}\label{class_c_plant_box_1_1_photosynthesis_a87abeae59af11fb4005cc8a61a5d7804}} 
+double {\bfseries Arrhenius} (int index, double Ea)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a2dfec8f03931e9d96f0fad8e0eb6c63b}\label{class_c_plant_box_1_1_photosynthesis_a2dfec8f03931e9d96f0fad8e0eb6c63b}} 
+double {\bfseries get\+Mean\+Or\+Seg\+Data} (std\+::vector$<$ double $>$ data, int index)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_af49bac08d5f8ee2734b929fd75381571}{get\+Psi\+Out}} (bool cells, int si, const std\+::vector$<$ double $>$ \&sx\+\_\+) const override
+\item 
+size\+\_\+t \mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis_ac43abf348e11c6cd05e1e205533f0f2d}{fill\+Vectors}} (size\+\_\+t k, int i, int j, double bi, double cii, double cij, double psi\+\_\+s) override
+\begin{DoxyCompactList}\small\item\em fill the vectors aI, aJ, aV, aB \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0c666d07109a0c5fea86b3ea6e8a5409}\label{class_c_plant_box_1_1_photosynthesis_a0c666d07109a0c5fea86b3ea6e8a5409}} 
+double {\bfseries kr\+\_\+f} (int si, double age, int type, int orgtype)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a28e159f6655e80b94070486329d81d10}\label{class_c_plant_box_1_1_photosynthesis_a28e159f6655e80b94070486329d81d10}} 
+bool {\bfseries can\+Stop} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae68244353b04e106641e385ecdb09e91}\label{class_c_plant_box_1_1_photosynthesis_ae68244353b04e106641e385ecdb09e91}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{CPlant\+Box\+::\+Mapped\+Plant}} $>$ {\bfseries plant}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a6473b3ee503020294f465b1a61a98e1a}\label{class_c_plant_box_1_1_photosynthesis_a6473b3ee503020294f465b1a61a98e1a}} 
+std\+::vector$<$ double $>$ {\bfseries tauv}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae696a8acf52f1c69928711ce9e3e3bd2}\label{class_c_plant_box_1_1_photosynthesis_ae696a8acf52f1c69928711ce9e3e3bd2}} 
+std\+::vector$<$ double $>$ {\bfseries fv}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae0301e57b04658a82fd3a4e6f2af8e45}\label{class_c_plant_box_1_1_photosynthesis_ae0301e57b04658a82fd3a4e6f2af8e45}} 
+std\+::vector$<$ double $>$ {\bfseries lengths}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_afcb281d3c06055a4deef574e4f7b0007}\label{class_c_plant_box_1_1_photosynthesis_afcb281d3c06055a4deef574e4f7b0007}} 
+std\+::vector$<$ double $>$ {\bfseries deltagco2}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a2a03978867d2eff1932dec83338289e7}\label{class_c_plant_box_1_1_photosynthesis_a2a03978867d2eff1932dec83338289e7}} 
+std\+::vector$<$ double $>$ {\bfseries dv}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae1fcc02eb68eb626cc858e6e31bb901c}\label{class_c_plant_box_1_1_photosynthesis_ae1fcc02eb68eb626cc858e6e31bb901c}} 
+double {\bfseries es}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a3024f2364553825e46ccccb5fb0ea085}\label{class_c_plant_box_1_1_photosynthesis_a3024f2364553825e46ccccb5fb0ea085}} 
+double {\bfseries ea}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae320282765d092e82d6ce2616a6d59b8}\label{class_c_plant_box_1_1_photosynthesis_ae320282765d092e82d6ce2616a6d59b8}} 
+std\+::vector$<$ double $>$ {\bfseries delta}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a73087ce436663110224426fb0fded168}\label{class_c_plant_box_1_1_photosynthesis_a73087ce436663110224426fb0fded168}} 
+std\+::vector$<$ double $>$ {\bfseries Rd\+\_\+ref}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ac50a9a93c2739ec0716d1bbea22d7a85}\label{class_c_plant_box_1_1_photosynthesis_ac50a9a93c2739ec0716d1bbea22d7a85}} 
+std\+::vector$<$ double $>$ {\bfseries Rd}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a1a7e5735384e3e6b419fe942940c29a3}\label{class_c_plant_box_1_1_photosynthesis_a1a7e5735384e3e6b419fe942940c29a3}} 
+std\+::vector$<$ double $>$ {\bfseries psi\+Xyl}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_af4b7eb2d674db6806c1335d80c759da3}\label{class_c_plant_box_1_1_photosynthesis_af4b7eb2d674db6806c1335d80c759da3}} 
+std\+::vector$<$ double $>$ {\bfseries Ag4\+Phloem}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ab0183e8a5e05918cebc16a576063610f}\label{class_c_plant_box_1_1_photosynthesis_ab0183e8a5e05918cebc16a576063610f}} 
+std\+::vector$<$ double $>$ {\bfseries An}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_acaf92a28afda679464375405b678d6e0}\label{class_c_plant_box_1_1_photosynthesis_acaf92a28afda679464375405b678d6e0}} 
+std\+::vector$<$ double $>$ {\bfseries Vc}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_af7700321c55661f49b23ff3c2ccb3eda}\label{class_c_plant_box_1_1_photosynthesis_af7700321c55661f49b23ff3c2ccb3eda}} 
+std\+::vector$<$ double $>$ {\bfseries Vcmax}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a642d43e13cfc3eef7149a17f781c4827}\label{class_c_plant_box_1_1_photosynthesis_a642d43e13cfc3eef7149a17f781c4827}} 
+std\+::vector$<$ double $>$ {\bfseries Vcrefmax}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a1bf4420897056a1abed3d2dbc2fbebab}\label{class_c_plant_box_1_1_photosynthesis_a1bf4420897056a1abed3d2dbc2fbebab}} 
+std\+::vector$<$ double $>$ {\bfseries Vj}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_aa41b0dd786c21e3f3de6d7c491fa9c59}\label{class_c_plant_box_1_1_photosynthesis_aa41b0dd786c21e3f3de6d7c491fa9c59}} 
+std\+::vector$<$ double $>$ {\bfseries ci}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a9ee009cc086dd30b4d395d2d1f0827bc}\label{class_c_plant_box_1_1_photosynthesis_a9ee009cc086dd30b4d395d2d1f0827bc}} 
+std\+::vector$<$ double $>$ {\bfseries Jw}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a1acb63efc4cfa05a824364838657b6f8}\label{class_c_plant_box_1_1_photosynthesis_a1acb63efc4cfa05a824364838657b6f8}} 
+std\+::vector$<$ double $>$ {\bfseries Ev}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a3d0308ea0e263bbe9fd80be8c58fa8b0}\label{class_c_plant_box_1_1_photosynthesis_a3d0308ea0e263bbe9fd80be8c58fa8b0}} 
+std\+::vector$<$ double $>$ {\bfseries PVD}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a05dc5c7e957eb659501255e4ff785b63}\label{class_c_plant_box_1_1_photosynthesis_a05dc5c7e957eb659501255e4ff785b63}} 
+std\+::vector$<$ double $>$ {\bfseries EAL}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a978895b3da9e156d9fabf399ca18096c}\label{class_c_plant_box_1_1_photosynthesis_a978895b3da9e156d9fabf399ca18096c}} 
+std\+::vector$<$ double $>$ {\bfseries hrelL}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_af9f6a27748ad3354d55a2cde6433be10}\label{class_c_plant_box_1_1_photosynthesis_af9f6a27748ad3354d55a2cde6433be10}} 
+std\+::vector$<$ double $>$ {\bfseries pg}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a4eaa006c1f16953e059584ba14618015}\label{class_c_plant_box_1_1_photosynthesis_a4eaa006c1f16953e059584ba14618015}} 
+std\+::vector$<$ double $>$ {\bfseries output\+Flux}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a1a8773e0ff1b6d02f83910096d99e9e0}\label{class_c_plant_box_1_1_photosynthesis_a1a8773e0ff1b6d02f83910096d99e9e0}} 
+std\+::vector$<$ double $>$ {\bfseries fw}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0370fae4880cb56a082b970b89abd424}\label{class_c_plant_box_1_1_photosynthesis_a0370fae4880cb56a082b970b89abd424}} 
+std\+::vector$<$ double $>$ {\bfseries psi\+Xyl4\+Phloem}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_af95bf5e4c267f912140397bf2f6aa937}\label{class_c_plant_box_1_1_photosynthesis_af95bf5e4c267f912140397bf2f6aa937}} 
+std\+::vector$<$ double $>$ {\bfseries gco2}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a161e4ed4e7506a7512dcbd547a5cba16}\label{class_c_plant_box_1_1_photosynthesis_a161e4ed4e7506a7512dcbd547a5cba16}} 
+std\+::vector$<$ double $>$ {\bfseries gtot\+Ox}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a492a71a063f314de60d358b8049701dd}\label{class_c_plant_box_1_1_photosynthesis_a492a71a063f314de60d358b8049701dd}} 
+std\+::vector$<$ double $>$ {\bfseries Jrefmax}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a778f0cfa5c6b1f843647ae52a40a5acc}\label{class_c_plant_box_1_1_photosynthesis_a778f0cfa5c6b1f843647ae52a40a5acc}} 
+std\+::vector$<$ double $>$ {\bfseries J}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_af498bfe650a70624afbbc6b6cd778a9c}\label{class_c_plant_box_1_1_photosynthesis_af498bfe650a70624afbbc6b6cd778a9c}} 
+std\+::vector$<$ double $>$ {\bfseries Jmax}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a33f379d38d91a6f95901d1fdb7dfe2a8}\label{class_c_plant_box_1_1_photosynthesis_a33f379d38d91a6f95901d1fdb7dfe2a8}} 
+std\+::vector$<$ double $>$ {\bfseries Ko}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ade1bbc1489b621e293d5b18939ec0864}\label{class_c_plant_box_1_1_photosynthesis_ade1bbc1489b621e293d5b18939ec0864}} 
+std\+::vector$<$ double $>$ {\bfseries Kc}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a233efeb0442af2fb91729dbcabb625b9}\label{class_c_plant_box_1_1_photosynthesis_a233efeb0442af2fb91729dbcabb625b9}} 
+std\+::vector$<$ double $>$ {\bfseries Vp}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_aeb09b0549af4337a52b5b6bd82699dbd}\label{class_c_plant_box_1_1_photosynthesis_aeb09b0549af4337a52b5b6bd82699dbd}} 
+std\+::vector$<$ double $>$ {\bfseries kp}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0df78a687a6cde1e7752d8509c7d5886}\label{class_c_plant_box_1_1_photosynthesis_a0df78a687a6cde1e7752d8509c7d5886}} 
+std\+::vector$<$ double $>$ {\bfseries kp25}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a53e50e0f0f53b8f25963363f11d37f04}\label{class_c_plant_box_1_1_photosynthesis_a53e50e0f0f53b8f25963363f11d37f04}} 
+int {\bfseries max\+Loop} = 50000
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ad8e2bb0e2c220c08dea904f2886f2002}\label{class_c_plant_box_1_1_photosynthesis_ad8e2bb0e2c220c08dea904f2886f2002}} 
+int {\bfseries min\+Loop} = 1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a66d7c471cbebdcfe1b7b4b07f558f6b5}\label{class_c_plant_box_1_1_photosynthesis_a66d7c471cbebdcfe1b7b4b07f558f6b5}} 
+std\+::string {\bfseries output\+Dir} =\char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a971a0d81afc96aafe498093bf666a90f}\label{class_c_plant_box_1_1_photosynthesis_a971a0d81afc96aafe498093bf666a90f}} 
+bool {\bfseries do\+Log} = false
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0637d47556ade483f74172f7ecea433b}\label{class_c_plant_box_1_1_photosynthesis_a0637d47556ade483f74172f7ecea433b}} 
+int {\bfseries verbose\+\_\+photosynthesis} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a5e53941cb42d5431a31ab9aca24a351e}\label{class_c_plant_box_1_1_photosynthesis_a5e53941cb42d5431a31ab9aca24a351e}} 
+int {\bfseries loop}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_add648a6ab4203486163168a1724c8634}\label{class_c_plant_box_1_1_photosynthesis_add648a6ab4203486163168a1724c8634}} 
+std\+::vector$<$ double $>$ {\bfseries max\+Err\+Abs} = std\+::vector$<$double$>$(9, 0.)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a84d7648676e2542d1abdc61a2487594b}\label{class_c_plant_box_1_1_photosynthesis_a84d7648676e2542d1abdc61a2487594b}} 
+std\+::vector$<$ double $>$ {\bfseries max\+Err} = std\+::vector$<$double$>$(9, 0.)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae87e632a3eeaa711ccfb5d1bec56895a}\label{class_c_plant_box_1_1_photosynthesis_ae87e632a3eeaa711ccfb5d1bec56895a}} 
+std\+::vector$<$ double $>$ {\bfseries max\+Err\+Abs\+Lim} = \{ 1.,1e-\/6 , 0.\+002, 1e-\/6, 1,1,1e-\/6,1,1e-\/6 \}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a19c569561a751d510b5a6a01de48e19e}\label{class_c_plant_box_1_1_photosynthesis_a19c569561a751d510b5a6a01de48e19e}} 
+std\+::vector$<$ double $>$ {\bfseries max\+Err\+Lim} = std\+::vector$<$double$>$(9, 1e-\/4)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a972d2a48d8e318f1f43a94f15cbcfa70}\label{class_c_plant_box_1_1_photosynthesis_a972d2a48d8e318f1f43a94f15cbcfa70}} 
+std\+::vector$<$ double $>$ {\bfseries output\+Flux\+\_\+old}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a6627afb50a0febc29ce694ada74bc289}\label{class_c_plant_box_1_1_photosynthesis_a6627afb50a0febc29ce694ada74bc289}} 
+std\+::vector$<$ double $>$ {\bfseries psi\+Xyl\+\_\+old}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a4bdce0ec1f36058007969fad00cd5c93}\label{class_c_plant_box_1_1_photosynthesis_a4bdce0ec1f36058007969fad00cd5c93}} 
+std\+::vector$<$ double $>$ {\bfseries An\+\_\+old}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a3de1f32070c953f93eb02c0bbf9856eb}\label{class_c_plant_box_1_1_photosynthesis_a3de1f32070c953f93eb02c0bbf9856eb}} 
+std\+::vector$<$ double $>$ {\bfseries gco2\+\_\+old}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a22bde3b464b5c354a533897ac07be672}\label{class_c_plant_box_1_1_photosynthesis_a22bde3b464b5c354a533897ac07be672}} 
+std\+::vector$<$ double $>$ {\bfseries ci\+\_\+old}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_add715177831e590355f196ac2a7db64d}\label{class_c_plant_box_1_1_photosynthesis_add715177831e590355f196ac2a7db64d}} 
+std\+::vector$<$ double $>$ {\bfseries pg\+\_\+old}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a782b31d7b96ad6ec0e7740c7fdf6e3c4}\label{class_c_plant_box_1_1_photosynthesis_a782b31d7b96ad6ec0e7740c7fdf6e3c4}} 
+double {\bfseries psi\+Xyl\+Init}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_abcace864903a7aeacdeb1b8cfff980ca}\label{class_c_plant_box_1_1_photosynthesis_abcace864903a7aeacdeb1b8cfff980ca}} 
+double {\bfseries ci\+Init}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a6378c6b23861bd9a3f04ccc760c0c2b0}\label{class_c_plant_box_1_1_photosynthesis_a6378c6b23861bd9a3f04ccc760c0c2b0}} 
+double {\bfseries Patm} = 1013.\+15
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a4c82076f30bb78be42a480451e29f09b}\label{class_c_plant_box_1_1_photosynthesis_a4c82076f30bb78be42a480451e29f09b}} 
+std\+::vector$<$ double $>$ {\bfseries cs} = std\+::vector$<$double$>$(1, 350e-\/6)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a5c2d42d1df9952e08af0378e7f8e7963}\label{class_c_plant_box_1_1_photosynthesis_a5c2d42d1df9952e08af0378e7f8e7963}} 
+std\+::vector$<$ double $>$ {\bfseries TleafK}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ac2219dcca6e07363a8feeb601f1eef8e}\label{class_c_plant_box_1_1_photosynthesis_ac2219dcca6e07363a8feeb601f1eef8e}} 
+std\+::vector$<$ double $>$ {\bfseries Qlight}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a7cd08ea63a56011f8b5e1b3cb8b7b8ff}\label{class_c_plant_box_1_1_photosynthesis_a7cd08ea63a56011f8b5e1b3cb8b7b8ff}} 
+std\+::vector$<$ double $>$ {\bfseries g\+\_\+bl} = std\+::vector$<$double$>$(1,2.\+8)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a702d15e6684389aba1427d24002202da}\label{class_c_plant_box_1_1_photosynthesis_a702d15e6684389aba1427d24002202da}} 
+std\+::vector$<$ double $>$ {\bfseries g\+\_\+canopy} = std\+::vector$<$double$>$(1,6.\+1)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_acfccbb1838c5421deb88e1fb66ff741a}\label{class_c_plant_box_1_1_photosynthesis_acfccbb1838c5421deb88e1fb66ff741a}} 
+std\+::vector$<$ double $>$ {\bfseries g\+\_\+air} = std\+::vector$<$double$>$(1,11.\+4)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a184c71478a9bacfa0b8dcd8889874ac9}\label{class_c_plant_box_1_1_photosynthesis_a184c71478a9bacfa0b8dcd8889874ac9}} 
+int {\bfseries Photo\+Type} = C3
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a89027105dcd6344b9052c97e7807bc64}\label{class_c_plant_box_1_1_photosynthesis_a89027105dcd6344b9052c97e7807bc64}} 
+float {\bfseries gm} = 0.\+03
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a219b33429c597551ba44ceb9d198b3dc}\label{class_c_plant_box_1_1_photosynthesis_a219b33429c597551ba44ceb9d198b3dc}} 
+double {\bfseries fwr} = 9.\+308e-\/2
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_aabb716ebf87d19d7179e1126e7c7ddef}\label{class_c_plant_box_1_1_photosynthesis_aabb716ebf87d19d7179e1126e7c7ddef}} 
+double {\bfseries fw\+\_\+cutoff} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0b9a7dec59e0b2beee769b81f799dfbb}\label{class_c_plant_box_1_1_photosynthesis_a0b9a7dec59e0b2beee769b81f799dfbb}} 
+double {\bfseries sh} = 3.\+765e-\/4
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae1521e3e0a0151893f81739dcbe6b0b4}\label{class_c_plant_box_1_1_photosynthesis_ae1521e3e0a0151893f81739dcbe6b0b4}} 
+double {\bfseries p\+\_\+lcrit} = -\/15000/2
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ab3639e3a2bc7486cef15759541e455a0}\label{class_c_plant_box_1_1_photosynthesis_ab3639e3a2bc7486cef15759541e455a0}} 
+std\+::vector$<$ double $>$ {\bfseries Chl} = std\+::vector$<$double$>$(1,55.)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a2beedcc9b362c6a95cfa05683b01ab03}\label{class_c_plant_box_1_1_photosynthesis_a2beedcc9b362c6a95cfa05683b01ab03}} 
+double {\bfseries Vcmaxref\+Chl1} = 1.\+28/2
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a39f1cfdf2a921243543782a35b6b7d89}\label{class_c_plant_box_1_1_photosynthesis_a39f1cfdf2a921243543782a35b6b7d89}} 
+double {\bfseries Vcmaxref\+Chl2} = 8.\+33/2
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0f6a9ea1e17115278719939fb7135481}\label{class_c_plant_box_1_1_photosynthesis_a0f6a9ea1e17115278719939fb7135481}} 
+double {\bfseries alpha} = 0.\+2
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_acdb734328b3faba1687d022f1b7fa7c7}\label{class_c_plant_box_1_1_photosynthesis_acdb734328b3faba1687d022f1b7fa7c7}} 
+double {\bfseries a1} =4.
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ab957dbeb92de9165629668cf526aacad}\label{class_c_plant_box_1_1_photosynthesis_ab957dbeb92de9165629668cf526aacad}} 
+double {\bfseries g0} = 0.\+3e-\/3
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a7a6921cac0f79370d8af0bfb66a8e5cc}\label{class_c_plant_box_1_1_photosynthesis_a7a6921cac0f79370d8af0bfb66a8e5cc}} 
+double {\bfseries a3} = 1.\+7
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae7d41679dd17473027607ca57e46c05d}\label{class_c_plant_box_1_1_photosynthesis_ae7d41679dd17473027607ca57e46c05d}} 
+double {\bfseries theta} = 0.\+9
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a9032b1cc0528c8c2c82d3db41ec1cfa4}\label{class_c_plant_box_1_1_photosynthesis_a9032b1cc0528c8c2c82d3db41ec1cfa4}} 
+double {\bfseries oi} = 210e-\/3
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a62e0a141a94131409644f6546730de4f}\label{class_c_plant_box_1_1_photosynthesis_a62e0a141a94131409644f6546730de4f}} 
+double {\bfseries Q10\+\_\+photo} = 2
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae9a3f258decd5e81d8ab3a32f8f12571}\label{class_c_plant_box_1_1_photosynthesis_ae9a3f258decd5e81d8ab3a32f8f12571}} 
+double {\bfseries a2\+\_\+stomata} = 1.\+6
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_acd2ea7b3107ac7ca91415b181f20d2d7}\label{class_c_plant_box_1_1_photosynthesis_acd2ea7b3107ac7ca91415b181f20d2d7}} 
+double {\bfseries a2\+\_\+bl} = 1.\+37
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a988b9cf50845341950f2b6185e3c89fd}\label{class_c_plant_box_1_1_photosynthesis_a988b9cf50845341950f2b6185e3c89fd}} 
+double {\bfseries a2\+\_\+canopy} = 1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a7ccfd94e31f6826d4d6dd57c682cd2c6}\label{class_c_plant_box_1_1_photosynthesis_a7ccfd94e31f6826d4d6dd57c682cd2c6}} 
+double {\bfseries a2\+\_\+air} = 1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_aca5cdcf1b27f8d2c2d93c9855a21aa85}\label{class_c_plant_box_1_1_photosynthesis_aca5cdcf1b27f8d2c2d93c9855a21aa85}} 
+double {\bfseries Mh2o} = 18
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_af14c4f8f5286fdf8faee7358348b7e37}\label{class_c_plant_box_1_1_photosynthesis_af14c4f8f5286fdf8faee7358348b7e37}} 
+double {\bfseries R\+\_\+ph} = 83.\+143
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_aae294760fc0d48499d26ba2d202d34f3}\label{class_c_plant_box_1_1_photosynthesis_aae294760fc0d48499d26ba2d202d34f3}} 
+double {\bfseries rho\+\_\+h2o} = 1000
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_afd061f0255ef5980b544cc1733442673}\label{class_c_plant_box_1_1_photosynthesis_afd061f0255ef5980b544cc1733442673}} 
+double {\bfseries M\+\_\+\+Chla} = 893.\+51
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a36d7b2861afe5cafdbff6086a4ad9837}\label{class_c_plant_box_1_1_photosynthesis_a36d7b2861afe5cafdbff6086a4ad9837}} 
+double {\bfseries Tref} = 293.\+2
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0954c3242e3673019c1603c788185995}\label{class_c_plant_box_1_1_photosynthesis_a0954c3242e3673019c1603c788185995}} 
+double {\bfseries Eac} = 59430
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ab7204edb03657965090d42dbe4d8e301}\label{class_c_plant_box_1_1_photosynthesis_ab7204edb03657965090d42dbe4d8e301}} 
+double {\bfseries Eaj} = 37000
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a1d54914fe87f282aa807d2e9ee4f76aa}\label{class_c_plant_box_1_1_photosynthesis_a1d54914fe87f282aa807d2e9ee4f76aa}} 
+double {\bfseries Eao} = 36000
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a046e584147208b1628270d5575ca67b6}\label{class_c_plant_box_1_1_photosynthesis_a046e584147208b1628270d5575ca67b6}} 
+double {\bfseries Eard} = 53000
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_af439897d333527ec5d5237e4c045de93}\label{class_c_plant_box_1_1_photosynthesis_af439897d333527ec5d5237e4c045de93}} 
+double {\bfseries Eav} = 58520
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ae90e4b1bef40bc27941f62e537e4ddff}\label{class_c_plant_box_1_1_photosynthesis_ae90e4b1bef40bc27941f62e537e4ddff}} 
+double {\bfseries Ead} = 37830
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ad2afb1e9cc45dbeaa146c32a41ced506}\label{class_c_plant_box_1_1_photosynthesis_ad2afb1e9cc45dbeaa146c32a41ced506}} 
+double {\bfseries Edj} = 220000
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a12a9a10c603e448ebeef17c77ec6ef57}\label{class_c_plant_box_1_1_photosynthesis_a12a9a10c603e448ebeef17c77ec6ef57}} 
+double {\bfseries Edv} = 220000
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a232c1b00d125a47587c09707d359369a}\label{class_c_plant_box_1_1_photosynthesis_a232c1b00d125a47587c09707d359369a}} 
+double {\bfseries Edrd}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a8f15713db7adaafd358641c3d1e494f6}\label{class_c_plant_box_1_1_photosynthesis_a8f15713db7adaafd358641c3d1e494f6}} 
+double {\bfseries S} = 700
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a3ddeca39baae10e1c930acfaad5832a1}\label{class_c_plant_box_1_1_photosynthesis_a3ddeca39baae10e1c930acfaad5832a1}} 
+double {\bfseries Kc\+\_\+ref} = 302e-\/6
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a1380bb0d2b9ca67e2334228e206ecccc}\label{class_c_plant_box_1_1_photosynthesis_a1380bb0d2b9ca67e2334228e206ecccc}} 
+double {\bfseries Ko\+\_\+ref} = 256e-\/3
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a763d91b8ddb73cf03e09fd4ca2174f34}\label{class_c_plant_box_1_1_photosynthesis_a763d91b8ddb73cf03e09fd4ca2174f34}} 
+double {\bfseries delta\+\_\+ref} = 42.\+75e-\/6
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a5d0043851ebf901b6045128c94183392}\label{class_c_plant_box_1_1_photosynthesis_a5d0043851ebf901b6045128c94183392}} 
+double {\bfseries s1} = 0.\+3
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_afbc0352b0150994a83f58c281d083a08}\label{class_c_plant_box_1_1_photosynthesis_afbc0352b0150994a83f58c281d083a08}} 
+double {\bfseries s2} = 313.\+15
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a3ed7f88a9cb62f7a91255dc08f67fa6f}\label{class_c_plant_box_1_1_photosynthesis_a3ed7f88a9cb62f7a91255dc08f67fa6f}} 
+double {\bfseries s3} = 0.\+2
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a69e1ef5b9bf13ffa4dba26df8311ace8}\label{class_c_plant_box_1_1_photosynthesis_a69e1ef5b9bf13ffa4dba26df8311ace8}} 
+double {\bfseries s4} = 288.\+15
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ab937b23ca7e23bfa51109838477f2a29}\label{class_c_plant_box_1_1_photosynthesis_ab937b23ca7e23bfa51109838477f2a29}} 
+double {\bfseries s5} = 1.\+3
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a08845d20cbdbee5bf9539159d99b7c05}\label{class_c_plant_box_1_1_photosynthesis_a08845d20cbdbee5bf9539159d99b7c05}} 
+double {\bfseries s6} = 328.\+15
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a38e06b3f175ad9ab345f67ddffc72a1a}\label{class_c_plant_box_1_1_photosynthesis_a38e06b3f175ad9ab345f67ddffc72a1a}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ {\bfseries orgs\+Vec}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a30b2fcb00db78fbb37c91f165f006930}\label{class_c_plant_box_1_1_photosynthesis_a30b2fcb00db78fbb37c91f165f006930}} 
+std\+::vector$<$ int $>$ {\bfseries seg\+\_\+leaves\+\_\+idx}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a4b2926878e39aa35dc20edfa9c3646de}\label{class_c_plant_box_1_1_photosynthesis_a4b2926878e39aa35dc20edfa9c3646de}} 
+bool {\bfseries stop} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a86f8ac5a713cebdc9be93a2980ab8b3e}\label{class_c_plant_box_1_1_photosynthesis_a86f8ac5a713cebdc9be93a2980ab8b3e}} 
+std\+::vector$<$ Eigen\+::\+Triplet$<$ double $>$ $>$ {\bfseries triplet\+List}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a0f18b11843f6d2e386f1eca6a6137f1b}\label{class_c_plant_box_1_1_photosynthesis_a0f18b11843f6d2e386f1eca6a6137f1b}} 
+Eigen\+::\+Vector\+Xd {\bfseries b}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_photosynthesis}{Photosynthesis}} computation according to Tuzet (2003), Dewar 2002 and Lu 2020 see also photosynthesis.\+py in CPlant\+Box/src/python\+\_\+modules
+
+Units are \mbox{[}cm\mbox{]} and \mbox{[}day\mbox{]}
+
+Wraps a \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{Mapped\+Segments}} class (i.\+e. \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}}) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ad5b0d2e614b5a02f1354223d2eb197bc}\label{class_c_plant_box_1_1_photosynthesis_ad5b0d2e614b5a02f1354223d2eb197bc}} 
+\index{CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}!Photosynthesis@{Photosynthesis}}
+\index{Photosynthesis@{Photosynthesis}!CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}}
+\doxysubsubsection{\texorpdfstring{Photosynthesis()}{Photosynthesis()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Photosynthesis\+::\+Photosynthesis (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{CPlant\+Box\+::\+Mapped\+Plant}} $>$}]{plant\+\_\+,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_parameters}{CPlant\+Box\+::\+Plant\+Hydraulic\+Parameters}} $>$}]{params,  }\item[{double}]{psi\+Xyl\+Init = {\ttfamily -\/500.},  }\item[{double}]{ci\+Init = {\ttfamily 350e-\/6} }\end{DoxyParamCaption})}
+
+A \char`\"{}photosyntehsis\char`\"{} object, as needed for water flux computations + sucrose assimilation + stomatale opening
+
+
+\begin{DoxyParams}{Parameters}
+{\em plant\+\_\+} & \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} object \\
+\hline
+{\em psi\+Xyl\+Init} & Initial guess for the value of xylem wat. pot \mbox{[}cm\mbox{]} \\
+\hline
+{\em ci\+Init} & Initial guess for intracellular CO2 partial pressure \mbox{[}mol mol-\/1\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_ac43abf348e11c6cd05e1e205533f0f2d}\label{class_c_plant_box_1_1_photosynthesis_ac43abf348e11c6cd05e1e205533f0f2d}} 
+\index{CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}!fillVectors@{fillVectors}}
+\index{fillVectors@{fillVectors}!CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}}
+\doxysubsubsection{\texorpdfstring{fillVectors()}{fillVectors()}}
+{\footnotesize\ttfamily size\+\_\+t CPlant\+Box\+::\+Photosynthesis\+::fill\+Vectors (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{k,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{double}]{bi,  }\item[{double}]{cii,  }\item[{double}]{cij,  }\item[{double}]{psi\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fill the vectors aI, aJ, aV, aB 
+
+fill the matrices to be solved. overloads \begin{DoxySeeAlso}{See also}
+Xylem\+Flux\+::fill\+Vectors 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em k} & index for the row-\/ and column-\/index vectors \\
+\hline
+{\em i,j} & indexes of the non-\/zero elements of the sparse matrix \\
+\hline
+{\em psi\+\_\+s} & outer water potential \mbox{[}cm\mbox{]} \\
+\hline
+{\em bi} & value of variable b at row i \mbox{[}cm3/d\mbox{]} \\
+\hline
+{\em cii} & value of variable c at row i col i \mbox{[}cm2/d\mbox{]} \\
+\hline
+{\em cij} & value of variable c at row i col j \mbox{[}cm2/d\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+k next index for the row-\/ and column-\/index vectors 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_model_ab17e9c04e2636c3fee41fd7010f1d23a}{CPlant\+Box\+::\+Plant\+Hydraulic\+Model}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_af49bac08d5f8ee2734b929fd75381571}\label{class_c_plant_box_1_1_photosynthesis_af49bac08d5f8ee2734b929fd75381571}} 
+\index{CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}!getPsiOut@{getPsiOut}}
+\index{getPsiOut@{getPsiOut}!CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}}
+\doxysubsubsection{\texorpdfstring{getPsiOut()}{getPsiOut()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Photosynthesis\+::get\+Psi\+Out (\begin{DoxyParamCaption}\item[{bool}]{cells,  }\item[{int}]{si,  }\item[{const std\+::vector$<$ double $>$ \&}]{sx\+\_\+ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+give outer water potential \mbox{[}cm\mbox{]} overloads by \begin{DoxySeeAlso}{See also}
+Xylem\+::get\+Psi\+Out 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em cells} & sx per cell (true), or segments (false) \\
+\hline
+{\em si} & segment index \\
+\hline
+{\em sx} & \mbox{[}cm\mbox{]} soil matric potential for each cell \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_plant_hydraulic_model_ad10135f2ae6682f1d6a83b94ef663720}{CPlant\+Box\+::\+Plant\+Hydraulic\+Model}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_photosynthesis_a536709fe8d8ba0a02f99efb83268f382}\label{class_c_plant_box_1_1_photosynthesis_a536709fe8d8ba0a02f99efb83268f382}} 
+\index{CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}!linearSystemSolve@{linearSystemSolve}}
+\index{linearSystemSolve@{linearSystemSolve}!CPlantBox::Photosynthesis@{CPlantBox::Photosynthesis}}
+\doxysubsubsection{\texorpdfstring{linearSystemSolve()}{linearSystemSolve()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Photosynthesis\+::linear\+System\+Solve (\begin{DoxyParamCaption}\item[{double}]{sim\+Time\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{sxx\+\_\+,  }\item[{bool}]{cells\+\_\+,  }\item[{const std\+::vector$<$ double $>$}]{soil\+\_\+k\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+main function, solves the flux equations 
+
+Solves the linear system filled by \begin{DoxySeeAlso}{See also}
+Xylem\+Flux\+::linear\+System
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em sim\+Time\mbox{[}day\mbox{]}} & current simulation time, needed for age dependent conductivities, to calculate the age from the creation times (age = sim\+\_\+time -\/ segment creation time). \\
+\hline
+{\em sx} & \mbox{[}cm\mbox{]} soil matric potential in the cells or around the segments, given per cell or per segment \\
+\hline
+{\em cells} & sx per cell (true), or segments (false) \\
+\hline
+{\em soil\+\_\+k} & \mbox{[}day-\/1\mbox{]} optionally, soil conductivities can be prescribed per segment, conductivity at the root surface will be limited by the value, i.\+e. kr = min(kr\+\_\+root, k\+\_\+soil) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Photosynthesis.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Photosynthesis.\+cpp\end{DoxyCompactItemize}

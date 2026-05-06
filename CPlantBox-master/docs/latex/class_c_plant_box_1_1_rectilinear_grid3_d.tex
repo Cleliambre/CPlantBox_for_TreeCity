@@ -1,0 +1,82 @@
+\hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d}{}\doxysection{CPlant\+Box\+::Rectilinear\+Grid3D Class Reference}
+\label{class_c_plant_box_1_1_rectilinear_grid3_d}\index{CPlantBox::RectilinearGrid3D@{CPlantBox::RectilinearGrid3D}}
+
+
+{\ttfamily \#include $<$soil.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Rectilinear\+Grid3D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_c_plant_box_1_1_rectilinear_grid3_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Rectilinear\+Grid3D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_c_plant_box_1_1_rectilinear_grid3_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a203412adb3c0aa134d5e088d0b2f6138}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a203412adb3c0aa134d5e088d0b2f6138}} 
+{\bfseries Rectilinear\+Grid3D} (\mbox{\hyperlink{class_c_plant_box_1_1_grid1_d}{Grid1D}} $\ast$xgrid, \mbox{\hyperlink{class_c_plant_box_1_1_grid1_d}{Grid1D}} $\ast$ygrid, \mbox{\hyperlink{class_c_plant_box_1_1_grid1_d}{Grid1D}} $\ast$zgrid)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a095244f98bad4e8ad9bcd8689f1ee5ff}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a095244f98bad4e8ad9bcd8689f1ee5ff}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries copy} () override
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_affcbef17e5b09bf96da12ce2a0bae296}\label{class_c_plant_box_1_1_rectilinear_grid3_d_affcbef17e5b09bf96da12ce2a0bae296}} 
+virtual size\+\_\+t \mbox{\hyperlink{class_c_plant_box_1_1_rectilinear_grid3_d_affcbef17e5b09bf96da12ce2a0bae296}{map}} (double x, double y, double z) const
+\begin{DoxyCompactList}\small\item\em point to linear data index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_ab3f486f64cf7998c950b6ba7cd4a3d0a}\label{class_c_plant_box_1_1_rectilinear_grid3_d_ab3f486f64cf7998c950b6ba7cd4a3d0a}} 
+double {\bfseries get\+Data} (size\+\_\+t i, size\+\_\+t j, size\+\_\+t k)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a058eeea62461da84589e4c4ebe680b6d}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a058eeea62461da84589e4c4ebe680b6d}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_rectilinear_grid3_d_a058eeea62461da84589e4c4ebe680b6d}{get\+Value}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o=nullptr) const override
+\begin{DoxyCompactList}\small\item\em Returns the data of the 1d table, repeats first or last entry if out of bound. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_abe7503dff03c198a98c6549c0b3485aa}\label{class_c_plant_box_1_1_rectilinear_grid3_d_abe7503dff03c198a98c6549c0b3485aa}} 
+void {\bfseries set\+Data} (size\+\_\+t i, size\+\_\+t j, size\+\_\+t k, double d)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_aeecb281ac73c45ae57b5bf54c7629e20}\label{class_c_plant_box_1_1_rectilinear_grid3_d_aeecb281ac73c45ae57b5bf54c7629e20}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_rectilinear_grid3_d_aeecb281ac73c45ae57b5bf54c7629e20}{get\+Grid\+Point}} (size\+\_\+t i, size\+\_\+t j, size\+\_\+t k)
+\begin{DoxyCompactList}\small\item\em grid point at indices \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a464f4776556472634f49fbe7ba95e54a}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a464f4776556472634f49fbe7ba95e54a}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_grid1_d}{Grid1D}} $\ast$ {\bfseries xgrid}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a66baac24e011ad0a7ccfab24291e38ea}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a66baac24e011ad0a7ccfab24291e38ea}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_grid1_d}{Grid1D}} $\ast$ {\bfseries ygrid}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a3840f336d3c0fb2058d71ead291325f5}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a3840f336d3c0fb2058d71ead291325f5}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_grid1_d}{Grid1D}} $\ast$ {\bfseries zgrid}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a667f7e5ada7e436150bf9fa04e62f8f1}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a667f7e5ada7e436150bf9fa04e62f8f1}} 
+size\+\_\+t {\bfseries nx}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a7a76ad3b5f9e828ca049923835653253}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a7a76ad3b5f9e828ca049923835653253}} 
+size\+\_\+t {\bfseries ny}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_a7a797f941197b6fb1388cdcab4ef7946}\label{class_c_plant_box_1_1_rectilinear_grid3_d_a7a797f941197b6fb1388cdcab4ef7946}} 
+size\+\_\+t {\bfseries nz}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_rectilinear_grid3_d_aea24afbe27ad61255daa1128f0efddc3}\label{class_c_plant_box_1_1_rectilinear_grid3_d_aea24afbe27ad61255daa1128f0efddc3}} 
+std\+::vector$<$ double $>$ {\bfseries data}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rectilinear\+Grid, called tensor product grid (in Dune), data is located between the grid points 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/soil.\+h\end{DoxyCompactItemize}

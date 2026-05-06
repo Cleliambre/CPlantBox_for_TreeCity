@@ -1,0 +1,590 @@
+\hypertarget{class_c_plant_box_1_1_mapped_segments}{}\doxysection{CPlant\+Box\+::Mapped\+Segments Class Reference}
+\label{class_c_plant_box_1_1_mapped_segments}\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+
+
+{\ttfamily \#include $<$Mapped\+Organism.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Mapped\+Segments\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_c_plant_box_1_1_mapped_segments__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Mapped\+Segments\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_c_plant_box_1_1_mapped_segments__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a36df5a0c9e3c91e401845b8f45297649}{Mapped\+Segments}} (std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a85b2ff4f01daa05da5768057baa54e6e}{nodes}}, std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a4555930647c7535d35c3482b4771b680}{node\+CTs}}, std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ segs, std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a6b4b8b82d2813c3f7482b38d9559b718}{radii}}, std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a7b949a4186833abf3e0551f5ff074774}{sub\+Types}}, std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a02589e48c116cbce9c070156fc943e54}{organ\+Types}})
+\begin{DoxyCompactList}\small\item\em for kr and kx age and type dependent \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a994628709536b9e7f326fe902548776b}{Mapped\+Segments}} (std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a85b2ff4f01daa05da5768057baa54e6e}{nodes}}, std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a4555930647c7535d35c3482b4771b680}{node\+CTs}}, std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ segs, std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a6b4b8b82d2813c3f7482b38d9559b718}{radii}}, std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a7b949a4186833abf3e0551f5ff074774}{sub\+Types}})
+\begin{DoxyCompactList}\small\item\em for kr and kx age and type dependent \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a9c4e8aa7f472830217839fbc27ec100a}{Mapped\+Segments}} (std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a85b2ff4f01daa05da5768057baa54e6e}{nodes}}, std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ segs, std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a6b4b8b82d2813c3f7482b38d9559b718}{radii}})
+\begin{DoxyCompactList}\small\item\em for constant kr, and kx \end{DoxyCompactList}\item 
+std\+::map$<$ int, double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a8ea591ae8110ad12b6a981638d68124b}{sum\+Seg\+Fluxes}} (const std\+::vector$<$ double $>$ \&seg\+Fluxes)
+\begin{DoxyCompactList}\small\item\em sums segment fluxes over soil cells, soil\+Fluxes = sum\+Seg\+Fluxes(seg\+Fluxes), \mbox{[}cm3/day\mbox{]} \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a5462982b2803ba158c474f281b5934c8}{split\+Soil\+Fluxes}} (const std\+::vector$<$ double $>$ \&soil\+Fluxes, int type=0) const
+\begin{DoxyCompactList}\small\item\em splits soil fluxes (per cell) into segment fluxes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a2dd0d4e521eaa6c914aeff8bac9d1411}{set\+Soil\+Grid}} (const std\+::function$<$ int(double, double, double)$>$ \&s, bool no\+Changes=false)
+\begin{DoxyCompactList}\small\item\em sets the soil, resets the mappers, and maps all segments \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_ac4aa8177cbb67c4c1e5776a483ac323b}{set\+Rectangular\+Grid}} (\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} min, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} max, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} res, bool cut=true, bool no\+Changes=false)
+\begin{DoxyCompactList}\small\item\em sets an underlying rectangular grid, and cuts all segments accordingly \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_acf58c2e449d2cf984f0b83b43bfb0c1b}{map\+Segments}} (const std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ \&segs)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a9958737ba7fceb8b3bfcd1cd7ba4f6d8}{cut\+Segments}} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a3e7d3a6d9767b9b8bfa19dbf4a0a7d1b}\label{class_c_plant_box_1_1_mapped_segments_a3e7d3a6d9767b9b8bfa19dbf4a0a7d1b}} 
+int {\bfseries get\+Number\+Of\+Mapped\+Segments} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a52b4b163e4979e58b8a4de86471d2618}\label{class_c_plant_box_1_1_mapped_segments_a52b4b163e4979e58b8a4de86471d2618}} 
+int {\bfseries get\+Number\+Of\+Mapped\+Nodes} () const
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_ac8da0442768c1c898cdbd126333750f4}{get\+Segment\+Mapper}} () const
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_abaff64fb6163bb50b310b552abbacc90}{sort}} ()
+\begin{DoxyCompactList}\small\item\em sorts segments, each segment belongs to position s.\+y-\/1 \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a202742170d39412dde00a1e8d622aa23}{seg\+Length}} () const
+\begin{DoxyCompactList}\small\item\em calculates segment lengths \mbox{[}cm\mbox{]} \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a7f3f00fbda4b2939d9df9845842d47a5}{get\+Hs}} (const std\+::vector$<$ double $>$ sx) const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a12a10defa9f76d1750b04e2358e97c10}{get\+SegmentZ}} () const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a28161f258389e34e76be6e837a1d0013}{matric2total}} (const std\+::vector$<$ double $>$ sx) const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a21efbd81c22accff0e016bcddba39173}{total2matric}} (const std\+::vector$<$ double $>$ sx) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a56195abd16f7cd678758e52af6edb4ab}\label{class_c_plant_box_1_1_mapped_segments_a56195abd16f7cd678758e52af6edb4ab}} 
+virtual std\+::vector$<$ double $>$ {\bfseries get\+Effective\+Radii} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_ab8934be2c7f7f70ed4be68e64ccc08c1}\label{class_c_plant_box_1_1_mapped_segments_ab8934be2c7f7f70ed4be68e64ccc08c1}} 
+virtual double {\bfseries get\+Effective\+Radius} (int si)
+\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a74b833552d5079a92d31a0be1fd60b66}{get\+Perimeter}} (int si\+\_\+, double l\+\_\+)
+\begin{DoxyCompactList}\small\item\em Perimeter of the segment \mbox{[}cm\mbox{]} overloaded by. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_ae09aa885128cfa2472173965925a2b99}\label{class_c_plant_box_1_1_mapped_segments_ae09aa885128cfa2472173965925a2b99}} 
+virtual int {\bfseries get\+Segment2leaf\+Id} (int si\+\_\+)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a6944c62723ebb98c66842d14df352bfb}\label{class_c_plant_box_1_1_mapped_segments_a6944c62723ebb98c66842d14df352bfb}} 
+virtual void {\bfseries calc\+Exchange\+Zone\+Coefs} ()
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_acfeca0958985042b2aec882765b7e56f}{set\+Radius}} (double a)
+\begin{DoxyCompactList}\small\item\em sets a constant radius for all segments \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a033117fdba01060c874910b5a6f8c936}{set\+Sub\+Types}} (int t)
+\begin{DoxyCompactList}\small\item\em sets a constant sub type for all segments \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a5010100d1a26cda3487798fc9356b9c3}{get\+Min\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em minimum bounds of plant nodes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a70bf93fdf0a7047c109bdf72fa448e03}{get\+Max\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em maximum bounds of plant nodes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_abe7153d23404214de589b6dac3a89056}\label{class_c_plant_box_1_1_mapped_segments_abe7153d23404214de589b6dac3a89056}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_abe7153d23404214de589b6dac3a89056}{get\+Domain\+Width}} ()
+\begin{DoxyCompactList}\small\item\em grid domain width \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a8e5e19588f160bd72974b8ba6f576c08}\label{class_c_plant_box_1_1_mapped_segments_a8e5e19588f160bd72974b8ba6f576c08}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a8e5e19588f160bd72974b8ba6f576c08}{get\+Domain\+Surface}} ()
+\begin{DoxyCompactList}\small\item\em grid domain surface \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a85b2ff4f01daa05da5768057baa54e6e}\label{class_c_plant_box_1_1_mapped_segments_a85b2ff4f01daa05da5768057baa54e6e}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a85b2ff4f01daa05da5768057baa54e6e}{nodes}}
+\begin{DoxyCompactList}\small\item\em nodes \mbox{[}cm\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a4555930647c7535d35c3482b4771b680}\label{class_c_plant_box_1_1_mapped_segments_a4555930647c7535d35c3482b4771b680}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a4555930647c7535d35c3482b4771b680}{node\+CTs}}
+\begin{DoxyCompactList}\small\item\em creation times \mbox{[}days\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a7270c496c74aa65f0642d8ddebceaf11}\label{class_c_plant_box_1_1_mapped_segments_a7270c496c74aa65f0642d8ddebceaf11}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a7270c496c74aa65f0642d8ddebceaf11}{segments}}
+\begin{DoxyCompactList}\small\item\em connectivity of the nodes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a6b4b8b82d2813c3f7482b38d9559b718}\label{class_c_plant_box_1_1_mapped_segments_a6b4b8b82d2813c3f7482b38d9559b718}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a6b4b8b82d2813c3f7482b38d9559b718}{radii}}
+\begin{DoxyCompactList}\small\item\em radii \mbox{[}cm\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a7b949a4186833abf3e0551f5ff074774}\label{class_c_plant_box_1_1_mapped_segments_a7b949a4186833abf3e0551f5ff074774}} 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a7b949a4186833abf3e0551f5ff074774}{sub\+Types}}
+\begin{DoxyCompactList}\small\item\em types \mbox{[}1\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a02589e48c116cbce9c070156fc943e54}\label{class_c_plant_box_1_1_mapped_segments_a02589e48c116cbce9c070156fc943e54}} 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a02589e48c116cbce9c070156fc943e54}{organ\+Types}}
+\begin{DoxyCompactList}\small\item\em types of the organ\mbox{[}1\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_ae50adc2218cd3ebe77fb672e49316971}\label{class_c_plant_box_1_1_mapped_segments_ae50adc2218cd3ebe77fb672e49316971}} 
+std\+::vector$<$ double $>$ {\bfseries leaf\+Blade\+Surface}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a9fadb4f2027f3af8331e6ab63c74fc77}\label{class_c_plant_box_1_1_mapped_segments_a9fadb4f2027f3af8331e6ab63c74fc77}} 
+std\+::vector$<$ double $>$ {\bfseries seg\+Vol}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_abf0bb5df0084f210295ca373e3637aa2}\label{class_c_plant_box_1_1_mapped_segments_abf0bb5df0084f210295ca373e3637aa2}} 
+std\+::vector$<$ double $>$ {\bfseries blade\+Length}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a6ac7fd3e20d3b714a0ff61e5ae21cd44}\label{class_c_plant_box_1_1_mapped_segments_a6ac7fd3e20d3b714a0ff61e5ae21cd44}} 
+std\+::vector$<$ std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a6ac7fd3e20d3b714a0ff61e5ae21cd44}{segO}}
+\begin{DoxyCompactList}\small\item\em for \mbox{\hyperlink{class_c_plant_box_1_1_segment_analyser}{Segment\+Analyser}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_ae74aebfae2c778ba109012e520691166}\label{class_c_plant_box_1_1_mapped_segments_ae74aebfae2c778ba109012e520691166}} 
+std\+::vector$<$ double $>$ {\bfseries distance\+Tip}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a43e2b6b5c83e5d907690988ad892937e}\label{class_c_plant_box_1_1_mapped_segments_a43e2b6b5c83e5d907690988ad892937e}} 
+std\+::vector$<$ double $>$ {\bfseries exchange\+Zone\+Coefs}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a749cf86578a01578c7cad09230f6c334}\label{class_c_plant_box_1_1_mapped_segments_a749cf86578a01578c7cad09230f6c334}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries min\+Bound}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_aad1b39af09181fa36712373bf199d1cb}\label{class_c_plant_box_1_1_mapped_segments_aad1b39af09181fa36712373bf199d1cb}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries max\+Bound}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_aa54069283f542797496a3aae81793f49}\label{class_c_plant_box_1_1_mapped_segments_aa54069283f542797496a3aae81793f49}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries resolution}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_ab5c0b9cec02d9208b07087fcd7e9e7a9}\label{class_c_plant_box_1_1_mapped_segments_ab5c0b9cec02d9208b07087fcd7e9e7a9}} 
+bool {\bfseries cut\+At\+Grid} = false
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a2a99093495de19aadb3d6c5382a4154e}\label{class_c_plant_box_1_1_mapped_segments_a2a99093495de19aadb3d6c5382a4154e}} 
+bool {\bfseries constant\+Loc} = false
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a2b7e07e882c472dc7781e7923b592c7a}\label{class_c_plant_box_1_1_mapped_segments_a2b7e07e882c472dc7781e7923b592c7a}} 
+std\+::map$<$ int, int $>$ {\bfseries seg2cell}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a2469897a02020ff56932e5a6440e00a7}\label{class_c_plant_box_1_1_mapped_segments_a2469897a02020ff56932e5a6440e00a7}} 
+std\+::map$<$ int, std\+::vector$<$ int $>$ $>$ {\bfseries cell2seg}
+\item 
+std\+::function$<$ int(double, double, double)$>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a1814c91cf77d49ea6657971f0f573ba6}{soil\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em soil cell index call back function, (care need all MPI ranks in case of dumux) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a1e390966ef6ac25c9747da92d592f1a0}\label{class_c_plant_box_1_1_mapped_segments_a1e390966ef6ac25c9747da92d592f1a0}} 
+const double {\bfseries eps} = 1.e-\/5
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a366f20cd8caf98bf95a14bc28ddc714e}\label{class_c_plant_box_1_1_mapped_segments_a366f20cd8caf98bf95a14bc28ddc714e}} 
+double {\bfseries kr\+\_\+length} = -\/1.\+0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a89a3ee6b658699dbb9f82f3d1d2cf8f1}{add\+Cut\+Segment}} (\mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} ns, double a, int st, int ot, double lbsurf, double vols, double blen, std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a6ac7fd3e20d3b714a0ff61e5ae21cd44}{segO}}, int i)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a4647fe20ce5f2388ce3e3da070ab935d}{add\+Segment}} (\mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} ns, double a, int st, int ot, double lbsurf, double vols, double blen, std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a6ac7fd3e20d3b714a0ff61e5ae21cd44}{segO}}, int i)
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a50c067007de15927f05d0aae31a3f86d}{length}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} \&s) const
+\item 
+int \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a739a1c35471844a8d19a702f09d44e0e}{soil\+\_\+index\+\_\+}} (double x, double y, double z)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a374512c4d25341000bb1790e29d8f178}{unmap\+Segments}} (const std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ \&segs)
+\begin{DoxyCompactList}\small\item\em remove segments from the mappers \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a connected 1d rootsystem as segments, which are mapped to a 3d soil grid.
+
+Holds nodes, node\+CTs, segments, radii, and types, which can be directly accessed.
+
+Optionally, cuts segment along the boundaries of a rectangular grid 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a36df5a0c9e3c91e401845b8f45297649}\label{class_c_plant_box_1_1_mapped_segments_a36df5a0c9e3c91e401845b8f45297649}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!MappedSegments@{MappedSegments}}
+\index{MappedSegments@{MappedSegments}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{MappedSegments()}{MappedSegments()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Mapped\+Segments\+::\+Mapped\+Segments (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$}]{nodes,  }\item[{std\+::vector$<$ double $>$}]{node\+CTs,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$}]{segs,  }\item[{std\+::vector$<$ double $>$}]{radii,  }\item[{std\+::vector$<$ int $>$}]{sub\+Types,  }\item[{std\+::vector$<$ int $>$}]{organ\+Types }\end{DoxyParamCaption})}
+
+
+
+for kr and kx age and type dependent 
+
+A static plant, as needed for flux computations, represented as
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & coordinates \mbox{[}cm\mbox{]} \\
+\hline
+{\em node\+CTs} & node creation times \mbox{[}d\mbox{]} \\
+\hline
+{\em segs} & describes a segment with two node indices segs.\+x, and segs.\+y \mbox{[}1\mbox{]} \\
+\hline
+{\em radii} & segment radius \mbox{[}cm\mbox{]} \\
+\hline
+{\em sub\+Types} & root type or order of the segment \mbox{[}1\mbox{]} \\
+\hline
+{\em organ\+Types} & organ type \mbox{[}1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a994628709536b9e7f326fe902548776b}\label{class_c_plant_box_1_1_mapped_segments_a994628709536b9e7f326fe902548776b}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!MappedSegments@{MappedSegments}}
+\index{MappedSegments@{MappedSegments}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{MappedSegments()}{MappedSegments()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Mapped\+Segments\+::\+Mapped\+Segments (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$}]{nodes,  }\item[{std\+::vector$<$ double $>$}]{node\+CTs,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$}]{segs,  }\item[{std\+::vector$<$ double $>$}]{radii,  }\item[{std\+::vector$<$ int $>$}]{sub\+Types }\end{DoxyParamCaption})}
+
+
+
+for kr and kx age and type dependent 
+
+A static root system, as needed for flux computations, represented as
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & coordinates \mbox{[}cm\mbox{]} \\
+\hline
+{\em node\+CTs} & node creation times \mbox{[}d\mbox{]} \\
+\hline
+{\em segs} & describes a segment with two node indices segs.\+x, and segs.\+y \mbox{[}1\mbox{]} \\
+\hline
+{\em radii} & segment radius \mbox{[}cm\mbox{]} \\
+\hline
+{\em sub\+Types} & root type or order of the segment \mbox{[}1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a9c4e8aa7f472830217839fbc27ec100a}\label{class_c_plant_box_1_1_mapped_segments_a9c4e8aa7f472830217839fbc27ec100a}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!MappedSegments@{MappedSegments}}
+\index{MappedSegments@{MappedSegments}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{MappedSegments()}{MappedSegments()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Mapped\+Segments\+::\+Mapped\+Segments (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$}]{nodes,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$}]{segs,  }\item[{std\+::vector$<$ double $>$}]{radii }\end{DoxyParamCaption})}
+
+
+
+for constant kr, and kx 
+
+A static root system, as needed for flux computations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & \mbox{[}cm\mbox{]} \\
+\hline
+{\em segs} & describes a segment with two node indices segs.\+x, and segs.\+y \mbox{[}1\mbox{]} \\
+\hline
+{\em radii} & \mbox{[}cm\mbox{]} segment radius\\
+\hline
+\end{DoxyParams}
+node\+CTs is set to 0. for all segments sub\+Types are set to type 0 for all segments 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a89a3ee6b658699dbb9f82f3d1d2cf8f1}\label{class_c_plant_box_1_1_mapped_segments_a89a3ee6b658699dbb9f82f3d1d2cf8f1}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!addCutSegment@{addCutSegment}}
+\index{addCutSegment@{addCutSegment}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{addCutSegment()}{addCutSegment()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::add\+Cut\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}}}]{ns,  }\item[{double}]{r,  }\item[{int}]{st,  }\item[{int}]{ot,  }\item[{double}]{lbsurf,  }\item[{double}]{vols,  }\item[{double}]{blen,  }\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{segO,  }\item[{int}]{ii }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds and cuts a single segment at index
+\begin{DoxyParams}{Parameters}
+{\em ii.} & If the segment is cut, appends the remaining segments. Used by cut\+Segments This approach may run into problems if a segment is located exactly along a face.\\
+\hline
+{\em ns} & the segment to add and cut \\
+\hline
+{\em r} & segment radius \mbox{[}cm\mbox{]} \\
+\hline
+{\em st} & segment sub type \\
+\hline
+{\em ot} & segment organ type \\
+\hline
+{\em ii} & index to insert the segment, -\/1 to append the segment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a4647fe20ce5f2388ce3e3da070ab935d}\label{class_c_plant_box_1_1_mapped_segments_a4647fe20ce5f2388ce3e3da070ab935d}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!addSegment@{addSegment}}
+\index{addSegment@{addSegment}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{addSegment()}{addSegment()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::add\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}}}]{s,  }\item[{double}]{a,  }\item[{int}]{st,  }\item[{int}]{ot,  }\item[{double}]{lbsurf,  }\item[{double}]{vols,  }\item[{double}]{blen,  }\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds the segment at index i, or appends it, if i = -\/1
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the segment to append or insert \\
+\hline
+{\em r} & segment radius \mbox{[}cm\mbox{]} \\
+\hline
+{\em st} & segment sub type \\
+\hline
+{\em ot} & segment organ type \\
+\hline
+{\em i} & index to insert the segment, -\/1 to append the segment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a9958737ba7fceb8b3bfcd1cd7ba4f6d8}\label{class_c_plant_box_1_1_mapped_segments_a9958737ba7fceb8b3bfcd1cd7ba4f6d8}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!cutSegments@{cutSegments}}
+\index{cutSegments@{cutSegments}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{cutSegments()}{cutSegments()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::cut\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cuts segments
+\begin{DoxyParams}{Parameters}
+{\em segs} & at a rectangular grid (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a2dd0d4e521eaa6c914aeff8bac9d1411}{Mapped\+Segments\+::set\+Soil\+Grid}}) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a7f3f00fbda4b2939d9df9845842d47a5}\label{class_c_plant_box_1_1_mapped_segments_a7f3f00fbda4b2939d9df9845842d47a5}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!getHs@{getHs}}
+\index{getHs@{getHs}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{getHs()}{getHs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Mapped\+Segments\+::get\+Hs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$}]{sx }\end{DoxyParamCaption}) const}
+
+Returns soil matric potential per segment, for a given soil sx connected gy the mapper rs-\/$>$seg2cell \mbox{[}TODO make more general per\+Segment(value\+\_\+per\+Cell)...\mbox{]} \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a70bf93fdf0a7047c109bdf72fa448e03}\label{class_c_plant_box_1_1_mapped_segments_a70bf93fdf0a7047c109bdf72fa448e03}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!getMaxBounds@{getMaxBounds}}
+\index{getMaxBounds@{getMaxBounds}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{getMaxBounds()}{getMaxBounds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} CPlant\+Box\+::\+Mapped\+Segments\+::get\+Max\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+maximum bounds of plant nodes 
+
+Calculates the maximum of node coordinates (e.\+g. maximum corner of bounding box) value not cached \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a5010100d1a26cda3487798fc9356b9c3}\label{class_c_plant_box_1_1_mapped_segments_a5010100d1a26cda3487798fc9356b9c3}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!getMinBounds@{getMinBounds}}
+\index{getMinBounds@{getMinBounds}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{getMinBounds()}{getMinBounds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} CPlant\+Box\+::\+Mapped\+Segments\+::get\+Min\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+minimum bounds of plant nodes 
+
+Calculates the minimum of node coordinates (e.\+g. minimum corner of bounding box) value not cached \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a74b833552d5079a92d31a0be1fd60b66}\label{class_c_plant_box_1_1_mapped_segments_a74b833552d5079a92d31a0be1fd60b66}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily virtual double CPlant\+Box\+::\+Mapped\+Segments\+::get\+Perimeter (\begin{DoxyParamCaption}\item[{int}]{si\+\_\+,  }\item[{double}]{l\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Perimeter of the segment \mbox{[}cm\mbox{]} overloaded by. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_ae69ca81db897fed72475609de3ffaaef}{Mapped\+Plant\+::get\+Perimeter}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant_ae69ca81db897fed72475609de3ffaaef}{CPlant\+Box\+::\+Mapped\+Plant}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_ac8da0442768c1c898cdbd126333750f4}\label{class_c_plant_box_1_1_mapped_segments_ac8da0442768c1c898cdbd126333750f4}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!getSegmentMapper@{getSegmentMapper}}
+\index{getSegmentMapper@{getSegmentMapper}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{getSegmentMapper()}{getSegmentMapper()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ CPlant\+Box\+::\+Mapped\+Segments\+::get\+Segment\+Mapper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns seg2cell as vector \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a12a10defa9f76d1750b04e2358e97c10}\label{class_c_plant_box_1_1_mapped_segments_a12a10defa9f76d1750b04e2358e97c10}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!getSegmentZ@{getSegmentZ}}
+\index{getSegmentZ@{getSegmentZ}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{getSegmentZ()}{getSegmentZ()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Mapped\+Segments\+::get\+SegmentZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Calculates the z-\/coordinates of the segment \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a50c067007de15927f05d0aae31a3f86d}\label{class_c_plant_box_1_1_mapped_segments_a50c067007de15927f05d0aae31a3f86d}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!length@{length}}
+\index{length@{length}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Mapped\+Segments\+::length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Length of the segment
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_acf58c2e449d2cf984f0b83b43bfb0c1b}\label{class_c_plant_box_1_1_mapped_segments_acf58c2e449d2cf984f0b83b43bfb0c1b}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!mapSegments@{mapSegments}}
+\index{mapSegments@{mapSegments}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{mapSegments()}{mapSegments()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::map\+Segments (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ \&}]{segs }\end{DoxyParamCaption})}
+
+Update the mappers root2cell, which maps root segment index to soil cell index, and cell2seg which maps soil cell index to multiple root segments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em segs} & the (new) segments that need to be mapped \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a28161f258389e34e76be6e837a1d0013}\label{class_c_plant_box_1_1_mapped_segments_a28161f258389e34e76be6e837a1d0013}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!matric2total@{matric2total}}
+\index{matric2total@{matric2total}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{matric2total()}{matric2total()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Mapped\+Segments\+::matric2total (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$}]{sx }\end{DoxyParamCaption}) const}
+
+Calculates the total potential from the matric potential \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a202742170d39412dde00a1e8d622aa23}\label{class_c_plant_box_1_1_mapped_segments_a202742170d39412dde00a1e8d622aa23}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!segLength@{segLength}}
+\index{segLength@{segLength}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{segLength()}{segLength()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Mapped\+Segments\+::seg\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+calculates segment lengths \mbox{[}cm\mbox{]} 
+
+Calculates segment lengths \mbox{[}cm\mbox{]} \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_acfeca0958985042b2aec882765b7e56f}\label{class_c_plant_box_1_1_mapped_segments_acfeca0958985042b2aec882765b7e56f}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!setRadius@{setRadius}}
+\index{setRadius@{setRadius}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{setRadius()}{setRadius()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::set\+Radius (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
+
+
+
+sets a constant radius for all segments 
+
+Sets the radius
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{[}cm\mbox{]} for all segments. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_ac4aa8177cbb67c4c1e5776a483ac323b}\label{class_c_plant_box_1_1_mapped_segments_ac4aa8177cbb67c4c1e5776a483ac323b}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!setRectangularGrid@{setRectangularGrid}}
+\index{setRectangularGrid@{setRectangularGrid}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{setRectangularGrid()}{setRectangularGrid()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::set\+Rectangular\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}}]{min,  }\item[{\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}}]{max,  }\item[{\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}}]{res,  }\item[{bool}]{cut = {\ttfamily true},  }\item[{bool}]{no\+Changes = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+sets an underlying rectangular grid, and cuts all segments accordingly 
+
+Sets a rectangular grid, and cuts all segments along the grid cells
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & minimum of the soil domain \mbox{[}cm\mbox{]} \\
+\hline
+{\em max} & maximum of the soil domain \mbox{[}cm\mbox{]} \\
+\hline
+{\em res} & resolution, how many cells in each dimension \mbox{[}1\mbox{]} \\
+\hline
+{\em cut} & determines if the segments are cut at the rectangular grid faces \\
+\hline
+{\em no\+Changes} & determines if the segments remain in the soil voxel they are created in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a2dd0d4e521eaa6c914aeff8bac9d1411}\label{class_c_plant_box_1_1_mapped_segments_a2dd0d4e521eaa6c914aeff8bac9d1411}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!setSoilGrid@{setSoilGrid}}
+\index{setSoilGrid@{setSoilGrid}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{setSoilGrid()}{setSoilGrid()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::set\+Soil\+Grid (\begin{DoxyParamCaption}\item[{const std\+::function$<$ int(double, double, double)$>$ \&}]{s,  }\item[{bool}]{no\+Changes = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+sets the soil, resets the mappers, and maps all segments 
+
+Sets the soil cell index call back function, resets and updates the mappers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the callback function picks a cell with spatial coordinate \mbox{[}cm\mbox{]} and returns the index of the cell \mbox{[}1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a033117fdba01060c874910b5a6f8c936}\label{class_c_plant_box_1_1_mapped_segments_a033117fdba01060c874910b5a6f8c936}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!setSubTypes@{setSubTypes}}
+\index{setSubTypes@{setSubTypes}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{setSubTypes()}{setSubTypes()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::set\+Sub\+Types (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+sets a constant sub type for all segments 
+
+Sets the sub type of all segments to
+\begin{DoxyParams}{Parameters}
+{\em t.} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a739a1c35471844a8d19a702f09d44e0e}\label{class_c_plant_box_1_1_mapped_segments_a739a1c35471844a8d19a702f09d44e0e}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!soil\_index\_@{soil\_index\_}}
+\index{soil\_index\_@{soil\_index\_}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{soil\_index\_()}{soil\_index\_()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+Mapped\+Segments\+::soil\+\_\+index\+\_\+ (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Maps a point into a cell and return the cells linear index (for a equidistant rectangular domain) \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_abaff64fb6163bb50b310b552abbacc90}\label{class_c_plant_box_1_1_mapped_segments_abaff64fb6163bb50b310b552abbacc90}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!sort@{sort}}
+\index{sort@{sort}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sorts segments, each segment belongs to position s.\+y-\/1 
+
+Sorts the segments, so that the segment index == second node index -\/1 (unique mapping in a tree) \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a5462982b2803ba158c474f281b5934c8}\label{class_c_plant_box_1_1_mapped_segments_a5462982b2803ba158c474f281b5934c8}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!splitSoilFluxes@{splitSoilFluxes}}
+\index{splitSoilFluxes@{splitSoilFluxes}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{splitSoilFluxes()}{splitSoilFluxes()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Mapped\+Segments\+::split\+Soil\+Fluxes (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{soil\+Fluxes,  }\item[{int}]{type = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+splits soil fluxes (per cell) into segment fluxes 
+
+Splits soil fluxes per cell to the segments within the cell, so that the summed fluxes agree, \begin{DoxySeeAlso}{See also}
+sum\+Soil\+Fluxes()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em soil\+Fluxes} & cell fluxes per global index \mbox{[}cm3/day\mbox{]} \\
+\hline
+{\em type} & split flux proportional to 0\+: segment volume, 1\+: segment surface, 2\+: segment length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+fluxes for each segment \mbox{[}cm3/day\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a8ea591ae8110ad12b6a981638d68124b}\label{class_c_plant_box_1_1_mapped_segments_a8ea591ae8110ad12b6a981638d68124b}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!sumSegFluxes@{sumSegFluxes}}
+\index{sumSegFluxes@{sumSegFluxes}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{sumSegFluxes()}{sumSegFluxes()}}
+{\footnotesize\ttfamily std\+::map$<$ int, double $>$ CPlant\+Box\+::\+Mapped\+Segments\+::sum\+Seg\+Fluxes (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{seg\+Fluxes }\end{DoxyParamCaption})}
+
+
+
+sums segment fluxes over soil cells, soil\+Fluxes = sum\+Seg\+Fluxes(seg\+Fluxes), \mbox{[}cm3/day\mbox{]} 
+
+Sums segment fluxes over each cell
+
+
+\begin{DoxyParams}{Parameters}
+{\em seg\+Fluxes} & segment fluxes given per segment index \mbox{[}cm3/day\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash map with cell indices as keys and fluxes as values \mbox{[}cm3/day\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a21efbd81c22accff0e016bcddba39173}\label{class_c_plant_box_1_1_mapped_segments_a21efbd81c22accff0e016bcddba39173}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!total2matric@{total2matric}}
+\index{total2matric@{total2matric}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{total2matric()}{total2matric()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Mapped\+Segments\+::total2matric (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$}]{sx }\end{DoxyParamCaption}) const}
+
+Calculates the matric potential from the tortal potential \mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a374512c4d25341000bb1790e29d8f178}\label{class_c_plant_box_1_1_mapped_segments_a374512c4d25341000bb1790e29d8f178}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!unmapSegments@{unmapSegments}}
+\index{unmapSegments@{unmapSegments}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{unmapSegments()}{unmapSegments()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Mapped\+Segments\+::unmap\+Segments (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector2i}{Vector2i}} $>$ \&}]{segs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+remove segments from the mappers 
+
+Removes segments
+\begin{DoxyParams}{Parameters}
+{\em segs} & from the mappers \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_mapped_segments_a1814c91cf77d49ea6657971f0f573ba6}\label{class_c_plant_box_1_1_mapped_segments_a1814c91cf77d49ea6657971f0f573ba6}} 
+\index{CPlantBox::MappedSegments@{CPlantBox::MappedSegments}!soil\_index@{soil\_index}}
+\index{soil\_index@{soil\_index}!CPlantBox::MappedSegments@{CPlantBox::MappedSegments}}
+\doxysubsubsection{\texorpdfstring{soil\_index}{soil\_index}}
+{\footnotesize\ttfamily std\+::function$<$int(double,double,double)$>$ CPlant\+Box\+::\+Mapped\+Segments\+::soil\+\_\+index}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::bind(\&\mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments_a739a1c35471844a8d19a702f09d44e0e}{MappedSegments::soil\_index\_}}, \textcolor{keyword}{this}, std::placeholders::\_1, std::placeholders::\_2, std::placeholders::\_3)}
+
+\end{DoxyCode}
+
+
+soil cell index call back function, (care need all MPI ranks in case of dumux) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Mapped\+Organism.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Mapped\+Organism.\+cpp\end{DoxyCompactItemize}

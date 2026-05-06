@@ -1,0 +1,286 @@
+\hypertarget{class_c_plant_box_1_1_plant_visualiser}{}\doxysection{CPlant\+Box\+::Plant\+Visualiser Class Reference}
+\label{class_c_plant_box_1_1_plant_visualiser}\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a5ff4b41356a6ac72487140630a1a926b}\label{class_c_plant_box_1_1_plant_visualiser_a5ff4b41356a6ac72487140630a1a926b}} 
+{\bfseries Plant\+Visualiser} (const \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser}{Plant\+Visualiser}} \&pv)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_aadac9b3a04f253c437da1837696ebca3}\label{class_c_plant_box_1_1_plant_visualiser_aadac9b3a04f253c437da1837696ebca3}} 
+{\bfseries Plant\+Visualiser} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} $>$ plant)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a0239234f90d95d6f33027ffea94053b3}\label{class_c_plant_box_1_1_plant_visualiser_a0239234f90d95d6f33027ffea94053b3}} 
+double {\bfseries Leaf\+Width\+Scale\+Factor} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_ac1c334eb182a0488942e481187b30873}\label{class_c_plant_box_1_1_plant_visualiser_ac1c334eb182a0488942e481187b30873}} 
+void {\bfseries Set\+Leaf\+Width\+Scale\+Factor} (double factor)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a281fcbfa017d9e7e1c1e7c97b14859a0}\label{class_c_plant_box_1_1_plant_visualiser_a281fcbfa017d9e7e1c1e7c97b14859a0}} 
+void {\bfseries Set\+Minimum\+Leaf\+Width} (double width)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a4e04a98bdbc80d9f22bc614e34f695fd}\label{class_c_plant_box_1_1_plant_visualiser_a4e04a98bdbc80d9f22bc614e34f695fd}} 
+void {\bfseries Set\+Geometry\+Resolution} (int resolution)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a2d6f0a0ec3ad436c9efb0585eb7ab444}\label{class_c_plant_box_1_1_plant_visualiser_a2d6f0a0ec3ad436c9efb0585eb7ab444}} 
+void {\bfseries Set\+Leaf\+Resolution} (int resolution)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_ac170c2bd305cf42f37d2affbe04e40b4}\label{class_c_plant_box_1_1_plant_visualiser_ac170c2bd305cf42f37d2affbe04e40b4}} 
+void {\bfseries Set\+Compute\+Midline\+In\+Leaf} (bool in\+Compute)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a3b08e750d917e4ad9f71acb1003dd36e}\label{class_c_plant_box_1_1_plant_visualiser_a3b08e750d917e4ad9f71acb1003dd36e}} 
+void {\bfseries set\+Plant} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} $>$ \&plant)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_aff528db0e94e6e68337fc7fc1ce30df4}{Compute\+Geometry\+For\+Organ}} (int organ\+Id)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_a48d85fefa8ceac7db43144cef5b5749b}{Compute\+Geometry\+For\+Organ\+Type}} (int organ\+Type, bool clear\+First=true)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_abd53d36d56557fff1aa8be4e8590585b}{Compute\+Geometry}} ()
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_aed00d938d6251c4acd83070315cb613f}{Reset\+Geometry}} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a8e31fc70ef1eb08619b288ccdc1a72dc}\label{class_c_plant_box_1_1_plant_visualiser_a8e31fc70ef1eb08619b288ccdc1a72dc}} 
+bool {\bfseries Has\+Geometry} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_ae6f9f2e0e9dfe7be235c501163d9b64d}\label{class_c_plant_box_1_1_plant_visualiser_ae6f9f2e0e9dfe7be235c501163d9b64d}} 
+std\+::vector$<$ double $>$ {\bfseries Get\+Geometry} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a24d6354c02e66ac04522cace4a5a5cdf}\label{class_c_plant_box_1_1_plant_visualiser_a24d6354c02e66ac04522cace4a5a5cdf}} 
+std\+::vector$<$ unsigned short $>$ {\bfseries Get\+Geometry\+Colors} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a49b072981ed036f923f8080d8d353dbe}\label{class_c_plant_box_1_1_plant_visualiser_a49b072981ed036f923f8080d8d353dbe}} 
+std\+::vector$<$ double $>$ {\bfseries Get\+Geometry\+Normals} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_afc427c1cacf744be4404ab683679ef53}\label{class_c_plant_box_1_1_plant_visualiser_afc427c1cacf744be4404ab683679ef53}} 
+std\+::vector$<$ double $>$ {\bfseries Get\+Geometry\+Texture\+Coordinates} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_aec4048297e85a13c9c5acd552310b0e7}\label{class_c_plant_box_1_1_plant_visualiser_aec4048297e85a13c9c5acd552310b0e7}} 
+std\+::vector$<$ unsigned int $>$ {\bfseries Get\+Geometry\+Indices} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a13187864770bb713bade7b7836f6e04d}\label{class_c_plant_box_1_1_plant_visualiser_a13187864770bb713bade7b7836f6e04d}} 
+std\+::vector$<$ int $>$ {\bfseries Get\+Geometry\+Node\+Ids} () const
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_a120aeb57e9e35149377ae6284bbf0856}{Map\+Property\+To\+Colors}} (std\+::vector$<$ double $>$ property, std\+::pair$<$ double, double $>$ min\+Max=\{0.\+0, 1.\+0\})
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a84fc10433e3bd24a5f967d3e9b42304e}\label{class_c_plant_box_1_1_plant_visualiser_a84fc10433e3bd24a5f967d3e9b42304e}} 
+void {\bfseries Set\+Verbose} (bool verbose)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a3a37df39262d0e97e3dff37140b74c95}\label{class_c_plant_box_1_1_plant_visualiser_a3a37df39262d0e97e3dff37140b74c95}} 
+void {\bfseries Set\+Add\+Vertical\+Leaf\+Offset} (bool add)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a03bd6fc8e1d3b4be3cdc5e5fa93e8bb6}\label{class_c_plant_box_1_1_plant_visualiser_a03bd6fc8e1d3b4be3cdc5e5fa93e8bb6}} 
+void {\bfseries Set\+Right\+Penalty} (double penalty)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_acce1ab956705c9d374439e5e7e357664}\label{class_c_plant_box_1_1_plant_visualiser_acce1ab956705c9d374439e5e7e357664}} 
+void {\bfseries Set\+Shape\+Function} (std\+::function$<$ double(double)$>$ shape\+\_\+function)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_ae5788c019347d9dd5bfccaa1c1d207e8}\label{class_c_plant_box_1_1_plant_visualiser_ae5788c019347d9dd5bfccaa1c1d207e8}} 
+void {\bfseries Clear\+Shape\+Function} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a863daca336391d67e9cf8b3f850d1b27}\label{class_c_plant_box_1_1_plant_visualiser_a863daca336391d67e9cf8b3f850d1b27}} 
+void {\bfseries Set\+Use\+Stem\+Influence} (bool use, double radius)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a9c9f4c218ade7c770b45c50ce860808c}\label{class_c_plant_box_1_1_plant_visualiser_a9c9f4c218ade7c770b45c50ce860808c}} 
+void {\bfseries Set\+Use\+Stem\+Radius\+As\+Min} (bool use)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_aa558ba13d304d3d776ec2feb4036cc10}\label{class_c_plant_box_1_1_plant_visualiser_aa558ba13d304d3d776ec2feb4036cc10}} 
+void {\bfseries Set\+Not\+Use\+Stem\+Influence} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_aed17dff1b658569307ec06616206986e}\label{class_c_plant_box_1_1_plant_visualiser_aed17dff1b658569307ec06616206986e}} 
+int {\bfseries Get\+Num\+Organs} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a8b643d20d6c8bfb508ad8dabd1c16aec}\label{class_c_plant_box_1_1_plant_visualiser_a8b643d20d6c8bfb508ad8dabd1c16aec}} 
+std\+::string {\bfseries Self\+Check} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_a497f04e1472061757fb83af1744b834c}{Build\+Attachment\+Map}} ()
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_a621beae88ff25091ad337b71c75bf890}{Generate\+Leaf\+Geometry}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf}{Leaf}} $>$ leaf, unsigned int petiole\+\_\+zone=0, unsigned int p\+\_\+o=0, unsigned int c\+\_\+o=0)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_a4525c2fc7df4d02184cf2903c81e4231}{Generate\+Stem\+Geometry}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ stem, unsigned int p\+\_\+o=0, unsigned int c\+\_\+o=0)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_plant_visualiser_a4bdf9456750a993a82730a6434e4da7d}{Generate\+Radial\+Leaf\+Geometry}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf}{Leaf}} $>$ leaf, unsigned int p\+\_\+o=0, unsigned int c\+\_\+o=0)
+\begin{DoxyCompactList}\small\item\em A private method to generate a geometry for a radial leaf representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a8b4205706bb3ff1759ddf4656bdb4a4e}\label{class_c_plant_box_1_1_plant_visualiser_a8b4205706bb3ff1759ddf4656bdb4a4e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}} $>$ {\bfseries plant\+\_\+} \{nullptr\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_aa6bff76c57d5e13b1925d6b03fc196b2}\label{class_c_plant_box_1_1_plant_visualiser_aa6bff76c57d5e13b1925d6b03fc196b2}} 
+bool {\bfseries include\+\_\+midline\+\_\+in\+\_\+leaf\+\_\+} \{true\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a561d9b68fc8ed46c50067b8bd682377b}\label{class_c_plant_box_1_1_plant_visualiser_a561d9b68fc8ed46c50067b8bd682377b}} 
+bool {\bfseries verbose\+\_\+} \{false\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_ac0d0bd5482b4dfd3a95a47e9005fbca4}\label{class_c_plant_box_1_1_plant_visualiser_ac0d0bd5482b4dfd3a95a47e9005fbca4}} 
+bool {\bfseries add\+\_\+vertical\+\_\+leaf\+\_\+offset\+\_\+} \{false\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a333ba27886f0a051ccf99379ef3e755c}\label{class_c_plant_box_1_1_plant_visualiser_a333ba27886f0a051ccf99379ef3e755c}} 
+double {\bfseries right\+\_\+penalty\+\_\+} \{0.\+1\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a5a077922929dbb54e5a039c888ae8929}\label{class_c_plant_box_1_1_plant_visualiser_a5a077922929dbb54e5a039c888ae8929}} 
+double {\bfseries leaf\+\_\+width\+\_\+scale\+\_\+factor\+\_\+} \{1.\+0\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_acfdba09c3ae0a5186b8c8e3149e1001f}\label{class_c_plant_box_1_1_plant_visualiser_acfdba09c3ae0a5186b8c8e3149e1001f}} 
+double {\bfseries leaf\+\_\+minimum\+\_\+width\+\_\+} \{0.\+0\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a592fe3f0aba60f504482e1b5a35a37f4}\label{class_c_plant_box_1_1_plant_visualiser_a592fe3f0aba60f504482e1b5a35a37f4}} 
+double {\bfseries stem\+\_\+influence\+\_\+radius\+\_\+} \{0.\+0\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a7eb289b543bff2452156e43db6a92586}\label{class_c_plant_box_1_1_plant_visualiser_a7eb289b543bff2452156e43db6a92586}} 
+bool {\bfseries use\+\_\+stem\+\_\+influence\+\_\+} \{false\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_afab0fcb064548bb0e5e109cbea9c762a}\label{class_c_plant_box_1_1_plant_visualiser_afab0fcb064548bb0e5e109cbea9c762a}} 
+bool {\bfseries use\+\_\+stem\+\_\+radius\+\_\+as\+\_\+min\+\_\+} \{false\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_aed418acde7fa931047c8f3f73747a189}\label{class_c_plant_box_1_1_plant_visualiser_aed418acde7fa931047c8f3f73747a189}} 
+std\+::map$<$ int, std\+::pair$<$ int, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ $>$ {\bfseries leaf\+\_\+attachment\+\_\+map\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_af08d8ac9c38f5b70a44b6c2b5097431e}\label{class_c_plant_box_1_1_plant_visualiser_af08d8ac9c38f5b70a44b6c2b5097431e}} 
+std\+::vector$<$ double $>$ {\bfseries geometry\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a8d7a77b3796839b383713034f3ad9763}\label{class_c_plant_box_1_1_plant_visualiser_a8d7a77b3796839b383713034f3ad9763}} 
+std\+::vector$<$ unsigned short $>$ {\bfseries geometry\+\_\+colors\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a2f5ac54f2fd118da41345a12b9955060}\label{class_c_plant_box_1_1_plant_visualiser_a2f5ac54f2fd118da41345a12b9955060}} 
+std\+::vector$<$ double $>$ {\bfseries geometry\+\_\+normals\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_adad70bd45f5a0745f19537066c339967}\label{class_c_plant_box_1_1_plant_visualiser_adad70bd45f5a0745f19537066c339967}} 
+std\+::vector$<$ unsigned int $>$ {\bfseries geometry\+\_\+indices\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_ac3c7cc07fd741dae3f4f3b8b756d4710}\label{class_c_plant_box_1_1_plant_visualiser_ac3c7cc07fd741dae3f4f3b8b756d4710}} 
+std\+::vector$<$ double $>$ {\bfseries geometry\+\_\+texture\+\_\+coordinates\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a3c5800e191745a5a238678d61221dc6a}\label{class_c_plant_box_1_1_plant_visualiser_a3c5800e191745a5a238678d61221dc6a}} 
+std\+::vector$<$ int $>$ {\bfseries geometry\+\_\+node\+\_\+ids\+\_\+}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a490aa368f3583b67c270099052e5ccaa}\label{class_c_plant_box_1_1_plant_visualiser_a490aa368f3583b67c270099052e5ccaa}} 
+unsigned int {\bfseries geometry\+\_\+resolution\+\_\+} \{8\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a0001ce684e80930772e32af2aa07a448}\label{class_c_plant_box_1_1_plant_visualiser_a0001ce684e80930772e32af2aa07a448}} 
+unsigned int {\bfseries leaf\+\_\+resolution\+\_\+} \{20\}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_ae3525482e805dca270d647f58295f9f7}\label{class_c_plant_box_1_1_plant_visualiser_ae3525482e805dca270d647f58295f9f7}} 
+std\+::optional$<$ std\+::function$<$ double(double)$>$ $>$ {\bfseries shape\+\_\+function\+\_\+} = std\+::nullopt
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a497f04e1472061757fb83af1744b834c}\label{class_c_plant_box_1_1_plant_visualiser_a497f04e1472061757fb83af1744b834c}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!BuildAttachmentMap@{BuildAttachmentMap}}
+\index{BuildAttachmentMap@{BuildAttachmentMap}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{BuildAttachmentMap()}{BuildAttachmentMap()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Build\+Attachment\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+A private method to build the attachment map for the leaf organs This is used to determine the attachment point of the leaf to the stem \mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_abd53d36d56557fff1aa8be4e8590585b}\label{class_c_plant_box_1_1_plant_visualiser_abd53d36d56557fff1aa8be4e8590585b}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!ComputeGeometry@{ComputeGeometry}}
+\index{ComputeGeometry@{ComputeGeometry}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{ComputeGeometry()}{ComputeGeometry()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Compute\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compute the geometry of the whole plant This merges the individual organs into one geometry! These methods cannot be const as that would require returning buffers individually, which would be very inefficient \mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_aff528db0e94e6e68337fc7fc1ce30df4}\label{class_c_plant_box_1_1_plant_visualiser_aff528db0e94e6e68337fc7fc1ce30df4}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!ComputeGeometryForOrgan@{ComputeGeometryForOrgan}}
+\index{ComputeGeometryForOrgan@{ComputeGeometryForOrgan}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{ComputeGeometryForOrgan()}{ComputeGeometryForOrgan()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Compute\+Geometry\+For\+Organ (\begin{DoxyParamCaption}\item[{int}]{organ\+Id }\end{DoxyParamCaption})}
+
+Compute the geometry for a single organ 
+\begin{DoxyParams}{Parameters}
+{\em organ\+Id} & the id of the organ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a48d85fefa8ceac7db43144cef5b5749b}\label{class_c_plant_box_1_1_plant_visualiser_a48d85fefa8ceac7db43144cef5b5749b}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!ComputeGeometryForOrganType@{ComputeGeometryForOrganType}}
+\index{ComputeGeometryForOrganType@{ComputeGeometryForOrganType}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{ComputeGeometryForOrganType()}{ComputeGeometryForOrganType()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Compute\+Geometry\+For\+Organ\+Type (\begin{DoxyParamCaption}\item[{int}]{organ\+Type,  }\item[{bool}]{clear\+First = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Compute the geometry for all organs of a given type This merges the individual organs into one geometry! 
+\begin{DoxyParams}{Parameters}
+{\em organ\+Type} & the type of the organ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a621beae88ff25091ad337b71c75bf890}\label{class_c_plant_box_1_1_plant_visualiser_a621beae88ff25091ad337b71c75bf890}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!GenerateLeafGeometry@{GenerateLeafGeometry}}
+\index{GenerateLeafGeometry@{GenerateLeafGeometry}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{GenerateLeafGeometry()}{GenerateLeafGeometry()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Generate\+Leaf\+Geometry (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf}{Leaf}} $>$}]{leaf,  }\item[{unsigned int}]{petiole\+\_\+zone = {\ttfamily 0},  }\item[{unsigned int}]{p\+\_\+o = {\ttfamily 0},  }\item[{unsigned int}]{c\+\_\+o = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+A private method to generate a geometry for the leaf Based on the existing parametrization and the template from the parameter file 
+\begin{DoxyParams}{Parameters}
+{\em leaf} & the leaf to generate the geometry for \\
+\hline
+{\em petiole\+\_\+zone} & the zone of the petiole in which no leaf surface is present \\
+\hline
+{\em p\+\_\+o} & the point offset (mainly internal) \\
+\hline
+{\em c\+\_\+o} & the cell offset (mainly internal) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+using a shared\+\_\+ptr as parameter might be less efficient, but only O(1) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a4bdf9456750a993a82730a6434e4da7d}\label{class_c_plant_box_1_1_plant_visualiser_a4bdf9456750a993a82730a6434e4da7d}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!GenerateRadialLeafGeometry@{GenerateRadialLeafGeometry}}
+\index{GenerateRadialLeafGeometry@{GenerateRadialLeafGeometry}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{GenerateRadialLeafGeometry()}{GenerateRadialLeafGeometry()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Generate\+Radial\+Leaf\+Geometry (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_leaf}{Leaf}} $>$}]{leaf,  }\item[{unsigned int}]{p\+\_\+o = {\ttfamily 0},  }\item[{unsigned int}]{c\+\_\+o = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A private method to generate a geometry for a radial leaf representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em leaf} & the leaf to generate the geometry for \\
+\hline
+{\em p\+\_\+o} & the point offset (mainly internal) \\
+\hline
+{\em c\+\_\+o} & the cell offset (mainly internal) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+using a shared\+\_\+ptr as parameter might be less efficient, but only O(1) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a4525c2fc7df4d02184cf2903c81e4231}\label{class_c_plant_box_1_1_plant_visualiser_a4525c2fc7df4d02184cf2903c81e4231}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!GenerateStemGeometry@{GenerateStemGeometry}}
+\index{GenerateStemGeometry@{GenerateStemGeometry}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{GenerateStemGeometry()}{GenerateStemGeometry()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Generate\+Stem\+Geometry (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{stem,  }\item[{unsigned int}]{p\+\_\+o = {\ttfamily 0},  }\item[{unsigned int}]{c\+\_\+o = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+A private method to generate a geometry for the stem Based solely on the node-\/link structure 
+\begin{DoxyParams}{Parameters}
+{\em stem} & the stem to generate the geometry for \\
+\hline
+{\em p\+\_\+o} & the point offset (mainly internal) \\
+\hline
+{\em c\+\_\+o} & the cell offset (mainly internal) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_a120aeb57e9e35149377ae6284bbf0856}\label{class_c_plant_box_1_1_plant_visualiser_a120aeb57e9e35149377ae6284bbf0856}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!MapPropertyToColors@{MapPropertyToColors}}
+\index{MapPropertyToColors@{MapPropertyToColors}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{MapPropertyToColors()}{MapPropertyToColors()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Map\+Property\+To\+Colors (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{property,  }\item[{std\+::pair$<$ double, double $>$}]{min\+Max = {\ttfamily \{0.0,~1.0\}} }\end{DoxyParamCaption})}
+
+Map Property onto vertex colors This will use the complete range of the RBGA color space You need to communicate the min and max values of the property seperately 
+\begin{DoxyParams}{Parameters}
+{\em property} & the property to map \\
+\hline
+{\em min\+Max} & the min and max values of the property \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_plant_visualiser_aed00d938d6251c4acd83070315cb613f}\label{class_c_plant_box_1_1_plant_visualiser_aed00d938d6251c4acd83070315cb613f}} 
+\index{CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}!ResetGeometry@{ResetGeometry}}
+\index{ResetGeometry@{ResetGeometry}!CPlantBox::PlantVisualiser@{CPlantBox::PlantVisualiser}}
+\doxysubsubsection{\texorpdfstring{ResetGeometry()}{ResetGeometry()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Plant\+Visualiser\+::\+Reset\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset the geometry buffers 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/visualisation/Plant\+Visualiser.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/visualisation/Plant\+Visualiser.\+cpp\end{DoxyCompactItemize}

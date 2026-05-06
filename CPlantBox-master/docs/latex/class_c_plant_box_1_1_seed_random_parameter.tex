@@ -1,0 +1,222 @@
+\hypertarget{class_c_plant_box_1_1_seed_random_parameter}{}\doxysection{CPlant\+Box\+::Seed\+Random\+Parameter Class Reference}
+\label{class_c_plant_box_1_1_seed_random_parameter}\index{CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}}
+
+
+{\ttfamily \#include $<$seedparameter.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Seed\+Random\+Parameter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{class_c_plant_box_1_1_seed_random_parameter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Seed\+Random\+Parameter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_seed_random_parameter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_acb4a553845489e1f6ecb46cece078066}{Seed\+Random\+Parameter}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a600f1fe1b52c082a99f2f6fc396f2be0}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant) override
+\begin{DoxyCompactList}\small\item\em nothing to do \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_aefceb84452ba9ff487b15a1b96eceb63}{realize}} () override
+\begin{DoxyCompactList}\small\item\em Creates a specific plant seed from the seed parameter set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a82e550fa93385d070208c49fddfd0fb6}{read}} (std\+::istream \&cin)
+\begin{DoxyCompactList}\small\item\em reads a single root system parameter set \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_af4a89eaabecd013c1fcc91d770136639}{write}} (std\+::ostream \&cout) const
+\begin{DoxyCompactList}\small\item\em writes a single root system parameter set \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a9f1d68923db04fee664a794c96bc4511}\label{class_c_plant_box_1_1_seed_random_parameter_a9f1d68923db04fee664a794c96bc4511}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a9f1d68923db04fee664a794c96bc4511}{seed\+Pos}} = \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}(0.,0.,-\/3.)
+\begin{DoxyCompactList}\small\item\em Mean position of the seed \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a880e82bc9e64664d5e1b107d712a9f63}\label{class_c_plant_box_1_1_seed_random_parameter_a880e82bc9e64664d5e1b107d712a9f63}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a880e82bc9e64664d5e1b107d712a9f63}{seed\+Poss}} = \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}(0.,0.,0.)
+\begin{DoxyCompactList}\small\item\em Standard deviation of position \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a455b4effc2f216a44503b83f32faf06f}\label{class_c_plant_box_1_1_seed_random_parameter_a455b4effc2f216a44503b83f32faf06f}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a455b4effc2f216a44503b83f32faf06f}{delay\+Definition}}
+\begin{DoxyCompactList}\small\item\em how is the delay of the laterals defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_ab74cd5825f203d708cbea45e64d3b5ea}\label{class_c_plant_box_1_1_seed_random_parameter_ab74cd5825f203d708cbea45e64d3b5ea}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_ab74cd5825f203d708cbea45e64d3b5ea}{delay\+Definition\+Shoot}}
+\begin{DoxyCompactList}\small\item\em how is the delay of the laterals defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_aa4204cb639715e1c1d0918b5eb18ea27}\label{class_c_plant_box_1_1_seed_random_parameter_aa4204cb639715e1c1d0918b5eb18ea27}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_aa4204cb639715e1c1d0918b5eb18ea27}{firstB}} = 1.e9
+\begin{DoxyCompactList}\small\item\em Mean emergence of first basal root \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_ae9a6adc024fb7fa782e45d2ad7d40a7f}\label{class_c_plant_box_1_1_seed_random_parameter_ae9a6adc024fb7fa782e45d2ad7d40a7f}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_ae9a6adc024fb7fa782e45d2ad7d40a7f}{first\+Bs}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of emergence of first basal root \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_ae01220389f7e49d1fd716efd628dd16e}\label{class_c_plant_box_1_1_seed_random_parameter_ae01220389f7e49d1fd716efd628dd16e}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_ae01220389f7e49d1fd716efd628dd16e}{delayB}} = 1.e9
+\begin{DoxyCompactList}\small\item\em Mean time delay between the basal roots \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a9adcbf12b3174c8212db3c321bdafcfa}\label{class_c_plant_box_1_1_seed_random_parameter_a9adcbf12b3174c8212db3c321bdafcfa}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a9adcbf12b3174c8212db3c321bdafcfa}{delay\+Bs}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of time delay between the basal roots \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a13decf170f2c74a0b9e17e7338b575e6}\label{class_c_plant_box_1_1_seed_random_parameter_a13decf170f2c74a0b9e17e7338b575e6}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a13decf170f2c74a0b9e17e7338b575e6}{maxB}} = 0.
+\begin{DoxyCompactList}\small\item\em Mean maximal number of basal roots \mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a9bf75b30102cb5790e2a1203f8552f9c}\label{class_c_plant_box_1_1_seed_random_parameter_a9bf75b30102cb5790e2a1203f8552f9c}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a9bf75b30102cb5790e2a1203f8552f9c}{max\+Bs}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of maximal number of basal roots \mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_ae4d14631c7aa46bf39d3026683d82af6}\label{class_c_plant_box_1_1_seed_random_parameter_ae4d14631c7aa46bf39d3026683d82af6}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_ae4d14631c7aa46bf39d3026683d82af6}{nC}} = 7.
+\begin{DoxyCompactList}\small\item\em Mean maximal number of roots per root crown \mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a89f7ee6b1c7dcc7db6c8b5f5c6185a52}\label{class_c_plant_box_1_1_seed_random_parameter_a89f7ee6b1c7dcc7db6c8b5f5c6185a52}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a89f7ee6b1c7dcc7db6c8b5f5c6185a52}{n\+Cs}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of maximal number of roots per root crown \mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a3a63c205e4e88b21d93f645867900524}\label{class_c_plant_box_1_1_seed_random_parameter_a3a63c205e4e88b21d93f645867900524}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a3a63c205e4e88b21d93f645867900524}{first\+SB}} = 1.e9
+\begin{DoxyCompactList}\small\item\em Mean first emergence of a shoot borne root \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_aafcb6bdec4e34e103e72f0cccc249546}\label{class_c_plant_box_1_1_seed_random_parameter_aafcb6bdec4e34e103e72f0cccc249546}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_aafcb6bdec4e34e103e72f0cccc249546}{first\+SBs}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of first emergence of a shoot borne root \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_af4433d1632e82e12da4b5447111d3ca7}\label{class_c_plant_box_1_1_seed_random_parameter_af4433d1632e82e12da4b5447111d3ca7}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_af4433d1632e82e12da4b5447111d3ca7}{delay\+SB}} = 1.e9
+\begin{DoxyCompactList}\small\item\em Mean time delay between the shoot borne roots \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a34bc335ae7f05388aa9ed41df4ed3222}\label{class_c_plant_box_1_1_seed_random_parameter_a34bc335ae7f05388aa9ed41df4ed3222}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a34bc335ae7f05388aa9ed41df4ed3222}{delay\+SBs}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of time delay between the shoot borne roots \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a9ad0558eab0c8c3aac925c57c11f7162}\label{class_c_plant_box_1_1_seed_random_parameter_a9ad0558eab0c8c3aac925c57c11f7162}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a9ad0558eab0c8c3aac925c57c11f7162}{delay\+RC}} = 1.e9
+\begin{DoxyCompactList}\small\item\em Mean delay between the root crowns \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a9936211bdb858df762d8adc4fbc48145}\label{class_c_plant_box_1_1_seed_random_parameter_a9936211bdb858df762d8adc4fbc48145}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a9936211bdb858df762d8adc4fbc48145}{delay\+RCs}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of delay between the root crowns \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_ad7cd3dca29f8c359075e4ca3741c5da4}\label{class_c_plant_box_1_1_seed_random_parameter_ad7cd3dca29f8c359075e4ca3741c5da4}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_ad7cd3dca29f8c359075e4ca3741c5da4}{nz}} = 1.
+\begin{DoxyCompactList}\small\item\em Mean distance between the root crowns along the shoot \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a786a0c2b0b7b643f47b66e3b99390d2d}\label{class_c_plant_box_1_1_seed_random_parameter_a786a0c2b0b7b643f47b66e3b99390d2d}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a786a0c2b0b7b643f47b66e3b99390d2d}{nzs}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of distance between the root crowns along the shoot \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a93abbe06269d8f72bd131d388afae65b}\label{class_c_plant_box_1_1_seed_random_parameter_a93abbe06269d8f72bd131d388afae65b}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a93abbe06269d8f72bd131d388afae65b}{max\+Til}} = 0
+\begin{DoxyCompactList}\small\item\em Maximal number of tillers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a64b526f58ea16b5e0e611160a8470829}\label{class_c_plant_box_1_1_seed_random_parameter_a64b526f58ea16b5e0e611160a8470829}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a64b526f58ea16b5e0e611160a8470829}{max\+Tils}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of tillers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a3ef67656b932a078274ffb2caaecc199}\label{class_c_plant_box_1_1_seed_random_parameter_a3ef67656b932a078274ffb2caaecc199}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a3ef67656b932a078274ffb2caaecc199}{first\+Til}} = 1.e9
+\begin{DoxyCompactList}\small\item\em Mean emergence of first basal root \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_ab3a42a82cc155d041ac80f6f6d7715c5}\label{class_c_plant_box_1_1_seed_random_parameter_ab3a42a82cc155d041ac80f6f6d7715c5}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_ab3a42a82cc155d041ac80f6f6d7715c5}{first\+Tils}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of emergence of first basal root \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a497356c8bf2335f7eb1c0e742b8f82bb}\label{class_c_plant_box_1_1_seed_random_parameter_a497356c8bf2335f7eb1c0e742b8f82bb}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a497356c8bf2335f7eb1c0e742b8f82bb}{delay\+Til}} = 1.e9
+\begin{DoxyCompactList}\small\item\em Mean time delay between the basal roots \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a7b69c2ec7944eee595f4b98ddf827c61}\label{class_c_plant_box_1_1_seed_random_parameter_a7b69c2ec7944eee595f4b98ddf827c61}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a7b69c2ec7944eee595f4b98ddf827c61}{delay\+Tils}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of time delay between the basal roots \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a176b666ce267c937c9fe2db1eba94cdb}\label{class_c_plant_box_1_1_seed_random_parameter_a176b666ce267c937c9fe2db1eba94cdb}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a176b666ce267c937c9fe2db1eba94cdb}{simtime}} = 300.
+\begin{DoxyCompactList}\small\item\em Mean recommended final simulation time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_aee8364f3211ee27553c6878e19989bcf}\label{class_c_plant_box_1_1_seed_random_parameter_aee8364f3211ee27553c6878e19989bcf}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_aee8364f3211ee27553c6878e19989bcf}{simtimes}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of recommended final simulation time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_af20eb4895ed3b315948a0be4eb546afb}{bind\+Parameters}} () override
+\begin{DoxyCompactList}\small\item\em sets up class introspection \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Contains a parameter set describing a plant 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_acb4a553845489e1f6ecb46cece078066}\label{class_c_plant_box_1_1_seed_random_parameter_acb4a553845489e1f6ecb46cece078066}} 
+\index{CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}!SeedRandomParameter@{SeedRandomParameter}}
+\index{SeedRandomParameter@{SeedRandomParameter}!CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}}
+\doxysubsubsection{\texorpdfstring{SeedRandomParameter()}{SeedRandomParameter()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Seed\+Random\+Parameter\+::\+Seed\+Random\+Parameter (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant }\end{DoxyParamCaption})}
+
+
+
+default constructor 
+
+Default constructor sets up hashmaps for class introspection 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_af20eb4895ed3b315948a0be4eb546afb}\label{class_c_plant_box_1_1_seed_random_parameter_af20eb4895ed3b315948a0be4eb546afb}} 
+\index{CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}!bindParameters@{bindParameters}}
+\index{bindParameters@{bindParameters}!CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}}
+\doxysubsubsection{\texorpdfstring{bindParameters()}{bindParameters()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Seed\+Random\+Parameter\+::bind\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+sets up class introspection 
+
+Sets up class introspection by linking parameter names to their class members, additionally adds a description for each parameter, for to\+String and write\+XML 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a19c73d9702e745e90c9051349fc23468}{CPlant\+Box\+::\+Organ\+Random\+Parameter}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a600f1fe1b52c082a99f2f6fc396f2be0}\label{class_c_plant_box_1_1_seed_random_parameter_a600f1fe1b52c082a99f2f6fc396f2be0}} 
+\index{CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ CPlant\+Box\+::\+Seed\+Random\+Parameter\+::copy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+nothing to do 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_afd1204de6d2c3b96969f856fbb767a5a}{CPlant\+Box\+::\+Organ\+Random\+Parameter}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_a82e550fa93385d070208c49fddfd0fb6}\label{class_c_plant_box_1_1_seed_random_parameter_a82e550fa93385d070208c49fddfd0fb6}} 
+\index{CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}!read@{read}}
+\index{read@{read}!CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Seed\+Random\+Parameter\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{cin }\end{DoxyParamCaption})}
+
+
+
+reads a single root system parameter set 
+
+depricated todo no Root\+System\+Type\+Parameter yet \mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_aefceb84452ba9ff487b15a1b96eceb63}\label{class_c_plant_box_1_1_seed_random_parameter_aefceb84452ba9ff487b15a1b96eceb63}} 
+\index{CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}!realize@{realize}}
+\index{realize@{realize}!CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}}
+\doxysubsubsection{\texorpdfstring{realize()}{realize()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ CPlant\+Box\+::\+Seed\+Random\+Parameter\+::realize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a specific plant seed from the seed parameter set. 
+
+Creates a specific plant from the plant random parameters. \begin{DoxyReturn}{Returns}
+Specific plant parameters derived from the root random parameters 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_aa6989a0e7d9641c2a348764edcaa3103}{CPlant\+Box\+::\+Organ\+Random\+Parameter}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_random_parameter_af4a89eaabecd013c1fcc91d770136639}\label{class_c_plant_box_1_1_seed_random_parameter_af4a89eaabecd013c1fcc91d770136639}} 
+\index{CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}!write@{write}}
+\index{write@{write}!CPlantBox::SeedRandomParameter@{CPlantBox::SeedRandomParameter}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Seed\+Random\+Parameter\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{cout }\end{DoxyParamCaption}) const}
+
+
+
+writes a single root system parameter set 
+
+depricated todo no Root\+System\+Type\+Parameter yet 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/seedparameter.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/seedparameter.\+cpp\end{DoxyCompactItemize}

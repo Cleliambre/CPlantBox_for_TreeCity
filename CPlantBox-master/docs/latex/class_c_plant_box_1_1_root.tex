@@ -1,0 +1,364 @@
+\hypertarget{class_c_plant_box_1_1_root}{}\doxysection{CPlant\+Box\+::Root Class Reference}
+\label{class_c_plant_box_1_1_root}\index{CPlantBox::Root@{CPlantBox::Root}}
+
+
+{\ttfamily \#include $<$Root.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Root\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_c_plant_box_1_1_root__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Root\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_c_plant_box_1_1_root__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_root_aca500d0e464b3f950d431317c0b56bbe}{Root}} (int \mbox{\hyperlink{class_c_plant_box_1_1_organ_a1c602de4cbb1294d6caf35b81655e1db}{id}}, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_a30a2056196ff4b77738a76a854665c14}{param}}, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a0889e6bf6d670b945de355dbc6e96965}{alive}}, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a37cba2abb3c4052d7e69b57019589b78}{active}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a4f17f0bfe7f03eedf4138fd8fe51376d}{age}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a94f5b16aa7ebc3912501051281fe88dc}{length}}, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} partial\+IHeading\+\_\+, int pni, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a79bcbb57413b3ca4e96ea9ed0d9285af}{moved}}=false, int old\+NON=0)
+\begin{DoxyCompactList}\small\item\em creates everything from scratch \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_root_a6a183f47a63280cee492be77b8fbb263}{Root}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant\+\_\+, int sub\+Type, double delay, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_a3650b8edd1964d65ac4059871d6f5c4b}{parent}}, int pni)
+\begin{DoxyCompactList}\small\item\em used within simulation \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_a1295f48ca40510c21d8017143a8517cd}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ rs) override
+\begin{DoxyCompactList}\small\item\em no need to do anything, children are deleted in $\sim$\+Organ() \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_plant_box_1_1_root_a2847338115b242de0d07a039e768f9a4}{organ\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em returns the organs type, overwrite for each organ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_af2fa9d229ab05897214e0ec224f0ae71}{simulate}} (double dt, bool silence=false) override
+\begin{DoxyCompactList}\small\item\em returns the organs type \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_root_a2124e977f32372aa9b9539e14f9be565}{get\+Parameter}} (std\+::string name) const override
+\begin{DoxyCompactList}\small\item\em returns an organ pa\+:vector$<$\+CPlant\+Box\+::\+Vector3d$>$\+::size\+\_\+type)’ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_root_ad36316c4fe5c83df99ad8d33beaccfd8}{to\+String}} () const override
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_root_aec84b45795e5e7bcc4a4488f4215ec49}{calc\+Length}} (double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a4f17f0bfe7f03eedf4138fd8fe51376d}{age}}) override
+\begin{DoxyCompactList}\small\item\em analytical length of the root \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_root_a3d73c081ec7bfe56e755b0bf47db2d96}{calc\+Age}} (double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a94f5b16aa7ebc3912501051281fe88dc}{length}}) const override
+\begin{DoxyCompactList}\small\item\em analytical age of the root \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter}{Root\+Random\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_a2f9e71282caef91356b6042f70f3a94d}{get\+Root\+Random\+Parameter}} () const
+\begin{DoxyCompactList}\small\item\em root type parameter of this root \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_root_specific_parameter}{Root\+Specific\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_a30a2056196ff4b77738a76a854665c14}{param}} () const
+\begin{DoxyCompactList}\small\item\em root parameter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_aeb5526208972f48c6841c56aa4ce8592}\label{class_c_plant_box_1_1_root_aeb5526208972f48c6841c56aa4ce8592}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_root_aeb5526208972f48c6841c56aa4ce8592}{insertion\+Angle}} = 0.
+\begin{DoxyCompactList}\small\item\em differs to (const) theta, if angle is scaled by soil properties with \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter_a8db45aa46a138cd93458962dfcff0cc2}{Root\+Random\+Parameter\+::f\+\_\+sa}} TODO some better idea? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}}
+
+Describes a single root, by a vector of nodes representing the root. The method \mbox{\hyperlink{class_c_plant_box_1_1_root_af2fa9d229ab05897214e0ec224f0ae71}{simulate()}} creates new nodes of this root, and lateral roots in the root\textquotesingle{}s branching zone. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_aca500d0e464b3f950d431317c0b56bbe}\label{class_c_plant_box_1_1_root_aca500d0e464b3f950d431317c0b56bbe}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!Root@{Root}}
+\index{Root@{Root}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Root\+::\+Root (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$}]{param,  }\item[{bool}]{alive,  }\item[{bool}]{active,  }\item[{double}]{age,  }\item[{double}]{length,  }\item[{\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}}]{partial\+IHeading\+\_\+,  }\item[{int}]{pni,  }\item[{bool}]{moved = {\ttfamily false},  }\item[{int}]{old\+NON = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+creates everything from scratch 
+
+Constructs a root from given data. The organ tree must be created, \begin{DoxySeeAlso}{See also}
+Organ\+::set\+Plant, \mbox{\hyperlink{class_c_plant_box_1_1_organ_a5f89e793a1ff1e068f18b953fb25409c}{Organ\+::set\+Parent}}, \mbox{\hyperlink{class_c_plant_box_1_1_organ_a92560d96959389219d26b1f10ea9437e}{Organ\+::add\+Child}} \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} geometry must be created, 
+
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a928426fcc1d5ed8101744a34d4ab2f06}{Organ\+::add\+Node}}, ensure that this-\/$>$get\+Node\+Id(0) == parent-\/$>$get\+Node\+Id(pni)
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the organ\textquotesingle{}s unique id (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_af4916e667175aff351c73cb6f0748324}{Organ\+::get\+Id}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & the organs parameters set, ownership transfers to the organ \\
+\hline
+{\em alive} & indicates if the organ is alive (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_abe7318360213d9effff6f52d0911c0ca}{Organ\+::is\+Alive}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em active} & indicates if the organ is active (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a36d3c456f82fbcae99c1256781c564a8}{Organ\+::is\+Active}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em age} & the current age of the organ (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_aee4adaa0ebe3dec382f725db5ba9d361}{Organ\+::get\+Age}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em length} & the current length of the organ (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a2b332bc562d43c90fb4bb00d181d0c52}{Organ\+::get\+Length}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em iheading} & the initial heading of this root \\
+\hline
+{\em pbl} & base length of the parent root, where this root emerges \\
+\hline
+{\em pni} & local node index, where this root emerges \\
+\hline
+{\em moved} & indicates if nodes were moved in the previous time step (default = false) \\
+\hline
+{\em old\+NON} & the number of nodes of the previous time step (default = 0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_a6a183f47a63280cee492be77b8fbb263}\label{class_c_plant_box_1_1_root_a6a183f47a63280cee492be77b8fbb263}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!Root@{Root}}
+\index{Root@{Root}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Root\+::\+Root (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant\+\_\+,  }\item[{int}]{sub\+Type,  }\item[{double}]{delay,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{parent,  }\item[{int}]{pni }\end{DoxyParamCaption})}
+
+
+
+used within simulation 
+
+Constructor\+: Should be only called during simulation by \mbox{\hyperlink{class_c_plant_box_1_1_organ_afebf5e9c8e8e4f90dfbbc16ddde399f2}{Root\+::create\+Lateral()}}. For base roots the initial node and node creation time must be set from outside
+
+
+\begin{DoxyParams}{Parameters}
+{\em plant\+\_\+} & points to \mbox{\hyperlink{class_c_plant_box_1_1_root_system}{Root\+System}} \\
+\hline
+{\em sub\+Type} & sub\+Type of root that is created \\
+\hline
+{\em heading} & heading of parent root at emergence \\
+\hline
+{\em delay} & to give apical zone of parent time to develop \\
+\hline
+{\em parent} & parent root \\
+\hline
+{\em pbl} & parent base length \\
+\hline
+{\em pni} & parent node index \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_a3d73c081ec7bfe56e755b0bf47db2d96}\label{class_c_plant_box_1_1_root_a3d73c081ec7bfe56e755b0bf47db2d96}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!calcAge@{calcAge}}
+\index{calcAge@{calcAge}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{calcAge()}{calcAge()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Root\+::calc\+Age (\begin{DoxyParamCaption}\item[{double}]{length }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+analytical age of the root 
+
+Analytical age of the single root at a given length
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & length of the root \mbox{[}cm\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+local age \mbox{[}day\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a84d141f13b899b8024746a72cad43789}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_aec84b45795e5e7bcc4a4488f4215ec49}\label{class_c_plant_box_1_1_root_aec84b45795e5e7bcc4a4488f4215ec49}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!calcLength@{calcLength}}
+\index{calcLength@{calcLength}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{calcLength()}{calcLength()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Root\+::calc\+Length (\begin{DoxyParamCaption}\item[{double}]{age }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+analytical length of the root 
+
+Analytical length of the single root at a given age
+
+
+\begin{DoxyParams}{Parameters}
+{\em age} & age of the root \mbox{[}day\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+root length \mbox{[}cm\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_a1295f48ca40510c21d8017143a8517cd}\label{class_c_plant_box_1_1_root_a1295f48ca40510c21d8017143a8517cd}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ CPlant\+Box\+::\+Root\+::copy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{rs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+no need to do anything, children are deleted in $\sim$\+Organ() 
+
+deep copies the root tree
+
+Deep copies the organ into the new plant
+\begin{DoxyParams}{Parameters}
+{\em rs.} & All laterals are deep copied, plant and parent pointers are updated.\\
+\hline
+{\em plant} & the plant the copied organ will be part of \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a9314bc56eaa1104bbcfa19e62c7cfdb2}{CPlant\+Box\+::\+Organ}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_delay_a7d59cd040c1aa326236cbee487322535}{CPlant\+Box\+::\+Root\+Delay}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_a2124e977f32372aa9b9539e14f9be565}\label{class_c_plant_box_1_1_root_a2124e977f32372aa9b9539e14f9be565}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!getParameter@{getParameter}}
+\index{getParameter@{getParameter}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{getParameter()}{getParameter()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Root\+::get\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+returns an organ pa\+:vector$<$\+CPlant\+Box\+::\+Vector3d$>$\+::size\+\_\+type)’ 
+
+returns an organ parameter
+
+Returns a single scalar parameter called
+\begin{DoxyParams}{Parameters}
+{\em name} & of the organ. This method is for post processing, since it is flexible but slow. Overwrite to add more parameters for specific organs.\\
+\hline
+\end{DoxyParams}
+For Organ\+Random\+Parameters add \textquotesingle{}\+\_\+mean\textquotesingle{}, or \textquotesingle{}\+\_\+dev\textquotesingle{}, to avoid naming conflicts with the organ specific parameters.
+
+\begin{DoxyReturn}{Returns}
+The parameter value, if unknown NaN
+\end{DoxyReturn}
+Note\+: ln\+Mean, and ln\+Dev denotes the mean and standard deviation of the inter-\/lateral distance of this organ ln\+\_\+mean, and ln\+\_\+dev is the mean and standard deviation from the Root\+Random\+Parmaeters 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a8cf87b29888d4c999a3789b1d54cfbf3}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_a2f9e71282caef91356b6042f70f3a94d}\label{class_c_plant_box_1_1_root_a2f9e71282caef91356b6042f70f3a94d}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!getRootRandomParameter@{getRootRandomParameter}}
+\index{getRootRandomParameter@{getRootRandomParameter}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{getRootRandomParameter()}{getRootRandomParameter()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter}{Root\+Random\+Parameter}} $>$ CPlant\+Box\+::\+Root\+::get\+Root\+Random\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+root type parameter of this root 
+
+\begin{DoxyReturn}{Returns}
+The Root\+Type\+Parameter from the plant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_a2847338115b242de0d07a039e768f9a4}\label{class_c_plant_box_1_1_root_a2847338115b242de0d07a039e768f9a4}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!organType@{organType}}
+\index{organType@{organType}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{organType()}{organType()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+Root\+::organ\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+returns the organs type, overwrite for each organ 
+
+\begin{DoxyReturn}{Returns}
+The organ type, which is a coarse classification of the organs, for a string representation see see \mbox{\hyperlink{class_c_plant_box_1_1_organism_aba56ccd341664450effe12a8efbc94ae}{Organism\+::organ\+Type\+Names}}
+\end{DoxyReturn}
+Currently there are\+: ot\+\_\+organ (for unspecified organs) = 0, ot\+\_\+seed = 1, ot\+\_\+root = 2, ot\+\_\+stem = 3, and ot\+\_\+leaf = 4. There can be different classes with the same organ type. 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a734d6a012b32c79c3ecfa7a768b9875b}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_a30a2056196ff4b77738a76a854665c14}\label{class_c_plant_box_1_1_root_a30a2056196ff4b77738a76a854665c14}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!param@{param}}
+\index{param@{param}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{param()}{param()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_root_specific_parameter}{Root\+Specific\+Parameter}} $>$ CPlant\+Box\+::\+Root\+::param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+root parameter 
+
+\begin{DoxyReturn}{Returns}
+Parameters of the specific root 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_af2fa9d229ab05897214e0ec224f0ae71}\label{class_c_plant_box_1_1_root_af2fa9d229ab05897214e0ec224f0ae71}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!simulate@{simulate}}
+\index{simulate@{simulate}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+::simulate (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+returns the organs type 
+
+root growth for a time span of
+\begin{DoxyParams}{Parameters}
+{\em dt} & Simulates the development of the organ in a time span of\\
+\hline
+{\em dt} & days.\\
+\hline
+{\em dt} & time step \mbox{[}day\mbox{]} \\
+\hline
+{\em verbose} & turns console output on or off \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_acced3af5057dae40c647bcc1ea0e511d}{CPlant\+Box\+::\+Organ}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_static_root_ac920b80426ee778edcd95e6e867d8208}{CPlant\+Box\+::\+Static\+Root}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_ad36316c4fe5c83df99ad8d33beaccfd8}\label{class_c_plant_box_1_1_root_ad36316c4fe5c83df99ad8d33beaccfd8}} 
+\index{CPlantBox::Root@{CPlantBox::Root}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::Root@{CPlantBox::Root}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Root\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Quick info about the object for debugging additionally, use \mbox{\hyperlink{class_c_plant_box_1_1_root_a30a2056196ff4b77738a76a854665c14}{param()}}-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_root_ad36316c4fe5c83df99ad8d33beaccfd8}{to\+String()}} and \mbox{\hyperlink{class_c_plant_box_1_1_organ_afabf8911c0d2771a58564792e353f186}{get\+Organ\+Random\+Parameter()}}-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_root_ad36316c4fe5c83df99ad8d33beaccfd8}{to\+String()}} to obtain all information. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a9f823aebd19519096e899e65604f239f}{CPlant\+Box\+::\+Organ}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_delay_a9ec88279f73d04c4082d70c0f4542470}{CPlant\+Box\+::\+Root\+Delay}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Root.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Root.\+cpp\end{DoxyCompactItemize}

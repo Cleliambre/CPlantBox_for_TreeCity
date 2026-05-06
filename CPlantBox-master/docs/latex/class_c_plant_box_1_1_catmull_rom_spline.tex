@@ -1,0 +1,50 @@
+\hypertarget{class_c_plant_box_1_1_catmull_rom_spline}{}\doxysection{CPlant\+Box\+::Catmull\+Rom\+Spline Class Reference}
+\label{class_c_plant_box_1_1_catmull_rom_spline}\index{CPlantBox::CatmullRomSpline@{CPlantBox::CatmullRomSpline}}
+
+
+{\ttfamily \#include $<$Catmull\+Rom\+Spline.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_ad4c8d67028c70f5a9ff3f90b64761f29}\label{class_c_plant_box_1_1_catmull_rom_spline_ad4c8d67028c70f5a9ff3f90b64761f29}} 
+{\bfseries Catmull\+Rom\+Spline} (\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} y0, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} y1, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} y2, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} y3, double t0, double t1)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_a67c5ab8f95243d9658f3339b99568757}\label{class_c_plant_box_1_1_catmull_rom_spline_a67c5ab8f95243d9658f3339b99568757}} 
+{\bfseries Catmull\+Rom\+Spline} (std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ y, double t0, double t1)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_acc175e20b9316c323448311a1e99bf33}\label{class_c_plant_box_1_1_catmull_rom_spline_acc175e20b9316c323448311a1e99bf33}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries operator()} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_a115263efc3a454c87430da3a9972a0cb}\label{class_c_plant_box_1_1_catmull_rom_spline_a115263efc3a454c87430da3a9972a0cb}} 
+double {\bfseries get\+T0} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_aee4ca881525af8b4c46592f669a671d5}\label{class_c_plant_box_1_1_catmull_rom_spline_aee4ca881525af8b4c46592f669a671d5}} 
+double {\bfseries get\+T1} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_a1a14656d3c0e1e212809684c7e05588c}\label{class_c_plant_box_1_1_catmull_rom_spline_a1a14656d3c0e1e212809684c7e05588c}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries derivative} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_a4ff82bc6d8ae880bd6497a5f40b158a1}\label{class_c_plant_box_1_1_catmull_rom_spline_a4ff82bc6d8ae880bd6497a5f40b158a1}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries operator\mbox{[}$\,$\mbox{]}} (int i)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_ab10c756c2967f728f3b63d7430cdabe8}\label{class_c_plant_box_1_1_catmull_rom_spline_ab10c756c2967f728f3b63d7430cdabe8}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_quaternion}{Quaternion}} {\bfseries compute\+Orientation} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_a0044cc8bcf2cf37f63205c6aff97b136}\label{class_c_plant_box_1_1_catmull_rom_spline_a0044cc8bcf2cf37f63205c6aff97b136}} 
+int {\bfseries closest\+Id} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_a94d5c1151f2f2728dbd7c77f4e46ae99}\label{class_c_plant_box_1_1_catmull_rom_spline_a94d5c1151f2f2728dbd7c77f4e46ae99}} 
+void {\bfseries Id\+Pair} (int id1, int id2)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_ad90f6b101220246f13f88377584acd4e}\label{class_c_plant_box_1_1_catmull_rom_spline_ad90f6b101220246f13f88377584acd4e}} 
+void {\bfseries set\+Alpha} (double alpha)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Catmull-\/\+Rom spline interpolation It is used to store the Catmull-\/\+Rom splines of depth 4 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/visualisation/Catmull\+Rom\+Spline.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,448 @@
+\hypertarget{class_c_plant_box_1_1_organ_random_parameter}{}\doxysection{CPlant\+Box\+::Organ\+Random\+Parameter Class Reference}
+\label{class_c_plant_box_1_1_organ_random_parameter}\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+
+
+{\ttfamily \#include $<$organparameter.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Organ\+Random\+Parameter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_organ_random_parameter__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a40127311b1e7dd275ac22f3733f9ae7e}{Organ\+Random\+Parameter}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_afd1204de6d2c3b96969f856fbb767a5a}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant)
+\begin{DoxyCompactList}\small\item\em copies the root type parameter into a new plant \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_aa6989a0e7d9641c2a348764edcaa3103}{realize}} ()
+\begin{DoxyCompactList}\small\item\em creates a specific organ from the root parameter set \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a0906dbac66fc789e4d761a28c672fc15}{get\+Parameter}} (std\+::string name) const
+\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a9714debae54b412fb728c708b22eb0d0}{to\+String}} (bool verbose=true) const
+\begin{DoxyCompactList}\small\item\em info for debugging \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_af93a5ecb718a11eac95d42dc7c8b86d3}{read\+XML}} (\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$element, bool verbose)
+\begin{DoxyCompactList}\small\item\em reads a single sub type organ parameter set \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a1206215fe5f90d715ce6380e98f794b9}\label{class_c_plant_box_1_1_organ_random_parameter_a1206215fe5f90d715ce6380e98f794b9}} 
+void {\bfseries read\+Successor} (\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$p, bool verbose)
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a8092f50a3b3157e767e76a74b384d957}{read\+XML}} (std\+::string name, bool verbose)
+\begin{DoxyCompactList}\small\item\em reads a single sub type organ parameter set \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a5e2309b1ef1912a42be7106bbd09c91e}{write\+XML}} (\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_document}{tinyxml2\+::\+XMLDocument}} \&doc, bool comments=true) const
+\begin{DoxyCompactList}\small\item\em writes a organ root parameter set \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_acdae87e57050bed3180ab08e2c86a5b8}{write\+XML}} (std\+::string name) const
+\begin{DoxyCompactList}\small\item\em writes a organ root parameter set \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_af4cd76125c918fd5e40f1a31fc776ecf}{get\+Lateral\+Type}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, int rule\+Id)
+\begin{DoxyCompactList}\small\item\em Choose (dice) lateral type based on stem parameter set. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a19c73d9702e745e90c9051349fc23468}{bind\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em sets up class introspection \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a4b80ae585194b41e1b403a46bd166e16}{bind\+Parameter}} (std\+::string name, int $\ast$i, std\+::string descr=\char`\"{}\char`\"{}, double $\ast$dev=nullptr)
+\begin{DoxyCompactList}\small\item\em binds integer to parameter name \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_ad43976a8292a2e4ae7cfa2d3349153a7}{bind\+Parameter}} (std\+::string name, double $\ast$d, std\+::string descr=\char`\"{}\char`\"{}, double $\ast$dev=nullptr)
+\begin{DoxyCompactList}\small\item\em binds double to parameter name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_ae03a7e0913db9ad83513111ecab1d4f7}\label{class_c_plant_box_1_1_organ_random_parameter_ae03a7e0913db9ad83513111ecab1d4f7}} 
+std\+::string {\bfseries name} = \char`\"{}organ\char`\"{}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_afa457c3d642a85e6b5ce5cfe5073b29e}\label{class_c_plant_box_1_1_organ_random_parameter_afa457c3d642a85e6b5ce5cfe5073b29e}} 
+int {\bfseries organ\+Type} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a707f36a5c98140006375ac1d1d2f0548}\label{class_c_plant_box_1_1_organ_random_parameter_a707f36a5c98140006375ac1d1d2f0548}} 
+int {\bfseries sub\+Type} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a88e7d13df2416db4b2c1d23bbca5442e}\label{class_c_plant_box_1_1_organ_random_parameter_a88e7d13df2416db4b2c1d23bbca5442e}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a88e7d13df2416db4b2c1d23bbca5442e}{a}} = 0.\+1
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}} radius \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_ab7f43d16f5227c1be99749b5ada2d24f}\label{class_c_plant_box_1_1_organ_random_parameter_ab7f43d16f5227c1be99749b5ada2d24f}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_ab7f43d16f5227c1be99749b5ada2d24f}{as}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation root radius \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a7ef7fd21d0a6d98d239748b9859904be}\label{class_c_plant_box_1_1_organ_random_parameter_a7ef7fd21d0a6d98d239748b9859904be}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a7ef7fd21d0a6d98d239748b9859904be}{dx}} = 0.\+25
+\begin{DoxyCompactList}\small\item\em Maximal segment size \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_afdf6b73111ddd4ed626b276966e35526}\label{class_c_plant_box_1_1_organ_random_parameter_afdf6b73111ddd4ed626b276966e35526}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_afdf6b73111ddd4ed626b276966e35526}{dx\+Min}} = 1e-\/6
+\begin{DoxyCompactList}\small\item\em threshold value, smaller segments will be skipped (otherwise stem tip direction can become NaN) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a5b5f5dd48452dbd7f4fa7a6c64dc083c}{ldelay}} = -\/1.
+\begin{DoxyCompactList}\small\item\em Lateral emergence delay \mbox{[}day\mbox{]}, used by \mbox{\hyperlink{class_c_plant_box_1_1_root_delay}{Root\+Delay}},. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a7690c830894b35180226545010cc9140}\label{class_c_plant_box_1_1_organ_random_parameter_a7690c830894b35180226545010cc9140}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a7690c830894b35180226545010cc9140}{ldelays}} = 0.
+\begin{DoxyCompactList}\small\item\em Standard deviation of lateral emergence delay \mbox{[}day\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a8e38b9c511c15147b3a36cdeab81c4ca}\label{class_c_plant_box_1_1_organ_random_parameter_a8e38b9c511c15147b3a36cdeab81c4ca}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a8e38b9c511c15147b3a36cdeab81c4ca}{successor\+Where}} = std\+::vector$<$std\+::vector$<$double$>$$>$(0, std\+::vector$<$double$>$ (0, 0))
+\begin{DoxyCompactList}\small\item\em Where should rule be implemented \mbox{[}1\mbox{]} or not \mbox{[}-\/1\mbox{]}; need to use double to distiguish between -\/0 and 0; default\+: vector empty == rule implemented everywhere. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a5271e5b6dab5c529dce6ec68d776448b}\label{class_c_plant_box_1_1_organ_random_parameter_a5271e5b6dab5c529dce6ec68d776448b}} 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a5271e5b6dab5c529dce6ec68d776448b}{successor\+OT}} = std\+::vector$<$std\+::vector$<$int$>$$>$(0, std\+::vector$<$int$>$ (0, 0))
+\begin{DoxyCompactList}\small\item\em Lateral types \mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a0d6f0616eeb1f3de51cc38eb01722145}\label{class_c_plant_box_1_1_organ_random_parameter_a0d6f0616eeb1f3de51cc38eb01722145}} 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a0d6f0616eeb1f3de51cc38eb01722145}{successor\+ST}} = std\+::vector$<$std\+::vector$<$int$>$$>$(0, std\+::vector$<$int$>$ (0, 0))
+\begin{DoxyCompactList}\small\item\em Lateral types \mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a2b0b88f46e3356cec9b57174ab264dce}\label{class_c_plant_box_1_1_organ_random_parameter_a2b0b88f46e3356cec9b57174ab264dce}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a2b0b88f46e3356cec9b57174ab264dce}{successorP}} = std\+::vector$<$std\+::vector$<$double$>$$>$(0, std\+::vector$<$double$>$ (0, 0))
+\begin{DoxyCompactList}\small\item\em Probabilities of lateral type to emerge (sum of values == 1) \mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_afd084d417e93644ffdaefa0fde2c8a36}\label{class_c_plant_box_1_1_organ_random_parameter_afd084d417e93644ffdaefa0fde2c8a36}} 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_afd084d417e93644ffdaefa0fde2c8a36}{successor\+No}} = std\+::vector$<$int$>$(0)
+\begin{DoxyCompactList}\small\item\em Lateral types \mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a1bd54d32c32d7fc5fb0f9a2e3e331385}\label{class_c_plant_box_1_1_organ_random_parameter_a1bd54d32c32d7fc5fb0f9a2e3e331385}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ {\bfseries plant}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a892bfb448a07c6f9f60b14bf8122f5bb}\label{class_c_plant_box_1_1_organ_random_parameter_a892bfb448a07c6f9f60b14bf8122f5bb}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a892bfb448a07c6f9f60b14bf8122f5bb}{f\+\_\+tf}}
+\begin{DoxyCompactList}\small\item\em tropism function (defined in constructor as new Tropism(plant)) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a68b1ad7d4811f383e37be138499641cf}\label{class_c_plant_box_1_1_organ_random_parameter_a68b1ad7d4811f383e37be138499641cf}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_growth_function}{Growth\+Function}} $>$ {\bfseries f\+\_\+gf}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a6c4396ce485c824c7791f968a16a036a}\label{class_c_plant_box_1_1_organ_random_parameter_a6c4396ce485c824c7791f968a16a036a}} 
+std\+::string {\bfseries vector2string} (std\+::vector$<$ int $>$ vec) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a8672fa43380df73ba16f4a3d25a65b69}\label{class_c_plant_box_1_1_organ_random_parameter_a8672fa43380df73ba16f4a3d25a65b69}} 
+std\+::string {\bfseries vector2string} (std\+::vector$<$ double $>$ vec) const
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a63f0d440f364cf823495d452bb25b3db}{string2vector}} (const char $\ast$xml\+Input, int default\+Val)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a4ee82bf73cfd1b21350fa7b4dd38a157}\label{class_c_plant_box_1_1_organ_random_parameter_a4ee82bf73cfd1b21350fa7b4dd38a157}} 
+std\+::vector$<$ double $>$ {\bfseries string2vector} (const char $\ast$xml\+Input, double default\+Val)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a130f3b4dbc89d065d9f2827d58d5e05b}\label{class_c_plant_box_1_1_organ_random_parameter_a130f3b4dbc89d065d9f2827d58d5e05b}} 
+{\footnotesize template$<$class Int\+Or\+Double $>$ }\\void {\bfseries cpb\+\_\+query\+String\+Attribute} (std\+::vector$<$ std\+::string $>$ key\+Names, Int\+Or\+Double default\+Val, int size\+Vector, bool replace\+By\+Default, std\+::vector$<$ Int\+Or\+Double $>$ \&v\+To\+Fill, \mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_ada782713cc486965e36bfb6a3916ac09}\label{class_c_plant_box_1_1_organ_random_parameter_ada782713cc486965e36bfb6a3916ac09}} 
+std\+::map$<$ std\+::string, double $\ast$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_ada782713cc486965e36bfb6a3916ac09}{dparam}}
+\begin{DoxyCompactList}\small\item\em Parameters with type double that can be read and written. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a3de5a5fd444f659f916d5f5e33583f8e}\label{class_c_plant_box_1_1_organ_random_parameter_a3de5a5fd444f659f916d5f5e33583f8e}} 
+std\+::map$<$ std\+::string, int $\ast$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a3de5a5fd444f659f916d5f5e33583f8e}{iparam}}
+\begin{DoxyCompactList}\small\item\em Parameters with type double that can be read and written. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a3364450c792d35a0b12bbb134860b07c}\label{class_c_plant_box_1_1_organ_random_parameter_a3364450c792d35a0b12bbb134860b07c}} 
+std\+::map$<$ std\+::string, double $\ast$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a3364450c792d35a0b12bbb134860b07c}{param\+\_\+sd}}
+\begin{DoxyCompactList}\small\item\em Deviations of parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_ac50b7aa333e755140961114344ba6a08}\label{class_c_plant_box_1_1_organ_random_parameter_ac50b7aa333e755140961114344ba6a08}} 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_ac50b7aa333e755140961114344ba6a08}{description}}
+\begin{DoxyCompactList}\small\item\em Parameter descriptions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains a parameter set describing as single sub type of an organ, specific parameters are then created with \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_aa6989a0e7d9641c2a348764edcaa3103}{realize()}}.
+
+Organizes parameters in hash-\/maps for scalar double and scalar int values. For this reason derived classes \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a0906dbac66fc789e4d761a28c672fc15}{get\+Parameter()}}, \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a9714debae54b412fb728c708b22eb0d0}{to\+String()}}, \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_af93a5ecb718a11eac95d42dc7c8b86d3}{read\+XML()}}, and \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_a5e2309b1ef1912a42be7106bbd09c91e}{write\+XML()}} should work out of the box. For other parameter types the methods must be overwritten, see e.\+g. \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter}{Root\+Random\+Parameter}}.
+
+The factory function \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter_afd1204de6d2c3b96969f856fbb767a5a}{copy()}} has to be overwritten for each specialization. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a40127311b1e7dd275ac22f3733f9ae7e}\label{class_c_plant_box_1_1_organ_random_parameter_a40127311b1e7dd275ac22f3733f9ae7e}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!OrganRandomParameter@{OrganRandomParameter}}
+\index{OrganRandomParameter@{OrganRandomParameter}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{OrganRandomParameter()}{OrganRandomParameter()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Organ\+Random\+Parameter\+::\+Organ\+Random\+Parameter (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{p }\end{DoxyParamCaption})}
+
+
+
+default constructor 
+
+Default constructor using default values for the parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plant} & the organism managing this organ type parameter \\
+\hline
+\end{DoxyParams}
+$<$ growth function
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_ad43976a8292a2e4ae7cfa2d3349153a7}\label{class_c_plant_box_1_1_organ_random_parameter_ad43976a8292a2e4ae7cfa2d3349153a7}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!bindParameter@{bindParameter}}
+\index{bindParameter@{bindParameter}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{bindParameter()}{bindParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organ\+Random\+Parameter\+::bind\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double $\ast$}]{d,  }\item[{std\+::string}]{descr = {\ttfamily \char`\"{}\char`\"{}},  }\item[{double $\ast$}]{dev = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+binds double to parameter name 
+
+Binds a parameter name to its double member variable, the values can then be accessed with Organ\+Type\+Parameter\+::get\+Parameter, and are used in Organ\+Type\+Parameter\+::to\+String, and Organ\+Type\+Parameter\+::write\+XML.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the parameter name \\
+\hline
+{\em i} & a pointer to the integer member variable \\
+\hline
+{\em descr} & a parameter description \\
+\hline
+{\em dev} & optionally, a deviation of the parameter like standard deviation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a4b80ae585194b41e1b403a46bd166e16}\label{class_c_plant_box_1_1_organ_random_parameter_a4b80ae585194b41e1b403a46bd166e16}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!bindParameter@{bindParameter}}
+\index{bindParameter@{bindParameter}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{bindParameter()}{bindParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organ\+Random\+Parameter\+::bind\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int $\ast$}]{i,  }\item[{std\+::string}]{descr = {\ttfamily \char`\"{}\char`\"{}},  }\item[{double $\ast$}]{dev = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+binds integer to parameter name 
+
+Binds a parameter name to its int member variable, the values can then be accessed with Organ\+Type\+Parameter\+::get\+Parameter, and are used in Organ\+Type\+Parameter\+::to\+String, and Organ\+Type\+Parameter\+::write\+XML.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the parameter name \\
+\hline
+{\em i} & a pointer to the integer member variable \\
+\hline
+{\em descr} & a parameter description \\
+\hline
+{\em dev} & optionally, a deviation of the parameter like standard deviation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a19c73d9702e745e90c9051349fc23468}\label{class_c_plant_box_1_1_organ_random_parameter_a19c73d9702e745e90c9051349fc23468}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!bindParameters@{bindParameters}}
+\index{bindParameters@{bindParameters}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{bindParameters()}{bindParameters()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organ\+Random\+Parameter\+::bind\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+sets up class introspection 
+
+Sets up class introspection by linking parameter names to their class members, additionally adds a description for each parameter, for to\+String and write\+XML 
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_stem_random_parameter_ae9789c0002a4c0ee1be0a729aab5658d}{CPlant\+Box\+::\+Stem\+Random\+Parameter}}, \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_af20eb4895ed3b315948a0be4eb546afb}{CPlant\+Box\+::\+Seed\+Random\+Parameter}}, \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter_a8b036a94613a76a221653db436f69c6d}{CPlant\+Box\+::\+Root\+Random\+Parameter}}, and \mbox{\hyperlink{class_c_plant_box_1_1_leaf_random_parameter_ae242d46ee4469597d722089207d728b2}{CPlant\+Box\+::\+Leaf\+Random\+Parameter}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_afd1204de6d2c3b96969f856fbb767a5a}\label{class_c_plant_box_1_1_organ_random_parameter_afd1204de6d2c3b96969f856fbb767a5a}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_random_parameter}{Organ\+Random\+Parameter}} $>$ CPlant\+Box\+::\+Organ\+Random\+Parameter\+::copy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+copies the root type parameter into a new plant 
+
+Copies the Organ\+Type\+Parameter and into another plant.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plant} & target organism managing this organ type parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new organ type parameter object, with same values as this, ownership is passed to the caller 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_stem_random_parameter_af3b3ea267f399492abcc30e8f791b419}{CPlant\+Box\+::\+Stem\+Random\+Parameter}}, \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_a600f1fe1b52c082a99f2f6fc396f2be0}{CPlant\+Box\+::\+Seed\+Random\+Parameter}}, \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter_afe59ca3cec6bb047627fce9feb138305}{CPlant\+Box\+::\+Root\+Random\+Parameter}}, and \mbox{\hyperlink{class_c_plant_box_1_1_leaf_random_parameter_a6938db561852f01f5a7b845337704646}{CPlant\+Box\+::\+Leaf\+Random\+Parameter}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_af4cd76125c918fd5e40f1a31fc776ecf}\label{class_c_plant_box_1_1_organ_random_parameter_af4cd76125c918fd5e40f1a31fc776ecf}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!getLateralType@{getLateralType}}
+\index{getLateralType@{getLateralType}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{getLateralType()}{getLateralType()}}
+{\footnotesize\ttfamily int CPlant\+Box\+::\+Organ\+Random\+Parameter\+::get\+Lateral\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{int}]{rule\+Id }\end{DoxyParamCaption})}
+
+
+
+Choose (dice) lateral type based on stem parameter set. 
+
+Choose (dice) lateral type based on stem parameters successor and successorP
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & spatial position (for coupling to a soil model) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stem sub type of the lateral stem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a0906dbac66fc789e4d761a28c672fc15}\label{class_c_plant_box_1_1_organ_random_parameter_a0906dbac66fc789e4d761a28c672fc15}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!getParameter@{getParameter}}
+\index{getParameter@{getParameter}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{getParameter()}{getParameter()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Organ\+Random\+Parameter\+::get\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns a single scalar parameter. Works for int and double in derived classes, if the parameters were added to the respective hashmaps
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the parameter, add \char`\"{}\+\_\+dev\char`\"{} to obtain the parameter\textquotesingle{}s deviation (usually standard deviation), optionally, add \char`\"{}\+\_\+mean\char`\"{} to obtain the mean value (to avoid naming conflicts with the specific parameters).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A single parameter value, if unknown NaN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a8092f50a3b3157e767e76a74b384d957}\label{class_c_plant_box_1_1_organ_random_parameter_a8092f50a3b3157e767e76a74b384d957}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!readXML@{readXML}}
+\index{readXML@{readXML}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{readXML()}{readXML()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organ\+Random\+Parameter\+::read\+XML (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{bool}]{verbose }\end{DoxyParamCaption})}
+
+
+
+reads a single sub type organ parameter set 
+
+Reads a single XML Tag with parameter values for this organ type parameter from a file. Mainly for testing and debugging.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & file name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_af93a5ecb718a11eac95d42dc7c8b86d3}\label{class_c_plant_box_1_1_organ_random_parameter_af93a5ecb718a11eac95d42dc7c8b86d3}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!readXML@{readXML}}
+\index{readXML@{readXML}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{readXML()}{readXML()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organ\+Random\+Parameter\+::read\+XML (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$}]{element,  }\item[{bool}]{verbose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+reads a single sub type organ parameter set 
+
+Reads a XML Tag with parameter values for this organ type parameter. This works in derived classes for int and double parameters including deviation.
+
+The reader does not check if all parameters are in the XML Tag, missing parameters are not altered.
+
+Not directly exposed to Python (called by \mbox{\hyperlink{class_c_plant_box_1_1_organism_adb958dfb52157e92159c52f2ec70ec20}{Organism\+::read\+Parameters}})
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The XML element containing the parameter tags \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter_ad1ae541d988ae030777e01e245968bb3}{CPlant\+Box\+::\+Root\+Random\+Parameter}}, and \mbox{\hyperlink{class_c_plant_box_1_1_leaf_random_parameter_aaad130656f150932a814864e7bb64cb6}{CPlant\+Box\+::\+Leaf\+Random\+Parameter}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_aa6989a0e7d9641c2a348764edcaa3103}\label{class_c_plant_box_1_1_organ_random_parameter_aa6989a0e7d9641c2a348764edcaa3103}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!realize@{realize}}
+\index{realize@{realize}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{realize()}{realize()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ CPlant\+Box\+::\+Organ\+Random\+Parameter\+::realize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+creates a specific organ from the root parameter set 
+
+An organ specific parameter set (Organ\+Parameter) is created from the general parameter set (Organ\+Type\+Parameter). In the specializations of this class, random variables are drawn from their distributions.
+
+Normally, both Organ\+Parameter, and Organ\+Type\+Parameter are constant over the organ life time.
+
+\begin{DoxyReturn}{Returns}
+The organ specific parameter set (each organ has exactly one set), ownership is passed to caller 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_stem_random_parameter_ae1c1b23eda8a652896d87d4e0abd1221}{CPlant\+Box\+::\+Stem\+Random\+Parameter}}, \mbox{\hyperlink{class_c_plant_box_1_1_seed_random_parameter_aefceb84452ba9ff487b15a1b96eceb63}{CPlant\+Box\+::\+Seed\+Random\+Parameter}}, \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter_af345e0c35bbcbf8a0e38bc74b5be4c9e}{CPlant\+Box\+::\+Root\+Random\+Parameter}}, and \mbox{\hyperlink{class_c_plant_box_1_1_leaf_random_parameter_a5d555cd72565e87d07e39be93a7619bf}{CPlant\+Box\+::\+Leaf\+Random\+Parameter}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a63f0d440f364cf823495d452bb25b3db}\label{class_c_plant_box_1_1_organ_random_parameter_a63f0d440f364cf823495d452bb25b3db}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!string2vector@{string2vector}}
+\index{string2vector@{string2vector}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{string2vector()}{string2vector()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ CPlant\+Box\+::\+Organ\+Random\+Parameter\+::string2vector (\begin{DoxyParamCaption}\item[{const char $\ast$}]{xml\+Input,  }\item[{int}]{default\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+converts string to vector of double see @\+Leaf\+Random\+Parameter\+::read\+XML used for leaf shape 
+\begin{DoxyParams}{Parameters}
+{\em xml\+Input} & input array in xml\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+xml\+Input converted to vector double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a9714debae54b412fb728c708b22eb0d0}\label{class_c_plant_box_1_1_organ_random_parameter_a9714debae54b412fb728c708b22eb0d0}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Organ\+Random\+Parameter\+::to\+String (\begin{DoxyParamCaption}\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+info for debugging 
+
+Quick info about the object for debugging
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose} & if true, all parameters names, values, and descriptions are written \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_root_random_parameter_a13048c5e77fdc8c9d9f84c8b81ba4b1f}{CPlant\+Box\+::\+Root\+Random\+Parameter}}, and \mbox{\hyperlink{class_c_plant_box_1_1_leaf_random_parameter_aaa1ce75bcc98e84eca5cffe162a94e64}{CPlant\+Box\+::\+Leaf\+Random\+Parameter}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_acdae87e57050bed3180ab08e2c86a5b8}\label{class_c_plant_box_1_1_organ_random_parameter_acdae87e57050bed3180ab08e2c86a5b8}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!writeXML@{writeXML}}
+\index{writeXML@{writeXML}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{writeXML()}{writeXML()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Organ\+Random\+Parameter\+::write\+XML (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+
+
+
+writes a organ root parameter set 
+
+Writes a single XML tag representing this organ type parameter into a file. Mainly for testing and debugging.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & file name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a5e2309b1ef1912a42be7106bbd09c91e}\label{class_c_plant_box_1_1_organ_random_parameter_a5e2309b1ef1912a42be7106bbd09c91e}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!writeXML@{writeXML}}
+\index{writeXML@{writeXML}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{writeXML()}{writeXML()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+XMLElement}} $\ast$ CPlant\+Box\+::\+Organ\+Random\+Parameter\+::write\+XML (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtinyxml2_1_1_x_m_l_document}{tinyxml2\+::\+XMLDocument}} \&}]{doc,  }\item[{bool}]{comments = {\ttfamily true} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+writes a organ root parameter set 
+
+Creates a XML tag representing this organ type parameter This works in derived classes for int and double parameters including deviation.$\ast$
+
+Not exposed to Python
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc} & the XML document you are writing \\
+\hline
+{\em comments} & if true, add the parameter descriptions as comments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the xml tag representing this organ type parameter 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_leaf_random_parameter_a2070c6e6180cc059f89bab587f71b171}{CPlant\+Box\+::\+Leaf\+Random\+Parameter}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_organ_random_parameter_a5b5f5dd48452dbd7f4fa7a6c64dc083c}\label{class_c_plant_box_1_1_organ_random_parameter_a5b5f5dd48452dbd7f4fa7a6c64dc083c}} 
+\index{CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}!ldelay@{ldelay}}
+\index{ldelay@{ldelay}!CPlantBox::OrganRandomParameter@{CPlantBox::OrganRandomParameter}}
+\doxysubsubsection{\texorpdfstring{ldelay}{ldelay}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Organ\+Random\+Parameter\+::ldelay = -\/1.}
+
+
+
+Lateral emergence delay \mbox{[}day\mbox{]}, used by \mbox{\hyperlink{class_c_plant_box_1_1_root_delay}{Root\+Delay}},. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_root_delay}{Root\+Delay}}, \mbox{\hyperlink{class_c_plant_box_1_1_root_system_a3fae3938b88404d7770af2b30ed100d9}{Root\+System\+::initialize\+DB}} or if Organism-\/$>$delay\+Definition != Organism\+::dd\+\_\+distance 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/organparameter.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/organparameter.\+cpp\end{DoxyCompactItemize}

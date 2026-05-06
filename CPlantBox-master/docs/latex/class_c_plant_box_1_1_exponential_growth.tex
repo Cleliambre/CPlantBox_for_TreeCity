@@ -1,0 +1,99 @@
+\hypertarget{class_c_plant_box_1_1_exponential_growth}{}\doxysection{CPlant\+Box\+::Exponential\+Growth Class Reference}
+\label{class_c_plant_box_1_1_exponential_growth}\index{CPlantBox::ExponentialGrowth@{CPlantBox::ExponentialGrowth}}
+
+
+{\ttfamily \#include $<$growth.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Exponential\+Growth\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_c_plant_box_1_1_exponential_growth__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Exponential\+Growth\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_c_plant_box_1_1_exponential_growth__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_exponential_growth_ad29e0c6e2c972ae9d982b5ae73ef38e2}{get\+Length}} (double t, double r, double k, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o) const override
+\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_exponential_growth_abfa3ff0a024cf1b449895e6b8675003b}{get\+Age}} (double l, double r, double k, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o) const override
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exponential_growth_ae05cae4ed789438cf9bee227c7585e46}\label{class_c_plant_box_1_1_exponential_growth_ae05cae4ed789438cf9bee227c7585e46}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_growth_function}{Growth\+Function}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_exponential_growth_ae05cae4ed789438cf9bee227c7585e46}{copy}} () const override
+\begin{DoxyCompactList}\small\item\em Copy the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_exponential_growth}{Exponential\+Growth}} elongates initially at constant rate r and slows down towards the maximum length k 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_exponential_growth_abfa3ff0a024cf1b449895e6b8675003b}\label{class_c_plant_box_1_1_exponential_growth_abfa3ff0a024cf1b449895e6b8675003b}} 
+\index{CPlantBox::ExponentialGrowth@{CPlantBox::ExponentialGrowth}!getAge@{getAge}}
+\index{getAge@{getAge}!CPlantBox::ExponentialGrowth@{CPlantBox::ExponentialGrowth}}
+\doxysubsubsection{\texorpdfstring{getAge()}{getAge()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Exponential\+Growth\+::get\+Age (\begin{DoxyParamCaption}\item[{double}]{l,  }\item[{double}]{r,  }\item[{double}]{k,  }\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_growth_function}{Growth\+Function}} 
+\end{DoxySeeAlso}
+$<$ Returns the age of a root of length l. Returns the age of a root of length l
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & organ length \mbox{[}cm\mbox{]} \\
+\hline
+{\em r} & initial growth rate \mbox{[}cm/day\mbox{]} \\
+\hline
+{\em k} & maximal root length \mbox{[}cm\mbox{]} \\
+\hline
+{\em root} & points to the organ in case more information is needed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+organ age \mbox{[}day\mbox{]} at specific length
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_growth_function_a244e78e24fe542efeeed369c5f949add}{CPlant\+Box\+::\+Growth\+Function}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_c_w_limited_growth_a6fb5a75166b052029905ed24b603f24d}{CPlant\+Box\+::\+CWLimited\+Growth}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_exponential_growth_ad29e0c6e2c972ae9d982b5ae73ef38e2}\label{class_c_plant_box_1_1_exponential_growth_ad29e0c6e2c972ae9d982b5ae73ef38e2}} 
+\index{CPlantBox::ExponentialGrowth@{CPlantBox::ExponentialGrowth}!getLength@{getLength}}
+\index{getLength@{getLength}!CPlantBox::ExponentialGrowth@{CPlantBox::ExponentialGrowth}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Exponential\+Growth\+::get\+Length (\begin{DoxyParamCaption}\item[{double}]{t,  }\item[{double}]{r,  }\item[{double}]{k,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_growth_function_adc0924128786e08b4c3405d633bc052a}{CPlant\+Box\+::\+Growth\+Function}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_c_plant_box_1_1_c_w_limited_growth_aaa729471da5ac996df9137a520cb21c3}{CPlant\+Box\+::\+CWLimited\+Growth}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/growth.\+h\end{DoxyCompactItemize}

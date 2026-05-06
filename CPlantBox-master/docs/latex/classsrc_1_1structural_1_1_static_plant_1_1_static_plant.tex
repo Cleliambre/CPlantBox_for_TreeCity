@@ -1,0 +1,124 @@
+\hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant}{}\doxysection{src.\+structural.\+Static\+Plant.\+Static\+Plant Class Reference}
+\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant}\index{src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}}
+
+
+Inheritance diagram for src.\+structural.\+Static\+Plant.\+Static\+Plant\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classsrc_1_1structural_1_1_static_plant_1_1_static_plant__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for src.\+structural.\+Static\+Plant.\+Static\+Plant\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classsrc_1_1structural_1_1_static_plant_1_1_static_plant__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a1fc60998e86596f3384004daf4113ce8}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a1fc60998e86596f3384004daf4113ce8}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, seed\+\_\+num=0)
+\item 
+def \mbox{\hyperlink{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a982c10a1dfbe870bc9dc074289c1c5ae}{plot\+\_\+rsml\+\_\+}} (self, list polylines, list prop)
+\item 
+def \mbox{\hyperlink{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_ab3a38aa82876bd7fc5dbf1f1cdc22d92}{polyline\+\_\+length\+\_\+}} (self, i0, i1, poly)
+\item 
+def \mbox{\hyperlink{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a6d19d3b0323c8177d16fd9914f2e7501}{initialize\+\_\+static}} (self, rsml\+\_\+file, initial\+\_\+sub\+\_\+types)
+\item 
+def \mbox{\hyperlink{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_acbd75b9a46c98a5ef4a05cd83bf08e9b}{set\+\_\+identical\+\_\+laterals}} (self, initial\+\_\+sub\+\_\+types, lateral\+\_\+subtypes, emerge\+\_\+type)
+\item 
+def \mbox{\hyperlink{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a5f189246f210248fbdc41ee8bed2f2c6}{initialize\+\_\+static\+\_\+laterals}} (self)
+\item 
+def \mbox{\hyperlink{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a0b4320d64e9513d56e45b3089a8c18d8}{analyse\+\_\+laterals}} (self, initial\+\_\+sub\+\_\+types, lateral\+\_\+subtypes)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a8df2f7d8d83bf76db8b0cdf76ceaeb98}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a8df2f7d8d83bf76db8b0cdf76ceaeb98}} 
+{\bfseries static\+\_\+organs}
+\item 
+\mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a6da86b196cdf496f08c8c4a109752034}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a6da86b196cdf496f08c8c4a109752034}} 
+{\bfseries data}
+\item 
+\mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a175942cc0545202a708becc7201b5db1}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a175942cc0545202a708becc7201b5db1}} 
+\mbox{\hyperlink{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a175942cc0545202a708becc7201b5db1}{old\+Number\+Of\+Nodes}}
+\begin{DoxyCompactList}\small\item\em which sub\+Type print(param) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}adds functionality to initialize with a static root system, where emerging lateral roots are predefined
+static root system has subType (57 for ST)
+
+usage:    
+PlantPython.initialize_static (instead of initialize), no organs emerge from the plant seed
+define lateral types and emergence times
+PlantPython.initialize_static_laterals() to create the dynamic organs    
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a0b4320d64e9513d56e45b3089a8c18d8}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a0b4320d64e9513d56e45b3089a8c18d8}} 
+\index{src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}!analyse\_laterals@{analyse\_laterals}}
+\index{analyse\_laterals@{analyse\_laterals}!src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}}
+\doxysubsubsection{\texorpdfstring{analyse\_laterals()}{analyse\_laterals()}}
+{\footnotesize\ttfamily def src.\+structural.\+Static\+Plant.\+Static\+Plant.\+analyse\+\_\+laterals (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{initial\+\_\+sub\+\_\+types,  }\item[{}]{lateral\+\_\+subtypes }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} prints emergence points of laterals (for debugging)\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a6d19d3b0323c8177d16fd9914f2e7501}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a6d19d3b0323c8177d16fd9914f2e7501}} 
+\index{src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}!initialize\_static@{initialize\_static}}
+\index{initialize\_static@{initialize\_static}!src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}}
+\doxysubsubsection{\texorpdfstring{initialize\_static()}{initialize\_static()}}
+{\footnotesize\ttfamily def src.\+structural.\+Static\+Plant.\+Static\+Plant.\+initialize\+\_\+static (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{rsml\+\_\+file,  }\item[{}]{initial\+\_\+sub\+\_\+types }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} uses initial_sub_types of the rsml_file as a static initial root system, 
+called instead of initialize(), initializeLB(), or initializeDB() \end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a5f189246f210248fbdc41ee8bed2f2c6}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a5f189246f210248fbdc41ee8bed2f2c6}} 
+\index{src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}!initialize\_static\_laterals@{initialize\_static\_laterals}}
+\index{initialize\_static\_laterals@{initialize\_static\_laterals}!src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}}
+\doxysubsubsection{\texorpdfstring{initialize\_static\_laterals()}{initialize\_static\_laterals()}}
+{\footnotesize\ttfamily def src.\+structural.\+Static\+Plant.\+Static\+Plant.\+initialize\+\_\+static\+\_\+laterals (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Creates lateral root instances from static roots lateralDelays, lateralTypes, and lateralDelays \end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a982c10a1dfbe870bc9dc074289c1c5ae}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_a982c10a1dfbe870bc9dc074289c1c5ae}} 
+\index{src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}!plot\_rsml\_@{plot\_rsml\_}}
+\index{plot\_rsml\_@{plot\_rsml\_}!src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}}
+\doxysubsubsection{\texorpdfstring{plot\_rsml\_()}{plot\_rsml\_()}}
+{\footnotesize\ttfamily def src.\+structural.\+Static\+Plant.\+Static\+Plant.\+plot\+\_\+rsml\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{list}]{polylines,  }\item[{list}]{prop }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plots the polylines in y-z axis with colors given by a root property
+
+Args:
+polylines(list): flat list of polylines, one polyline per root 
+prop(list): a single property, list of scalar value, on per root 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_ab3a38aa82876bd7fc5dbf1f1cdc22d92}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_ab3a38aa82876bd7fc5dbf1f1cdc22d92}} 
+\index{src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}!polyline\_length\_@{polyline\_length\_}}
+\index{polyline\_length\_@{polyline\_length\_}!src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}}
+\doxysubsubsection{\texorpdfstring{polyline\_length\_()}{polyline\_length\_()}}
+{\footnotesize\ttfamily def src.\+structural.\+Static\+Plant.\+Static\+Plant.\+polyline\+\_\+length\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i0,  }\item[{}]{i1,  }\item[{}]{poly }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} length of poly between two indices i0 and i1 \end{DoxyVerb}
+ \mbox{\Hypertarget{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_acbd75b9a46c98a5ef4a05cd83bf08e9b}\label{classsrc_1_1structural_1_1_static_plant_1_1_static_plant_acbd75b9a46c98a5ef4a05cd83bf08e9b}} 
+\index{src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}!set\_identical\_laterals@{set\_identical\_laterals}}
+\index{set\_identical\_laterals@{set\_identical\_laterals}!src.structural.StaticPlant.StaticPlant@{src.structural.StaticPlant.StaticPlant}}
+\doxysubsubsection{\texorpdfstring{set\_identical\_laterals()}{set\_identical\_laterals()}}
+{\footnotesize\ttfamily def src.\+structural.\+Static\+Plant.\+Static\+Plant.\+set\+\_\+identical\+\_\+laterals (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{initial\+\_\+sub\+\_\+types,  }\item[{}]{lateral\+\_\+subtypes,  }\item[{}]{emerge\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} places laterals as in the original rsml, all start growing at once 
+
+initial_sub_types             subTypes of the initial static root system 
+lateral_subtypes              subTypes of the laterals wihtin the RSML
+emerge_type                   subType of the model lateral (todo: could be probabilistic)        
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Static\+Plant.\+py\end{DoxyCompactItemize}

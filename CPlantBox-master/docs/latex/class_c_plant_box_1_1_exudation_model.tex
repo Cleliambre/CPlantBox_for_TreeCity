@@ -1,0 +1,184 @@
+\hypertarget{class_c_plant_box_1_1_exudation_model}{}\doxysection{CPlant\+Box\+::Exudation\+Model Class Reference}
+\label{class_c_plant_box_1_1_exudation_model}\index{CPlantBox::ExudationModel@{CPlantBox::ExudationModel}}
+
+
+{\ttfamily \#include $<$Exudation\+Model.\+h$>$}
+
+
+
+Collaboration diagram for CPlant\+Box\+::Exudation\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_plant_box_1_1_exudation_model__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a094383bcd8f0f6de9ead52eabe23e01f}\label{class_c_plant_box_1_1_exudation_model_a094383bcd8f0f6de9ead52eabe23e01f}} 
+enum {\bfseries Integration\+Type} \{ {\bfseries mps\+\_\+straight} = 0
+, {\bfseries mps} = 1
+, {\bfseries mls} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_exudation_model_a10bbe0932fde4a3e1ada70af5758cd5c}{Exudation\+Model}} (double width, double depth, int n, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system}{Root\+System}} $>$ rs)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a52427040aaf6b17d37443adb7f02cefe}\label{class_c_plant_box_1_1_exudation_model_a52427040aaf6b17d37443adb7f02cefe}} 
+{\bfseries Exudation\+Model} (double length, double width, double depth, int nx, int ny, int nz, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system}{Root\+System}} $>$ rs)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_exudation_model_a1f1adc723cd11f4a4d8b1fea2a74ecbe}{calculate}} (double tend, int i0=0, int iend=-\/1)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a3abff6cb1d0bf41af3a150243c0735b7}\label{class_c_plant_box_1_1_exudation_model_a3abff6cb1d0bf41af3a150243c0735b7}} 
+double {\bfseries eqn11} (double x0, double xend, double y0, double yend)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a47aef20b7478cbc20bb844836145c740}\label{class_c_plant_box_1_1_exudation_model_a47aef20b7478cbc20bb844836145c740}} 
+double {\bfseries integrate13} (double t)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a9e9192a9b933d5e693739cdda87a3639}\label{class_c_plant_box_1_1_exudation_model_a9e9192a9b933d5e693739cdda87a3639}} 
+double {\bfseries integrand13} (\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&y, size\+\_\+t lind, double t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_acd9351a466de0b55e7ad4706b0469dbc}\label{class_c_plant_box_1_1_exudation_model_acd9351a466de0b55e7ad4706b0469dbc}} 
+static \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries point\+At\+Age} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}} $>$ r, double a)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a876ba09cf0ee5c2ec20a924b900e8d61}\label{class_c_plant_box_1_1_exudation_model_a876ba09cf0ee5c2ec20a924b900e8d61}} 
+static double {\bfseries to32} (double x)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a8dec45826b609b72c3350ca8e765c1c8}\label{class_c_plant_box_1_1_exudation_model_a8dec45826b609b72c3350ca8e765c1c8}} 
+static double {\bfseries to3} (double x)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_aed64936ca85986e9ea8f11825cb5c413}\label{class_c_plant_box_1_1_exudation_model_aed64936ca85986e9ea8f11825cb5c413}} 
+static double {\bfseries integrand\+MPS\+\_\+straight} (double t, void $\ast$param)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a34d8b7883f0895dfa7caced2dc272508}\label{class_c_plant_box_1_1_exudation_model_a34d8b7883f0895dfa7caced2dc272508}} 
+static double {\bfseries integrand\+MLS} (double t, double l, void $\ast$param)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a4f3240d4aac3370595a144132ca57028}\label{class_c_plant_box_1_1_exudation_model_a4f3240d4aac3370595a144132ca57028}} 
+static double {\bfseries integrand\+MPS} (double t, void $\ast$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_ae778289e60a53aaabcbc8da2857241c4}\label{class_c_plant_box_1_1_exudation_model_ae778289e60a53aaabcbc8da2857241c4}} 
+double {\bfseries Q} = 1e-\/5
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_aa7980f3d58e5529ba1bc475499bd9a96}\label{class_c_plant_box_1_1_exudation_model_aa7980f3d58e5529ba1bc475499bd9a96}} 
+double {\bfseries Dl} = 1e-\/5
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a16e49662ffddcf7078237e9d1be561eb}\label{class_c_plant_box_1_1_exudation_model_a16e49662ffddcf7078237e9d1be561eb}} 
+double {\bfseries theta} = 0.\+3
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_ab713e2522478595aa4bb62d29b882353}\label{class_c_plant_box_1_1_exudation_model_ab713e2522478595aa4bb62d29b882353}} 
+double {\bfseries R} = 1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a1d6ecc713f29ad7abe6bd5462cd0803e}\label{class_c_plant_box_1_1_exudation_model_a1d6ecc713f29ad7abe6bd5462cd0803e}} 
+double {\bfseries k} = 1e-\/6
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a447c52f0b35e792f0d17d79743cf531e}\label{class_c_plant_box_1_1_exudation_model_a447c52f0b35e792f0d17d79743cf531e}} 
+double {\bfseries l} = 0.\+1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a7d6e4fe03485fb76b844f4b59d4b2566}\label{class_c_plant_box_1_1_exudation_model_a7d6e4fe03485fb76b844f4b59d4b2566}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_equidistant_grid3_d}{Equidistant\+Grid3D}} {\bfseries grid}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_afda80f8143f5d602ccbd4341aca795a3}\label{class_c_plant_box_1_1_exudation_model_afda80f8143f5d602ccbd4341aca795a3}} 
+int {\bfseries type} = mps
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a80bdb60cb1aefb3d2b0f36b42579f875}\label{class_c_plant_box_1_1_exudation_model_a80bdb60cb1aefb3d2b0f36b42579f875}} 
+int {\bfseries n0} = 5
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_abd81526daf442d0f38a14b3c2efeff8c}\label{class_c_plant_box_1_1_exudation_model_abd81526daf442d0f38a14b3c2efeff8c}} 
+double {\bfseries thresh13} = 1.e-\/15
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_ac6e142e6925056eb669572b0b3bcbefa}\label{class_c_plant_box_1_1_exudation_model_ac6e142e6925056eb669572b0b3bcbefa}} 
+bool {\bfseries calc13} = true
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_addff673cae577eab10ec1f1ff386c6ab}\label{class_c_plant_box_1_1_exudation_model_addff673cae577eab10ec1f1ff386c6ab}} 
+double {\bfseries observation\+Radius} = 5
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a1088ef5596c88e3ee9591eb2a0ba07c8}\label{class_c_plant_box_1_1_exudation_model_a1088ef5596c88e3ee9591eb2a0ba07c8}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}} $>$ $>$ {\bfseries roots}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a35373eddfa3e6927ff2e816c0bce660f}\label{class_c_plant_box_1_1_exudation_model_a35373eddfa3e6927ff2e816c0bce660f}} 
+std\+::vector$<$ double $>$ {\bfseries stop\+Time}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a54e9524bcffe24dab452b49de384af35}\label{class_c_plant_box_1_1_exudation_model_a54e9524bcffe24dab452b49de384af35}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ {\bfseries tip}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a359895b3bcffbb2563519aefbca574c6}\label{class_c_plant_box_1_1_exudation_model_a359895b3bcffbb2563519aefbca574c6}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ {\bfseries v}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a0b66d910c28ba4410317e46c3cfcb649}\label{class_c_plant_box_1_1_exudation_model_a0b66d910c28ba4410317e46c3cfcb649}} 
+double {\bfseries dx3} = 1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_aada82827ad81127ef01125d1b010d511}\label{class_c_plant_box_1_1_exudation_model_aada82827ad81127ef01125d1b010d511}} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_s_d_f___root_system}{SDF\+\_\+\+Root\+System}} $>$ {\bfseries sdfs}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_ab719bfb93ee3801ff0c535b4b460c4c9}\label{class_c_plant_box_1_1_exudation_model_ab719bfb93ee3801ff0c535b4b460c4c9}} 
+bool {\bfseries limit\+Domain} = (observation\+Radius$>$0)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a3f24cc9ddef8eaec59c3fb659f212eb4}\label{class_c_plant_box_1_1_exudation_model_a3f24cc9ddef8eaec59c3fb659f212eb4}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries x\+\_\+} = \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_af2cfd40f6fddc09bf9206bc5de8b086b}\label{class_c_plant_box_1_1_exudation_model_af2cfd40f6fddc09bf9206bc5de8b086b}} 
+int {\bfseries n\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a571209b781b6061040ec235ffb6b05c8}\label{class_c_plant_box_1_1_exudation_model_a571209b781b6061040ec235ffb6b05c8}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root}{Root}} $>$ {\bfseries r\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_afed4f816f81b7cb762aa60329a879ead}\label{class_c_plant_box_1_1_exudation_model_afed4f816f81b7cb762aa60329a879ead}} 
+double {\bfseries age\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a5157fce94f77a271112651bc38f27064}\label{class_c_plant_box_1_1_exudation_model_a5157fce94f77a271112651bc38f27064}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries tip\+\_\+} = \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a96b6fe01526f35bbb47c086f43a58206}\label{class_c_plant_box_1_1_exudation_model_a96b6fe01526f35bbb47c086f43a58206}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries v\+\_\+} = \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}}()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_ab5357587296eb00e381822505744d417}\label{class_c_plant_box_1_1_exudation_model_ab5357587296eb00e381822505744d417}} 
+double {\bfseries st\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_ac3aff889f25538a4a744dea9f613df82}\label{class_c_plant_box_1_1_exudation_model_ac3aff889f25538a4a744dea9f613df82}} 
+std\+::vector$<$ double $>$ {\bfseries g\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+docme 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a10bbe0932fde4a3e1ada70af5758cd5c}\label{class_c_plant_box_1_1_exudation_model_a10bbe0932fde4a3e1ada70af5758cd5c}} 
+\index{CPlantBox::ExudationModel@{CPlantBox::ExudationModel}!ExudationModel@{ExudationModel}}
+\index{ExudationModel@{ExudationModel}!CPlantBox::ExudationModel@{CPlantBox::ExudationModel}}
+\doxysubsubsection{\texorpdfstring{ExudationModel()}{ExudationModel()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Exudation\+Model\+::\+Exudation\+Model (\begin{DoxyParamCaption}\item[{double}]{width,  }\item[{double}]{depth,  }\item[{int}]{n,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_root_system}{Root\+System}} $>$}]{rs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructors 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_exudation_model_a1f1adc723cd11f4a4d8b1fea2a74ecbe}\label{class_c_plant_box_1_1_exudation_model_a1f1adc723cd11f4a4d8b1fea2a74ecbe}} 
+\index{CPlantBox::ExudationModel@{CPlantBox::ExudationModel}!calculate@{calculate}}
+\index{calculate@{calculate}!CPlantBox::ExudationModel@{CPlantBox::ExudationModel}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ CPlant\+Box\+::\+Exudation\+Model\+::calculate (\begin{DoxyParamCaption}\item[{double}]{tend,  }\item[{int}]{i0 = {\ttfamily 0},  }\item[{int}]{iend = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+For each root for each grid point 
+\begin{DoxyParams}{Parameters}
+{\em tend} & final simulation time \\
+\hline
+{\em i0} & optionally, initial root index (default = 0) \\
+\hline
+{\em iend} & optionally, final root index (default = roots.\+size()) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Exudation\+Model.\+h\end{DoxyCompactItemize}

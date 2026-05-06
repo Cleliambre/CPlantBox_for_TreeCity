@@ -1,0 +1,52 @@
+"""How to modify parameters"""
+
+import numpy as np
+import plantbox as pb  # |\label{l14:cplantbox}|
+import plantbox.visualisation.vtk_plot as vp  # |\label{l14:vtk_plot}|
+import plantbox.rsml.rsml_writer as rw
+from plantbox.rsml.rsml_writer import Metadata
+
+plant = pb.Plant()  # Create a new plant |\label{l14:plant}|
+
+# Open plant and root parameter from a file
+path = "../../modelparameter/structural/plant/"
+name = "fspm2023"
+plant.readParameters(path + name + ".xml")  # |\label{l14:readparameters}|
+
+# Get input parameter by organ type
+root = plant.getOrganRandomParameter(pb.root)  # |\label{l14:root}|
+stem = plant.getOrganRandomParameter(pb.stem)  # |\label{l14:stem}|
+leaf = plant.getOrganRandomParameter(pb.leaf)  # |\label{l14:leaf}|
+seed = plant.getOrganRandomParameter(pb.seed)  # |\label{l14:seed}|
+
+print(root[1], stem[1], leaf[1], "\n")  # Print sub type 1 |\label{l14:print}|
+print(seed[0], "\n")  # Print the seed parameter  |\label{l14:print_seed}|
+
+# Change a parameter
+root[1].r = 5  # Change elongation rate r (cm/day]) |\label{l14:change_params_r}|
+root[1].ln = 0.25  # Change inter-lateral distance ln (cm) |\label{l14:change_params_ln}|
+root[2].dx = 0.5  # Change axial resolution dx (cm) |\label{l14:change_params_dx}|
+root[2].dxMin = 0.1  # Change minimal axial resolution dxMin (cm)
+
+print(root[1])  # Print new root parameters |\label{l14:print_new}|
+
+plant.initialize()  # Initialize |\label{l14:initialize}|
+sim_time = 40  # days
+plant.simulate(sim_time)  # Simulate |\label{l14:simulate}|
+
+plant.write("results/example_plant_changed.vtp") 
+
+#tentative d'exportation en rsml
+nodes = np.array(plant.getNodes())
+segments = np.array(plant.getSegments())
+axes = [0]
+
+mon_meta = Metadata()
+mon_meta.user = "Stage_TreeCity"
+mon_meta.unit = "cm"
+
+real_orders = np.array(plant.getFeature("subType"))
+rw.write_rsml(name = "results/example_plant_changed.rsml", nodes = nodes, segs = segments, axes = axes,
+              segdata = real_orders, nodedata=[], meta = mon_meta) 
+
+#vp.plot_plant(plant, "organType")  # Plot |\label{l14:plot_plant}|

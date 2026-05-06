@@ -1,0 +1,76 @@
+\hypertarget{namespaceparameters}{}\doxysection{parameters Namespace Reference}
+\label{namespaceparameters}\index{parameters@{parameters}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceparameters_a7a08be99bbaa76c78ff1ba75c8e722f2}\label{namespaceparameters_a7a08be99bbaa76c78ff1ba75c8e722f2}} 
+def {\bfseries check\+Folder} (folder\+\_\+path)
+\item 
+\mbox{\Hypertarget{namespaceparameters_adcf306d9610528ba8092d74512de397f}\label{namespaceparameters_adcf306d9610528ba8092d74512de397f}} 
+def {\bfseries check\+File} (file)
+\item 
+\mbox{\Hypertarget{namespaceparameters_a0cbea81e3ea94d0349622acdee9ec8f0}\label{namespaceparameters_a0cbea81e3ea94d0349622acdee9ec8f0}} 
+def {\bfseries check\+\_\+root} (p)
+\item 
+\mbox{\Hypertarget{namespaceparameters_a907cbfcf63f760ea16677e3c3122fcd3}\label{namespaceparameters_a907cbfcf63f760ea16677e3c3122fcd3}} 
+def {\bfseries check\+\_\+seed} (p)
+\item 
+\mbox{\Hypertarget{namespaceparameters_aaa01f95050c1a5820c5c8cdbad427e1c}\label{namespaceparameters_aaa01f95050c1a5820c5c8cdbad427e1c}} 
+def {\bfseries check\+\_\+stem} (p)
+\item 
+\mbox{\Hypertarget{namespaceparameters_aa610296fde327c86f5d2845edcb5947c}\label{namespaceparameters_aa610296fde327c86f5d2845edcb5947c}} 
+def {\bfseries check\+\_\+leaf} (p)
+\item 
+\mbox{\Hypertarget{namespaceparameters_a557b8fd6e77c6e2a0f23608f9dd0ae98}\label{namespaceparameters_a557b8fd6e77c6e2a0f23608f9dd0ae98}} 
+def {\bfseries check\+\_\+organ} (p, msg=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{namespaceparameters_ab20bbddffd87b950c3bf8066de5dd2e7}\label{namespaceparameters_ab20bbddffd87b950c3bf8066de5dd2e7}} 
+def {\bfseries check\+\_\+range\+\_\+} (p, ranges, msg=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{namespaceparameters_a4b1ebc43367f02b1b6082fb666333e4b}\label{namespaceparameters_a4b1ebc43367f02b1b6082fb666333e4b}} 
+def {\bfseries check\+\_\+values\+\_\+} (p, ranges, msg=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary {\bfseries Organ\+Parameter\+Ranges}
+\item 
+dictionary {\bfseries Organ\+Parameter\+Values}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Checks parameter sets for plausibility 
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceparameters_a88c73ccbe5409abc4bbd8e3fab3830a6}\label{namespaceparameters_a88c73ccbe5409abc4bbd8e3fab3830a6}} 
+\index{parameters@{parameters}!OrganParameterRanges@{OrganParameterRanges}}
+\index{OrganParameterRanges@{OrganParameterRanges}!parameters@{parameters}}
+\doxysubsubsection{\texorpdfstring{OrganParameterRanges}{OrganParameterRanges}}
+{\footnotesize\ttfamily dictionary parameters.\+Organ\+Parameter\+Ranges}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{"{}a"{}}: [0.01, 2.5], }
+\DoxyCodeLine{3     \textcolor{stringliteral}{"{}dx"{}} : [0.1, 1],}
+\DoxyCodeLine{4     \textcolor{stringliteral}{"{}dxMin"{}} : [0., 0.1],}
+\DoxyCodeLine{5 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceparameters_ac3c04bcd6c8a7854667d3b915cbb09c8}\label{namespaceparameters_ac3c04bcd6c8a7854667d3b915cbb09c8}} 
+\index{parameters@{parameters}!OrganParameterValues@{OrganParameterValues}}
+\index{OrganParameterValues@{OrganParameterValues}!parameters@{parameters}}
+\doxysubsubsection{\texorpdfstring{OrganParameterValues}{OrganParameterValues}}
+{\footnotesize\ttfamily dictionary parameters.\+Organ\+Parameter\+Values}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{"{}organType"{}}: [pb.seed, pb.root, pb.stem, pb.leaf],}
+\DoxyCodeLine{3     \textcolor{stringliteral}{"{}subType"{}} : range(0, 100)}
+\DoxyCodeLine{4 \}}
+
+\end{DoxyCode}

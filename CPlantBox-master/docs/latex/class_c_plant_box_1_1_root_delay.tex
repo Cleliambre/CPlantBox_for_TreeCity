@@ -1,0 +1,213 @@
+\hypertarget{class_c_plant_box_1_1_root_delay}{}\doxysection{CPlant\+Box\+::Root\+Delay Class Reference}
+\label{class_c_plant_box_1_1_root_delay}\index{CPlantBox::RootDelay@{CPlantBox::RootDelay}}
+
+
+{\ttfamily \#include $<$Root\+Delay.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Root\+Delay\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_c_plant_box_1_1_root_delay__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Root\+Delay\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_c_plant_box_1_1_root_delay__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_delay_a7d59cd040c1aa326236cbee487322535}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ rs) override
+\begin{DoxyCompactList}\small\item\em deep copies the root tree \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_root_delay_a9ec88279f73d04c4082d70c0f4542470}{to\+String}} () const override
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_root_delay_aca500d0e464b3f950d431317c0b56bbe}{Root}} (int \mbox{\hyperlink{class_c_plant_box_1_1_organ_a1c602de4cbb1294d6caf35b81655e1db}{id}}, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_root_a30a2056196ff4b77738a76a854665c14}{param}}, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a0889e6bf6d670b945de355dbc6e96965}{alive}}, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a37cba2abb3c4052d7e69b57019589b78}{active}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a4f17f0bfe7f03eedf4138fd8fe51376d}{age}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a94f5b16aa7ebc3912501051281fe88dc}{length}}, \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} partial\+IHeading\+\_\+, int pni, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a79bcbb57413b3ca4e96ea9ed0d9285af}{moved}}=false, int old\+NON=0)
+\begin{DoxyCompactList}\small\item\em creates everything from scratch \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_root_delay_a6a183f47a63280cee492be77b8fbb263}{Root}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant\+\_\+, int sub\+Type, double delay, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_a3650b8edd1964d65ac4059871d6f5c4b}{parent}}, int pni)
+\begin{DoxyCompactList}\small\item\em used within simulation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_root_delay_af96f21ba49a3ef7e0053f15f36125112}{create\+Lateral}} (double dt, bool silence) override
+\begin{DoxyCompactList}\small\item\em creates a new lateral based on a delay \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_root_delay}{Root\+Delay}}
+
+Laterals emerge after a specific prefdefined delay (in contrast to emerging after the apical zone reaches a predefined length) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_delay_a7d59cd040c1aa326236cbee487322535}\label{class_c_plant_box_1_1_root_delay_a7d59cd040c1aa326236cbee487322535}} 
+\index{CPlantBox::RootDelay@{CPlantBox::RootDelay}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::RootDelay@{CPlantBox::RootDelay}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ CPlant\+Box\+::\+Root\+Delay\+::copy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{rs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copies the root tree 
+
+Deep copies the organ into the new plant
+\begin{DoxyParams}{Parameters}
+{\em rs.} & All laterals are deep copied, plant and parent pointers are updated.\\
+\hline
+{\em plant} & the plant the copied organ will be part of \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_root_a1295f48ca40510c21d8017143a8517cd}{CPlant\+Box\+::\+Root}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_delay_af96f21ba49a3ef7e0053f15f36125112}\label{class_c_plant_box_1_1_root_delay_af96f21ba49a3ef7e0053f15f36125112}} 
+\index{CPlantBox::RootDelay@{CPlantBox::RootDelay}!createLateral@{createLateral}}
+\index{createLateral@{createLateral}!CPlantBox::RootDelay@{CPlantBox::RootDelay}}
+\doxysubsubsection{\texorpdfstring{createLateral()}{createLateral()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Root\+Delay\+::create\+Lateral (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{bool}]{verbose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+creates a new lateral based on a delay 
+
+Creates a new lateral root and passes time overhead
+
+Overwrite this method to implement more spezialized root classes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose} & turns console output on or off \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_afebf5e9c8e8e4f90dfbbc16ddde399f2}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_delay_aca500d0e464b3f950d431317c0b56bbe}\label{class_c_plant_box_1_1_root_delay_aca500d0e464b3f950d431317c0b56bbe}} 
+\index{CPlantBox::RootDelay@{CPlantBox::RootDelay}!Root@{Root}}
+\index{Root@{Root}!CPlantBox::RootDelay@{CPlantBox::RootDelay}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Root\+::\+Root}
+
+
+
+creates everything from scratch 
+
+Constructs a root from given data. The organ tree must be created, \begin{DoxySeeAlso}{See also}
+Organ\+::set\+Plant, \mbox{\hyperlink{class_c_plant_box_1_1_organ_a5f89e793a1ff1e068f18b953fb25409c}{Organ\+::set\+Parent}}, \mbox{\hyperlink{class_c_plant_box_1_1_organ_a92560d96959389219d26b1f10ea9437e}{Organ\+::add\+Child}} \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} geometry must be created, 
+
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a928426fcc1d5ed8101744a34d4ab2f06}{Organ\+::add\+Node}}, ensure that this-\/$>$get\+Node\+Id(0) == parent-\/$>$get\+Node\+Id(pni)
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the organ\textquotesingle{}s unique id (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_af4916e667175aff351c73cb6f0748324}{Organ\+::get\+Id}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & the organs parameters set, ownership transfers to the organ \\
+\hline
+{\em alive} & indicates if the organ is alive (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_abe7318360213d9effff6f52d0911c0ca}{Organ\+::is\+Alive}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em active} & indicates if the organ is active (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a36d3c456f82fbcae99c1256781c564a8}{Organ\+::is\+Active}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em age} & the current age of the organ (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_aee4adaa0ebe3dec382f725db5ba9d361}{Organ\+::get\+Age}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em length} & the current length of the organ (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_c_plant_box_1_1_organ_a2b332bc562d43c90fb4bb00d181d0c52}{Organ\+::get\+Length}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em iheading} & the initial heading of this root \\
+\hline
+{\em pbl} & base length of the parent root, where this root emerges \\
+\hline
+{\em pni} & local node index, where this root emerges \\
+\hline
+{\em moved} & indicates if nodes were moved in the previous time step (default = false) \\
+\hline
+{\em old\+NON} & the number of nodes of the previous time step (default = 0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_delay_a6a183f47a63280cee492be77b8fbb263}\label{class_c_plant_box_1_1_root_delay_a6a183f47a63280cee492be77b8fbb263}} 
+\index{CPlantBox::RootDelay@{CPlantBox::RootDelay}!Root@{Root}}
+\index{Root@{Root}!CPlantBox::RootDelay@{CPlantBox::RootDelay}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Root\+::\+Root}
+
+
+
+used within simulation 
+
+Constructor\+: Should be only called during simulation by \mbox{\hyperlink{class_c_plant_box_1_1_organ_afebf5e9c8e8e4f90dfbbc16ddde399f2}{Root\+::create\+Lateral()}}. For base roots the initial node and node creation time must be set from outside
+
+
+\begin{DoxyParams}{Parameters}
+{\em plant\+\_\+} & points to \mbox{\hyperlink{class_c_plant_box_1_1_root_system}{Root\+System}} \\
+\hline
+{\em sub\+Type} & sub\+Type of root that is created \\
+\hline
+{\em heading} & heading of parent root at emergence \\
+\hline
+{\em delay} & to give apical zone of parent time to develop \\
+\hline
+{\em parent} & parent root \\
+\hline
+{\em pbl} & parent base length \\
+\hline
+{\em pni} & parent node index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_root_delay_a9ec88279f73d04c4082d70c0f4542470}\label{class_c_plant_box_1_1_root_delay_a9ec88279f73d04c4082d70c0f4542470}} 
+\index{CPlantBox::RootDelay@{CPlantBox::RootDelay}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::RootDelay@{CPlantBox::RootDelay}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Root\+Delay\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Quick info about the object for debugging additionally, use \mbox{\hyperlink{class_c_plant_box_1_1_root_a30a2056196ff4b77738a76a854665c14}{param()}}-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_root_delay_a9ec88279f73d04c4082d70c0f4542470}{to\+String()}} and \mbox{\hyperlink{class_c_plant_box_1_1_organ_afabf8911c0d2771a58564792e353f186}{get\+Organ\+Random\+Parameter()}}-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_root_delay_a9ec88279f73d04c4082d70c0f4542470}{to\+String()}} to obtain all information. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_root_ad36316c4fe5c83df99ad8d33beaccfd8}{CPlant\+Box\+::\+Root}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Root\+Delay.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Root\+Delay.\+cpp\end{DoxyCompactItemize}

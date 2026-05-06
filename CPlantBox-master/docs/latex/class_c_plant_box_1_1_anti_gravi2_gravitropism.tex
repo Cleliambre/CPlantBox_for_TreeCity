@@ -1,0 +1,79 @@
+\hypertarget{class_c_plant_box_1_1_anti_gravi2_gravitropism}{}\doxysection{CPlant\+Box\+::Anti\+Gravi2\+Gravitropism Class Reference}
+\label{class_c_plant_box_1_1_anti_gravi2_gravitropism}\index{CPlantBox::AntiGravi2Gravitropism@{CPlantBox::AntiGravi2Gravitropism}}
+
+
+{\ttfamily \#include $<$tropism.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Anti\+Gravi2\+Gravitropism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{class_c_plant_box_1_1_anti_gravi2_gravitropism__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Anti\+Gravi2\+Gravitropism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{class_c_plant_box_1_1_anti_gravi2_gravitropism__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_anti_gravi2_gravitropism_abd7a1462dec94b4843d27fd48acfd5c8}{Anti\+Gravi2\+Gravitropism}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant, double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_ad66a1abd4a5e98d30fa305058f330bc9}{n}}, double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_af056914c05b89a19107ac89d9c6b96ba}{sigma}}, double age\+Switch=0)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_anti_gravi2_gravitropism_ad5924227c9e4dc498e9b5f68340099e7}\label{class_c_plant_box_1_1_anti_gravi2_gravitropism_ad5924227c9e4dc498e9b5f68340099e7}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_anti_gravi2_gravitropism_ad5924227c9e4dc498e9b5f68340099e7}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant) override
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_plant_box_1_1_anti_gravi2_gravitropism_a67f9c32a64fecf2b6083b983048eb08c}{tropism\+Objective}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&old, double a, double b, double dx, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o) override
+\begin{DoxyCompactList}\small\item\em Tropism\+Function\+::get\+Heading minimizes this function,. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+for wheat leaves. start by growing straight and then fall to the side. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_anti_gravi2_gravitropism_abd7a1462dec94b4843d27fd48acfd5c8}\label{class_c_plant_box_1_1_anti_gravi2_gravitropism_abd7a1462dec94b4843d27fd48acfd5c8}} 
+\index{CPlantBox::AntiGravi2Gravitropism@{CPlantBox::AntiGravi2Gravitropism}!AntiGravi2Gravitropism@{AntiGravi2Gravitropism}}
+\index{AntiGravi2Gravitropism@{AntiGravi2Gravitropism}!CPlantBox::AntiGravi2Gravitropism@{CPlantBox::AntiGravi2Gravitropism}}
+\doxysubsubsection{\texorpdfstring{AntiGravi2Gravitropism()}{AntiGravi2Gravitropism()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Anti\+Gravi2\+Gravitropism\+::\+Anti\+Gravi2\+Gravitropism (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant,  }\item[{double}]{n,  }\item[{double}]{sigma,  }\item[{double}]{age\+Switch = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+Tropism\+Function 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_anti_gravi2_gravitropism_a67f9c32a64fecf2b6083b983048eb08c}\label{class_c_plant_box_1_1_anti_gravi2_gravitropism_a67f9c32a64fecf2b6083b983048eb08c}} 
+\index{CPlantBox::AntiGravi2Gravitropism@{CPlantBox::AntiGravi2Gravitropism}!tropismObjective@{tropismObjective}}
+\index{tropismObjective@{tropismObjective}!CPlantBox::AntiGravi2Gravitropism@{CPlantBox::AntiGravi2Gravitropism}}
+\doxysubsubsection{\texorpdfstring{tropismObjective()}{tropismObjective()}}
+{\footnotesize\ttfamily virtual double CPlant\+Box\+::\+Anti\+Gravi2\+Gravitropism\+::tropism\+Objective (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&}]{old,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{dx,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tropism\+Function\+::get\+Heading minimizes this function,. 
+
+\begin{DoxySeeAlso}{See also}
+Tropism\+Function\+::get\+Heading and 
+
+Tropism\+Function\+::tropism\+Objective 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_tropism_aee46e346f1fa6b94bb936d309cb70287}{CPlant\+Box\+::\+Tropism}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/tropism.\+h\end{DoxyCompactItemize}

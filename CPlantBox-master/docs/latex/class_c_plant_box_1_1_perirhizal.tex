@@ -1,0 +1,146 @@
+\hypertarget{class_c_plant_box_1_1_perirhizal}{}\doxysection{CPlant\+Box\+::Perirhizal Class Reference}
+\label{class_c_plant_box_1_1_perirhizal}\index{CPlantBox::Perirhizal@{CPlantBox::Perirhizal}}
+
+
+{\ttfamily \#include $<$Perirhizal.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a9f7ec351b565c337790669840676d116}\label{class_c_plant_box_1_1_perirhizal_a9f7ec351b565c337790669840676d116}} 
+{\bfseries Perirhizal} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{Mapped\+Segments}} $>$ ms)
+\item 
+std\+::map$<$ int, double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_perirhizal_a6e9e12b124b9f93ab06e62abba1692ee}{sum\+Seg\+Fluxes}} (const std\+::vector$<$ double $>$ \&seg\+Fluxes)
+\begin{DoxyCompactList}\small\item\em sums segment fluxes over soil cells, soil\+Fluxes = sum\+Seg\+Fluxes(seg\+Fluxes), \mbox{[}cm3/day\mbox{]} \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_perirhizal_a017d05c2a771629532d038975ff1ef7f}{split\+Soil\+Fluxes}} (const std\+::vector$<$ double $>$ \&soil\+Fluxes, int type=0) const
+\begin{DoxyCompactList}\small\item\em splits soil fluxes (per cell) into segment fluxes \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_perirhizal_a0bd610cbcc896b252e90a13d84799f0f}{seg\+Outer\+Radii}} (int type, const std\+::vector$<$ double $>$ \&vols=std\+::vector$<$ double $>$(0)) const
+\begin{DoxyCompactList}\small\item\em outer cylinder radii to match cell volume \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a87999c8eee1324a3eb09ca51a6e70e99}\label{class_c_plant_box_1_1_perirhizal_a87999c8eee1324a3eb09ca51a6e70e99}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_c_plant_box_1_1_perirhizal_a87999c8eee1324a3eb09ca51a6e70e99}{adapt\+\_\+values}} (std\+::vector$<$ double $>$ val\+\_\+new\+\_\+, double min\+Val\+\_\+, double max\+Val\+\_\+, const std\+::vector$<$ double $>$ \&volumes\+\_\+, bool divide\+Equally\+\_\+, bool verbose\+\_\+)
+\begin{DoxyCompactList}\small\item\em Update val\+\_\+new\+\_\+ to remain between bounds while maintaining as much as possible the gradient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_ada33ce575658b69c48987b4560e8adf7}\label{class_c_plant_box_1_1_perirhizal_ada33ce575658b69c48987b4560e8adf7}} 
+std\+::vector$<$ double $>$ {\bfseries distribute\+Val\+Solute\+\_\+} (std\+::vector$<$ double $>$ seg\+\_\+values\+\_\+content, const std\+::vector$<$ double $>$ \&volumes, double source, double dt)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a88b50400a28cd072a2690afa9ec2d51f}\label{class_c_plant_box_1_1_perirhizal_a88b50400a28cd072a2690afa9ec2d51f}} 
+std\+::vector$<$ double $>$ {\bfseries distribute\+Val\+Water\+\_\+} (std\+::vector$<$ double $>$ seg\+\_\+values\+\_\+per\+Vol, const std\+::vector$<$ double $>$ \&volumes, double source, double dt, double theta\+\_\+S, double theta\+\_\+wilting\+\_\+point)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_ad6df7ffd467dde7b0110269cb8fc261d}\label{class_c_plant_box_1_1_perirhizal_ad6df7ffd467dde7b0110269cb8fc261d}} 
+std\+::vector$<$ double $>$ {\bfseries split\+Soil\+Vals} (const std\+::vector$<$ double $>$ \&soil\+Vals, const std\+::vector$<$ int $>$ \&cell\+Ids, bool is\+Water, const std\+::vector$<$ double $>$ \&seg\+\_\+values, const std\+::vector$<$ double $>$ \&seg\+\_\+volume, double dt, double theta\+\_\+S, double theta\+\_\+wilting\+\_\+point)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a480e34d3d2d4f4671cc7a824a99756a4}\label{class_c_plant_box_1_1_perirhizal_a480e34d3d2d4f4671cc7a824a99756a4}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{Mapped\+Segments}} $>$ {\bfseries ms}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_ae07fbbcea538c6a16617a1b519c5e506}\label{class_c_plant_box_1_1_perirhizal_ae07fbbcea538c6a16617a1b519c5e506}} 
+void {\bfseries redistribute\+\_\+excess} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a67b2766802920c2a688a1ddb6c9d6ef7}\label{class_c_plant_box_1_1_perirhizal_a67b2766802920c2a688a1ddb6c9d6ef7}} 
+void {\bfseries redistribute\+\_\+deficit} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a429cba80f92d74547ab4483e32b52882}\label{class_c_plant_box_1_1_perirhizal_a429cba80f92d74547ab4483e32b52882}} 
+void {\bfseries handle\+\_\+excess} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_af1d296a30736a5d1dcb8af22309bd031}\label{class_c_plant_box_1_1_perirhizal_af1d296a30736a5d1dcb8af22309bd031}} 
+void {\bfseries handle\+\_\+deficit} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a641c2235c26a2ad673d1ed1a359134d7}\label{class_c_plant_box_1_1_perirhizal_a641c2235c26a2ad673d1ed1a359134d7}} 
+std\+::vector$<$ double $>$ {\bfseries val\+\_\+new}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_ae9a1d87f5c7c6b5ffbbd9442eefe7e0c}\label{class_c_plant_box_1_1_perirhizal_ae9a1d87f5c7c6b5ffbbd9442eefe7e0c}} 
+double {\bfseries min\+Val}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_ac744a8401dcadba8f704e5e1ab1a4086}\label{class_c_plant_box_1_1_perirhizal_ac744a8401dcadba8f704e5e1ab1a4086}} 
+double {\bfseries max\+Val}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a8af42ade0367eb25d5704bacd865b70d}\label{class_c_plant_box_1_1_perirhizal_a8af42ade0367eb25d5704bacd865b70d}} 
+std\+::vector$<$ double $>$ {\bfseries volumes}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a9ab3c0bb567dc7a3a77ac96ee862e6d4}\label{class_c_plant_box_1_1_perirhizal_a9ab3c0bb567dc7a3a77ac96ee862e6d4}} 
+bool {\bfseries divide\+Equally}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_acd044585244b355d5b5cfec7e652475a}\label{class_c_plant_box_1_1_perirhizal_acd044585244b355d5b5cfec7e652475a}} 
+bool {\bfseries verbose}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps a \mbox{\hyperlink{class_c_plant_box_1_1_mapped_segments}{Mapped\+Segments}} (or specialisations \mbox{\hyperlink{class_c_plant_box_1_1_mapped_plant}{Mapped\+Plant}}, Mapped\+Rootsystem) and adds functions to help modelling the perirhizal zone.
+
+Currently rather useless, main part is in Python (in Perirhizal.\+py), but perfomance critical methods could be implemented in C++ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a0bd610cbcc896b252e90a13d84799f0f}\label{class_c_plant_box_1_1_perirhizal_a0bd610cbcc896b252e90a13d84799f0f}} 
+\index{CPlantBox::Perirhizal@{CPlantBox::Perirhizal}!segOuterRadii@{segOuterRadii}}
+\index{segOuterRadii@{segOuterRadii}!CPlantBox::Perirhizal@{CPlantBox::Perirhizal}}
+\doxysubsubsection{\texorpdfstring{segOuterRadii()}{segOuterRadii()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Perirhizal\+::seg\+Outer\+Radii (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{const std\+::vector$<$ double $>$ \&}]{vols = {\ttfamily std\+:\+:vector$<$double$>$(0)} }\end{DoxyParamCaption}) const}
+
+
+
+outer cylinder radii to match cell volume 
+
+Calculates outer segment radii \mbox{[}cm\mbox{]}, so that the summed segment volumes per cell equals the cell volume 
+\begin{DoxyParams}{Parameters}
+{\em type} & prescribed cylinder volume proportional to 0\+: segment volume, 1\+: segment surface, 2\+: segment length \\
+\hline
+{\em vols} & (optional) in case of non-\/equidistant grids, volumes per cell must be defined \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a017d05c2a771629532d038975ff1ef7f}\label{class_c_plant_box_1_1_perirhizal_a017d05c2a771629532d038975ff1ef7f}} 
+\index{CPlantBox::Perirhizal@{CPlantBox::Perirhizal}!splitSoilFluxes@{splitSoilFluxes}}
+\index{splitSoilFluxes@{splitSoilFluxes}!CPlantBox::Perirhizal@{CPlantBox::Perirhizal}}
+\doxysubsubsection{\texorpdfstring{splitSoilFluxes()}{splitSoilFluxes()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ CPlant\+Box\+::\+Perirhizal\+::split\+Soil\+Fluxes (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{soil\+Fluxes,  }\item[{int}]{type = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+splits soil fluxes (per cell) into segment fluxes 
+
+Splits soil fluxes per cell to the segments within the cell, so that the summed fluxes agree, \begin{DoxySeeAlso}{See also}
+sum\+Soil\+Fluxes()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em soil\+Fluxes} & cell fluxes per global index \mbox{[}cm3/day\mbox{]} \\
+\hline
+{\em type} & split flux proportional to 0\+: segment volume, 1\+: segment surface, 2\+: segment length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+fluxes for each segment \mbox{[}cm3/day\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_plant_box_1_1_perirhizal_a6e9e12b124b9f93ab06e62abba1692ee}\label{class_c_plant_box_1_1_perirhizal_a6e9e12b124b9f93ab06e62abba1692ee}} 
+\index{CPlantBox::Perirhizal@{CPlantBox::Perirhizal}!sumSegFluxes@{sumSegFluxes}}
+\index{sumSegFluxes@{sumSegFluxes}!CPlantBox::Perirhizal@{CPlantBox::Perirhizal}}
+\doxysubsubsection{\texorpdfstring{sumSegFluxes()}{sumSegFluxes()}}
+{\footnotesize\ttfamily std\+::map$<$ int, double $>$ CPlant\+Box\+::\+Perirhizal\+::sum\+Seg\+Fluxes (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{seg\+Fluxes }\end{DoxyParamCaption})}
+
+
+
+sums segment fluxes over soil cells, soil\+Fluxes = sum\+Seg\+Fluxes(seg\+Fluxes), \mbox{[}cm3/day\mbox{]} 
+
+Sums segment fluxes over each cell
+
+
+\begin{DoxyParams}{Parameters}
+{\em seg\+Fluxes} & segment fluxes given per segment index \mbox{[}cm3/day\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash map with cell indices as keys and fluxes as values \mbox{[}cm3/day\mbox{]} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Perirhizal.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/functional/Perirhizal.\+cpp\end{DoxyCompactItemize}

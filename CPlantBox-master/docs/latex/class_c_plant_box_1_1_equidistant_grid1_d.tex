@@ -1,0 +1,64 @@
+\hypertarget{class_c_plant_box_1_1_equidistant_grid1_d}{}\doxysection{CPlant\+Box\+::Equidistant\+Grid1D Class Reference}
+\label{class_c_plant_box_1_1_equidistant_grid1_d}\index{CPlantBox::EquidistantGrid1D@{CPlantBox::EquidistantGrid1D}}
+
+
+{\ttfamily \#include $<$soil.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Equidistant\+Grid1D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_c_plant_box_1_1_equidistant_grid1_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Equidistant\+Grid1D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_c_plant_box_1_1_equidistant_grid1_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_equidistant_grid1_d_a547e2b5f13b052db184eb6e619705f2c}\label{class_c_plant_box_1_1_equidistant_grid1_d_a547e2b5f13b052db184eb6e619705f2c}} 
+{\bfseries Equidistant\+Grid1D} (double a, double b, size\+\_\+t n)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_equidistant_grid1_d_a3f7b993063834666090aa3d0ff65d63a}\label{class_c_plant_box_1_1_equidistant_grid1_d_a3f7b993063834666090aa3d0ff65d63a}} 
+{\bfseries Equidistant\+Grid1D} (double a, double b, const std\+::vector$<$ double $>$ \&data)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_equidistant_grid1_d_a4c7976d6c24ed931a14caa3cc4bf135e}\label{class_c_plant_box_1_1_equidistant_grid1_d_a4c7976d6c24ed931a14caa3cc4bf135e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_soil_look_up}{Soil\+Look\+Up}} $>$ {\bfseries copy} () override
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_equidistant_grid1_d_a97541be85967709b74e396f2697fba70}\label{class_c_plant_box_1_1_equidistant_grid1_d_a97541be85967709b74e396f2697fba70}} 
+void {\bfseries make\+Grid} (double a, double b, size\+\_\+t n)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_equidistant_grid1_d_a50e0d68c1944aa445ad74fac2ddde689}\label{class_c_plant_box_1_1_equidistant_grid1_d_a50e0d68c1944aa445ad74fac2ddde689}} 
+size\+\_\+t \mbox{\hyperlink{class_c_plant_box_1_1_equidistant_grid1_d_a50e0d68c1944aa445ad74fac2ddde689}{map}} (double x) const override
+\begin{DoxyCompactList}\small\item\em faster than general look up \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_equidistant_grid1_d_a7224d38a01626a38b1bfd1f4e167e71b}\label{class_c_plant_box_1_1_equidistant_grid1_d_a7224d38a01626a38b1bfd1f4e167e71b}} 
+std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_equidistant_grid1_d_a7224d38a01626a38b1bfd1f4e167e71b}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Quick info about the object for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_equidistant_grid1_d_ae5186503da857f1a31168dd9a347299f}\label{class_c_plant_box_1_1_equidistant_grid1_d_ae5186503da857f1a31168dd9a347299f}} 
+double {\bfseries a}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_equidistant_grid1_d_ae554c4ac566ceb2ec229fdd4b5feb901}\label{class_c_plant_box_1_1_equidistant_grid1_d_ae554c4ac566ceb2ec229fdd4b5feb901}} 
+double {\bfseries b}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+1D look up table with equidistant spacing, data is located between the grid points 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/soil.\+h\end{DoxyCompactItemize}

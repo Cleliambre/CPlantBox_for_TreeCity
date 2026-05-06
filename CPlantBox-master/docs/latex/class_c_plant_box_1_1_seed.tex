@@ -1,0 +1,251 @@
+\hypertarget{class_c_plant_box_1_1_seed}{}\doxysection{CPlant\+Box\+::Seed Class Reference}
+\label{class_c_plant_box_1_1_seed}\index{CPlantBox::Seed@{CPlantBox::Seed}}
+
+
+{\ttfamily \#include $<$Seed.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Seed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_c_plant_box_1_1_seed__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Seed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_c_plant_box_1_1_seed__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_seed_afd69e50e9831f01db0686988e64159db}{Seed}} (int \mbox{\hyperlink{class_c_plant_box_1_1_organ_a1c602de4cbb1294d6caf35b81655e1db}{id}}, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$ param, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a0889e6bf6d670b945de355dbc6e96965}{alive}}, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a37cba2abb3c4052d7e69b57019589b78}{active}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a4f17f0bfe7f03eedf4138fd8fe51376d}{age}}, double \mbox{\hyperlink{class_c_plant_box_1_1_organ_a94f5b16aa7ebc3912501051281fe88dc}{length}}, bool \mbox{\hyperlink{class_c_plant_box_1_1_organ_a79bcbb57413b3ca4e96ea9ed0d9285af}{moved}}=false, int old\+NON=0)
+\begin{DoxyCompactList}\small\item\em creates everything from scratch \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_seed_aae7bc59833b505135d3a8394abe4a210}{Seed}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_ae7e6e82271bc27409ceb37725ae75050}{plant}})
+\begin{DoxyCompactList}\small\item\em used within simulation \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_a7380dc22add8d95f913f7c95f297ac7d}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ rs) override
+\begin{DoxyCompactList}\small\item\em deep copies the seed \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_c_plant_box_1_1_seed_ab9e6531b8ab252af9c0b2da83ae98972}{organ\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em returns the organs type, overwrite for each organ \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_c_plant_box_1_1_seed_a83a1493777594b1e92d31d6d3db4258b}{to\+String}} () const override
+\item 
+void \mbox{\hyperlink{class_c_plant_box_1_1_seed_a33d05612e1aa9e9b2846aeb8e377a949}{initialize}} (bool verbose=true)
+\begin{DoxyCompactList}\small\item\em initialization creates the initial organs, i.\+e. taproot, optional\+: basal, shoot borne root, if plant stem, optional\+: tillers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a07ccb2a2004c75fdf160747f3f4f7b01}\label{class_c_plant_box_1_1_seed_a07ccb2a2004c75fdf160747f3f4f7b01}} 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_seed_specific_parameter}{Seed\+Specific\+Parameter}} $>$ {\bfseries param} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a3e63f5b11fbe98c0199a3be4bfd2ca25}\label{class_c_plant_box_1_1_seed_a3e63f5b11fbe98c0199a3be4bfd2ca25}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ {\bfseries base\+Organs} ()
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_a13dd33c4e574fe7f67792302f848efbb}{copy\+Base\+Organs}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_ae7e6e82271bc27409ceb37725ae75050}{plant}})
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_a05123ce2372476106b06c3c0008dbff7}{create\+Root}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_ae7e6e82271bc27409ceb37725ae75050}{plant}}, int type, double delay)
+\begin{DoxyCompactList}\small\item\em overwrite if you want to change class types used by intialize() \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_seed_a0d94dd055a3e47c1e96f4c5d70009a3a}{create\+Stem}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_organ_ae7e6e82271bc27409ceb37725ae75050}{plant}}, int type, double delay)
+\begin{DoxyCompactList}\small\item\em overwrite if you want to change class types used by intialize() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a7b97d9c7f68b46710d67798ebb55d637}\label{class_c_plant_box_1_1_seed_a7b97d9c7f68b46710d67798ebb55d637}} 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_seed_a7b97d9c7f68b46710d67798ebb55d637}{basal\+Roots}} ()
+\begin{DoxyCompactList}\small\item\em returns true if the seed has basal roots \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_ab916dd1547bec877c4f567a1d4636ab7}\label{class_c_plant_box_1_1_seed_ab916dd1547bec877c4f567a1d4636ab7}} 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_seed_ab916dd1547bec877c4f567a1d4636ab7}{shoot\+Borne\+Roots}} ()
+\begin{DoxyCompactList}\small\item\em returns true if the seed has shoot borne roots \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_ad9b22603a0cf42f1deaeae60562fa1bb}\label{class_c_plant_box_1_1_seed_ad9b22603a0cf42f1deaeae60562fa1bb}} 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_seed_ad9b22603a0cf42f1deaeae60562fa1bb}{tillers}} ()
+\begin{DoxyCompactList}\small\item\em returns true if the seed has tillers \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_seed_ab11a30aa0b56defb94610a6092799889}{basal\+Root\+Defined}} ()
+\item 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_seed_a15337de49f731ac95e829ea0eb9fe6cb}{shoot\+Borne\+Root\+Defined}} ()
+\item 
+bool \mbox{\hyperlink{class_c_plant_box_1_1_seed_a4e4f34675fe96f1ada689a67ed53cbe5}{tillers\+Defined}} ()
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_ae8d49402ff7c0f4af376000c2e7d1591}\label{class_c_plant_box_1_1_seed_ae8d49402ff7c0f4af376000c2e7d1591}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_seed_ae8d49402ff7c0f4af376000c2e7d1591}{get\+Number\+Of\+Root\+Crowns}} () const
+\begin{DoxyCompactList}\small\item\em returns the number of root crowns, after initialization (currently == 1) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a65039f51f338ac80f471cdb7033219cd}\label{class_c_plant_box_1_1_seed_a65039f51f338ac80f471cdb7033219cd}} 
+double \mbox{\hyperlink{class_c_plant_box_1_1_seed_a65039f51f338ac80f471cdb7033219cd}{get\+Max\+Sim\+Time}} () const
+\begin{DoxyCompactList}\small\item\em returns the recommended final simulation time \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a30386bc8f4e9e7a4d5429675d4331940}\label{class_c_plant_box_1_1_seed_a30386bc8f4e9e7a4d5429675d4331940}} 
+int \mbox{\hyperlink{class_c_plant_box_1_1_seed_a30386bc8f4e9e7a4d5429675d4331940}{tap\+Type}} = 1
+\begin{DoxyCompactList}\small\item\em defauts, may be adapted by intialize() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a1cd3628262acec20f5c8191ad924e3da}\label{class_c_plant_box_1_1_seed_a1cd3628262acec20f5c8191ad924e3da}} 
+int {\bfseries basal\+Type} = 4
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a170d1ebde7197b40a25d4934304bc11a}\label{class_c_plant_box_1_1_seed_a170d1ebde7197b40a25d4934304bc11a}} 
+int {\bfseries shootborne\+Type} = 5
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a7f5a0764c381bf028967a40561fd5f06}\label{class_c_plant_box_1_1_seed_a7f5a0764c381bf028967a40561fd5f06}} 
+int {\bfseries main\+Stem\+Type} = 1
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_af632bc010b9b89bb28b554e21950893a}\label{class_c_plant_box_1_1_seed_af632bc010b9b89bb28b554e21950893a}} 
+int {\bfseries tiller\+Type} = 4
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a0370532a00874b2a9cdec13c863b1aa7}\label{class_c_plant_box_1_1_seed_a0370532a00874b2a9cdec13c863b1aa7}} 
+int {\bfseries get\+Param\+Sub\+Type} (int organtype, std\+::string str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a253df713b9c6de7cc2f5f62424e2f710}\label{class_c_plant_box_1_1_seed_a253df713b9c6de7cc2f5f62424e2f710}} 
+int {\bfseries root\+Crowns\+\_\+} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_plant_box_1_1_seed}{Seed}}
+
+Creates one node, which represents the seed.
+
+\mbox{\hyperlink{class_c_plant_box_1_1_seed_a33d05612e1aa9e9b2846aeb8e377a949}{Seed\+::initialize()}} creates the initial organs, i.\+e. taproot, optional\+: basal, shoot borne root, if plant stem, optional\+: tillers \mbox{\hyperlink{class_c_plant_box_1_1_organ_acced3af5057dae40c647bcc1ea0e511d}{Seed\+::simulate()}} calls the simulate method of the created organs, i.\+e. taproot, basal roots, shoot borne roots, stem, tillers 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_afd69e50e9831f01db0686988e64159db}\label{class_c_plant_box_1_1_seed_afd69e50e9831f01db0686988e64159db}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!Seed@{Seed}}
+\index{Seed@{Seed}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{Seed()}{Seed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Seed\+::\+Seed (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_c_plant_box_1_1_organ_specific_parameter}{Organ\+Specific\+Parameter}} $>$}]{param,  }\item[{bool}]{alive,  }\item[{bool}]{active,  }\item[{double}]{age,  }\item[{double}]{length,  }\item[{bool}]{moved = {\ttfamily false},  }\item[{int}]{old\+NON = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+creates everything from scratch 
+
+Creates a seed from scratch by given parameters \mbox{\Hypertarget{class_c_plant_box_1_1_seed_aae7bc59833b505135d3a8394abe4a210}\label{class_c_plant_box_1_1_seed_aae7bc59833b505135d3a8394abe4a210}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!Seed@{Seed}}
+\index{Seed@{Seed}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{Seed()}{Seed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Seed\+::\+Seed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant }\end{DoxyParamCaption})}
+
+
+
+used within simulation 
+
+Creates a seed from a \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} using its parameter set 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_ab11a30aa0b56defb94610a6092799889}\label{class_c_plant_box_1_1_seed_ab11a30aa0b56defb94610a6092799889}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!basalRootDefined@{basalRootDefined}}
+\index{basalRootDefined@{basalRootDefined}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{basalRootDefined()}{basalRootDefined()}}
+{\footnotesize\ttfamily bool CPlant\+Box\+::\+Seed\+::basal\+Root\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+is there a basal root definition in the parameter set? works only before initialization, otherwise the basal root type is copied from to the tap root type
+
+Checks if there is a basal root definition in the parameter set. This works only before initialization, because on initialization the basal root type is copied from to the tap root type \mbox{\Hypertarget{class_c_plant_box_1_1_seed_a7380dc22add8d95f913f7c95f297ac7d}\label{class_c_plant_box_1_1_seed_a7380dc22add8d95f913f7c95f297ac7d}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!copy@{copy}}
+\index{copy@{copy}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ CPlant\+Box\+::\+Seed\+::copy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{rs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copies the seed 
+
+Deep copies the organ into the new plant
+\begin{DoxyParams}{Parameters}
+{\em rs.} & All laterals are deep copied, plant and parent pointers are updated.\\
+\hline
+{\em plant} & the plant the copied organ will be part of \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a9314bc56eaa1104bbcfa19e62c7cfdb2}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a13dd33c4e574fe7f67792302f848efbb}\label{class_c_plant_box_1_1_seed_a13dd33c4e574fe7f67792302f848efbb}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!copyBaseOrgans@{copyBaseOrgans}}
+\index{copyBaseOrgans@{copyBaseOrgans}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{copyBaseOrgans()}{copyBaseOrgans()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ $>$ CPlant\+Box\+::\+Seed\+::copy\+Base\+Organs (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant }\end{DoxyParamCaption})}
+
+Creates a deep copy of the seeds child organs. Use\+: the rootsystem manages base root itself, and just uses \mbox{\hyperlink{class_c_plant_box_1_1_seed}{Seed}} class for initialization \mbox{\Hypertarget{class_c_plant_box_1_1_seed_a05123ce2372476106b06c3c0008dbff7}\label{class_c_plant_box_1_1_seed_a05123ce2372476106b06c3c0008dbff7}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!createRoot@{createRoot}}
+\index{createRoot@{createRoot}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{createRoot()}{createRoot()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ CPlant\+Box\+::\+Seed\+::create\+Root (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant,  }\item[{int}]{type,  }\item[{double}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+overwrite if you want to change class types used by intialize() 
+
+todo doc \mbox{\Hypertarget{class_c_plant_box_1_1_seed_a0d94dd055a3e47c1e96f4c5d70009a3a}\label{class_c_plant_box_1_1_seed_a0d94dd055a3e47c1e96f4c5d70009a3a}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!createStem@{createStem}}
+\index{createStem@{createStem}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{createStem()}{createStem()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ CPlant\+Box\+::\+Seed\+::create\+Stem (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant,  }\item[{int}]{type,  }\item[{double}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+overwrite if you want to change class types used by intialize() 
+
+todo doc// overwrite if you want to change the types \mbox{\Hypertarget{class_c_plant_box_1_1_seed_a33d05612e1aa9e9b2846aeb8e377a949}\label{class_c_plant_box_1_1_seed_a33d05612e1aa9e9b2846aeb8e377a949}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!initialize@{initialize}}
+\index{initialize@{initialize}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void CPlant\+Box\+::\+Seed\+::initialize (\begin{DoxyParamCaption}\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+initialization creates the initial organs, i.\+e. taproot, optional\+: basal, shoot borne root, if plant stem, optional\+: tillers 
+
+Initialization creates the initial organs, i.\+e. taproot, basal root, (if needed) shoot borne root (if plant) stem \mbox{\Hypertarget{class_c_plant_box_1_1_seed_ab9e6531b8ab252af9c0b2da83ae98972}\label{class_c_plant_box_1_1_seed_ab9e6531b8ab252af9c0b2da83ae98972}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!organType@{organType}}
+\index{organType@{organType}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{organType()}{organType()}}
+{\footnotesize\ttfamily virtual int CPlant\+Box\+::\+Seed\+::organ\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+returns the organs type, overwrite for each organ 
+
+\begin{DoxyReturn}{Returns}
+The organ type, which is a coarse classification of the organs, for a string representation see see \mbox{\hyperlink{class_c_plant_box_1_1_organism_aba56ccd341664450effe12a8efbc94ae}{Organism\+::organ\+Type\+Names}}
+\end{DoxyReturn}
+Currently there are\+: ot\+\_\+organ (for unspecified organs) = 0, ot\+\_\+seed = 1, ot\+\_\+root = 2, ot\+\_\+stem = 3, and ot\+\_\+leaf = 4. There can be different classes with the same organ type. 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a734d6a012b32c79c3ecfa7a768b9875b}{CPlant\+Box\+::\+Organ}}.
+
+\mbox{\Hypertarget{class_c_plant_box_1_1_seed_a15337de49f731ac95e829ea0eb9fe6cb}\label{class_c_plant_box_1_1_seed_a15337de49f731ac95e829ea0eb9fe6cb}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!shootBorneRootDefined@{shootBorneRootDefined}}
+\index{shootBorneRootDefined@{shootBorneRootDefined}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{shootBorneRootDefined()}{shootBorneRootDefined()}}
+{\footnotesize\ttfamily bool CPlant\+Box\+::\+Seed\+::shoot\+Borne\+Root\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+is there a shoot borne root definition in the parameter set? works only before initialization, otherwise the shoot borne root type is copied from to the tap
+
+Checks if there is a shoot borne root definition in the parameter set. This works only before initialization, because on initialization the shoot borne root type is copied from to the basal root type \mbox{\Hypertarget{class_c_plant_box_1_1_seed_a4e4f34675fe96f1ada689a67ed53cbe5}\label{class_c_plant_box_1_1_seed_a4e4f34675fe96f1ada689a67ed53cbe5}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!tillersDefined@{tillersDefined}}
+\index{tillersDefined@{tillersDefined}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{tillersDefined()}{tillersDefined()}}
+{\footnotesize\ttfamily bool CPlant\+Box\+::\+Seed\+::tillers\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+is there a tiller definition in the parameter set? works only before initialization, otherwise the tiller type is copied from to the stem type
+
+Checks if there is a tiller definition in the parameter set. This works only before initialization, because on initialization the tiller type is copied from to the main stem type \mbox{\Hypertarget{class_c_plant_box_1_1_seed_a83a1493777594b1e92d31d6d3db4258b}\label{class_c_plant_box_1_1_seed_a83a1493777594b1e92d31d6d3db4258b}} 
+\index{CPlantBox::Seed@{CPlantBox::Seed}!toString@{toString}}
+\index{toString@{toString}!CPlantBox::Seed@{CPlantBox::Seed}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string CPlant\+Box\+::\+Seed\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Quick info about the object for debugging additionally, use param()-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_seed_a83a1493777594b1e92d31d6d3db4258b}{to\+String()}} and \mbox{\hyperlink{class_c_plant_box_1_1_organ_afabf8911c0d2771a58564792e353f186}{get\+Organ\+Random\+Parameter()}}-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_seed_a83a1493777594b1e92d31d6d3db4258b}{to\+String()}} to obtain all information. 
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_organ_a9f823aebd19519096e899e65604f239f}{CPlant\+Box\+::\+Organ}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Seed.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/Seed.\+cpp\end{DoxyCompactItemize}

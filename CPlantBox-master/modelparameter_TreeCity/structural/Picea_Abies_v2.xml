@@ -1,0 +1,161 @@
+<plant>
+    <name>Picea Abies</name>
+    <seed name="true" subType="0">
+        <parameter name="delayDefinition" value="0"/>
+        <parameter name="delayDefinitionShoot" value="0"/>
+        <parameter name="maxTil" value="0"/>
+        <parameter name="a" value="0.15"/> 
+        <parameter name="delayB" value="5"/> 
+        <parameter name="delayRC" value="1e+09"/>
+        <parameter name="delaySB" value="1e+09"/>
+        <parameter name="delayTil" value="1e+09"/>
+        <parameter name="dx" value="0.25"/>
+        <parameter name="dxMin" value="1e-06"/>
+        <parameter name="firstB" value="0"/>
+        <parameter name="firstSB" value="1e+09"/>
+        <parameter name="firstTil" value="1e+09"/>
+        <parameter name="ldelay" value="-1"/>
+        <parameter name="maxB" value="5" dev="2"/> 
+        <parameter name="nC" value="0"/>
+        <parameter name="nz" value="0"/>
+        <parameter name="seedPos.x" value="0"/>
+        <parameter name="seedPos.y" value="0"/>
+        <parameter name="seedPos.z" value="-3"/>
+        <parameter name="simulationTime" value="3000"/>
+    </seed>
+
+    <root name="taproot" subType="1">
+        <parameter name="gf" value="1"/>
+        <parameter name="tropismT" value="1"/>
+        <parameter name="a" value="0.175"/>
+        <parameter name="dx" value="0.5"/>
+        <parameter name="dxMin" value="1e-06"/>
+        <parameter name="la" value="20"/> 
+        <parameter name="lb" value="0"/> 
+        <parameter name="ldelay" value="-1"/>
+        <parameter name="lmax" value="30"/>
+        <parameter name="ln" value="3"/> 
+        <parameter name="lnk" value="0"/>
+        <parameter name="r" value="0.175"/>
+        <parameter name="rlt" value="1e+09"/>
+        <parameter name="theta" value="0"/>
+        <parameter name="tropismN" value="8"/>
+        <parameter name="tropismS" value="0.5"/>
+        
+        <!-- Le pivot génère notre NOUVELLE base horizontale courte -->
+        <!--parameter name="successor" ruleId="0" numLat="1" Where="" subType="6" organType="2" percentage="1"/-->
+    </root>
+
+    <!-- NOUVEAU: La base de la racine horizontale (Zone Proximale) -->
+    <root name="Horizontale_Base" subType="4">
+        <parameter name="gf" value="1"/>
+        <parameter name="tropismT" value="0"/>
+        <parameter name="a" value="0.17" dev="0.02"/>
+        <parameter name="dx" value="0.5"/>
+        <parameter name="dxMin" value="1e-06"/>
+        <parameter name="la" value="5"/> 
+        <parameter name="lb" value="2"/> 
+        <parameter name="ldelay" value="-1"/>
+        <parameter name="lmax" value="80" dev="10"/> <!-- Courte: s'arrête à 80 cm -->
+        <parameter name="ln" value="5"/> 
+        <parameter name="lnk" value="0"/>
+        <parameter name="r" value="0.164"/> <!--Vitesse théorique maximale-->
+        <parameter name="rlt" value="1e+09"/>
+        <parameter name="theta" value="1.57" dev="0.174"/> <!-- Naît à l'horizontale -->
+        <parameter name="tropismN" value="8"/>
+        <parameter name="tropismS" value="0.1"/>
+
+        <!-- Elle fait tomber les GRANDS Sinkers d'ancrage (subType 3) -->
+        <parameter name="successor" ruleId="0" numLat="1" Where="" subType="3" organType="2" percentage="0.3"/>
+        <!-- Quand elle a fini de pousser, elle passe le relais à la racine d'exploration (subType 4) -->
+        <parameter name="successor" ruleId="2" numLat="1" Where="apex" subType="6" organType="2" percentage="0.08"/>
+    </root>
+
+    <!-- MODIFIÉ: La racine horizontale d'exploration (Zone Distale) -->
+    <root name="Horizontale_Exploration" subType="6">
+        <parameter name="gf" value="1"/>
+        <parameter name="tropismT" value="0"/>
+        <parameter name="a" value="0.1" dev="0.02"/>
+        <parameter name="dx" value="0.5"/>
+        <parameter name="dxMin" value="1e-06"/>
+        <parameter name="la" value="5"/> 
+        <parameter name="lb" value="2"/> 
+        <parameter name="ldelay" value="-1"/>
+        <parameter name="lmax" value="600" dev="50"/> <!-- Longue: colonise le sol -->
+        <parameter name="ln" value="5"/> 
+        <parameter name="lnk" value="0"/>
+        <parameter name="r" value="0.164"/> <!--Vitesse théorique maximale--> 
+        <parameter name="rlt" value="1e+09"/>
+        <parameter name="theta" value="0.5" dev="0.1"/> <!-- CRUCIAL: angle 0 pour prolonger la base sans tourner -->
+        <parameter name="tropismN" value="8"/>
+        <parameter name="tropismS" value="0.1"/>
+
+        <!-- Elle ne fait plus que des PETITS Sinkers (5) et des racines fines (2) -->
+        <parameter name="successor" ruleId="0" numLat="1" Where="" subType="5" organType="2" percentage="0.1"/>
+        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.5"/>
+    </root>
+
+    <root name="Sinkers" subType="3">
+        <parameter name="gf" value="1"/>
+        <parameter name="tropismT" value="1"/>
+        <parameter name="a" value="0.05" dev="0.01"/>
+        <parameter name="dx" value="0.5"/>
+        <parameter name="dxMin" value="1e-06"/>
+        <parameter name="la" value="2"/> 
+        <parameter name="lb" value="0"/> 
+        <parameter name="ldelay" value="-1"/>
+        <parameter name="lmax" value="110" dev="40"/>
+        <parameter name="ln" value="4"/> 
+        <parameter name="lnk" value="0"/>
+
+        <parameter name="r" value="0.2"/> <!--Vitesse théorique maximale-->
+        <!--Initial growth rate [cm day-1]-->
+
+        <parameter name="rlt" value="1e+09"/>
+        <parameter name="theta" value="1.57" dev="0.7"/>
+        <parameter name="tropismN" value="2"/>
+        <parameter name="tropismS" value="1.5"/>
+
+        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.5"/>
+    </root>
+    
+    <root name="Short_Sinkers" subType="5">
+        <parameter name="gf" value="1"/>
+        <parameter name="tropismT" value="1"/>
+        <parameter name="a" value="0.04" dev="0.01"/>
+        <parameter name="dx" value="0.5"/>
+        <parameter name="dxMin" value="1e-06"/>
+        <parameter name="la" value="2"/> 
+        <parameter name="lb" value="0"/> 
+        <parameter name="ldelay" value="-1"/>
+        <parameter name="lmax" value="40" dev="15"/> <!-- Plus courtes -->
+        <parameter name="ln" value="4"/> 
+        <parameter name="lnk" value="0"/>
+        <parameter name="r" value="0.08"/>
+        <parameter name="rlt" value="1e+09"/>
+        <parameter name="theta" value="1.57" dev="0.7"/>
+        <parameter name="tropismN" value="2"/>
+        <parameter name="tropismS" value="1.5"/>
+
+        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.5"/>
+    </root>
+
+    <root name="Fine_Roots" subType="2">
+        <parameter name="gf" value="1"/>
+        <parameter name="tropismT" value="1"/>
+        <parameter name="a" value="0.05"/>
+        <parameter name="dx" value="0.2"/>
+        <parameter name="dxMin" value="1e-06"/>
+        <parameter name="la" value="0"/> 
+        <parameter name="lb" value="0"/> 
+        <parameter name="ldelay" value="-1"/>
+        <parameter name="lmax" value="5"/> 
+        <parameter name="ln" value="0"/> 
+        <parameter name="lnk" value="0"/>
+        <parameter name="r" value="0.05"/>
+        <parameter name="rlt" value="60"/>
+        <parameter name="theta" value="1.57" dev="0.174"/>
+        <parameter name="tropismN" value="0"/>
+        <parameter name="tropismS" value="0"/>
+    </root>
+</plant>

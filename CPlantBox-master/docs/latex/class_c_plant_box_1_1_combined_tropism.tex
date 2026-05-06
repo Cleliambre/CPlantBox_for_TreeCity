@@ -1,0 +1,102 @@
+\hypertarget{class_c_plant_box_1_1_combined_tropism}{}\doxysection{CPlant\+Box\+::Combined\+Tropism Class Reference}
+\label{class_c_plant_box_1_1_combined_tropism}\index{CPlantBox::CombinedTropism@{CPlantBox::CombinedTropism}}
+
+
+{\ttfamily \#include $<$tropism.\+h$>$}
+
+
+
+Inheritance diagram for CPlant\+Box\+::Combined\+Tropism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_c_plant_box_1_1_combined_tropism__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CPlant\+Box\+::Combined\+Tropism\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_c_plant_box_1_1_combined_tropism__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_combined_tropism_a6d5b4bea2a77fa9359bddaafda114977}\label{class_c_plant_box_1_1_combined_tropism_a6d5b4bea2a77fa9359bddaafda114977}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_combined_tropism_a6d5b4bea2a77fa9359bddaafda114977}{Combined\+Tropism}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant, double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_ad66a1abd4a5e98d30fa305058f330bc9}{n}}, double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_af056914c05b89a19107ac89d9c6b96ba}{sigma}}, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$$>$ tropisms\+\_\+, std\+::vector$<$ double $>$ weights\+\_\+)
+\begin{DoxyCompactList}\small\item\em linearly combines the objective functions of multiple tropisms \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_plant_box_1_1_combined_tropism_a74fa02939b1113a82ff8d93d25fd4fdb}{Combined\+Tropism}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant, double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_ad66a1abd4a5e98d30fa305058f330bc9}{n}}, double \mbox{\hyperlink{class_c_plant_box_1_1_tropism_af056914c05b89a19107ac89d9c6b96ba}{sigma}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ t1, double w1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ t2, double w2)
+\begin{DoxyCompactList}\small\item\em linearly combines the objective functions of two tropism functions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_combined_tropism_a86dbb1fb0c6bc68b14dba9c0eca5a7f2}\label{class_c_plant_box_1_1_combined_tropism_a86dbb1fb0c6bc68b14dba9c0eca5a7f2}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$ \mbox{\hyperlink{class_c_plant_box_1_1_combined_tropism_a86dbb1fb0c6bc68b14dba9c0eca5a7f2}{copy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$ plant) override
+\begin{DoxyCompactList}\small\item\em copy constructor, deep copies tropisms \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_plant_box_1_1_combined_tropism_a90203fd1a936905a07646ce9a3dfe9b7}{tropism\+Objective}} (const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&pos, const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&old, double a, double b, double dx, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$ o=nullptr) override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading()}} minimizes this function, \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Combined tropisms, creates a linear combination of the respective objective functions 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_combined_tropism_a74fa02939b1113a82ff8d93d25fd4fdb}\label{class_c_plant_box_1_1_combined_tropism_a74fa02939b1113a82ff8d93d25fd4fdb}} 
+\index{CPlantBox::CombinedTropism@{CPlantBox::CombinedTropism}!CombinedTropism@{CombinedTropism}}
+\index{CombinedTropism@{CombinedTropism}!CPlantBox::CombinedTropism@{CPlantBox::CombinedTropism}}
+\doxysubsubsection{\texorpdfstring{CombinedTropism()}{CombinedTropism()}}
+{\footnotesize\ttfamily CPlant\+Box\+::\+Combined\+Tropism\+::\+Combined\+Tropism (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organism}{Organism}} $>$}]{plant,  }\item[{double}]{n,  }\item[{double}]{sigma,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$}]{t1,  }\item[{double}]{w1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_tropism}{Tropism}} $>$}]{t2,  }\item[{double}]{w2 }\end{DoxyParamCaption})}
+
+
+
+linearly combines the objective functions of two tropism functions 
+
+Constructs a combined tropism with two tropsims, the new objective funciton is (t1-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_combined_tropism_a90203fd1a936905a07646ce9a3dfe9b7}{tropism\+Objective()}}$\ast$w1)+(t2-\/$>$\mbox{\hyperlink{class_c_plant_box_1_1_combined_tropism_a90203fd1a936905a07646ce9a3dfe9b7}{tropism\+Objective()}}$\ast$w2)
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & number of tries \\
+\hline
+{\em sigma} & standard deviation of angular change \mbox{[}1/cm\mbox{]} \\
+\hline
+{\em t1} & first tropism \\
+\hline
+{\em w1} & first weight \\
+\hline
+{\em t2} & first tropism \\
+\hline
+{\em w2} & first weight \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_plant_box_1_1_combined_tropism_a90203fd1a936905a07646ce9a3dfe9b7}\label{class_c_plant_box_1_1_combined_tropism_a90203fd1a936905a07646ce9a3dfe9b7}} 
+\index{CPlantBox::CombinedTropism@{CPlantBox::CombinedTropism}!tropismObjective@{tropismObjective}}
+\index{tropismObjective@{tropismObjective}!CPlantBox::CombinedTropism@{CPlantBox::CombinedTropism}}
+\doxysubsubsection{\texorpdfstring{tropismObjective()}{tropismObjective()}}
+{\footnotesize\ttfamily double CPlant\+Box\+::\+Combined\+Tropism\+::tropism\+Objective (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} \&}]{pos,  }\item[{const \mbox{\hyperlink{class_c_plant_box_1_1_matrix3d}{Matrix3d}} \&}]{old,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{dx,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_plant_box_1_1_organ}{Organ}} $>$}]{o = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading()}} minimizes this function, 
+
+\begin{DoxySeeAlso}{See also}
+Tropism\+Function
+\end{DoxySeeAlso}
+\mbox{\hyperlink{class_c_plant_box_1_1_tropism_acab3cafe893f5e60a1d440c857511f40}{get\+Heading()}} minimizes this function, \begin{DoxySeeAlso}{See also}
+Tropism\+Function\+::tropism\+Objective 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_plant_box_1_1_tropism_aee46e346f1fa6b94bb936d309cb70287}{CPlant\+Box\+::\+Tropism}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/tropism.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/structural/tropism.\+cpp\end{DoxyCompactItemize}

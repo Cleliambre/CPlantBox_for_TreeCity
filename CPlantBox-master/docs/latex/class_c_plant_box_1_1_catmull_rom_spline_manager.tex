@@ -1,0 +1,77 @@
+\hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager}{}\doxysection{CPlant\+Box\+::Catmull\+Rom\+Spline\+Manager Class Reference}
+\label{class_c_plant_box_1_1_catmull_rom_spline_manager}\index{CPlantBox::CatmullRomSplineManager@{CPlantBox::CatmullRomSplineManager}}
+
+
+{\ttfamily \#include $<$Catmull\+Rom\+Spline.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_aa621c17c03be38d2cd05bf9c168c5dd9}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_aa621c17c03be38d2cd05bf9c168c5dd9}} 
+{\bfseries Catmull\+Rom\+Spline\+Manager} (std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ y, std\+::optional$<$ std\+::vector$<$ int $>$$>$ ids=std\+::nullopt)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_ab874b2d0686c9e55cf0319712490976f}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_ab874b2d0686c9e55cf0319712490976f}} 
+{\bfseries Catmull\+Rom\+Spline\+Manager} (std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ y)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a6f972e75b5978ed33220ce75aa620ef8}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a6f972e75b5978ed33220ce75aa620ef8}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_catmull_rom_spline}{Catmull\+Rom\+Spline}} {\bfseries spline} (int i) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_ae1196536bd28f26e43157fe0a6a5835d}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_ae1196536bd28f26e43157fe0a6a5835d}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_catmull_rom_spline}{Catmull\+Rom\+Spline}} {\bfseries select\+Spline} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a9751eb0ff9845aea91f8880a8c36a250}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a9751eb0ff9845aea91f8880a8c36a250}} 
+double {\bfseries get\+T0} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_ad0b55f739615fdbbfff3b3e318929bf1}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_ad0b55f739615fdbbfff3b3e318929bf1}} 
+double {\bfseries get\+T1} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a727070f62a718cd42e7a8fdbd6b3e2ae}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a727070f62a718cd42e7a8fdbd6b3e2ae}} 
+std\+::vector$<$ double $>$ {\bfseries getT} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a9090cec7399b270a669ae85b02ed6f63}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a9090cec7399b270a669ae85b02ed6f63}} 
+void {\bfseries set\+Alpha} (double alpha, int i)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a39fa40fddee3504398243775e30d99e4}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a39fa40fddee3504398243775e30d99e4}} 
+const std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_catmull_rom_spline}{Catmull\+Rom\+Spline}} $>$ \& {\bfseries get\+Splines} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a083cdb90300241175761e9c59b03b9ab}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a083cdb90300241175761e9c59b03b9ab}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries operator()} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a4a923b472939a9e04883ed844d98c31b}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a4a923b472939a9e04883ed844d98c31b}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries derivative} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a12b88776350e975b0e233af1c46cb8a9}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a12b88776350e975b0e233af1c46cb8a9}} 
+void {\bfseries setY} (std\+::vector$<$ \mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} $>$ y)
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a3653267258cef89ca039fbf71fc27c27}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a3653267258cef89ca039fbf71fc27c27}} 
+double {\bfseries get\+Offset} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a8cfd7f5fe26dad287d204bbff0a5d6a5}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a8cfd7f5fe26dad287d204bbff0a5d6a5}} 
+int {\bfseries get\+Index} (double t) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a930b5534c9cf90a9830b11c1e0ab7dea}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a930b5534c9cf90a9830b11c1e0ab7dea}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries help\+\_\+lower} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_abea71bd28d52f126f6c71a7980b2e43c}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_abea71bd28d52f126f6c71a7980b2e43c}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries help\+\_\+upper} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a29eace1652f3617b27c7fea46603df46}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a29eace1652f3617b27c7fea46603df46}} 
+\mbox{\hyperlink{class_c_plant_box_1_1_vector3d}{Vector3d}} {\bfseries get\+Control\+Point} (int i) const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a0c4cd5f7b9fda045cc1e45d85c5ee4a7}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a0c4cd5f7b9fda045cc1e45d85c5ee4a7}} 
+int {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a46cb87e76b49092d67f8c18d17827e13}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a46cb87e76b49092d67f8c18d17827e13}} 
+int {\bfseries spline\+Size} () const
+\item 
+\mbox{\Hypertarget{class_c_plant_box_1_1_catmull_rom_spline_manager_a6c23035823a574a5c454360a1a887da2}\label{class_c_plant_box_1_1_catmull_rom_spline_manager_a6c23035823a574a5c454360a1a887da2}} 
+std\+::vector$<$ double $>$ {\bfseries get\+TValues} (int spline) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A manager class for the Catmull-\/\+Rom spline interpolation It is used to store the Catmull-\/\+Rom splines of depth 4 We use a weighted average of the splines to get a smooth transition 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/visualisation/Catmull\+Rom\+Spline.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,186 @@
+\hypertarget{classaabb_1_1_a_a_b_b}{}\doxysection{aabb\+::AABB Class Reference}
+\label{classaabb_1_1_a_a_b_b}\index{aabb::AABB@{aabb::AABB}}
+
+
+The axis-\/aligned bounding box object.  
+
+
+
+
+{\ttfamily \#include $<$AABB.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_aa772ee84f77f4de832d18ae04f33e400}\label{classaabb_1_1_a_a_b_b_aa772ee84f77f4de832d18ae04f33e400}} 
+\mbox{\hyperlink{classaabb_1_1_a_a_b_b_aa772ee84f77f4de832d18ae04f33e400}{AABB}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaabb_1_1_a_a_b_b_aa8694177c970e4f7b1b0e5b639044e3f}{AABB}} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaabb_1_1_a_a_b_b_a4579840c424c1878e250939ba165d6bc}{AABB}} (const std\+::vector$<$ double $>$ \&, const std\+::vector$<$ double $>$ \&)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_ab4ed16fb404ebab59923fa7bb24ccf36}\label{classaabb_1_1_a_a_b_b_ab4ed16fb404ebab59923fa7bb24ccf36}} 
+double \mbox{\hyperlink{classaabb_1_1_a_a_b_b_ab4ed16fb404ebab59923fa7bb24ccf36}{compute\+Surface\+Area}} () const
+\begin{DoxyCompactList}\small\item\em Compute the surface area of the box. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_a27df40e0dd050e9f3edb7712c356e16d}\label{classaabb_1_1_a_a_b_b_a27df40e0dd050e9f3edb7712c356e16d}} 
+double \mbox{\hyperlink{classaabb_1_1_a_a_b_b_a27df40e0dd050e9f3edb7712c356e16d}{get\+Surface\+Area}} () const
+\begin{DoxyCompactList}\small\item\em Get the surface area of the box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaabb_1_1_a_a_b_b_aa944634f1e621a4defedf9a2f870edd9}{merge}} (const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&, const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&)
+\begin{DoxyCompactList}\small\item\em Merge two AABBs into this one. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaabb_1_1_a_a_b_b_a57dbe77327ab42c811975efea1f2f5f2}{contains}} (const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&) const
+\begin{DoxyCompactList}\small\item\em Test whether the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} is contained within this one. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaabb_1_1_a_a_b_b_ad329d1ab532735bb9e97b83142450658}{overlaps}} (const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&, bool touch\+Is\+Overlap) const
+\begin{DoxyCompactList}\small\item\em Test whether the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} overlaps this one. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classaabb_1_1_a_a_b_b_a15920bc5d9536246246c2a5a00f474d9}{compute\+Centre}} ()
+\begin{DoxyCompactList}\small\item\em Compute the centre of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaabb_1_1_a_a_b_b_aa6f56a927969129208d3863eea0e6958}{set\+Dimension}} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Set the dimensionality of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_a43a22388a1483b4f839a9b0975b65356}\label{classaabb_1_1_a_a_b_b_a43a22388a1483b4f839a9b0975b65356}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classaabb_1_1_a_a_b_b_a43a22388a1483b4f839a9b0975b65356}{lower\+Bound}}
+\begin{DoxyCompactList}\small\item\em Lower bound of \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} in each dimension. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_a654aefe653e71a7820c73804e29a0ef5}\label{classaabb_1_1_a_a_b_b_a654aefe653e71a7820c73804e29a0ef5}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classaabb_1_1_a_a_b_b_a654aefe653e71a7820c73804e29a0ef5}{upper\+Bound}}
+\begin{DoxyCompactList}\small\item\em Upper bound of \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} in each dimension. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_a1b67d7133c95f072af08d7b45b6817db}\label{classaabb_1_1_a_a_b_b_a1b67d7133c95f072af08d7b45b6817db}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classaabb_1_1_a_a_b_b_a1b67d7133c95f072af08d7b45b6817db}{centre}}
+\begin{DoxyCompactList}\small\item\em The position of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} centre. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_aea42d1c7b7c709bdb5189b16567f6874}\label{classaabb_1_1_a_a_b_b_aea42d1c7b7c709bdb5189b16567f6874}} 
+double \mbox{\hyperlink{classaabb_1_1_a_a_b_b_aea42d1c7b7c709bdb5189b16567f6874}{surface\+Area}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}\textquotesingle{}s surface area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The axis-\/aligned bounding box object. 
+
+Axis-\/aligned bounding boxes (AABBs) store information for the minimum orthorhombic bounding-\/box for an object. Support is provided for dimensions $>$= 2. (In 2D the bounding box is either a rectangle, in 3D it is a rectangular prism.)
+
+Class member functions provide functionality for merging \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} objects and testing overlap with other AABBs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_aa8694177c970e4f7b1b0e5b639044e3f}\label{classaabb_1_1_a_a_b_b_aa8694177c970e4f7b1b0e5b639044e3f}} 
+\index{aabb::AABB@{aabb::AABB}!AABB@{AABB}}
+\index{AABB@{AABB}!aabb::AABB@{aabb::AABB}}
+\doxysubsubsection{\texorpdfstring{AABB()}{AABB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily aabb\+::\+AABB\+::\+AABB (\begin{DoxyParamCaption}\item[{unsigned int}]{dimension }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimension} & The dimensionality of the system. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_a4579840c424c1878e250939ba165d6bc}\label{classaabb_1_1_a_a_b_b_a4579840c424c1878e250939ba165d6bc}} 
+\index{aabb::AABB@{aabb::AABB}!AABB@{AABB}}
+\index{AABB@{AABB}!aabb::AABB@{aabb::AABB}}
+\doxysubsubsection{\texorpdfstring{AABB()}{AABB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily aabb\+::\+AABB\+::\+AABB (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{lower\+Bound\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{upper\+Bound\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lower\+Bound\+\_\+} & The lower bound in each dimension.\\
+\hline
+{\em upper\+Bound\+\_\+} & The upper bound in each dimension. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_a15920bc5d9536246246c2a5a00f474d9}\label{classaabb_1_1_a_a_b_b_a15920bc5d9536246246c2a5a00f474d9}} 
+\index{aabb::AABB@{aabb::AABB}!computeCentre@{computeCentre}}
+\index{computeCentre@{computeCentre}!aabb::AABB@{aabb::AABB}}
+\doxysubsubsection{\texorpdfstring{computeCentre()}{computeCentre()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ aabb\+::\+AABB\+::compute\+Centre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compute the centre of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. 
+
+\begin{DoxyReturn}{Returns}
+The position vector of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} centre. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_a57dbe77327ab42c811975efea1f2f5f2}\label{classaabb_1_1_a_a_b_b_a57dbe77327ab42c811975efea1f2f5f2}} 
+\index{aabb::AABB@{aabb::AABB}!contains@{contains}}
+\index{contains@{contains}!aabb::AABB@{aabb::AABB}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool aabb\+::\+AABB\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&}]{aabb }\end{DoxyParamCaption}) const}
+
+
+
+Test whether the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} is contained within this one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aabb} & A reference to the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} is fully contained. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_aa944634f1e621a4defedf9a2f870edd9}\label{classaabb_1_1_a_a_b_b_aa944634f1e621a4defedf9a2f870edd9}} 
+\index{aabb::AABB@{aabb::AABB}!merge@{merge}}
+\index{merge@{merge}!aabb::AABB@{aabb::AABB}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily void aabb\+::\+AABB\+::merge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&}]{aabb1,  }\item[{const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&}]{aabb2 }\end{DoxyParamCaption})}
+
+
+
+Merge two AABBs into this one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aabb1} & A reference to the first \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}.\\
+\hline
+{\em aabb2} & A reference to the second \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_ad329d1ab532735bb9e97b83142450658}\label{classaabb_1_1_a_a_b_b_ad329d1ab532735bb9e97b83142450658}} 
+\index{aabb::AABB@{aabb::AABB}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!aabb::AABB@{aabb::AABB}}
+\doxysubsubsection{\texorpdfstring{overlaps()}{overlaps()}}
+{\footnotesize\ttfamily bool aabb\+::\+AABB\+::overlaps (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} \&}]{aabb,  }\item[{bool}]{touch\+Is\+Overlap }\end{DoxyParamCaption}) const}
+
+
+
+Test whether the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} overlaps this one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aabb} & A reference to the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}.\\
+\hline
+{\em touch\+Is\+Overlap} & Does touching constitute an overlap?\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}} overlaps. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaabb_1_1_a_a_b_b_aa6f56a927969129208d3863eea0e6958}\label{classaabb_1_1_a_a_b_b_aa6f56a927969129208d3863eea0e6958}} 
+\index{aabb::AABB@{aabb::AABB}!setDimension@{setDimension}}
+\index{setDimension@{setDimension}!aabb::AABB@{aabb::AABB}}
+\doxysubsubsection{\texorpdfstring{setDimension()}{setDimension()}}
+{\footnotesize\ttfamily void aabb\+::\+AABB\+::set\+Dimension (\begin{DoxyParamCaption}\item[{unsigned int}]{dimension }\end{DoxyParamCaption})}
+
+
+
+Set the dimensionality of the \mbox{\hyperlink{classaabb_1_1_a_a_b_b}{AABB}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimension} & The dimensionality of the system. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/aabbcc/AABB.\+h\item 
+/workspaces/\+CPlant\+Box/\+CPlant\+Box-\/master/src/external/aabbcc/AABB.\+cc\end{DoxyCompactItemize}
