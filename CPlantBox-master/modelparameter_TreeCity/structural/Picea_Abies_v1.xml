@@ -3,7 +3,6 @@
 <!-- Il a été gardé en cas d'envie de retourner en arrière-->
 
 <plant>
-    <name>Picea Abies</name>
     <seed name="true" subType="0">
         <parameter name="delayDefinition" value="0"/>
         <!--method implemented to evaluate root lateral growth delay (0: distance based, 1: delay based defined by parent organ)-->

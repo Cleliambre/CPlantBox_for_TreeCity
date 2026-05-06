@@ -1,5 +1,4 @@
 <plant>
-    <name>Picea Abies</name>
     <seed name="true" subType="0">
         <parameter name="delayDefinition" value="0"/>
         <parameter name="delayDefinitionShoot" value="0"/>
