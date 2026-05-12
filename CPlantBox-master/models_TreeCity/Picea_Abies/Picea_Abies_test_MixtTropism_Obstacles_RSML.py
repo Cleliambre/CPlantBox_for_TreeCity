@@ -158,7 +158,7 @@ for i in range(0, n_steps):
     plant.write("results/Picea_Abies_Mixte_" + str(i) + ".vtp")
 
 #export en RSML
-plant.write("results/Picea_Abies_Mixte.rsml")
+plant.write("results/Picea_Abies_Mixte_Obstacles.rsml")
 
 #export de la carte d'humidité pour ParaView
 print("Génération du champ d'humidité 3D...")
