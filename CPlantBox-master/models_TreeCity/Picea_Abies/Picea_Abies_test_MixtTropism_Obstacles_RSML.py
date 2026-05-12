@@ -1,10 +1,16 @@
 import plantbox as pb
+import plantbox.visualisation.vtk_plot as vp
+import plantbox.rsml.rsml_writer as rw
+from plantbox.rsml.rsml_writer import Metadata
 import numpy as np
 
 # --- 1. L'ENVIRONNEMENT PUR ---
 class SolHumidite(pb.SoilLookUp):
     def __init__(self, cx=300, cy=0, cz=-80):
         super().__init__()
+        self.cx = cx
+        self.cy = cy
+        self.cz = cz
 
     def getDistance(self, pos):
         return np.sqrt((pos.x - self.cx)**2 + (pos.y - self.cy)**2 + (pos.z - self.cz)**2)
@@ -17,23 +23,23 @@ class SolHumidite(pb.SoilLookUp):
         return 1000 / (distance + 50)
 
 #un sol plus complexe avec plusieurs poches d'eau  
+# --- 1. LE SOL INTELLIGENT (Le radar est caché ici !) ---
 class SolHumidite2(pb.SoilLookUp):
-    def __init__(self, pics_humidite=None):
+    def __init__(self, pics_humidite=None, obstacle=None):
         super().__init__()
-        # Si on ne donne pas de pics, on en crée une liste par défaut très dispersée
+        self.obstacle = obstacle
         if pics_humidite is None:
             self.pics = [
-                (300, 0, -80),     # Poche originale (Droite, moyenne profondeur)
-                (-250, 100, -120), # Poche (Gauche, profonde, décalée en Y)
-                (100, -200, -40),  # Poche (Devant, très peu profonde)
-                (-100, 150, -180)  # Poche (Derrière, très profonde)
+                (300, 0, -80), 
+                (-250, 100, -120),
+                (100, -200, -40), 
+                (-100, 150, -180)
             ]
         else:
             self.pics = pics_humidite
             
     def getDistance(self, pos):
         """Renvoie la distance minimale entre la position donnée et les pics d'humidité"""
-        # Cherche la distance vers la flaque d'eau la plus proche
         distance_min = float('inf')
         for cx, cy, cz in self.pics:
             dist = np.sqrt((pos.x - cx)**2 + (pos.y - cy)**2 + (pos.z - cz)**2)
@@ -42,87 +48,117 @@ class SolHumidite2(pb.SoilLookUp):
         return distance_min
         
     def getValue(self, pos, organ=None):
-        #méthode "opportuniste" : on ne regarde que la poche d'eau la plus proche pour calculer l'humidité
+        # 1. LE BOUCLIER TRAJECTOIRE : CPlantBox interroge cette fonction pour 
+        # les 15 positions FUTURES testées.
+        if self.obstacle is not None:
+            dist_obs = self.obstacle.getDist(pos)
+            if dist_obs < 0:
+                # Si la trajectoire testée mène près de la roche, on renvoie une 
+                # valeur absurdement négative. Le moteur l'évitera !
+                #return dist_obs * 10000.0
+
+                #sans boost particulier, juste en pénalisant la roche
+                return dist_obs
+
+        # 2. Sinon, on renvoie l'attraction normale
         distance_min = self.getDistance(pos)
         return 1000 / (distance_min + 50)
     
-        #méthode "cumulative" : on additionne l'humidité dégagée par toutes les poches d'eau, même les plus éloignées
-        # Additionne l'humidité dégagée par toutes les poches
-        #humidite_totale = 0
-        #for cx, cy, cz in self.pics:
-        #    dist = np.sqrt((pos.x - cx)**2 + (pos.y - cy)**2 + (pos.z - cz)**2)
-        #    humidite_totale += 1000 / (dist + 50)
-        #return humidite_totale
-
-# --- 2. LE COMPORTEMENT PUR (Héritage de Tropism) ---
-class MonTropismeMixte(pb.Tropism):
+# --- 2. LE CERVEAU MIXTE ÉPURÉ ---
+class TropismeMixte(pb.Tropism):
     def __init__(self, plant, n_trials, sigma, sol_humide, poids_grav=0.8, poids_eau=0.2):
-        # 1. On initialise la classe mère C++ pb.Tropism
         super().__init__(plant, n_trials, sigma)
-        
-        #réutilisation des tropismes déjà existants
         self.t_gravite = pb.Gravitropism(plant, n_trials, sigma)
         self.t_eau = pb.Hydrotropism(plant, n_trials, sigma, sol_humide)
 
-        # 2. On stocke nos paramètres spécifiques
         self.sol = sol_humide
         self.w_grav = poids_grav
         self.w_eau = poids_eau
 
-    # On écrase (override) la méthode d'évaluation du tropisme
     def tropismObjective(self, pos, old, a, b, dx, organ=None):        
-        # Calcul de l'objectif Gravité
-        # 1. On demande au moteur C++ de calculer le score de gravité
-        # Il va utiliser 'old', 'a' et 'b' pour évaluer la future trajectoire 
-        # et renvoyer un score parfait entre 0 et 1.
+        # On délègue les maths lourdes au C++ !
         score_gravite = self.t_gravite.tropismObjective(pos, old, a, b, dx, organ)
-        
-        # Calcul de l'objectif Eau
-        # 2. On fait exactement la même chose pour l'eau
         score_eau = self.t_eau.tropismObjective(pos, old, a, b, dx, organ)
 
-        distance = self.sol.getDistance(pos)
-
-        # 3. La Zone Neutre Anti-Noeuds :
-        # Si la racine est dans un rayon de 40cm du centre de la poche d'eau,
-        # on coupe l'attraction de l'eau pour qu'elle reprenne sa course droite.
-        poids_eau_actuel = 0 if distance < 40 else self.w_eau
+        # On garde notre sécurité anti-nœuds (si on est déjà dans l'eau, on écoute la gravité)
+        poids_eau = 0 if self.sol.getDistance(pos) < 40 else self.w_eau
         
-        # Retourne le score combiné
-        return (score_gravite * self.w_grav) + (score_eau * poids_eau_actuel)
+        return (score_gravite * self.w_grav) + (score_eau * poids_eau)
 
 # --- 3. LE SCRIPT PRINCIPAL ---
-plant = pb.Plant()
+plant = pb.RootSystem() #attention, RootSystem est deprecated mais c'est plus simple pour exporter en RSML
 plant.readParameters("../../modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml")
+
+
+# On définit notre obstacle (une grosse plaque de roche rectangulaire)
+# SDF_Cuboid prend le coin minimum (x,y,z) et le coin maximum (x,y,z)
+# Plaçons un mur/roche en plein sur le chemin de la poche d'eau de droite !
+
+print("Création de l'obstacle rocheux...")
+min_roche = pb.Vector3d(50, -150, -150) # Point bas-gauche
+max_roche = pb.Vector3d(100, 100, -20)   # Point haut-droit
+roche = pb.SDF_Cuboid(min_roche, max_roche)
+
+roche = pb.SDF_RotateTranslate(roche, -45, 2, pb.Vector3d(0, 0, 0)) 
+
+# (Optionnel) Vous pouvez en créer un deuxième
+# roche2 = pb.SDF_Cuboid(pb.Vector3d(-150, -50, -100), pb.Vector3d(-100, 50, -50))
+# obstacles_combines = pb.SDF_Union(roche, roche2)
+
+#ajout d'un obstacle pour limiter la propagation au delà de 60cm de la surface
+limite = pb.SDF_HalfPlane(
+    pb.Vector3d(-1000, -1000, -60), # Origine (coin du plan)
+    pb.Vector3d(1000, -1000, -60),  # Point 1 (direction X)
+    pb.Vector3d(-1000, 1000, -60)   # Point 2 (direction Y)
+)
+
+tous_les_obstacles = pb.SDF_Union(roche, limite)
 
 # On instancie notre sol et on l'assigne
 #mon_sol = SolHumidite(cx=300, cy=0, cz=-80)
-mon_sol2 = SolHumidite2()
+mon_sol2 = SolHumidite2(obstacle=tous_les_obstacles)
 plant.setSoil(mon_sol2)
+
+# On définit la limite globale de la terre (un espace immense de 2000 cm)
+# Pour que les racines aient la place de s'exprimer
+domaine = pb.SDF_PlantBox(2000, 2000, 2000)
+
+# 3. On soustrait la roche du domaine navigable
+espace_navigable = pb.SDF_Difference(domaine, tous_les_obstacles)
+
+#export de l'obstacle pour visualisation dans ParaView
+vp.write_container(tous_les_obstacles, "results/ObstacleRoche.vtp")
+
+# 4. On assigne cet espace physique à l'arbre
+plant.setGeometry(espace_navigable)
 
 # Initialisation
 plant.initialize()
 
 # On instancie notre tropisme mixte
-tropisme_mixte = MonTropismeMixte(plant, 2.0, 1.5, mon_sol2, 0.26, 1)
-tropisme_mixte2 = MonTropismeMixte(plant, 4.0, 0.5, mon_sol2, 0.01, 1)
+tropisme_mixte = TropismeMixte(plant, 2.0, 1.5, mon_sol2, 0.27, 1)
+tropisme_mixte2 = TropismeMixte(plant, 4.0, 0.5, mon_sol2, 0.01, 1)
 
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 3)
+plant.setTropism(tropisme_mixte,  3)
 
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 5)
+plant.setTropism(tropisme_mixte,  5)
 
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 2)
+plant.setTropism(tropisme_mixte,  2)
 
-plant.setTropism(tropisme_mixte2, pb.OrganTypes.root, 7)
+plant.setTropism(tropisme_mixte2,  7)
 
 # Simulation
 sim_time = 5000
 dt = 50
 n_steps = round(sim_time / dt)
 
+#export du système
 for i in range(0, n_steps):
     plant.simulate(dt)
     plant.write("results/Picea_Abies_Mixte_" + str(i) + ".vtp")
+
+#export en RSML
+plant.write("results/Picea_Abies_Mixte.rsml")
 
 #export de la carte d'humidité pour ParaView
 print("Génération du champ d'humidité 3D...")

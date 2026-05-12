@@ -92,7 +92,7 @@ class MonTropismeMixte(pb.Tropism):
         return (score_gravite * self.w_grav) + (score_eau * poids_eau_actuel)
 
 # --- 3. LE SCRIPT PRINCIPAL ---
-plant = pb.Plant()
+plant = pb.RootSystem() #attention, RootSystem est deprecated mais c'est plus simple pour exporter en RSML
 plant.readParameters("../../modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml")
 
 # On instancie notre sol et on l'assigne
@@ -107,13 +107,13 @@ plant.initialize()
 tropisme_mixte = MonTropismeMixte(plant, 2.0, 1.5, mon_sol2, 0.26, 1)
 tropisme_mixte2 = MonTropismeMixte(plant, 4.0, 0.5, mon_sol2, 0.01, 1)
 
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 3)
+plant.setTropism(tropisme_mixte, 3)
 
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 5)
+plant.setTropism(tropisme_mixte, 5)
 
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 2)
+plant.setTropism(tropisme_mixte,  2)
 
-plant.setTropism(tropisme_mixte2, pb.OrganTypes.root, 7)
+plant.setTropism(tropisme_mixte2, 7)
 
 # Simulation
 sim_time = 5000
@@ -123,6 +123,7 @@ n_steps = round(sim_time / dt)
 for i in range(0, n_steps):
     plant.simulate(dt)
     plant.write("results/Picea_Abies_Mixte_" + str(i) + ".vtp")
+plant.write("results/Picea_Abies_Mixte.rsml")
 
 #export de la carte d'humidité pour ParaView
 print("Génération du champ d'humidité 3D...")
