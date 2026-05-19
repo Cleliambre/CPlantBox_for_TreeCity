@@ -3,22 +3,71 @@ import numpy as np
 
 # --- 1. L'ENVIRONNEMENT PUR ---
 class SolHumidite(pb.SoilLookUp):
+    """
+    Modèle de sol basique contenant une unique source d'eau ponctuelle.
+    Conçu pour tester l'attraction hydrotropique simple d'un système racinaire.
+    """
+
     def __init__(self, cx=300, cy=0, cz=-80):
+        """
+        Initialise la position spatiale de la source d'eau unique.
+        
+        Args:
+            cx (float): Coordonnée X de la source. Défaut à 300.
+            cy (float): Coordonnée Y de la source. Défaut à 0.
+            cz (float): Coordonnée Z de la source (profondeur). Défaut à -80.
+        """
         super().__init__()
+        self.cx = cx
+        self.cy = cy
+        self.cz = cz
 
     def getDistance(self, pos):
+        """
+        Calcule la distance euclidienne en 3D entre une position donnée et la source d'eau.
+        
+        Args:
+            pos (pb.Vector3d): Position actuelle à évaluer.
+            
+        Returns:
+            float: La distance absolue (en cm).
+        """
         return np.sqrt((pos.x - self.cx)**2 + (pos.y - self.cy)**2 + (pos.z - self.cz)**2)
         
     def getValue(self, pos, organ=None):
+        """
+        Évalue l'attractivité du sol (humidité) à une position donnée.
+        La valeur est normalisée pour décroître hyperboliquement de 1.0 (au centre) vers 0.0.
+        
+        Args:
+            pos (pb.Vector3d): La position sondée par le moteur C++.
+            organ (Organ, optionnel): L'organe effectuant la requête.
+            
+        Returns:
+            float: Le score d'humidité local, strictement compris dans l'intervalle (0, 1].
+        """
         # Le sol ne connait que la position de l'eau
         distance = self.getDistance(pos)
         
         # Retourne uniquement une concentration/attractivité liée à l'eau
-        return 1000 / (distance + 50)
+        return 50 / (distance + 50)
 
 #un sol plus complexe avec plusieurs poches d'eau  
 class SolHumidite2(pb.SoilLookUp):
+    """
+    Modèle de sol contenant de multiples poches d'humidité dispersées.
+    L'attractivité du sol à un point donné est déterminée de manière "opportuniste" 
+    par la poche d'eau la plus proche.
+    """
+
     def __init__(self, pics_humidite=None):
+        """
+        Initialise l'environnement avec une liste de sources d'eau.
+        
+        Args:
+            pics_humidite (list of tuples, optionnel): Liste de coordonnées (x, y, z) 
+                pour chaque poche d'eau. Si None, une configuration de test par défaut est générée.
+        """
         super().__init__()
         # Si on ne donne pas de pics, on en crée une liste par défaut très dispersée
         if pics_humidite is None:
@@ -32,7 +81,15 @@ class SolHumidite2(pb.SoilLookUp):
             self.pics = pics_humidite
             
     def getDistance(self, pos):
-        """Renvoie la distance minimale entre la position donnée et les pics d'humidité"""
+        """
+        Identifie la poche d'eau la plus proche de la racine et renvoie sa distance.
+        
+        Args:
+            pos (pb.Vector3d): Position spatiale de l'apex racinaire.
+            
+        Returns:
+            float: La distance minimale (en cm) vers la source d'eau la plus proche.
+        """
         # Cherche la distance vers la flaque d'eau la plus proche
         distance_min = float('inf')
         for cx, cy, cz in self.pics:
@@ -42,9 +99,19 @@ class SolHumidite2(pb.SoilLookUp):
         return distance_min
         
     def getValue(self, pos, organ=None):
+        """
+        Calcule l'attractivité hydrique locale en se basant sur la source d'eau la plus proche.
+        
+        Args:
+            pos (pb.Vector3d): La position sondée par le moteur C++.
+            organ (Organ, optionnel): L'organe effectuant la requête.
+            
+        Returns:
+            float: Le score d'humidité local, normalisé dans l'intervalle (0, 1].
+        """
         #méthode "opportuniste" : on ne regarde que la poche d'eau la plus proche pour calculer l'humidité
         distance_min = self.getDistance(pos)
-        return 1000 / (distance_min + 50)
+        return 50 / (distance_min + 50)
     
         #méthode "cumulative" : on additionne l'humidité dégagée par toutes les poches d'eau, même les plus éloignées
         # Additionne l'humidité dégagée par toutes les poches
@@ -56,7 +123,24 @@ class SolHumidite2(pb.SoilLookUp):
 
 # --- 2. LE COMPORTEMENT PUR (Héritage de Tropism) ---
 class MonTropismeMixte(pb.Tropism):
+    """
+    Gestionnaire comportemental hybride combinant gravitropisme et hydrotropisme.
+    Inclut une sécurité d'exploration spatiale (anti-nœuds) désactivant la recherche 
+    d'eau une fois la cible atteinte, permettant à la racine de reprendre son extension.
+    """
+
     def __init__(self, plant, n_trials, sigma, sol_humide, poids_grav=0.8, poids_eau=0.2):
+        """
+        Initialise le comportement mixte de la racine et ses sous-moteurs.
+        
+        Args:
+            plant (pb.RootSystem): Le système racinaire complet.
+            n_trials (float): Nombre de directions générées et testées (résolution spatiale).
+            sigma (float): La variance angulaire de la recherche directionnelle.
+            sol_humide (pb.SoilLookUp): L'objet sol servant de radar pour l'hydrotropisme.
+            poids_grav (float): Le poids de base accordé à la gravité.
+            poids_eau (float): Le poids de base accordé à la recherche d'eau.
+        """
         # 1. On initialise la classe mère C++ pb.Tropism
         super().__init__(plant, n_trials, sigma)
         
@@ -71,6 +155,22 @@ class MonTropismeMixte(pb.Tropism):
 
     # On écrase (override) la méthode d'évaluation du tropisme
     def tropismObjective(self, pos, old, a, b, dx, organ=None):        
+        """
+        Évalue et note une trajectoire de croissance potentielle.
+        Gère dynamiquement l'extinction de la soif : désactive l'attraction hydrique 
+        lorsque la racine pénètre dans un rayon de 40 cm du centre de la poche d'eau.
+        
+        Args:
+            pos (pb.Vector3d): Position actuelle de l'apex.
+            old (pb.Matrix3d): Matrice de rotation (direction) actuelle.
+            a (float): Angle de rotation alpha de la trajectoire testée.
+            b (float): Angle de rotation beta de la trajectoire testée.
+            dx (float): Longueur du segment de croissance projeté.
+            organ (Organ, optionnel): L'organe concerné.
+            
+        Returns:
+            float: Le score normalisé de la trajectoire, garanti dans l'intervalle [0, 1].
+        """
         # Calcul de l'objectif Gravité
         # 1. On demande au moteur C++ de calculer le score de gravité
         # Il va utiliser 'old', 'a' et 'b' pour évaluer la future trajectoire 
@@ -88,8 +188,10 @@ class MonTropismeMixte(pb.Tropism):
         # on coupe l'attraction de l'eau pour qu'elle reprenne sa course droite.
         poids_eau_actuel = 0 if distance < 40 else self.w_eau
         
+        #normalisation pour que les scores soient entre 0 et 1
+        somme_poids = self.w_grav + poids_eau_actuel
         # Retourne le score combiné
-        return (score_gravite * self.w_grav) + (score_eau * poids_eau_actuel)
+        return (score_gravite * self.w_grav + score_eau * poids_eau_actuel) / somme_poids
 
 # --- 3. LE SCRIPT PRINCIPAL ---
 plant = pb.RootSystem() #attention, RootSystem est deprecated mais c'est plus simple pour exporter en RSML
@@ -104,15 +206,12 @@ plant.setSoil(mon_sol2)
 plant.initialize()
 
 # On instancie notre tropisme mixte
-tropisme_mixte = MonTropismeMixte(plant, 2.0, 1.5, mon_sol2, 0.26, 1)
-tropisme_mixte2 = MonTropismeMixte(plant, 4.0, 0.5, mon_sol2, 0.01, 1)
+tropisme_mixte = MonTropismeMixte(plant, 2.0, 1.5, mon_sol2, 0.026, 1)
+tropisme_mixte2 = MonTropismeMixte(plant, 4.0, 0.5, mon_sol2, 0.001, 1)
 
 plant.setTropism(tropisme_mixte, 3)
-
 plant.setTropism(tropisme_mixte, 5)
-
 plant.setTropism(tropisme_mixte,  2)
-
 plant.setTropism(tropisme_mixte2, 7)
 
 # Simulation
