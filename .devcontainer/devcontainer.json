@@ -1,0 +1,13 @@
+{
+    "name": "CPlantBox-Environnement",
+    "image": "cplantbox-image",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    
+}
