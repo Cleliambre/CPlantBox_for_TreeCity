@@ -1,5 +1,5 @@
 import math
-from random import random
+import random
 
 import plantbox as pb
 import numpy as np
@@ -15,15 +15,16 @@ class MaCarteDeau(pb.SoilLookUp):
         
         print(f"Génération du sol avec {nombre_de_poches} poches d'eau aléatoires...")
         
+        random.seed(3) # On fixe la graine pour avoir les mêmes poches à chaque test 
         for _ in range(nombre_de_poches):
             # On tire au sort les coordonnées (dans un cube de 20 mètres sur 5 mètres de fond)
-            x = np.random.uniform(-1000.0, 1000.0)
-            y = np.random.uniform(-1000.0, 1000.0)
-            z = np.random.uniform(-500.0, -20.0) # L'eau ne touche pas tout à fait la surface
+            x = random.uniform(-1000.0, 1000.0)
+            y = random.uniform(-1000.0, 1000.0)
+            z = random.uniform(-500.0, -20.0) # L'eau ne touche pas tout à fait la surface
             
             # On tire au sort la taille et l'attractivité de la flaque
-            force = np.random.uniform(8.0, 15.0)  # La "quantité" d'eau
-            pente = np.random.uniform(15.0, 50.0) # Le diviseur (plus il est petit, plus la pente est raide)
+            force = random.uniform(8.0, 15.0)  # La "quantité" d'eau
+            pente = random.uniform(15.0, 50.0) # Le diviseur (plus il est petit, plus la pente est raide)
             
             self.poches.append((x, y, z, force, pente))
 
@@ -44,20 +45,25 @@ class MaCarteDeau(pb.SoilLookUp):
             
         # EXEMPLE B : Une "poche d'eau" (sphère) décalée sur le côté
         # Décommentez les lignes ci-dessous pour tester :
-        #distance_centre1 = ((p.x - 350)**2 + (p.y - 0)**2 + (p.z + 100)**2)**0.5
+        distance_centre1 = ((p.x - 25)**2 + (p.y - 10)**2 + (p.z + 300)**2)**0.5
 
-        #distance_centre2 = ((p.x + 250)**2 + (p.y - 10)**2 + (p.z + 100)**2)**0.5
+        distance_centre2 = ((p.x + 25)**2 + (p.y - 10)**2 + (p.z + 300)**2)**0.5
 
-        #distance_centre3 = ((p.x + 350)**2 + (p.y - 30)**2 + (p.z + 100)**2)**0.5
+        distance_centre3 = ((p.x + 350)**2 + (p.y - 30)**2 + (p.z + 0)**2)**0.5
+
+        distance_centre4 = ((p.x - 350)**2 + (p.y - 30)**2 + (p.z + 0)**2)**0.5
         
         # On crée un gradient géant qui s'étale sur 1000 cm (10 mètres !)
         #humidite = 10.0 - (distance_centre / 1000.0)
-        #humidite1 = 10.0 - (distance_centre1 / 50.0)
+        humidite1 = 10.0 - (distance_centre1 / 20.0)
 
-        #humidite2 = 10.0 - (distance_centre2 / 20.0)
+        humidite2 = 10.0 - (distance_centre2 / 20.0)
 
-        #humidite3 = 10.0 - (distance_centre3 / 50.0)
+        humidite3 = 10.0 - (distance_centre3 / 50.0)
+
+        humidite4 = 30.0 - (distance_centre4 / 10.0)
         # Le sol sec de base reste à 0.1
+        return max(0.1, humidite1, humidite2, humidite3, humidite4)
         #return max(0.1, humidite1, humidite2,  humidite3)
 
         #---------------------------------------------------------------------------------
@@ -110,24 +116,24 @@ class MaCarteDeau(pb.SoilLookUp):
         # EXEMPLE E : L'Archipel (Poches d'eau multiples et asymétriques)
         
         # Poche 1 : Assez haute, sur la gauche
-        #dist1 = ((p.x + 400)**2 + (p.y - 100)**2 + (p.z + 100)**2)**0.5
-        #hum1 = 10.0 - (dist1 / 50.0)
+        """dist1 = ((p.x + 200)**2 + (p.y - 200)**2 + (p.z + 100)**2)**0.5
+        hum1 = 30.0 - (dist1 / 15.0)
         
         # Poche 2 : Plus profonde, sur la droite
-        #dist2 = ((p.x - 500)**2 + (p.y + 200)**2 + (p.z + 250)**2)**0.5
-        #hum2 = 10.0 - (dist2 / 50.0)
+        dist2 = ((p.x - 200)**2 + (p.y + 200)**2 + (p.z + 250)**2)**0.5
+        hum2 = 30.0 - (dist2 / 15.0)
         
         # Poche 3 : Loin devant (axe Y), profondeur moyenne
-        #dist3 = ((p.x - 100)**2 + (p.y - 600)**2 + (p.z + 150)**2)**0.5
-        #hum3 = 10.0 - (dist3 / 50.0)
+        dist3 = ((p.x - 200)**2 + (p.y - 200)**2 + (p.z + 150)**2)**0.5
+        hum3 = 30.0 - (dist3 / 15.0)
 
         # Poche 4 : En profondeur, légèrement à gauche
-        #dist4 = ((p.x + 200)**2 + (p.y + 100)**2 + (p.z + 400)**2)**0.5
-        #hum4 = 10.0 - (dist4 / 50.0)
+        dist4 = ((p.x + 200)**2 + (p.y + 200)**2 + (p.z + 400)**2)**0.5
+        hum4 = 30.0 - (dist4 / 15.0)
         
         # On garde l'humidité de base à 0.1
         # ATTENTION : On ne plafonne PAS à 1.0 pour garder un gradient actif jusqu'au centre !
-        #return max(0.1, hum1, hum2, hum3, hum4)
+        return max(0.1, hum1, hum2, hum3, hum4)"""
     
         #----------------------------------------------------------------------------------
 
@@ -159,6 +165,18 @@ plant.readParameters(file)
 # 2. On applique notre carte d'eau à l'arbre
 carte_eau = MaCarteDeau()
 plant.setSoil(carte_eau)
+
+#Ajout d'un obstacle plan à 200 cm de profondeur
+domaine = pb.SDF_PlantBox(3000, 3000, 3000)
+
+limite = pb.SDF_HalfPlane(
+    pb.Vector3d(-1000, -1000, -400), # Origine (coin du plan)
+    pb.Vector3d(1000, -1000, -400),  # Point 1 (direction X)
+    pb.Vector3d(-1000, 1000, -400)   # Point 2 (direction Y)
+)
+
+espace_navigable = pb.SDF_Difference(domaine, limite)
+plant.setGeometry(espace_navigable)
 
 # 3. L'initialisation classique (à faire APRES setSoil)
 plant.initialize()

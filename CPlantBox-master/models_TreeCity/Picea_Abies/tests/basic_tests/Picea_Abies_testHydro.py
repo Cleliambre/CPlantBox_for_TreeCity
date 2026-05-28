@@ -1,6 +1,10 @@
 import plantbox as pb
 import numpy as np
 
+#gestion des chemins
+import os
+from pathlib import Path
+
 # --- 1. CRÉATION DE LA CLASSE DE SOL SUR MESURE ---
 # Nous créons une classe qui hérite du moteur C++ pb.SoilLookUp
 class MonSolMixte(pb.SoilLookUp):
@@ -31,9 +35,18 @@ class MonSolMixte(pb.SoilLookUp):
 
 
 # --- 2. CONFIGURATION DE L'ARBRE ---
+
+#---------------préparations pour l'export des résultats et l'import du xml de l'arbre-------------------
+# 1. Définir le répertoire parent du script
+script_dir = Path(__file__).resolve().parent
+# 2. Définir le chemin vers results/BrusselSoil
+dossier_simulation = script_dir / "results" / "Hydro"
+os.makedirs(dossier_simulation, exist_ok=True)
+parameters_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml"
+
+
 plant = pb.Plant()
-path = "../../modelparameter_TreeCity/structural/Picea_Abies_hydro_v2"
-plant.readParameters(path + ".xml")
+plant.readParameters(parameters_path)
 
 # --- 3. AFFECTATION DU SOL ---
 # On instancie notre nouvel objet "MonSolMixte"
@@ -55,6 +68,6 @@ for i in range(0, n_steps):
     plant.simulate(dt)
     
     # Enregistrement de toutes les étapes
-    plant.write("results/Picea_Abies_hydro_" + str(i) + ".vtp")
+    plant.write(f"{dossier_simulation}/Picea_Abies_hydro_{i}.vtp")
 
 print("Simulation terminée !")
