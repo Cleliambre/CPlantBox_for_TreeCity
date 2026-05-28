@@ -3,3 +3,8 @@
 /Dockerfile
 /mon_test.py
 /output
+
+*.vtp
+*.vtk
+
+*.devcontainer
