@@ -4,6 +4,10 @@ import plantbox.functional.van_genuchten as vg
 import numpy as np
 import random
 
+#gestion des chemins
+import os
+from pathlib import Path
+
 # ====================================================================
 # 1. LE SOL DYNAMIQUE (Extrait de votre script LoamSoil)
 # ====================================================================
@@ -25,7 +29,7 @@ class SolDynamique(pb.SoilLookUp):
         self.obstacle = obstacle
         self.theta_s = 0.43
         self.loam = vg.Parameters([0.08, self.theta_s, 0.04, 1.6, 5.0])
-        self.z_nappe = -150
+        self.z_nappe = -120
 
         self.res_x, self.res_y, self.res_z = 40, 40, 40
         self.xmin, self.xmax = -300.0, 300.0
@@ -36,7 +40,7 @@ class SolDynamique(pb.SoilLookUp):
 
         random.seed(48)
         self.pics_aleatoires = []
-        for _ in range(70): 
+        for _ in range(30): 
             px = random.uniform(self.xmin, self.xmax)
             py = random.uniform(self.ymin, self.ymax)
             pz = random.uniform(self.zmax - 100, self.zmax - 10) 
@@ -181,7 +185,7 @@ def exporter_sol_vtk(sol, etape):
         sol (SolDynamique): L'instance du sol contenant la matrice self.grid.
         etape (int): Le numéro de l'itération temporelle (utilisé pour nommer le fichier de sortie).
     """
-    filename = f"results/Picea_Abies_Humidite_{etape:03d}.vtk"
+    filename = f"{dossier_simulation}/Picea_Abies_Humidite_{etape:03d}.vtk"
     with open(filename, "w") as f:
         f.write("# vtk DataFile Version 3.0\n")
         f.write(f"Teneur en Eau Etape {etape}\n")
@@ -259,9 +263,15 @@ class TropismeMixte(pb.Tropism):
         score_gravite = self.t_gravite.tropismObjective(pos, old, a, b, dx, organ)
         score_eau = self.t_eau.tropismObjective(pos, old, a, b, dx, organ)
 
+        #sécurité pour éviter les "noeuds"
+        #humidite_future = self.sol.getWaterContent(pos_future)
+        # Si le sol contient plus de 35% d'eau, la racine n'a plus soif.
+        # On passe temporairement le poids de l'eau à 0.0 pour éviter qu'elle ne boucle.
+        #poids_eau_actuel = 0.0 if humidite_future > 0.35 else self.w_eau
+        poids_eau_actuel = self.w_eau
         #score normalisé pour entrer dans l'intervalle [0,1]
-        somme_poids = self.w_grav + self.w_eau
-        score_base = (score_gravite * self.w_grav + score_eau * self.w_eau) / somme_poids
+        somme_poids = self.w_grav + poids_eau_actuel
+        score_base = (score_gravite * self.w_grav + score_eau * poids_eau_actuel) / somme_poids
 
         #gestion de l'anoxie
         volume_air_futur = self.sol.getOxygen(pos_future)
@@ -277,8 +287,18 @@ class TropismeMixte(pb.Tropism):
 # ====================================================================
 # 3. SCRIPT PRINCIPAL : ARCHITECTURE ET SIMULATION
 # ====================================================================
+
+#---------------préparations pour l'export des résultats et l'import du xml de l'arbre-------------------
+# 1. Définir le répertoire parent du script
+script_dir = Path(__file__).resolve().parent
+# 2. Définir le chemin vers results/BrusselSoil
+dossier_simulation = script_dir / "results" / "LoamSoil_MixtTropism"
+os.makedirs(dossier_simulation, exist_ok=True)
+parameters_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml"
+
+
 plant = pb.Plant()
-plant.readParameters("../../modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml")
+plant.readParameters(parameters_path)
 
 print("Création de la roche et des limites...")
 min_roche = pb.Vector3d(50, -150, -150) 
@@ -296,7 +316,7 @@ tous_les_obstacles = pb.SDF_Union(roche, limite)
 domaine = pb.SDF_PlantBox(2000, 2000, 2000)
 espace_navigable = pb.SDF_Difference(domaine, tous_les_obstacles)
 
-vp.write_container(tous_les_obstacles, "results/Picea_Abies_Mixt_LoamSoil_Roche.vtp")
+vp.write_container(tous_les_obstacles, f"{dossier_simulation}/Picea_Abies_Roche.vtp")
 
 
 # Instanciation du Sol
@@ -308,8 +328,8 @@ plant.setSoil(sol_realiste)
 plant.initialize()
 
 # Application du Tropisme Mixte
-tropisme_mixte = TropismeMixte(plant, 2.0, 1.5, sol_realiste, 0.7, 1)
-tropisme_mixte2 = TropismeMixte(plant, 4.0, 0.5, sol_realiste, 0.0025, 1)
+tropisme_mixte = TropismeMixte(plant, 2.0, 1.5, sol_realiste, 0.35, 1)
+tropisme_mixte2 = TropismeMixte(plant, 4.0, 0.5, sol_realiste, 0.0012, 1)
 
 #on ajoute les obstacles au cerveau pour que les racines les évitent
 #tropisme_mixte.setGeometry(espace_navigable)
@@ -330,9 +350,9 @@ for i in range(0, n_steps):
     plant.simulate(dt)
     
     # LA CLÉ EST ICI : Les racines boivent et modifient le sol en temps réel
-    sol_realiste.pomper_eau(plant, dt, 10e-6)
+    sol_realiste.pomper_eau(plant, dt, 10e-5)
     
-    plant.write(f"results/Picea_Abies_Mixt_LoamSoil_{i:03d}.vtp")
+    plant.write(f"{dossier_simulation}/Picea_Abies_{i:03d}.vtp")
     exporter_sol_vtk(sol_realiste, i)
 
 print("Simulation terminée avec succès !")

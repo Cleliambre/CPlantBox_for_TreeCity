@@ -4,6 +4,10 @@ import plantbox.rsml.rsml_writer as rw
 from plantbox.rsml.rsml_writer import Metadata
 import numpy as np
 
+#gestion des chemins
+import os
+from pathlib import Path
+
 # --- 1. L'ENVIRONNEMENT PUR ---
 class SolHumidite(pb.SoilLookUp):
     """
@@ -54,6 +58,7 @@ class SolHumidite(pb.SoilLookUp):
         distance = self.getDistance(pos)
         
         # Retourne uniquement une concentration/attractivité liée à l'eau
+        #Valeur max = 1.0 au centre de la poche
         return 50 / (distance + 50)
 
 #un sol plus complexe avec plusieurs poches d'eau  
@@ -115,7 +120,8 @@ class SolHumidite2(pb.SoilLookUp):
             float: Le score d'humidité local, normalisé dans l'intervalle (0, 1].
         """
         distance_min = self.getDistance(pos)
-        return 50 / (distance_min + 50)
+        #Valeur max = 1.0 au centre de la poche
+        return 50/ (distance_min + 50)
     
 # --- 2. LE CERVEAU MIXTE ÉPURÉ ---
 class TropismeMixte(pb.Tropism):
@@ -144,7 +150,7 @@ class TropismeMixte(pb.Tropism):
         self.w_grav = poids_grav
         self.w_eau = poids_eau
 
-    def tropismObjective(self, pos, old, a, b, dx, organ=None):    
+    def tropismObjective(self, pos, old, a, b, dx, organ=None):        
         """
         Évalue une trajectoire potentielle en combinant gravité et humidité.
         Intègre une sécurité comportementale : si la racine est arrivée à destination 
@@ -161,21 +167,29 @@ class TropismeMixte(pb.Tropism):
             
         Returns:
             float: Le score normalisé de la trajectoire, garanti dans l'intervalle [0, 1].
-        """    
+        """
         # On délègue les maths lourdes au C++ !
         score_gravite = self.t_gravite.tropismObjective(pos, old, a, b, dx, organ)
         score_eau = self.t_eau.tropismObjective(pos, old, a, b, dx, organ)
 
         # On garde notre sécurité anti-nœuds (si on est déjà dans l'eau, on écoute la gravité)
         poids_eau = 0 if self.sol.getDistance(pos) < 40 else self.w_eau
-        
+
         #normalisation pour que les scores soient entre 0 et 1
         somme_poids = self.w_grav + poids_eau
         return (score_gravite * self.w_grav + score_eau * poids_eau) / somme_poids
 
 # --- 3. LE SCRIPT PRINCIPAL ---
-plant = pb.Plant()
-plant.readParameters("../../modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml")
+#---------------préparations pour l'export des résultats et l'import du xml de l'arbre-------------------
+# 1. Définir le répertoire parent du script
+script_dir = Path(__file__).resolve().parent
+# 2. Définir le chemin vers results/BrusselSoil
+dossier_simulation = script_dir / "results" / "MixtTropism"
+os.makedirs(dossier_simulation, exist_ok=True)
+parameters_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml"
+
+plant = pb.RootSystem() #attention, RootSystem est deprecated mais c'est plus simple pour exporter en RSML
+plant.readParameters(parameters_path)
 
 
 # On définit notre obstacle (une grosse plaque de roche rectangulaire)
@@ -230,10 +244,10 @@ tropisme_mixte2 = TropismeMixte(plant, 4.0, 0.5, mon_sol2, 0.001, 1)
 tropisme_mixte.setGeometry(espace_navigable)
 tropisme_mixte2.setGeometry(espace_navigable)
 
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 3)
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 5)
-plant.setTropism(tropisme_mixte, pb.OrganTypes.root, 2)
-plant.setTropism(tropisme_mixte2, pb.OrganTypes.root, 7)
+plant.setTropism(tropisme_mixte,  3)
+plant.setTropism(tropisme_mixte,  5)
+plant.setTropism(tropisme_mixte,  2)
+plant.setTropism(tropisme_mixte2,  7)
 
 # Simulation
 sim_time = 5000
@@ -243,7 +257,10 @@ n_steps = round(sim_time / dt)
 #export du système
 for i in range(0, n_steps):
     plant.simulate(dt)
-    plant.write("results/Picea_Abies_Mixte_" + str(i) + ".vtp")
+    plant.write(f"{dossier_simulation}/Picea_Abies_Mixte_{i}.vtp")
+
+#export en RSML
+plant.write(f"{dossier_simulation}/Picea_Abies_Mixte_Obstacles.rsml")
 
 #export de la carte d'humidité pour ParaView
 print("Génération du champ d'humidité 3D...")
@@ -254,7 +271,7 @@ res = 50
 xs = np.linspace(x_min, x_max, res)
 ys = np.linspace(y_min, y_max, res)
 zs = np.linspace(z_min, z_max, res)
-with open("results/Picea_Abies_HumiditeSol_Mixte.vtk", "w") as f:
+with open(f"{dossier_simulation}/Picea_Abies_HumiditeSol.vtk", "w") as f:
     # En-tête obligatoire pour ParaView
     f.write("# vtk DataFile Version 3.0\n")
     f.write("Champ d'humidite du sol - Tropisme Mixte\n")

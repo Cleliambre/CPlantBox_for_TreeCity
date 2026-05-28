@@ -1,3 +1,7 @@
+#gestion des chemins
+import os
+from pathlib import Path
+
 import plantbox as pb
 import numpy as np
 
@@ -194,8 +198,18 @@ class MonTropismeMixte(pb.Tropism):
         return (score_gravite * self.w_grav + score_eau * poids_eau_actuel) / somme_poids
 
 # --- 3. LE SCRIPT PRINCIPAL ---
+
+#---------------préparations pour l'export des résultats et l'import du xml de l'arbre-------------------
+# 1. Définir le répertoire parent du script
+script_dir = Path(__file__).resolve().parent
+# 2. Définir le chemin vers results/BrusselSoil
+dossier_simulation = script_dir / "results" / "MixtTropism"
+os.makedirs(dossier_simulation, exist_ok=True)
+parameters_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml"
+
+
 plant = pb.RootSystem() #attention, RootSystem est deprecated mais c'est plus simple pour exporter en RSML
-plant.readParameters("../../modelparameter_TreeCity/structural/Picea_Abies_hydro_v2.xml")
+plant.readParameters(parameters_path)
 
 # On instancie notre sol et on l'assigne
 #mon_sol = SolHumidite(cx=300, cy=0, cz=-80)
@@ -221,8 +235,8 @@ n_steps = round(sim_time / dt)
 
 for i in range(0, n_steps):
     plant.simulate(dt)
-    plant.write("results/Picea_Abies_Mixte_" + str(i) + ".vtp")
-plant.write("results/Picea_Abies_Mixte.rsml")
+    plant.write(f"{dossier_simulation}/Picea_Abies_Mixte_{i}.vtp")
+plant.write(f"{dossier_simulation}/Picea_Abies_Mixte.rsml")
 
 #export de la carte d'humidité pour ParaView
 print("Génération du champ d'humidité 3D...")
@@ -233,7 +247,7 @@ res = 50
 xs = np.linspace(x_min, x_max, res)
 ys = np.linspace(y_min, y_max, res)
 zs = np.linspace(z_min, z_max, res)
-with open("results/Picea_Abies_HumiditeSol_Mixte.vtk", "w") as f:
+with open(f"{dossier_simulation}/Picea_Abies_HumiditeSol.vtk", "w") as f:
     # En-tête obligatoire pour ParaView
     f.write("# vtk DataFile Version 3.0\n")
     f.write("Champ d'humidite du sol - Tropisme Mixte\n")
