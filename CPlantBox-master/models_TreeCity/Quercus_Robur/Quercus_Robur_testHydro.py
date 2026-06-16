@@ -1,3 +1,8 @@
+#gestion des chemins
+import os
+from pathlib import Path
+import sys
+
 import math
 import random
 
@@ -157,8 +162,13 @@ class MaCarteDeau(pb.SoilLookUp):
 
 # --- INITIALISATION DE LA PLANTE ---
 plant = pb.Plant()
-file = "../../modelparameter_TreeCity/structural/Quercus_Robur_hydro.xml"
-plant.readParameters(file)
+
+script_dir = Path(__file__).resolve().parent
+dossier_simulation = script_dir / "results/hydro" 
+os.makedirs(dossier_simulation, exist_ok=True)
+parameters_path = f"{script_dir.parent.parent}/modelparameter_TreeCity/structural/Quercus_Robur_hydro.xml"
+
+plant.readParameters(parameters_path)
 
 # ... (Ici, vous pouvez garder ou enlever vos obstacles physiques) ...
 
@@ -186,7 +196,7 @@ dt = 30
 n_steps = round(sim_time / dt)
 for i in range(0, n_steps):
     plant.simulate(dt)
-    plant.write("results/Quercus_Robur_hydro_" + str(i) + ".vtp")
+    plant.write(f"{dossier_simulation}/Quercus_Robur_hydro_{i}.vtp")
 
 # --- EXPORT DE LA CARTE D'EAU POUR PARAVIEW ---
 print("Génération du champ d'humidité 3D...")
@@ -204,7 +214,7 @@ ys = np.linspace(y_min, y_max, res)
 zs = np.linspace(z_min, z_max, res)
 
 # 2. On écrit un fichier VTK structuré
-with open("results/Quercus_Robur_HumiditeSol.vtk", "w") as f:
+with open(f"{dossier_simulation}/Quercus_Robur_HumiditeSol.vtk", "w") as f:
     # En-tête obligatoire pour ParaView
     f.write("# vtk DataFile Version 3.0\n")
     f.write("Champ d'humidite du sol\n")

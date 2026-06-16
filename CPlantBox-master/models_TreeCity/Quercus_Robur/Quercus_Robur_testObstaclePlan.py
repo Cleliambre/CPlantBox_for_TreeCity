@@ -1,14 +1,20 @@
+#gestion des chemins
+import os
+from pathlib import Path
+import sys
+
 import plantbox as pb
 import numpy as np
 
-
-file = "../../modelparameter_TreeCity/structural/Quercus_Robur.xml"
+script_dir = Path(__file__).resolve().parent
+dossier_simulation = script_dir / "results" 
+parameters_path = f"{script_dir.parent.parent}/modelparameter_TreeCity/structural/Quercus_Robur.xml"
 # 1. Création de l'objet plante
 pl = pb.MappedPlant()
 
 # 2. Chargement de ton fichier XML d'amélioration
 # Assure-toi que le nom correspond exactement à ton fichier
-pl.readParameters(file)
+pl.readParameters(parameters_path)
 
 # 3. Mise en place de la Nappe Phréatique (Obstacle)
 # On utilise un SDF (Signed Distance Field) de type "HalfSpace" (Demi-espace).
@@ -32,7 +38,7 @@ print(f"Simulation en cours pour {jours_de_simulation} jours...")
 pl.simulate(jours_de_simulation)
 
 # 7. Exportation du résultat pour visualisation dans ParaView (.vtp)
-fichier_sortie = "results/Quercus_Robur_Avec_Obstacle.vtp"
+fichier_sortie = f"{dossier_simulation}/Quercus_Robur_Avec_Obstacle.vtp"
 pl.write(fichier_sortie)
 
 print(f"Simulation terminée avec succès ! Ouvre {fichier_sortie} dans ParaView.")
