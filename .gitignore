@@ -6,5 +6,6 @@
 
 *.vtp
 *.vtk
+*.csv
 
 *.devcontainer
