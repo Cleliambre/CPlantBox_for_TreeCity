@@ -3,7 +3,8 @@
         <parameter name="delayDefinition" value="0"/>
         <parameter name="delayDefinitionShoot" value="0"/>
         <parameter name="maxTil" value="0"/>
-        <parameter name="a" value="0.175"/> <parameter name="delayB" value="5"/> 
+        <parameter name="a" value="0.175"/> 
+        <parameter name="delayB" value="5"/> 
         <parameter name="delayRC" value="1e+09"/>
         <parameter name="delaySB" value="1e+09"/>
         <parameter name="delayTil" value="1e+09"/>
@@ -20,7 +21,7 @@
         <parameter name="seedPos.y" value="0"/>
         <parameter name="seedPos.z" value="-3"/>
         <parameter name="simulationTime" value="3000"/>
-        </seed>
+    </seed>
 
     <root name="taproot" subType="1">
         <parameter name="gf" value="1"/>
@@ -28,16 +29,18 @@
         <parameter name="a" value="0.175"/>
         <parameter name="dx" value="0.5"/>
         <parameter name="dxMin" value="1e-06"/>
-        <parameter name="la" value="25"/> <parameter name="lb" value="2"/> 
+        <parameter name="la" value="25"/>
+        <parameter name="lb" value="2"/> 
         <parameter name="ldelay" value="-1"/>
-        <parameter name="lmax" value="30"/>
-        <parameter name="ln" value="1.5"/> <parameter name="lnk" value="0"/>
+        <parameter name="lmax" value="30"/> 
+        <parameter name="ln" value="5"/> 
+        <parameter name="lnk" value="0"/>
         <parameter name="r" value="0.175"/>
         <parameter name="rlt" value="1e+09"/>
         <parameter name="theta" value="0"/>
         <parameter name="tropismN" value="8"/>
         <parameter name="tropismS" value="0.5"/>
-        </root>
+    </root>
 
     <root name="Horizontale_Base" subType="4">
         <parameter name="gf" value="1"/>
@@ -45,15 +48,20 @@
         <parameter name="a" value="0.17" dev="0.02"/>
         <parameter name="dx" value="0.5"/>
         <parameter name="dxMin" value="1e-06"/>
-        <parameter name="la" value="25"/> <parameter name="lb" value="2"/> 
+        <parameter name="la" value="25"/> 
+        <parameter name="lb" value="5"/> 
         <parameter name="ldelay" value="-1"/>
-        <parameter name="lmax" value="80" dev="10"/> <parameter name="ln" value="1.5"/> 
+        <parameter name="lmax" value="80" dev="10"/> 
+        <parameter name="ln" value="10"/> 
         <parameter name="lnk" value="0"/>
-        <parameter name="r" value="0.2"/> <parameter name="rlt" value="1e+09"/>
-        <parameter name="theta" value="1.57" dev="0.174"/> <parameter name="tropismN" value="8"/>
+        <parameter name="r" value="0.2"/> 
+        <parameter name="rlt" value="1e+09"/>
+        <parameter name="theta" value="1.57" dev="0.174"/> 
+        <parameter name="tropismN" value="8"/>
         <parameter name="tropismS" value="0.1"/>
+
         <parameter name="successor" ruleId="0" numLat="1" Where="" subType="3" organType="2" percentage="0.3"/>
-        <parameter name="successor" ruleId="2" numLat="1" Where="apex" subType="6" organType="2" percentage="0.08"/>
+        <parameter name="successor" ruleId="2" numLat="1" Where="apex" subType="6" organType="2" percentage="1.0"/>
     </root>
 
     <root name="Horizontale_Exploration" subType="6">
@@ -62,38 +70,47 @@
         <parameter name="a" value="0.1" dev="0.02"/>
         <parameter name="dx" value="0.5"/>
         <parameter name="dxMin" value="1e-06"/>
-        <parameter name="la" value="25"/> <parameter name="lb" value="2"/> 
+        <parameter name="la" value="25"/> 
+        <parameter name="lb" value="2"/> 
         <parameter name="ldelay" value="-1"/>
-        <parameter name="lmax" value="600" dev="50"/> <parameter name="ln" value="1.5"/> 
+        <parameter name="lmax" value="600" dev="50"/> 
+        <parameter name="ln" value="25"/> 
         <parameter name="lnk" value="0"/>
-        <parameter name="r" value="0.2"/> <parameter name="rlt" value="1e+09"/>
-        <parameter name="theta" value="0.5" dev="0.1"/> <parameter name="tropismN" value="8"/>
+        <parameter name="r" value="0.2"/> 
+        <parameter name="rlt" value="1e+09"/>
+        <parameter name="theta" value="0.5" dev="0.1"/> 
+        <parameter name="tropismN" value="8"/>
         <parameter name="tropismS" value="0.1"/>
+
         <parameter name="successor" ruleId="0" numLat="1" Where="" subType="5" organType="2" percentage="0.1"/>
-        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.5"/>
+        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.8"/>
     </root>
 
     <root name="Sinkers" subType="3">
         <parameter name="gf" value="1"/>
-        <parameter name="tropismT" value="3"/>
+        <parameter name="tropismT" value="1"/> 
         <parameter name="a" value="0.05" dev="0.01"/>
         <parameter name="dx" value="0.5"/>
         <parameter name="dxMin" value="1e-06"/>
-        <parameter name="la" value="10"/> <parameter name="lb" value="2"/> 
+        <parameter name="la" value="10"/> 
+        <parameter name="lb" value="5"/> 
         <parameter name="ldelay" value="-1"/>
         <parameter name="lmax" value="90" dev="20"/>
-        <parameter name="ln" value="2"/> 
+        <parameter name="ln" value="15"/> 
         <parameter name="lnk" value="0"/>
-        <parameter name="r" value="0.15"/> <parameter name="rlt" value="1e+09"/>
-        <parameter name="theta" value="1.57" dev="0.7"/> <parameter name="tropismN" value="2"/>
+        <parameter name="r" value="0.15"/> 
+        <parameter name="rlt" value="1e+09"/>
+        <parameter name="theta" value="1.57" dev="0.7"/> 
+        <parameter name="tropismN" value="2"/>
         <parameter name="tropismS" value="1.5"/>
+
         <parameter name="successor" ruleId="1" numLat="1" Where="" subType="7" organType="2" percentage="0.1"/>
         <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.5"/>
     </root>
 
     <root name="SubSinkers" subType="7">
         <parameter name="gf" value="1"/>
-        <parameter name="tropismT" value="3"/>
+        <parameter name="tropismT" value="1"/>
         <parameter name="a" value="0.05" dev="0.01"/>
         <parameter name="dx" value="0.5"/>
         <parameter name="dxMin" value="1e-06"/>
@@ -101,46 +118,54 @@
         <parameter name="lb" value="0"/> 
         <parameter name="ldelay" value="-1"/>
         <parameter name="lmax" value="50" dev="15"/>
-        <parameter name="ln" value="2"/> 
+        <parameter name="ln" value="10"/> 
         <parameter name="lnk" value="0"/>
         <parameter name="r" value="0.15"/>
         <parameter name="rlt" value="1e+09"/>
         <parameter name="theta" value="1.57" dev="0.2"/>
         <parameter name="tropismN" value="10"/>
         <parameter name="tropismS" value="1.5"/>
-        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.5"/>
+
+        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.6"/>
     </root>
     
     <root name="Short_Sinkers" subType="5">
         <parameter name="gf" value="1"/>
-        <parameter name="tropismT" value="3"/>
+        <parameter name="tropismT" value="1"/>
         <parameter name="a" value="0.04" dev="0.01"/>
         <parameter name="dx" value="0.5"/>
         <parameter name="dxMin" value="1e-06"/>
         <parameter name="la" value="5"/> 
         <parameter name="lb" value="0"/> 
         <parameter name="ldelay" value="-1"/>
-        <parameter name="lmax" value="40" dev="15"/> <parameter name="ln" value="1.5"/> 
+        <parameter name="lmax" value="40" dev="15"/>
+        <parameter name="ln" value="8"/> 
         <parameter name="lnk" value="0"/>
         <parameter name="r" value="0.08"/>
         <parameter name="rlt" value="1e+09"/>
         <parameter name="theta" value="1.57" dev="0.7"/>
         <parameter name="tropismN" value="2"/>
         <parameter name="tropismS" value="1.5"/>
-        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.5"/>
+
+        <parameter name="successor" ruleId="1" numLat="1" Where="" subType="2" organType="2" percentage="0.6"/>
     </root>
 
     <root name="Fine_Roots" subType="2">
         <parameter name="gf" value="1"/>
-        <parameter name="tropismT" value="0"/> <parameter name="a" value="0.05"/> <parameter name="dx" value="0.2"/>
+        <parameter name="tropismT" value="0"/> 
+        <parameter name="a" value="0.05"/> 
+        <parameter name="dx" value="0.2"/>
         <parameter name="dxMin" value="1e-06"/>
         <parameter name="la" value="0"/> 
         <parameter name="lb" value="0"/> 
         <parameter name="ldelay" value="-1"/>
         <parameter name="lmax" value="5"/> 
-        <parameter name="ln" value="0"/> <parameter name="lnk" value="0"/>
+        <parameter name="ln" value="0"/> 
+        <parameter name="lnk" value="0"/>
         <parameter name="r" value="0.05"/>
-        <parameter name="rlt" value="60"/> <parameter name="theta" value="1.57" dev="0.174"/> <parameter name="tropismN" value="0"/>
+        <parameter name="rlt" value="60"/> 
+        <parameter name="theta" value="1.57" dev="0.174"/>
+        <parameter name="tropismN" value="0"/>
         <parameter name="tropismS" value="0"/>
-        </root>
+    </root>
 </plant>
