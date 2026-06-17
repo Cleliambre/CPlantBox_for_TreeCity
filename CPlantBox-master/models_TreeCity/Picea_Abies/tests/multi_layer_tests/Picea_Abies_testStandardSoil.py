@@ -108,7 +108,7 @@ plant.readParameters(parameters_path)
 # ---------------------------------------------------------
 print("Connexion de l'arbre au sous-sol Bruxellois...")
 # On instancie la classe
-sol = NorwegianSoil()
+sol = BrusselsSoil()
 
 print("Création de la roche et des limites...")
 espace_navigable = sol.get_espace_navigable()

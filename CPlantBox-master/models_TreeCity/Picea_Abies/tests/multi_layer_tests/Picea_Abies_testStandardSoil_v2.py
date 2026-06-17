@@ -134,7 +134,7 @@ for i in range(0, n_steps):
     
     plant.write(f"{dossier_simulation}/Picea_Abies_{sol.get_model_name()}_{i:03d}.vtp")
     
-    if i % 5 == 0:
-        exporter_sol_vtk(sol, i, dossier_simulation)
+    #if i % 5 == 0:
+    exporter_sol_vtk(sol, i, dossier_simulation)
 
 print("Simulation terminée avec succès !")
