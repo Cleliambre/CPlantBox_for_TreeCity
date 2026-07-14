@@ -10,52 +10,6 @@ dossier_simulation = script_dir / "results" / "Augmented_Radius"
 os.makedirs(dossier_simulation, exist_ok=True)
 parameters_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/structural/Picea_Abies_v2.xml"
 
-"""# 1. Initialisation de la plante
-plant = pb.RootSystem()
-plant.readParameters(parameters_path)
-plant.initialize()
-
-temps_simulation = 2000 # Jours
-plant.simulate(temps_simulation)
-
-# 2. Utilisation du SegmentAnalyzer pour extraire les données fiables
-# Le SegmentAnalyzer convertit la structure C++ complexe en tableaux Python faciles à lire
-ana = pb.SegmentAnalyser(plant)
-
-# Extraction des âges et des types de racines
-ages = np.array(ana.getParameter("age"))
-subtypes = np.array(ana.getParameter("subType"))
-
-# 3. Création du tableau pour les rayons évolutifs
-rayons_evolutifs = np.zeros(len(ages))
-taux_epaississement = 0.002 # cm/jour
-
-# 4. Calcul de l'épaississement basé sur le temps
-for i in range(len(ages)):
-    if subtypes[i] == 1: 
-        # Pivot central (subType 1)
-        rayon_initial_xml = 0.20 
-        rayons_evolutifs[i] = rayon_initial_xml + (ages[i] * taux_epaississement)
-        
-    elif subtypes[i] == 4 or subtypes[i] == 6:
-        # Racines charpentières (subType 4 ou 6)
-        rayon_initial_xml = 0.15
-        rayons_evolutifs[i] = rayon_initial_xml + (ages[i] * (taux_epaississement / 2))
-        
-    else:
-        # Racines fines (subType 3, 4...) : on ne fait pas d'épaississement
-        rayons_evolutifs[i] = 0.05 
-
-# 5. Injection de la nouvelle donnée dans l'Analyzer avant l'export
-# On écrase la variable existante "radius" avec notre tableau modifié
-ana.addData("radius", rayons_evolutifs.tolist())
-
-# 6. Exportation finale
-# On précise explicitement "radius" dans la liste des propriétés à écrire dans le .vtp
-ana.write(f"{dossier_simulation}/Picea_Abies_Epaissi.vtp", ["radius", "subType", "age"])
-
-print("Simulation terminée. Fichier VTP généré avec épaississement dynamique des rayons.")"""
-
 # 1. Initialisation de la plante
 plant = pb.RootSystem()
 plant.readParameters(parameters_path) # Votre fichier XML
