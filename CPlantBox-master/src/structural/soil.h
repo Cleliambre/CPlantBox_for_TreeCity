@@ -354,7 +354,11 @@ public:
     } ///< point to linear data index
 
     double getData(size_t i, size_t j, size_t k) {
-        return data.at(map(i,j,k));
+        return data.at(k * (nx * ny) + j * nx + i);
+    }
+
+    double getData(size_t index) {
+        return data.at(index);
     }
 
     double getValue(const Vector3d& pos, const std::shared_ptr<Organ> o = nullptr) const override {
@@ -363,7 +367,11 @@ public:
     } ///< Returns the data of the 1d table, repeats first or last entry if out of bound
 
     void setData(size_t i, size_t j, size_t k, double d) {
-        data.at(map(i,j,k)) = d;
+        data.at(k * (nx * ny) + j * nx + i) = d;
+    }
+
+    void setData(size_t index, double d) {
+        data.at(index) = d;
     }
 
     Vector3d getGridPoint(size_t i, size_t j, size_t k) {

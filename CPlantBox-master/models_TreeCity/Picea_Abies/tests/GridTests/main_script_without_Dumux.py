@@ -1,0 +1,132 @@
+# gestion des chemins
+import os
+from pathlib import Path
+import sys
+
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent.parent))
+
+import plantbox as pb
+from Soils import UrbanSoilDumuxCoupled
+import numpy as np
+from rosi.richards import RichardsWrapper
+from rosi.rosi_richards import RichardsSP
+from plantbox.functional.PlantHydraulicModel import HydraulicModel_Doussan
+from plantbox.functional.PlantHydraulicParameters import PlantHydraulicParameters
+
+import time
+
+def fonction_elongation_bengough(pr_value):
+    """
+    Renvoie une grille (SoilLookUp) qui applique la fonction de ralentissement de l'élongation selon Bengough et al. (2011).
+    """
+                
+    if pr_value <= 0.5:
+        return 1.0 
+    elif pr_value >= 2.5:
+        return 0.0 
+    else:
+        return max(0.0, 1.0 - ((pr_value - 0.5) / 2.0))
+
+def run_simulation():
+    script_dir = Path(__file__).resolve().parent
+    excel_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/soils/SoilData_en.xlsx"  # À ajuster selon votre vrai nom de fichier
+    xml_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/structural/Picea_Abies_v2.xml"# À ajuster selon votre fichier arbre
+    hydraulic_parameters_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/functional/plant_hydraulics/Picea_Abies" # À ajuster selon votre fichier hydraulique
+    export_dir = script_dir / "results" / "Without_Dumux" / "UrbanSoilTuranProfil6"
+    export_dir.mkdir(parents=True, exist_ok=True)
+    
+    # --- Paramètres de la Grille ---
+    nx, ny, nz = 20, 20, 20
+    min_b = [-500., -500., -150.]
+    max_b = [500., 500., 0.]
+    profil_id = 6
+    
+    # Initialisation finale du problème C++
+    
+    # --- 2. CONFIGURATION GÉOMÉTRIQUE VIA NOTRE CLASSE ---
+    # Lit l'excel, calcule les PTF et crée les domaines physiques dans DuMux
+    sol = UrbanSoilDumuxCoupled(excel_path, profil_id, nx, ny, nz, min_b, max_b, s_dumux=None)
+    
+    
+    # Micro-solve CRUCIAL pour forcer l'allocation de getWaterContent() au jour 0
+    print("Génération de la carte d'humidité initiale...")
+
+    # Première synchronisation mécanique
+    sol.update_hydromechanics()
+
+    time.sleep(10) # pour pouvoir lire le message d'initialisation
+    
+    # --- 4. INITIALISATION DE L'ARBRE (CPlantBox) ---
+    plant = pb.MappedPlant()
+    plant.readParameters(str(xml_path))
+
+    print("Création de la grille de perception biologique de l'arbre...")
+    # On crée une grille qui appartient à la logique de la plante
+    grille_biologique = pb.EquidistantGrid3D(
+        sol.min_b[0], sol.max_b[0], sol.nx,  # Axe X
+        sol.min_b[1], sol.max_b[1], sol.ny,  # Axe Y
+        sol.min_b[2], sol.max_b[2], sol.nz   # Axe Z
+    )
+
+    # Assignation de la grille au multiplicateur C++
+    for subType in range(1, 7):
+        try:
+            rrpm = plant.getOrganRandomParameter(pb.OrganTypes.root, subType)
+            rrpm.f_se = grille_biologique
+        except Exception:
+            pass
+        
+    plant.initialize()
+    
+    # Modèle hydraulique de Doussan pour l'aspiration de l'eau
+
+    p_flux = PlantHydraulicParameters() # Charge les conductivités kr et kx par défaut
+    # ATTENTION : Il faut vérifier les valeurs dans le fichier de paramètres
+    # état actuel : produit par IA, non vérifié
+    #ce read_parameter rajoute de lui-même l'extension .json
+    p_flux.read_parameters(hydraulic_parameters_path)
+    modele_hydraulique = HydraulicModel_Doussan(plant, p_flux)
+
+    plant_age = 10.0 # On laisse pousser l'arbre 10 jours "à vide"
+    plant.simulate(plant_age, True)
+    
+    # --- 5. BOUCLE TEMPORELLE SIMULATION COUPLÉE ---
+    sim_time = 3000.0     # Durée totale de la simulation (jours)
+    dt = 1.0            # Pas de temps (1 jour)
+    export_interval = 10 # Exporter les données tous les jours
+    transpiration_cible = 50.0 # cm3/jour
+    
+    print("\nLancement de la boucle dynamique TreeCity...")
+    for t in range(int(sim_time / dt)):
+        print(f"\nJour {t+1}/{int(sim_time)} :")
+        
+        # --- ÉTAPE B : Traduction mécanique de la nouvelle humidité ---
+        # Met à jour automatiquement self.pr_array via self.s.getWaterContent()
+        #pas besoin car, n'ayant pas de gestion de flux, la carte d'humidité ne change pas dans ce script. On pourrait l'appeler si on avait un solveur Dumux actif.
+        #sol.update_hydromechanics()
+
+        # L'arbre traduit la physique en biologie (Vitesse d'exécution : NumPy !)
+        # La formule de Bengough est : 1.0 - ((PR - 0.5) / 2.0) plafonnée entre 0 et 1.
+        # NumPy calcule cela pour les 64000 voxels d'un seul coup !
+        facteurs_bengough = np.clip(1.0 - ((sol.pr_array - 0.5) / 2.0), 0.0, 1.0)
+    
+        # On injecte ces facteurs dans la grille C++ de la plante
+        # (C'est la seule petite boucle requise pour passer de Python au C++)
+        for k in range(sol.nz):
+            for j in range(sol.ny):
+                for i in range(sol.nx):
+                    grille_biologique.setData(i, j, k, facteurs_bengough[i, j, k])
+            
+        # Avancement de la croissance de l'arbre
+        plant.simulate(dt, False)
+        
+        # --- ÉTAPE D : Sauvegarde des résultats ---
+        if t % export_interval == 0:
+            print(f"  -> Export ParaView Jour {t+1}")
+            sol.export_paraview(export_dir / f"UrbanSoil_Resistance_{t//export_interval}.vtk")
+            plant.write(f"{export_dir}/Tree_Architecture_{t//export_interval}.vtp", True)
+            
+    print("\nSimulation couplée TreeCity terminée avec succès !")
+
+if __name__ == "__main__":
+    run_simulation()

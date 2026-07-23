@@ -2,6 +2,9 @@ from .BrusselsSoil import BrusselsSoil
 from .NorwegianSoil import NorwegianSoil
 from .BrusselsSoil_Dumux import creer_sol_bruxellois_dumux
 from .UrbanSoil import creer_sol_urbain_dumux
+from .UrbanSoilBrussels_Dumux import creer_sol_urbain_bruxellois_dumux
+from .UrbanSoilBrussels import UrbanSoilBrussels
+from .urban_sol_module import UrbanSoilDumuxCoupled
 
 def exporter_sol_vtk(sol, etape, dossier_destination):
     """
