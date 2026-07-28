@@ -46,7 +46,7 @@ def run_simulation():
     excel_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/soils/SoilData_en.xlsx"  # À ajuster selon votre vrai nom de fichier
     xml_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/structural/Picea_Abies_v2.xml"# À ajuster selon votre fichier arbre
     hydraulic_parameters_path = f"{script_dir.parent.parent.parent.parent}/modelparameter_TreeCity/functional/plant_hydraulics/Picea_Abies" # À ajuster selon votre fichier hydraulique
-    export_dir = script_dir / "results" / "With_Dumux" / f"UrbanSoilTuranProfil{profil_id}"
+    export_dir = script_dir / "results" / "With_Dumux" / f"UrbanSoilTuranProfil{profil_id}_epaississement"
     export_dir.mkdir(parents=True, exist_ok=True)
     
     # --- Paramètres de la Grille ---
@@ -138,6 +138,7 @@ def run_simulation():
     dt = 1.0            # Pas de temps (1 jour)
     export_interval = 10 # Exporter les données tous les jours
     transpiration_cible = 50.0 # cm3/jour
+    taux_epaississement = 0.002 # Vitesse de croissance radiale (cm/jour)
     
     print("\nLancement de la boucle dynamique TreeCity...")
     for t in range(int(sim_time / dt)):
@@ -183,12 +184,51 @@ def run_simulation():
             
         # Avancement de la croissance de l'arbre
         plant.simulate(dt, False)
+
+        # --- Epaississement progressif des racines ---
+        ana = pb.SegmentAnalyser(plant)
+        
+        creation_times = np.array(ana.getParameter("creationTime"))
+        subtypes = np.array(ana.getParameter("subType"))
+        
+        ages_reels_du_segment = plant_age - creation_times
+        
+        # On prépare le tableau des rayons
+        rayons_evolutifs = np.zeros(len(creation_times))
+        
+        # 3. Calcul de l'épaississement progressif (à ajuster en fonction de la réalité biologique)
+        for i in range(len(creation_times)):
+            if subtypes[i] == 1: 
+                 # Pivot : Rayon de base + (âge du segment * taux)
+                rayons_evolutifs[i] = 0.20 + (ages_reels_du_segment[i] * taux_epaississement)
+                                
+            elif subtypes[i] == 4 or subtypes[i] == 6:
+                # Charpentières : S'épaississent un peu moins vite
+                rayons_evolutifs[i] = 0.15 + (ages_reels_du_segment[i] * (taux_epaississement / 2))
+                                
+            elif subtypes[i] == 5 or subtypes[i] == 3:
+                rayons_evolutifs[i] = 0.05 + (ages_reels_du_segment[i] * (taux_epaississement / 4))
+            else:
+                # Racines fines : Ne s'épaississent pas (gardent leur taille de naissance)
+                rayons_evolutifs[i] = 0.05 # On peut ajuster le taux pour les racines fines si nécessaire
+        # On écrase le rayon par défaut avec notre cône parfait
+        ana.addData("radius", rayons_evolutifs.tolist())
+        
+        # note bonus : il devrait être possible de ne garder que les racines qui nous intéressent 
+        # avec un ana.filter("subType", minSubType, maxSubType) (les segments dont le subType n'appartient pas à [minSubType, maxSubType] seront supprimés)
+        # si un seul type de racine n'est gardé, il y a aussi ana.filter("subType", val)
+        # filter est un filtre qui peut être utilisé sur tous les paramètres , pas que sur subType, il suffit de mettre le nom correspondant
+        # le paramètre order peut aussi être intéressant pour ne garder que les racines les plus importantes 
+        
+        plant_age += dt
         
         # --- ÉTAPE D : Sauvegarde des résultats ---
         if t % export_interval == 0:
             print(f"  -> Export ParaView Jour {t+1}")
             sol.export_paraview(export_dir / f"UrbanSoil_Resistance_{t//export_interval}.vtk")
-            plant.write(f"{export_dir}/Tree_Architecture_{t//export_interval}.vtp", True)
+            #plant.write(f"{export_dir}/Tree_Architecture_{t//export_interval}.vtp", True)
+            filename = f"{export_dir}/Tree_Architecture_{t//export_interval}.vtp"
+            ana.write(filename, ["age", "creationTime", "id", "order", "organType", "radius", "subType"])
             
     print("\nSimulation couplée TreeCity terminée avec succès !")
 

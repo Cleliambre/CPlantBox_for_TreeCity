@@ -64,10 +64,8 @@
         <parameter name="tropismN" value="8"/>
         <parameter name="tropismS" value="0.1"/>
 
-        <!-- Elle fait tomber les GRANDS Sinkers d'ancrage (subType 3) -->
         <parameter name="successor" ruleId="0" numLat="1" Where="" subType="3" organType="2" percentage="0.3"/>
-        <!-- Quand elle a fini de pousser, elle passe le relais à la racine d'exploration (subType 4) -->
-        <parameter name="successor" ruleId="2" numLat="1" Where="apex" subType="6" organType="2" percentage="0.08"/>
+        <parameter name="successor" ruleId="2" numLat="1" Where="" subType="6" organType="2" percentage="0.08"/>
     </root>
 
     <!-- MODIFIÉ: La racine horizontale d'exploration (Zone Distale) -->
